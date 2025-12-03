@@ -1,0 +1,725 @@
+R E S EARCH Open Access
+Semi-automatic quantification of 4D left
+ventricular blood flow
+Jonatan Eriksson1,2*†
+, Carl Johan Carlhäll2,3†
+, Petter Dyverfeldt1,2,4, Jan Engvall1,2,3, Ann F Bolger1,5, Tino Ebbers1,2,4
+Abstract
+Background: The beating heart is the generator of blood flow through the cardiovascular system. Within the
+heart’s own chambers, normal complex blood flow patterns can be disturbed by diseases. Methods for the
+quantification of intra-cardiac blood flow, with its 4D (3D+time) nature, are lacking. We sought to develop and
+validate a novel semi-automatic analysis approach that integrates flow and morphological data.
+Method: In six healthy subjects and three patients with dilated cardiomyopathy, three-directional, three￾dimensional cine phase-contrast cardiovascular magnetic resonance (CMR) velocity data and balanced steady-state
+free-precession long- and short-axis images were acquired. The LV endocardium was segmented from the short￾axis images at the times of isovolumetric contraction (IVC) and isovolumetric relaxation (IVR). At the time of IVC,
+pathlines were emitted from the IVC LV blood volume and traced forwards and backwards in time until IVR, thus
+including the entire cardiac cycle. The IVR volume was used to determine if and where the pathlines left the LV.
+This information was used to automatically separate the pathlines into four different components of flow: Direct
+Flow, Retained Inflow, Delayed Ejection Flow and Residual Volume. Blood volumes were calculated for every
+component by multiplying the number of pathlines with the blood volume represented by each pathline. The
+accuracy and inter- and intra-observer reproducibility of the approach were evaluated by analyzing volumes of LV
+inflow and outflow, the four flow components, and the end-diastolic volume.
+Results: The volume and distribution of the LV flow components were determined in all subjects. The calculated
+LV outflow volumes [ml] (67 ± 13) appeared to fall in between those obtained by through-plane phase-contrast
+CMR (77 ± 16) and Doppler ultrasound (58 ± 10), respectively. Calculated volumes of LV inflow (68 ± 11) and
+outflow (67 ± 13) were well matched (NS). Low inter- and intra-observer variability for the assessment of the
+volumes of the flow components was obtained.
+Conclusions: This semi-automatic analysis approach for the quantification of 4D blood flow resulted in accurate LV
+inflow and outflow volumes and a high reproducibility for the assessment of LV flow components.
+Introduction
+The final product of the molecular, electrical and
+mechanical events in the normal heart is the generation
+of blood flow. The forces which result from interaction
+between the heart and the flowing blood stimulate a
+continuous remodeling process [1], interactively creating
+an optimal geometry for efficient flow. Alterations in
+left ventricular (LV) flow patterns have been recognized
+in various cardiac diseases such as LV wall motion dis￾orders, valvular disease and arrhythmia. In heart failure,
+the LV may undergo progressive adverse remodeling [2].
+In these hearts, abnormal LV blood flow patterns have
+been observed [3-5]. These altered flow patterns may be
+detrimental to LV function, and in a vicious cycle, con￾tribute further to the adverse remodeling. Thus, it is
+desirable to gain a deeper understanding of the LV
+blood flow behavior under normal and disordered
+conditions.
+Previous methods have provided information about
+some aspects of LV blood flow behavior. These methods
+have been limited in their ability to assess the time-vary￾ing and intrinsically three-dimensional (time + 3D = 4D)
+flow patterns within the beating LV. Limitations have
+arisen due to velocity being recorded from single
+* Correspondence: jonatan.eriksson@liu.se
+† Contributed equally 1
+Division of Cardiovascular Medicine, Department of Medical and Health
+Sciences, Linköping University, Linköping, Sweden
+Eriksson et al. Journal of Cardiovascular Magnetic Resonance 2010, 12:9
+http://www.jcmr-online.com/content/12/1/9
+© 2010 Eriksson et al; licensee BioMed Central Ltd. This is an Open Access article distributed under the terms of the Creative Commons
+Attribution License (http://creativecommons.org/licenses/by/2.0), which permits unrestricted use, distribution, and reproduction in
+any medium, provided the original work is properly cited.
+
+directional velocity components (as with Doppler ultra￾sound) [6] or from two-dimensional (2D) regions of
+interest with cardiovascular magnetic resonance (CMR)
+[7,8]. Computational fluid dynamics (CFD) of the heart
+is being used more frequently [9-12] and has the poten￾tial to provide relevant information in the future. CFD
+may produce data with higher spatial and temporal reso￾lution than actual in vivo data and creates the opportu￾nity to broadly examine different measures of flow and
+the impact of varying conditions. However, today, the
+complex blood flow patterns in the heart are difficult to
+simulate accurately. Three-dimensional cine phase-con￾trast CMR (3D cine PC-CMR) has the ability to provide
+measurements of a time-varying velocity field, which
+allows for streamline [13] and pathline visualization
+[14-17] of the blood flow patterns over a complete car￾diac cycle. This method has been applied most fre￾quently to the aorta [18-20], but a few studies have also
+been performed in the beating heart [21,22].
+Recently, we have developed CMR based tools that
+elucidate 4D LV blood flow patterns [22]. This techni￾que enables the quantification of the volume, distribu￾tion and kinetic energy change of separate LV flow
+components over the cardiac cycle. In order to reduce
+user-dependency and enhance the reproducibility of this
+technique, we sought to develop and validate a semi￾automatic analysis approach that better integrates flow
+and morphological data.
+Method
+Measurements
+Nine subjects were included in the study, mean age 54
+years (range 22-62); six healthy subjects (three females),
+mean age 58 (range 50-61) years, and three patients
+(one female) suffering from idiopathic dilated cardio￾myopathy (DCM), mean age 46 (range 22-62) years
+(Table 1). The healthy subjects had normal electrocar￾diograms and echocardiographic examinations without
+valvular or ventricular dysfunction. No patient had more
+than trace valvular insufficiency or stenosis. The study
+was approved by the regional Ethical Review Board in
+Linköping, Sweden. All nine subjects gave written
+informed consent before participation.
+In all nine subjects, 3D cine PC-CMR velocity data of
+the left heart, morphological long- and short-axis data
+of the LV, and 2D cine through-plane PC-CMR velocity
+data of the ascending aorta were acquired on a clinical
+1.5 T scanner (Philips Achieva, Philips Medical Systems,
+Best, the Netherlands). Echocardiography was performed
+using a Vivid 7 scanner and a 2.0 MHz probe (GE,
+Vingmed Ultrasound, Horten, Norway).
+Cine balanced steady-state free-precession (bSSFP)
+imaging was used to acquire 2-, 3- and 4-chamber long￾axis and a stack of short-axis morphological images in
+30 time frames during end-expiratory breath holds. A
+slice thickness of 8 mm was used. Acquired pixel size
+was 2.19 × 1.78 mm2 and 1.67 × 1.78 mm2 for the
+short- and long-axis images, respectively. Reconstructed
+pixel size was of 1.252 mm2 for the long-axis images
+and 1.372 mm2 for the short-axis images.
+Two-dimensional cine through-plane PC-CMR velo￾city data were acquired in a plane perpendicular to the
+main flow direction in the ascending aorta (AoA) just
+downstream from the aortic valve (AoV). Imaging para￾meters included a velocity encoding range (VENC) of
+200 cm/s, an echo time (TE) of 3 ms, a repetition time
+(TR) of 5 ms, a flip angle of 15°, a slice thickness of 7
+mm, and a pixel size of 1.6 × 1.6 mm2
+. Three lines of k￾space were acquired per heart beat, resulting in a tem￾poral resolution of 30 ms.
+The three-directional, 3D cine PC-CMR velocity data
+were acquired during free-breathing, using a navigator￾gated gradient-echo pulse-sequence with interleaved
+three-directional flow-encoding and retrospective, vector
+cardiogram controlled cardiac gating [23]. Common
+acquisition parameters included a VENC of 100 cm/s, a
+flip angle of 8°, a TE of 3.7 ms, and a TR of 6.3 ms. Par￾allel imaging by sensitivity encoding (SENSE) with a
+speed-up factor of 2 was applied. To further reduce the
+scan time, two k-space lines per flow encoding segment
+were acquired during each heart beat. The spatial reso￾lution was 3 × 3 × 3 mm3
+. The field-of-view (FOV) was
+adjusted for each subject to fully encompass the left
+heart. Scan time was about 10-15 minutes, excluding
+the navigator gating efficiency. A temporal sliding-win￾dow reconstruction with individual non-linear stretching
+of each RR-interval (Philips Medical Systems, Best, The
+Netherlands) was used to reconstruct the time-resolved
+PC-CMR data into 40 time frames. Data were corrected
+for concomitant gradient field effects on the scanner. By
+the use of automated in-house postprocessing software
+written in Matlab (The MathWorks Inc., Natick, Massa￾chusetts, USA), the velocity data were corrected for
+background errors and phase wraps and converted into
+Table 1 Demographic and clinical data
+Healthy subjects
+(n = 6)
+DCM
+(n = 3)
+Age (yrs) 58 (range 50-61) 46 (range 22-62)
+Gender (f:m) 3:3 1:2
+Weight (kg) 72 ± 6 78 ± 18
+Heart rate (bpm) 64 ± 8 60 ± 17
+Systolic BP (mm Hg) 128 ± 10 120 ± 17
+Diastolic BP (mm Hg) 80 ± 5 78 ± 8
+LVEDD (mm) 45 ± 3 60 ± 4
+LVEF (%) 59 ± 2 39 ± 4
+Mean ± SD. BP, blood pressure; DCM, dilated cardiomyopathy; EDD, end￾diastolic diameter; EF, ejection fraction; LV, left ventricle.
+Eriksson et al. Journal of Cardiovascular Magnetic Resonance 2010, 12:9
+http://www.jcmr-online.com/content/12/1/9
+Page 2 of 10
+
+a file format compatible with commercially available
+visualization software (EnSight, CEI Inc, Research Trian￾gle Park, NC, USA). The background correction scheme,
+which was performed for each time frame, consisted of a
+4th-order weighted least-squares fit to the static tissue of
+the measured velocity data, where the weighting func￾tion was obtained from a combination of the signal
+magnitude and the standard deviation of the measured
+velocity over time [24].
+After postprocessing, all 3D cine PC-CMR datasets
+underwent quality control, which consisted of visual
+inspection of pathlines emitted from a plane located
+approximately at the mitral valve (MV) annulus and inte￾grated over one cardiac cycle. In addition to being valuable
+for visualization and quantification, pathlines provide a
+means of performing internal control of the data quality.
+As pathlines are calculated by the integration of the time￾resolved velocity field, a pathline should never leave the
+blood pool. Although in some cases a few pathlines may
+leave the blood pool due to noise, it is important to make
+sure that there are no systematic velocity offsets in the
+data: such an offset may result in a set of aberrant path￾lines leaving the blood pool at a specific site. With our
+present data acquisition and postprocessing protocol, the
+vast majority of our data sets pass this quality control.
+Data analysis
+The method proposed for the quantification of LV flow
+components consists of three steps:
+1) Definition of geometrical constraints of the LV at
+the times of isovolumetric contraction (IVC) and
+isovolumetric relaxation (IVR).
+2) Computation of pathlines, backwards and for￾wards in time, from the entire LV at the time of
+IVC.
+3) Separation of the pathlines into different compo￾nents using the IVR LV constraint.
+The manual steps of this approach are the definition
+of geometrical constraints and the determination of the
+time of IVC and IVR in the 3D cine PC-CMR data.
+Pathlines calculation and separation of the pathlines
+into different components are fully automatic.
+Following a pre-established protocol, the LV was seg￾mented from the stack of short-axis images, to define
+geometrical constraints. The endocardial border was
+defined according to the limit of the compact myocar￾dium, such that LV trabeculations were included in the
+estimated LV blood volume. The IVC and IVR phases
+were determined by visual inspection of the open or
+closed positions of the aortic and mitral valves and the
+LV size in the long- and short-axis images. The
+segmentation was performed at IVC and IVR using
+freely available segmentation software (Segment, version
+1.699d) [25]. From the segmentations two binary masks
+were created, each consisting of a stack of 8 mm thick
+slices. These were used to create two masks of the LV
+volume that matched the orientation of the 3D cine PC￾CMR data. The IVC LV volume was resampled to
+match the 3D cine PC-CMR data resolution, using in￾house developed Matlab software and was considered to
+contain all the blood residing in the LV during the ana￾lyzed cardiac cycle.
+Pathlines were emitted from the resampled IVC LV
+volume at the time of IVC, estimated from the 3D cine
+PC-CMR data. In this method, the visual inspection of
+short streamlines emitted from a three-chamber plane
+was used to determine IVC and IVR as the time when
+no flow can be seen across either the mitral or aortic
+valve. The pathlines were emitted from the center point
+of each voxel in the IVC LV volume and traced both
+forward and backward in time until the time of IVR,
+thus covering the complete cardiac cycle. No mask was
+used in the pathline computation; the pathlines were
+allowed to go anywhere in the 3D cine PC-CMR dataset
+covering the whole heart. The computation of pathlines
+was performed in EnSight (version 8.2), which utilizes a
+4th order Runge-Kutta numerical integration technique
+with adaptive step length.
+The pathlines, describing all the blood transiting the
+LV over a cardiac cycle, were analyzed using an auto￾matic algorithm, which works as follows. The IVR LV
+volume was used to determine whether and where the
+pathlines left the LV. A pathline leaving the IVR LV
+volume through the basal plane was considered to have
+left the LV in the physiological way, i.e. through the
+AoV during systole (forward pathlines) or MV during
+diastole (backward pathlines). Pathlines remaining below
+the basal plane at the time for IVR were divided in two
+categories: pathlines remaining inside the confines of
+the IVR LV volume were considered to represent the
+LV blood, whereas pathlines extending outside of this
+volume were considered to either have been emitted
+from the myocardium or to have left the LV due to data
+imperfections, such as noise or uncompensated back￾ground phase errors. The second category of pathlines
+was excluded from further calculations.
+Based on this combination of pathlines and geometri￾cal constraints, the intraventricular blood flow was auto￾matically divided into the four components, as defined
+by Bolger et al [22]:
+• Direct Flow: Blood that enters the LV during dia￾stole and leaves the LV during systole in the ana￾lyzed heart beat
+Eriksson et al. Journal of Cardiovascular Magnetic Resonance 2010, 12:9
+http://www.jcmr-online.com/content/12/1/9
+Page 3 of 10
+
+• Retained Inflow: Blood that enters the LV during
+diastole but does not leave during systole in the ana￾lyzed heart beat
+• Delayed Ejection Flow: Blood that starts and
+resides inside the LV during diastole and leaves dur￾ing systole
+• Residual Volume: Blood that resides within the LV
+for at least two cardiac cycles
+Each of these pathlines was considered to represent a
+volume of blood defined by the emitter density, here
+chosen to correspond to the voxel size of the 3D cine
+PC-CMR data. The volumes of the different components
+were calculated by multiplying the number of pathlines
+in each component group with the voxel volume.
+Evaluation and statistical analysis
+The analysis approach proposed was evaluated for accu￾racy as well as inter- and intra-observer variability on
+nine subjects. Accuracy was evaluated by comparing the
+LV inflow and outflow, where Inflow = Direct Flow +
+Retained Inflow and Outflow = Direct Flow + Delayed
+Ejection Flow. In addition, the outflow obtained by the
+proposed approach was related to measurements
+obtained by 2D cine through-plane PC-CMR and Dop￾pler ultrasound, respectively.
+Two investigators, referred to as Investigator 1 (Inv 1)
+and Investigator 2 (Inv 2), participated in the inter￾observer study and carried out the analysis of all nine
+subjects independently of each other. Inv 1 had little
+experience and Inv 2 had moderate experience in seg￾menting the LV from short axis CMR images. To assess
+the intra-observer variability, Inv 1 repeated the analysis
+on all nine data sets approximately one month after the
+first analysis. The results from the first analysis of Inv 1
+are referred to as Analysis 1 (A1) and the second as
+Analysis 2 (A2).
+All values are given as group mean ± 1SD unless
+otherwise specified. In the statistical analyses, all nine
+subjects are considered as one group. For LV inflow ver￾sus outflow comparison, two-tailed paired t-tests were
+used, and the statistical significance was set at P < 0.05.
+In the observer variability studies, two-tailed paired t￾tests were used to test for differences between the two
+investigators, or between Inv 1 A1 and Inv 1 A2. As five
+interrelated parameters were compared, a Bonferroni
+correction was performed, and the level of significance
+was adjusted to P < 0.01.
+Results
+All nine datasets were acquired successfully. No signifi￾cant aberrant traces, indicating artifacts or insufficient
+correction for background offset, were observed in any
+of the datasets.
+The flow data from each of the nine subjects (Table 1)
+were analyzed twice by Inv 1 and once by Inv 2, using
+the proposed approach, resulting in pathline visualiza￾tion of the four LV flow components, as demonstrated
+in Figures 1 and 2 and Additional file 1.
+The relative size of the four flow components of intra￾ventricular flow in the six healthy subjects is shown in
+Figure 3. The two largest components were Direct Flow
+and Residual Volume.
+The LV outflow, computed from 3D cine PC-CMR
+obtained by Inv1 A1, was related to LV outflow quanti￾fied using 2D cine through-plane PC-CMR and Doppler
+ultrasound, respectively, for all nine subjects (Table 2).
+Outflow estimates obtained from 2D cine through-plane
+PC-CMR appeared to be larger, while outflow estimates
+from Doppler Ultrasound appeared to be smaller.
+As a test of the accuracy of the method proposed, the
+LV inflow and outflow volumes were compared. No sig￾nificant difference between inflow and outflow volume
+was found in any of the three analyses (Table 3).
+The inter- and intra-observer variability was analyzed
+for the EDV and the four intra-ventricular flow compo￾nents (Figure 4). As shown in Table 4 no significant dif￾ferences were found for any of the parameters
+investigated. The end-diastolic volume comparison
+between Inv 1 A2 and Inv 2 resulted in borderline
+significance.
+Discussion
+In the present study, a novel analysis approach for 4D
+intra-ventricular flow data was developed and validated.
+The proposed analysis approach: (1) allowed quantifica￾tion of the volume, distribution and timing of separate
+components of LV flow in all nine data sets; (2)
+obtained a measurement of the LV outflow volume that
+appeared to be in between the magnitudes obtained by
+2D cine through-plane PC-CMR and Doppler ultra￾sound, respectively; (3) achieved equal magnitudes of
+the LV inflow and outflow volumes; and (4) showed a
+high intra- and inter-observer reproducibility for the
+assessment of the volumes of the LV flow components.
+In addition, the present analysis approach was both less
+user-dependent and time-consuming than our previous
+technique: using the present approach the time required
+for each analysis was reduced from hours per analysis to
+minutes. In fact, the only user interaction necessary is
+the segmentation of the LV from short axis morphologi￾cal images and to determine the times of IVC and IVR
+in the 3D cine PC-CMR data.
+The proposed approach enables the quantification and
+extended visualization (Additional file 1) of the flow￾derived LVEDV separated into the four intra-ventricular
+flow components (Direct Flow, Retained Inflow, Delayed
+Ejection Flow and Residual Volume). The visualization is
+Eriksson et al. Journal of Cardiovascular Magnetic Resonance 2010, 12:9
+http://www.jcmr-online.com/content/12/1/9
+Page 4 of 10
+
+extended because this approach facilitates the visualiza￾tion of the residual volume and the other flow compo￾nents over one cardiac cycle. When comparing the
+present measurements of these flow components with
+our previous findings [22], some differences were
+observed, such as a higher amount of the Direct Flow
+and Residual Volume using the present approach. We
+believe that these differences may be explained by a
+number of factors. The present velocity data have higher
+spatial and temporal resolution, and the previous data
+were acquired without respiratory compensation. The
+continuous emission of pathlines over diastolic filling
+might lead to an underestimation of inflow using our
+previous technique. The previous technique approxi￾mated the EDV by making a wire frame hull of the par￾ticle trace positions at end diastole; this likely caused an
+underestimation of the true EDV. The Residual Volume
+as estimated by the previous method used this inaccu￾rate EDV; the volume was not directly visualized using
+pathlines. In contrast, the present analysis approach
+allows tracing of the Residual Volume as well as the
+other flow components. There is a risk of overestimating
+this component in the presented approach, since the
+limit of the LV cavity is defined as the compact myocar￾dium. It is possible that some of the IVC traces are
+emitted from the trabeculae but are included in the IVR
+blood volume. However, in both the previous and pre￾sent analysis approach, this would constitute a consis￾tent error as it is done in the same way in every data
+set.
+The LV outflow volume measured with the proposed
+approach correlated with measurements obtained with
+both 2D cine through-plane PC-CMR and Doppler
+ultrasound (Table 2). The flow-based volume appeared
+to fall in between the volumes obtained from the two
+other methods. LV stroke volumes obtained by ultra￾sound are generally smaller than those obtained by
+CMR. Stalder et al [26] compared 3D cine PC-CMR and
+2D cine PC-CMR and found that 3D cine PC-CMR
+gave slightly lower velocities. This is most likely due to
+lower spatial resolution in the 3D cine PC-CMR data.
+Although the stroke volume and end-diastolic volume
+can be measured using the proposed analysis, we do not
+suggest that it should replace 2D cine through-plane
+Figure 1 Diastolic blood flow. Pathline visualization of all blood flow involved in one cardiac cycle in the left ventricle (LV) of a healthy, 61
+year old male at peak early LV filling (A), diastasis (B), and peak atrial contraction (C). In all panels a semitransparent three-chamber image
+provides anatomical orientation. The pathlines are color coded according to: Direct Flow, green; Retained Inflow, yellow; Delayed Ejection Flow,
+blue; Residual Volume, red. LA, Left Atrium; LV, Left Ventricle.
+Eriksson et al. Journal of Cardiovascular Magnetic Resonance 2010, 12:9
+http://www.jcmr-online.com/content/12/1/9
+Page 5 of 10
+
+PC-CMR or ultrasound techniques for the assessment of
+these parameters. The strength of the method proposed
+is instead that each part of the LV blood volume is
+monitored throughout the cardiac cycle, enabling assess￾ment of the dynamic and multidimensional blood flow
+organization within the beating LV.
+We validated the accuracy of this approach by com￾paring LV inflow and outflow volumes in each subject.
+We have not validated all different components and the
+blood flow patterns in the LV. However, LV inflow con￾sists of Direct Flow and Retained Inflow, the LV outflow
+consists of Direct Flow and Delayed Ejection Flow. The
+Residual Volume is not validated, but it is based on the
+same flow data and segmentation of the LV. The
+segmentation of the LV from short axis morphological
+images is well validated [27,28] and often part of the
+clinical CMR protocol. Visualization of blood flow using
+pathlines has been used extensively before [15,16,18-22].
+The accuracy of the computed pathlines depends, how￾ever, on a large number of factors, including temporal
+and spatial resolution, VENC, field strength, CMR hard￾ware, and intravoxel dephasing due to turbulence. We
+recommend therefore performing the validation based
+on inflow vs outflow for every patient study using this
+analysis approach, as it is easy to perform without any
+extra acquisitions or analysis.
+Inter- and intra-observer variability was determined
+for flow-based EDV and the four intra-ventricular flow
+Figure 2 Systolic blood flow. Pathline visualization of all blood flow involved in one cardiac cycle in the left ventricle of a healthy, 61 year old
+male at peak systole (A), and at isovolumetric relaxation (B). In all panels a semitransparent three-chamber image provides anatomical
+orientation. The pathlines are color coded according to: Direct Flow, green; Retained Inflow, yellow; Delayed Ejection Flow, blue; Residual Volume,
+red. LA, Left Atrium; LV, Left Ventricle.
+Eriksson et al. Journal of Cardiovascular Magnetic Resonance 2010, 12:9
+http://www.jcmr-online.com/content/12/1/9
+Page 6 of 10
+
+components (Table 4 and Figure 4). No significant dif￾ferences between observers were detected; the difference
+in EDV obtained by Inv1 A2 and Inv 2 were of border￾line significance. We believe that, of all the steps of the
+analysis, the LV segmentation has the most important
+impact on the reproducibility of the results. This is
+especially true for the selection of the most basal short
+axis slice in the LV, as this plane is used to determine
+whether the traces leave the LV in the basal-apical
+direction. We choose this plane in order to avoid the
+inclusion of the LA volume into the LV segmentation,
+and in most cases its position was easy to identify. In
+terms of other regions of the LV, an overestimation of
+the ventricular volume will most likely give an overesti￾mation of the Residual Volume, while an underestima￾tion may remove important portions of the flowing
+blood. In our segmentation protocol we chose to seg￾ment compact myocardium. We preferred a clinically
+useful segmentation approach that minimizes the risk of
+missing important flow due to partial volume effects; as
+the slice thickness was 8 mm it is very likely that the
+structure of the endocardial border varies through the
+plane, and that the pixel value is an average value of the
+tissue in the pixel. There is no consensus in the litera￾ture regarding the impact of including trabeculae and
+papillary muscles in the ventricular volume. Papavassiliu
+et al [27] concluded that even though the trabeculae sig￾nificantly influence the LV volume, the superior repro￾ducibility of their inclusion in the LV volume makes
+this approach most appropriate for clinical use. Sievers
+et al [28] concluded that, although there are systematic
+differences between inclusion and exclusion of trabecu￾lae and papillary muscles, these differences are small
+and do not necessarily have a clinical relevance in
+healthy or diseased hearts and that inclusion is signifi￾cantly faster. Also in the 3D cine PC-CMR data, voxels
+partially covered by trabeculae will suffer from partial
+volume effects, leading to an underestimation of the
+velocity of the flowing blood in these voxels. Another
+factor interactively set by the investigator is timing, but
+this factor is less critical than the LV segmentation pro￾cedure as long as particles are emitted at a time frame
+when no flow is crossing the mitral or aortic valve.
+3D cine PC-CMR flow data comprise large amounts of
+information and the ability to quantify important aspects
+of these data with a user-friendly and accurate tool
+opens the door to larger studies which could address
+Direct Flow 
+35 ± 6% 
+Retained Inflow 
+17 ± 4% 
+Delayed Ejection Flow 
+15 ± 3% 
+Residual Volume 
+33 ± 4% 
+Figure 3 Pie Chart. Illustration of the four LV flow components as
+a percentage of LV end-diastolic volume (mean ± SD) in the six
+healthy subjects, obtained by investigator 1 analysis 1.
+Table 2 LV outflow volume measured with the proposed method and other CMR and echocardiographic techniques.
+Subject Outflow,
+3D cine PC-CMR
+(mL)
+Outflow,
+2D cine through-plane PC-CMR
+(mL)
+Outflow,
+Doppler Echo,
+(mL)
+1 Healthy 53 48 50
+2 Healthy 92 105 75
+3 Healthy 59 74 48
+4 Healthy 73 72 62
+5 Healthy 71 84 53
+6 Healthy 61 74 51
+7 DCM 59 71 66
+8 DCM 80 95 68
+9 DCM 58 72 46
+Mean ± SD 67 ± 13 77 ± 16 58 ± 10
+DCM, dilated cardiomyopathy; PC, phase-contrast. 3D cine PC-CMR measurements are from Investigator I, Analysis 1.
+Table 3 LV inflow and outflow based on 4D flow data
+from the three different analyses
+Investigator 1
+(analysis 1)
+Investigator 1
+(analysis 2)
+Investigator 2
+Inflow 68 ± 11 71 ± 9 72 ± 12
+Outflow 67 ± 13 69 ± 13 70 ± 15
+P-value NS NS NS
+Eriksson et al. Journal of Cardiovascular Magnetic Resonance 2010, 12:9
+http://www.jcmr-online.com/content/12/1/9
+Page 7 of 10
+
+unanswered physiological and clinical questions. In addi￾tion to the assessment of the volume and distribution of
+the different LV flow components, the proposed analysis
+approach also allows quantification of the kinetic energy
+change of these components throughout the cardiac
+cycle. Recent findings in normal hearts suggest that the
+Direct Flow best preserves its kinetic energy during tran￾sit through the LV, while the Retained Inflow decelerates
+and requires greater addition of energy to achieve even￾tual ejection from the chamber [22]. In dilated and
+hypocontractile hearts, preliminary findings have shown
+that the normal organization of LV flow is altered, and
+that this abnormal flow pattern affects pumping effi￾ciency. The decreased direct flow and increased residual
+volume seen in these patients may be disadvantageous
+from an LV pumping efficiency point of view [22]. The
+ability to measure ventricular performance using multi￾dimensional blood flow analysis creates the potential for
+new perspectives on pathophysiology, early diagnosis,
+treatment options, and prognosis.
+Table 4 Inter- and intra-observer variability of the LVEDV and the four LV flow components as a percentage of EDV
+I1 A1 P-value
+vs I1 A2
+I1 A2 P-value
+vs I2
+I2 P-value
+vs I1 A1
+EDV 146 ± 25 NS 151 ± 29 0.010 144 ± 24 NS
+Direct flow 30 ± 10% NS 30 ± 9% NS 33 ± 11% NS
+Retained inflow 18 ± 4% NS 18 ± 4% NS 18 ± 4% NS
+Delayed ejection flow 17 ± 4% NS 16 ± 4% NS 16 ± 4% NS
+Residual volume 36 ± 6% NS 36 ± 6% NS 33 ± 6% NS
+Mean ± SD for all 9 subjects. P-values < 0.01 are considered statistically significant. EDV, End diastolic volume; NS, Not Significant; I1 A1, Investigator 1 Analysis 1;
+I1 A2, Investigator 1 Analysis 2; I2; Investigator 2.
+Investigator 1 (A1) Investigator 1 (A2) Investigator 2
+0
+50
+100
+150
+200
+EDV [ml]
+Direct Retained Delayed Residual
+0
+20
+40
+60
+Percentage of EDV
+A
+B
+Investigator 1 (A1)
+Investigator 1 (A2)
+Investigator 2
+Figure 4 EDV and intra-ventricular components. LV end-diastolic volume (EDV) (A), and the four LV flow components as a percentage of EDV
+(B), from the three different analyses. Mean ± SD for all 9 subjects. A1, analysis 1; A2, analysis 2.
+Eriksson et al. Journal of Cardiovascular Magnetic Resonance 2010, 12:9
+http://www.jcmr-online.com/content/12/1/9
+Page 8 of 10
+
+Limitations
+Although no significant differences between the LV
+inflow and outflow were detected for any of the three
+analyzes, in a few subjects larger differences were
+observed. Careful review of these cases suggested that
+the morphological and flow data did not match exactly,
+so that the morphological data were displaced relative to
+the flow data. The reason for this was likely the result of
+subject motion between the acquisition of the 3D cine
+PC-CMR and the bSSFP data. This error could be mini￾mized by careful instruction of the patient not to move
+between the scans. A more extensive approach may be
+to use volume registration. This will be further investi￾gated in future studies.
+Aortic or mitral valve insufficiency is at present a lim￾itation because the regurgitant pathlines will be inaccu￾rately included in the volume of the components that
+leave the LV. However, regurgitant flow pathlines will
+be identifiable using the timing and location where they
+leave the segmented volume. Detection and correction
+for these regurgitant pathlines will be implemented and
+evaluated for studies including patients with valve insuf￾ficiency. In the present study, valvular regurgitation that
+was more than trace constituted an exclusion criterion.
+Conclusions
+A semi-automatic analysis approach for the quantifica￾tion and visualization of 4D LV flow data was developed
+and validated in normal and dilated, myopathic hearts.
+The presented technique, utilizing the integration of
+morphological data and 3D cine PC-CMR flow data,
+allows for quantification of the volume, distribution and
+timing of separate components of LV flow and extends
+visualization of LV flow. The analysis approach was
+shown to yield accurate LV inflow and outflow volumes,
+and a high intra- and inter-observer reproducibility for
+the assessment of the flow components, which may
+open the door to larger clinical studies.
+List of abbreviations
+AoV: aortic valve; DCM: dilated cardiomyopathy; EF: ejec￾tion fraction; IVC: Isovolumetric contraction; IVR: Isovo￾lumetric relaxation; MV: Mitral Valve; LA: Left Atrium;
+LV: Left Ventricle; PC-CMR: Phase Contrast Cardiovascu￾lar Magnetic Resonance; SD: Standard Deviation.
+Additional file 1: Left heart flow in a healthy subject. Movie showing
+left heart intra cardiac blood flow in a healthy 61 year old male, all four
+components visualized with pathlines and a semi-transparent 3-chamber
+image to provide morphological orientation. The pathlines are color
+coded according to: Direct Flow, green; Retained Inflow, yellow; Delayed
+Ejection Flow, blue; Residual Volume, red. LA, Left Atrium; LV, Left Ventricle.
+The file-format is MPEG, which may be opened using standard software.
+Click here for file
+[ http://www.biomedcentral.com/content/supplementary/1532-429X-12-9-
+S1.MPG ]
+Acknowledgements
+This study was funded by the Swedish Research Council, the Swedish Heart￾Lung Foundation, and the Emil and Wera Cornell Foundation. The authors
+would like to acknowledge Johan Kihlberg for skillfully acquiring the CMR
+data and Henrik Haraldsson for valuable input.
+Author details
+1
+Division of Cardiovascular Medicine, Department of Medical and Health
+Sciences, Linköping University, Linköping, Sweden. 2
+Center for Medical
+Image Science and Visualization (CMIV), Linköping University, Linköping,
+Sweden. 3
+Department of Clinical Physiology, Linköping University Hospital,
+Linköping, Sweden. 4
+Division of Applied Thermodynamics and Fluid
+Mechanics, Department of Management and Engineering, Linköping
+University, Linköping, Sweden. 5
+Department of Medicine, University of
+California, San Francisco, California, USA.
+Authors’ contributions
+JE, CJC, TE, PD and AFB have been involved in conception and design. CJC
+recruited the subjects. CJC and PD have been involved in data acquisition.
+PD developed post processing tools. PD and JE post processed the data. JE
+implemented and evaluated the method along the implementation. JE, CJC,
+PD, JEN, AFB and TE analyzed and interpreted the data. JE and CJC
+performed the statistical analysis. TE and CJC supervised the study. JE and
+CJC drafted the manuscript. CJC, PD, JEN, AFB and TE critically revised the
+manuscript. All authors had full access to the data and take responsibility for
+its integrity. All authors have read and agree to the manuscript as written.
+Competing interests
+The authors declare that they have no competing interests.
+Received: 8 September 2009
+Accepted: 12 February 2010 Published: 12 February 2010
+References
+1. Richter Y, Edelman ER: Cardiology Is Flow. Circulation 2006, 113:2679-2682.
+2. Takano H, Hasegawa H, Nagai T, Komuro I: Implication of cardiac
+remodeling in heart failure: mechanisms and therapeutic strategies.
+Intern Med 2003, 42:465-469.
+3. Jacobs LE, Kotler MN, Parry WR: Flow patterns in dilated cardiomyopathy:
+a pulsed-wave and color flow Doppler study. J Am Soc Echocardiogr 1990,
+3:294-302.
+4. Houlind K, Schroeder AP, Stodkilde-Jorgensen H, Paulsen PK, Egeblad H,
+Pedersen EM: Intraventricular dispersion and temporal delay of early left
+ventricular filling after acute myocardial infarction. Assessment by
+magnetic resonance velocity mapping. Magn Reson Imaging 2002,
+20:249-260.
+5. Mohiaddin RH: Flow patterns in the dilated ischemic left ventricle
+studied by MR imaging with velocity vector mapping. J Magn Reson
+Imaging 1995, 5:493-498.
+6. Rodevand O, Bjornerheim R, Edvardsen T, Smiseth OA, Ihlen H: Diastolic
+flow pattern in the normal left ventricle. J Am Soc Echocardiogr 1999,
+12:500-507.
+7. Kilner PJ, Yang GZ, Wilkes AJ, Mohiaddin RH, Firmin DN, Yacoub MH:
+Asymmetric redirection of flow through the heart. Nature 2000,
+404:759-761.
+8. Walker PG, Cranney GB, Grimes RY, Delatore J, Rectenwald J, Pohost GM,
+Yoganathan AP: Three-dimensional reconstruction of the flow in a
+human left heart by using magnetic resonance phase velocity encoding.
+Ann Biomed Eng 1996, 24:139-147.
+9. Saber NR, Gosman AD, Wood NB, Kilner PJ, Charrier CL, Firmin DN:
+Computational flow modeling of the left ventricle based on in vivo MRI
+data: initial experience. Ann Biomed Eng 2001, 29:275-283.
+10. Saber NR, Wood NB, Gosman AD, Merrifield RD, Yang GZ, Charrier CL,
+Gatehouse PD, Firmin DN: Progress towards patient-specific
+computational flow modeling of the left heart via combination of
+magnetic resonance imaging with computational fluid dynamics. Ann
+Biomed Eng 2003, 31:42-52.
+11. Doenst T, Spiegel K, Reik M, Markl M, Hennig J, Nitzsche S, Beyersdorf F,
+Oertel H: Fluid-dynamic modeling of the human left ventricle:
+methodology and application to surgical ventricular reconstruction. Ann
+Thorac Surg 2009, 87:1187-1195.
+Eriksson et al. Journal of Cardiovascular Magnetic Resonance 2010, 12:9
+http://www.jcmr-online.com/content/12/1/9
+Page 9 of 10
+
+12. Watanabe H, Sugiura S, Hisada T: The looped heart does not save energy
+by maintaining the momentum of blood flowing in the ventricle. Am J
+Physiol Heart Circ Physiol 2008, 294:H2191-2196.
+13. Napel S, Lee DH, Frayne R, Rutt BK: Visualizing three-dimensional flow
+with simulated streamlines and three-dimensional phase-contrast MR
+imaging. J Magn Reson Imaging 1992, 2:143-153.
+14. Wigstrom L, Sjoqvist L, Wranne B: Temporally resolved 3D phase-contrast
+imaging. Magn Reson Med 1996, 36:800-803.
+15. Buonocore MH: Visualizing blood flow patterns using streamlines, arrows,
+and particle paths. Magn Reson Med 1998, 40:210-226.
+16. Buonocore MH, Bogren HG: Analysis of flow patterns using MRI. Int J Card
+Imaging 1999, 15:99-103.
+17. Bogren HG, Buonocore MH: Blood flow measurements in the aorta and
+major arteries with MR velocity mapping. J Magn Reson Imaging 1994,
+4:119-130.
+18. Kvitting JP, Ebbers T, Wigström L, Engvall J, Olin CL, Bolger AF: Flow
+patterns in the aortic root and the aorta studied with time-resolved, 3-
+dimensional, phase-contrast magnetic resonance imaging: implications
+for aortic valve-sparing surgery. J Thorac Cardiovasc Surg 2004,
+127:1602-1607.
+19. Markl M, Draney MT, Hope MD, Levin JM, Chan FP, Alley MT, Pelc NJ,
+Herfkens RJ: Time-resolved 3-dimensional velocity mapping in the
+thoracic aorta: visualization of 3-directional blood flow patterns in
+healthy volunteers and patients. J Comput Assist Tomogr 2004, 28:459-468.
+20. Hope TA, Markl M, Wigström L, Alley MT, Miller DC, Herfkens RJ:
+Comparison of flow patterns in ascending aortic aneurysms and
+volunteers using four-dimensional magnetic resonance velocity
+mapping. J Magn Reson Imaging 2007, 26:1471-1479.
+21. Fyrenius A, Wigström L, Ebbers T, Karlsson M, Engvall J, Bolger AF: Three
+dimensional flow in the human left atrium. Heart 2001, 86:448-455.
+22. Bolger AF, Heiberg E, Karlsson M, Wigström L, Engvall J, Sigfridsson A,
+Ebbers T, Kvitting JP, Carlhall CJ, Wranne B: Transit of blood flow through
+the human left ventricle mapped by cardiovascular magnetic resonance.
+J Cardiovasc Magn Reson 2007, 9:741-747.
+23. Dyverfeldt P, Kvitting JP, Sigfridsson A, Engvall J, Bolger AF, Ebbers T:
+Assessment of fluctuating velocities in disturbed cardiovascular blood
+flow: in vivo feasibility of generalized phase-contrast MRI. J Magn Reson
+Imaging 2008, 28:655-663.
+24. Ebbers T, Haraldsson H, Dyverfeldt P, Sigfridsson A, Warntjes M, Wigström L:
+Higher Order Weighted Least-Squares Offset Correction for Improved
+Accuracy in Phase-Contrast MRI. Proceedings International Society for
+Magnetic Resonance in Medecine 16; Toronto, Canada 2008, 1367.
+25. Heiberg E, Wigström L, Carlsson M, Bolger AF, Karlsson M: Time Resolved
+Three-dimensional Automated Segmentation of the Left Ventricle.
+Proceedings of IEEE Computers in Cardiology, Lyon, France 2005, 32:599-602.
+26. Stalder AF, Russe MF, Frydrychowicz A, Bock J, Hennig J, Markl M:
+Quantitative 2D and 3D phase contrast MRI: optimized analysis of blood
+flow and vessel wall parameters. Magn Reson Med 2008, 60:1218-1231.
+27. Papavassiliu T, Kuhl HP, Schroder M, Suselbeck T, Bondarenko O, Bohm CK,
+Beek A, Hofman MM, van Rossum AC: Effect of endocardial trabeculae on
+left ventricular measurements and measurement reproducibility at
+cardiovascular MR imaging. Radiology 2005, 236:57-64.
+28. Sievers B, Kirchberg S, Bakan A, Franken U, Trappe HJ: Impact of papillary
+muscles in ventricular volume and ejection fraction assessment by
+cardiovascular magnetic resonance. J Cardiovasc Magn Reson 2004, 6:9-16.
+doi:10.1186/1532-429X-12-9
+Cite this article as: Eriksson et al.: Semi-automatic quantification of 4D
+left ventricular blood flow. Journal of Cardiovascular Magnetic Resonance
+2010 12:9. Submit your next manuscript to BioMed Central
+and take full advantage of: 
+• Convenient online submission
+• Thorough peer review
+• No space constraints or color figure charges
+• Immediate publication on acceptance
+• Inclusion in PubMed, CAS, Scopus and Google Scholar
+• Research which is freely available for redistribution
+Submit your manuscript at 
+www.biomedcentral.com/submit
+Eriksson et al. Journal of Cardiovascular Magnetic Resonance 2010, 12:9
+http://www.jcmr-online.com/content/12/1/9
+Page 10 of 10
+

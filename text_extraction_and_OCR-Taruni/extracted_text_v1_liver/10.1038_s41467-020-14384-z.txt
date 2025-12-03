@@ -1,0 +1,2653 @@
+ARTICLE
+Fasting-induced FGF21 signaling activates hepatic
+autophagy and lipid degradation via JMJD3 histone
+demethylase
+Sangwon Byun1,6,7, Sunmi Seok1,7, Young-Chae Kim 1, Yang Zhang2, Peter Yau3, Naoki Iwamori4, H. Eric Xu5,
+Jian Ma 2, Byron Kemper1 & Jongsook Kim Kemper 1
+*
+Autophagy is essential for cellular survival and energy homeostasis under nutrient deprivation.
+Despite the emerging importance of nuclear events in autophagy regulation, epigenetic control
+of autophagy gene transcription remains unclear. Here, we report fasting-induced Fibroblast
+Growth Factor-21 (FGF21) signaling activates hepatic autophagy and lipid degradation via
+Jumonji-D3 (JMJD3/KDM6B) histone demethylase. Upon FGF21 signaling, JMJD3 epigenetically upregulates global autophagy-network genes, including Tfeb, Atg7, Atgl, and Fgf21,
+through demethylation of histone H3K27-me3, resulting in autophagy-mediated lipid degradation. Mechanistically, phosphorylation of JMJD3 at Thr-1044 by FGF21 signal-activated PKA
+increases its nuclear localization and interaction with the nuclear receptor PPARα to transcriptionally activate autophagy. Administration of FGF21 in obese mice improves defective
+autophagy and hepatosteatosis in a JMJD3-dependent manner. Remarkably, in non-alcoholic
+fatty liver disease patients, hepatic expression of JMJD3, ATG7, LC3, and ULK1 is substantially
+decreased. These findings demonstrate that FGF21-JMJD3 signaling epigenetically links
+nutrient deprivation with hepatic autophagy and lipid degradation in mammals.
+https://doi.org/10.1038/s41467-020-14384-z OPEN
+1Department of Molecular and Integrative Physiology, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA. 2Department of Computational
+Biology, School of Computer Science, Carnegie Mellon University, Pittsburgh, PA 15213, USA. 3 Proteomics Center, University of Illinois at Urbana-Champaign,
+Urbana, IL 61801, USA. 4Graduate School of Bioresource and Bioenvironmental Sciences, Kyushu University, Fukuoka 812-85812, Japan. 5 Laboratory of
+Structure Sciences, Van Andel Research Institute, Grand Rapids, MI 49503, USA. 6
+Present address: Korea Research Institute of Bioscience and Biotechnology
+(KRIBB), Gwahak-ro, Yuseong-gu, Daejeon, South Korea. 7
+Thease authors contributed equally: Sangwon Byun, Sunmi Seok. *email: jongsook@illinois.edu
+NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications 1
+1234567890():,;
+
+L
+ysosome-mediated autophagy is a highly conserved catabolic
+process that recycles cytoplasmic components, including
+damaged organelles and proteins, for cellular survival and
+maintenance of energy homeostasis under nutrient-deprived
+conditions1,2. Autophagy-mediated degradation of intracellular
+lipid stores, lipophagy, also plays a critical role in maintaining
+energy balance during nutrient deficiency by providing free fatty
+acids for mitochondrial fatty acid β-oxidation and ATP production3. Autophagy must be tightly regulated since defective
+autophagy has been implicated in many diseases, including cancer, neurodegenerative disease, and metabolic disorders like
+obesity, diabetes, and non-alcoholic fatty liver disease (NAFLD),
+while excessive autophagy is also harmful because it promotes cell
+death4–6.
+It has long been accepted that autophagy is activated under
+extremely stressful conditions, but increasing evidence demonstrates that it is also regulated during feeding/fasting cycles under
+physiological conditions7–10. Nutrient-sensing factors, such as
+feeding-sensing FXR and SHP and fasting-sensing TFEB, CREB,
+and PPARα, dynamically decrease or increase, respectively,
+autophagic flux by modulating transcription of autophagic gene
+networks7–10. Despite the emerging importance of nuclear events
+in sustaining autophagy regulation, there have been only a few
+studies on epigenetic control in response to environmental cues.
+Histone acetyltransferase hMOF has a role in determining whether autophagy induction leads to cellular survival or death11,
+and the AMPK-SKP2-CARM1 signaling axis epigenetically activates transcription of autophagy-related genes after nutrient
+deprivation12. Further, histone demethylase LSD1, together with
+SHP, epigenetically inhibits hepatic autophagy-network genes in
+response to a late fed-state gut hormone, FGF1910. However,
+in vivo epigenetic regulators that convert fasting signal into
+induction of autophagy genes in animals are largely unknown.
+Jumonji D3 (JMJD3/KDM6b) is a JmjC domain-containing
+histone lysine demethylase that, together with demethylases UTX
+and UTY, belongs to the KDM6 family and epigenetically activates genes by demethylating histone H3K27-me313. JMJD3 has
+known functions in development, differentiation, and immunity13, and in extending lifespan in response to mild mitochondrial stress14. Recently, JMJD3 was also shown to have a
+metabolic function in mediating hepatic fasting responses by
+acting as a gene-specific transcriptional partner of SIRT1, a key
+cellular energy sensor15. JMJD3 activates transcription of direct
+SIRT1 target genes that promote mitochondrial fatty acid β-oxidation, including Cpt1, Pgc-1α, and Fgf21, but not direct SIRT1
+target gluconeogenic genes15. Although fasting-induced JMJD3
+promotes fatty acid β-oxidation, a role for JMJD3 in promoting
+autophagy has not been shown.
+In this study, we identify a function of JMJD3 in linking
+nutrient deprivation to histone modifications and transcriptional
+induction of hepatic autophagy in mice. Under nutrient deprivation, JMJD3 is activated by the fasting-induced hepatokine,
+Fibroblast Growth Factor-21 (FGF21), and epigenetically upregulates global autophagy-network genes. Mechanistically, FGF21-
+activated PKA mediates phosphorylation of JMJD3, which is
+important for its nuclear localization and interaction with PPARα
+to transcriptionally activate autophagy. We further show that
+FGF21-mediated autophagy induction and lowering lipids in
+obese mice are dependent on JMJD3 and that the hepatic FGF21-
+JMJD3-autophagy axis is likely dysregulated in NAFLD patients.
+Results
+JMJD3 epigenetically activates liver autophagy gene networks.
+To explore epigenetic regulation of hepatic autophagy, we first
+examined whether selected histone modifications were altered
+by fasting in mouse liver. Levels of histone H3K27-me3 were
+markedly decreased in fasted mice, and levels of JMJD3, which
+activates genes by demethylating H3K27-me313, were increased
+after fasting, whereas expression of UTX H3K27 demethylase
+and EZH2 H3K27 methyltransferase was unchanged (Supplementary Fig. 1). These results suggest that JMJD3 may epigenetically activate hepatic autophagy in response to nutrient
+deficiency.
+To examine the role of JMJD3 in global regulation of hepatic
+genes, including autophagy genes, JMJD3 was downregulated
+specifically in the liver by infection of JMJD3-floxed mice with
+hepatocyte-targeting AAV-TBG-Cre15,16 (Fig. 1a), and effects of
+the downregulation on global gene expression and H3K27-me3
+levels were examined by RNA-seq and ChIP-seq, respectively.
+Expression of 846 genes was decreased by downregulation of
+JMJD3 (Fig. 1b, Supplementary Fig. 2a), which include genes
+involved in autophagy, Ulk1, Atg3, Atg7, and Lc3; a transcriptional activator of autophagy, Tfeb7; a lipase important for
+lipophagy, Atgl17; and a fasting-induced hepatokine promoting
+lipid catabolism, Fgf2118,19, and H3K27-me3 levels detected by
+ChIP-seq at nearly all of these genes were increased (Fig. 1c,
+Supplementary Fig. 2c). Remarkably, gene ontology (GO) analysis
+of 564 potential JMJD3 target genes with both decreased
+expression and increased levels of H3K27-me3 after downregulation of JMJD3, revealed that autophagy and lysosomal
+function are potentially regulated by JMJD3 in fasted mice
+(Fig. 1d, Supplementary Fig. 2b–d). Analysis of mRNA and
+H3K27-me3 levels for selected autophagy genes validated these
+genomic results (Fig. 1e, f) and occupancy of JMJD3 at these
+genes in fasted mice was decreased as expected by liver-specific
+downregulation of JMJD3 (Fig. 1g). These global analyses reveal a
+potential role for JMJD3 in epigenetic induction of hepatic
+autophagy.
+JMJD3 activates hepatic autophagy under nutrient deficiency.
+To examine whether induction of autophagy-network genes by
+JMJD3 actually leads to autophagy, we examined the effects of
+liver-specific downregulation or overexpression of JMJD3 on
+autophagic markers, the ratio of lipidated LC3-II to non-lipidated
+LC3-I, the levels of the autophagosome adapter p62, and
+lysosome-associated membrane protein (Lamp)1 and Lamp220.
+The ratio of hepatic LC3-II/I, the number of LC3 puncta, and
+Lamp1 and 2 levels were decreased, and p62 levels were increased
+by downregulation of JMJD3 in mice (Fig. 2a), indicative of
+decreased autophagy20. Conversely, adenoviral-mediated liverspecific expression of JMJD3 in mice resulted in the opposite
+effects (Fig. 2b). Similar effects of overexpression or downregulation of JMJD3 on the number of GFP-LC3 puncta were
+observed in Hepa1c1c7 cells (Fig. 2c).
+Downregulation of JMJD3 also decreased the LC3-II/I ratio
+and decreased the mRNA levels of genes involved in autophagy
+and lysosomal functions in primary mouse hepatocytes (PMH)
+(Supplementary Fig. 3a, b). Furthermore, while treatment with a
+lysosomal inhibitor, bafilomycin-A1, increased autophagy
+detected by increased LC3 puncta or ratios of LC3-II to LC3-I,
+overexpression of JMJD3 further increased autophagy while
+downregulation decreased it (Supplementary Fig. 3c–e). Similarly,
+treatment with an mTOR inhibitor increased the LC3-II/I ratio,
+and downregulation of JMJD3 decreased autophagy without
+reversing the phosphorylation of the mTOR target, pS6
+(Supplementary Fig. 3f). These results suggest that JMJD3
+activates autophagy independent of either lysosomal or mTOR
+action. Overall, these results, together with global studies (Fig. 1),
+demonstrate that JMJD3 transcriptionally activates hepatic
+autophagy under nutrient deprivation.
+ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z
+2 NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications
+
+JMJD3 promotes autophagy-mediated degradation of lipids.
+As key genes important for lipophagy, including Atgl, Tfeb, Pgc1α, and Fgf217,17,21, are direct targets of JMJD3 (Fig. 1, Supplementary Fig. 2), and JMJD3 promotes fatty acid βoxidation15, we further examined whether JMJD3 activates
+hepatic lipophagy.
+Overexpression of JMJD3 in Hepa1c1c7 cells increased the
+number of GFP-LC3 puncta that co-localized with BODIPYstained lipids and the opposite effects were observed after
+downregulation of JMJD3 (Fig. 2d). Furthermore, in electron
+microscopy studies, autophagic vesicles within lipid droplets
+were observed in mouse liver after adenoviral-mediated
+expression of JMJD3 (Supplementary Fig. 4a). Exogenous
+expression of JMJD3 in livers of mice fed a normal chow diet
+(ND) increased the LC3-II/I ratio (Fig. 2e), decreased hepatic
+lipid (Fig. 2f, Supplementary Fig. 4b) and triglyceride (TG)
+levels, and increased serum ketone body levels (Fig. 2g). In
+mice fed a high-fat diet (HFD), expression of JMJD3 resulted in
+increased autophagy and decreased hepatic TG levels, but these
+JMJD3-mediated effects were blunted in autophagy-defective
+Atg7-downregulated mice (Fig. 2e–g). These results suggest
+that JMJD3 promotes lipophagy, which contributes to
+decreased liver TG levels and that autophagy is important for
+the JMJD3-mediated lipid-lowering effects.
+Fasting-induced autophagy is blunted in FGF21-LKO mice.
+Fasting increased JMJD3 occupancy and decreased histone
+H3K27-me3 levels at selected genes promoting lipophagy,
+including Tfeb, Ulk1, Atgl, and Fgf21, in mice (Supplementary
+Fig. 5). As the fasting-induced FGF21 promotes lipid
+catabolism18,19 and lysosomal function21, we examined whether
+FGF21 has a role in JMJD3-induced autophagy using liverspecific FGF21-knockout (FGF21-LKO) mice22.
+The increased ratio of LC3-II/I, decreased p62 levels, and
+increased LC3 puncta (Fig. 3a,b), and induction of Tfeb, Pgc-1α,
+Ulk1, Atg7, Atgl, and JMJD3 (Fig. 3c) observed after fasting of
+control mice were attenuated in FGF21-LKO mice. These results
+suggest that physiological levels of endogenous FGF21 induced by
+fasting promote hepatic autophagy in an autocrine-manner.
+Consistent with these results, treatment with FGF21 increased
+JMJD3 occupancy and demethylation of H3K27-me3 at numerous autophagy genes, and increased expression of these genes
+(Fig. 3e, f).
+In hepatocytes, the increased levels of LC3, Lamp1/2, and
+JMJD3 expression in nutrient-deprived medium were attenuated
+by downregulation of FGF21 (Fig. 3g). Moreover, expression of
+JMJD3 increased the LC3-II/I ratio but this JMJD3-mediated
+effect was also blunted by FGF21 downregulation (Fig. 3h). These
+findings reveal a critical role for hepatic FGF21 in hepatic
+Liver ChIP; H3K27-me3 (n = 3) 
+IgG (AAV-GFP)
+IgG (AAV-Cre)
+H3K27-me3 (AAV-GFP)
+H3K27-me3 (AAV-Cre)
+% of H3
+** ** *
+**
+* **
+**
+*
+*
+0
+5
+10
+25
+20
+15 *
+Liver ChIP; JMJD3 (n = 3) 
+IgG (AAV-GFP)
+IgG (AAV-Cre)
+JMJD3 (AAV-GFP)
+JMJD3 (AAV-Cre)
+% of input
+** ** ** * ** ** ** ** *
+0
+0.5
+1
+2
+1.5
+**
+a bc
+d
+f g
+Rel mRNA level
+Jmjd3 f/f AAV-GFP
+AAV-TBG-Cre
+Sac 12 weeks
+Fasting
+(16 h)
+Ctsb
+20 -
+0 - 20 -
+0 -
+4 kb
+GFP
+Cre
+Tfeb
+GFP
+Cre
+10 -
+0 - 10 -
+0 - 5 kb
+Atg7
+30 -
+0 - 30 -
+0 -
+GFP
+Cre
+6 kb
+H3K27-me3 ChIP-seq
+Atgl
+30 -
+0 - 30 -
+0 -
+GFP
+Cre
+1 kb
+5 -
+0 -
+5 -
+0 -
+Fgf21 1 kb
+GFP
+Cre
+AAV-GFP AAV-Cre
+Gabarap
+Pink1
+Vegfa
+Prkar1a
+Gabarapl1
+Trp53inp2
+Ctsb
+Atg3
+Atg7
+Raf1
+Map1lc3b
+Ulk1
+Bag1
+Map1lc3a
+Nampt
+Dapk1
+Mapk9
+Jmjd3
+Bag3
+Rab24
+Nfe2l2
+Hdac6
+Bnip1
+Hsl
+Tnfsf10
+Pgc1
+Atg4c
+Tfeb
+Cxcr4
+Dapk2
+Atgl
+–1 1 –0.5 0 0.5
+Column Z-Score
+Heat map
+Autophagy
+gene
+regulators 
+Autophagy
+process
+&
+Lysosome
+Autophagy
+effectors
+Cpt1a
+Mcad
+Lipid
+catabolism
+RNA-seq
+Fgf21
+( Liver
+Jmjd3) 
+50 -
+37 -
+JMJD3 250 -
+150 -
+GFP
+Liver
+Cre GFP Cre
+Intestine
+AAV:
+ACTIN
+kd
+e
+GO ID Gene Ontology Term p-Value
+GO:0006955 Immune response 5.56E–32
+GO:0006629 Lipid metabolic process 8.76E–07
+GO:0006631 Fatty acid metabolic process 3.58E–05
+GO:0006914 Autophagy 6.01E–04
+GO:0005746 Mitochondrial respiratory chain 6.18E–04
+GO:0007623 Circadian rhythm 9.68E–04
+GO:0005764 Lysosome 4.49E–03
+GO:0016298 Lipase activity 1.13E–03
+GO:0031410 Cytoplasmic vesicle 3.08E–02
+Genes
+number
+282 5112 564
+Genes with increased
+H3K27-me3
+(5676)
+Downregulated
+genes
+(846) 
+Liver Jmjd3 downregulated mice (AAV-Cre)
+0
+Jmjd3
+Tfeb
+Ulk1
+Map1lc3a
+Atg3
+Atg7
+Bnip1Fgf21
+Atgl
+Hsl
+Pgc1
+Tfeb
+Ulk1
+Map1lc3a
+Atg3
+Atg7
+Bnip1
+Fgf21
+Atgl
+Hsl
+Pgc1
+Tfeb
+Ulk1
+Map1lc3a
+Atg3
+Atg7
+Bnip1Fgf21
+Atgl
+Hsl
+Pgc1
+1
+2
+3
+4
+5
+AAV-GFP
+AAV-Cre
+AAV-GFP
+AAV-Cre Fd Fs
+**
+NS * ** ** ** ** ** **
+** **
+Fig. 1 JMJD3 epigenetically activates hepatic autophagy-network genes. JMJD3-floxed mice were infected with AAV-TBG-Cre or control AAV-GFP for
+12 weeks, and then, fasted for 16 h. a Experimental outline (top) and the levels of JMJD3 detected by IB in the liver and intestine (bottom). b RNA-seq: heat
+maps of changes in mRNA levels of autophagy-related genes (n = 3 mice). c ChIP-seq: normalized H3K27-me3 peaks at hepatic genes involved in
+autophagic pathways (UCSC genome browser). d Venn diagram (top) of downregulated genes and genes with increased H3K27-me3 levels after liverspecific downregulation of JMJD3 and G/O analysis (bottom) of the hepatic genes that show both increased H3K27-me3 levels and decreased
+expression. e The mRNA levels of the indicated genes in liver of mice fasted for 16 h (Fs) or refed (Fd) for 6 h after fasted for 10 h were measured by qRTPCR (n = 5–10 mice). f, g ChIP assays: effects of the downregulation of JMJD3 on f H3K27-me3 levels and g occupancy of JMJD3 at the indicated genes
+(n = 3 mice). Source data are provided as a Source Data file. All values are presented as mean ± SD. Statistical significance was measured using the
+e–g two-way ANOVA with the Bonferroni post-test. *P < 0.05, **P < 0.01, and NS statistically not significant.
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z ARTICLE
+NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications 3
+
+autophagy induced either by nutrient deprivation or overexpression of JMJD3.
+JMJD3 has a critical role in FGF21-induced hepatic autophagy.
+As JMJD3 epigenetically induces hepatic expression of Fgf21 in
+response to fasting15, we further examined whether JMJD3 is also
+important for FGF21-induced hepatic autophagy. FGF21 treatment in mice increased the LC3II/I ratio and Lamp1/2 levels
+(Fig. 4a), LC3 puncta (Fig. 4b), and expression of Tfeb, Ulk1, and
+Atg7 (Fig. 4c), but these FGF21-mediated effects on autophagy
+were markedly blunted by downregulation of hepatic JMJD3.
+Consistent with these findings in mice, in primary mouse hepatocytes (PMH), FGF21 treatment increased p-ERK levels and the
+LC-II/I ratio and decreased p62 levels (Supplementary Fig. 6a).
+Furthermore, treatment with FGF21, but not rapamycin,
+increased expression of JMJD3 (Supplementary Fig. 6b). These
+results indicate that JMJD3 is important for hepatic autophagy
+induced by FGF21. As JMJD3 induces FGF21 expression and
+FGF21 signaling activates JMJD3, which is required for FGF21
+induction of autophagy, these findings reveal an intriguing
+feedforward loop between FGF21 and JMJD3 to activate hepatic
+lipophagy upon nutrient deprivation.
+FGF21 can directly act on hepatocytes and induce lipophagy.
+FGF21 lowers TG levels in liver, but it remains controversial
+whether the liver is a direct target organ for the FGF21 action or
+** **
+a
+LC3 
+p62
+LC3 
+p62
+AAV-GFP AAV-Cre
+8
+4
+2
+0
+6
+Puncta #/cell
+**
+AAV-GFP
+AAV-Cre
+( Jmjd3) 
+c
+75 -
+50 -
+250 -
+150 -
+50 -
+37 -
+10 -
+15 -
+GFP Jmjd3 Ad:
+1.0 0.8 1.6 7.5 10 11
+1.0 1.1 1.4 0.8 0.4 0.6
+C57BL/6
+1.0 0.5 0.7 3.6 3.7 2.6
+kd
+Hepa1c1c7 (HBSS)
+Control Jmjd3 Jmjd3
+Control
+20
+0
+60
+40
+GFP puncta/cell
+GFP-LC3 GFP-LC3
+Control siJmjd3
+GFP-LC3 GFP-LC3 siJmjd3
+Control
+GFP puncta/cell 20
+0
+30
+10
+b
+f g
+d e
+j
+HBSS
+Bodipy
+Bodipy
+Merge
+Merge
+GFP-LC3
+GFP-LC3
+siControl siJmjd3
+C57BL/6 Ad-GFP Ad-Jmjd3
+1.0 0.9 1.5 14 12 10 0.7 0.7 0.9 0.7 0.6 0.6
+LC3-I
+100 -
+75 -
+250 -
+150 -
+50 -
+37 -
+10 -
+15 -
+JMJD3
+ACTIN
+LC3-II
+ATG7
+Ratio
+(II/I) 
+1.0 0.8 0.7 17 16 12 0.9 1.1 0.8 1.1 0.7 0.7
+Ad: GFP Jmjd3 GFP Jmjd3
+Ad-shGFP Ad-shAtg7 
+C57BL/6 HFD
+Ad:
+Ad-shGFP Ad-shAtg 7
+ND 
+GFP Jmjd3 Jmjd3 GFP
+HFD C57BL/6
+ORO
+ORO
+H&E
+LC3-I
+100 -
+75 -
+250 -
+150 -
+50 -
+37 -
+10 -
+15 -
+JMJD3
+ACTIN
+LC3-II
+ATG7
+Ratio
+(II/I)
+Ad: GFP Jmjd3 GFP Jmjd3
+Ad-shGFP Ad-shAtg 7 
+C57BL/6 ND
+**
+60
+40
+0
+100
+20
+80
+NS
+**
+Ad: GFP
+shAtg7
+GFP
+shAtg7
+GFP
+shAtg7
+GFP
+shAtg7
+Ad:
+200
+100
+0
+300
+** *
+ND HFD
+**
+Liver TG
+(mg/g tissue)
+Liver TG
+(mg/g tissue)
+1
+0.5
+0
+1.5 ** **
+3
+2
+0
+4
+ND HFD
+Serum β-HDB
+(mM)
+Serum β-HDB
+(mM)
+Ad: Ad:
+siJmjd3
+siControl
+6
+2
+0
+8
+4
+Colocalization of puncta
+with lipid (#/cell) 
+kd kd
+AAV-GFP AAV-Cre
+LC3-II
+LC3-I
+10 -
+15 -
+1.0 1.1 1.1 0.9 0.9 0.1 0.1 0.1 0.2 0.1 Ratio
+(II/I)
+ACTIN 50 -
+37 -
+p62
+75 -
+50 -
+1.0 2.7 0.6 1.7 1.9 6.5 5.6 6.0 5.3 7.0
+kd ( Jmjd3) 
+Jmjd3 f/f mice
+LAMP1
+LAMP2
+150 -
+100 -
+150 -
+100 -
+Colocalization of puncta
+with lipid (#/cell) 
+Jmjd3
+Control
+15
+5
+0
+20
+10
+HBSS
+Bodipy
+Bodipy
+Merge
+Merge
+GFP-LC3
+GFP-LC3
+Control Jmjd3
+Hepa1c1c7
+-
+-
+1
+i
+**
+**
+**
+**
+JMJD3
+p62
+ACTIN
+LC3-I
+LC3-II
+Ratio
+(II/I)
+Fig. 2 JMJD3 promotes hepatic autophagy, including lipophagy. a The indicated hepatic proteins were detected by IB in JMJD3-floxed mice infected with
+AAV-TBG-Cre or AAV-GFP for 12 weeks and fasted for 16 h. Relative band intensities for p62 and the LC3-II/LC3-I ratios are below the blots (left, n = 5
+mice). LC3 and p62 in representative images of liver sections detected by IHC (middle) and numbers of LC3 puncta/cell (right, n = 10 hepatocytes) (scale
+bar = 10 μm for LC3, 50 μm for p62). b Levels of the indicated hepatic proteins were determined by IB in C57BL/6 mice infected with Ad-empty (GFP) or
+Ad-JMJD3 for 4 weeks and fasted for 8 h (n = 3 mice). c, d Hepa1c1c7 cells were transfected with expression plasmids or JMJD3 siRNA as indicated for 72
+h and cultured in HBSS for 2 h. c Representative confocal images and the average number of GFP-LC3-II puncta/cell (right, n = 10 cells) are shown (scale
+bar = 5 μm). d Cells were stained for lipid droplets with BODIPY (red) and imaged by confocal microscopy. Co-localization of GFP-LC3 puncta and BODIPY
+in the merged image is indicated by white arrows. The number of fluorescent puncta that co-localized with lipid staining (right, n = 20 cells) are shown
+(scale bar = 5 μm). e–g C57BL/6 mice were fed a normal chow diet (ND) or high-fat diet (HFD) for 8 weeks and then were injected with adenoviruses as
+indicated for 4 weeks. e Hepatic levels of the indicated proteins were measured by IB (n = 3 mice). The ratios of band intensities for the LC3-I/LC3-II
+relative to those in the first lane are shown below the blot. f Lipids in liver sections stained with Oil Red O (ORO) and H&E (scale bar = 50 μm). g Levels of
+hepatic triglycerides (TG) and serum β-hydroxybutyrate (β-HDB) (n = 5 mice). Source data are provided as a Source Data file. All values are presented as
+mean ± SD. Statistical significance was measured using the (a, c, d) Mann–Whitney test or g two-way ANOVA with the Bonferroni post-test. *P < 0.05,
+**P < 0.01, and NS statistically not significant.
+ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z
+4 NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications
+
+indirectly targeted through the CNS18,19,23,24. We, thus, examined
+whether FGF21-mediated autophagy observed in mice can also
+occur in isolated hepatocytes. FGF21 treatment increased
+autophagy and decreased cellular TG levels in PMH (Fig. 4d, e),
+and increased autophagy gene expression (Supplementary
+Fig. 6c). Each of these FGF21-mediated effects was blunted by
+downregulation of JMJD3. Furthermore, FGF21 treatment
+increased co-localization of LC3 puncta and lipids in Hepa1c1c7
+cells, but these effects were blunted by JMJD3 downregulation
+(Fig. 4f). These results suggest that FGF21 can directly act on
+hepatocytes and induce lipophagy, which is associated with
+decreased TG levels.
+PPARα is a key component of the FGF21-JMJD3-autophagy
+axis. We next examined the mechanism by which JMJD3 transmits the FGF21 signal to epigenetically activate autophagy genes.
+We first identified transcriptional factors that might recruit
+JMJD3 to autophagy genes by examining candidate factors that
+are known to promote autophagy, PPARα7,9, CREB8, and
+FOXO112. The increase in the LC3-II/I ratio induced by JMJD3
+expression was largely blocked by downregulation of PPARα,
+while a substantial increase was still observed after downregulation of CREB or FOXO1 (Supplementary Fig. 7a). Comparative analyses of our RNA-seq data (Fig. 1b, Supplementary
+Fig. 2a) with published PPARα microarray25 or ChIP-seq9 data
+revealed that ~70% of hepatic genes downregulated in JMJD3-
+depleted mice had binding peaks for PPARα (Fig. 5a) and ~70%
+of the hepatic genes downregulated in PPARα-KO mice also had
+increased levels of histone H3K27-me3 (Supplementary Fig. 7b).
+These genes, potentially regulated by both PPARα and JMJD3,
+were involved in autophagy, lysosome, and lipid catabolism based
+on GO analysis (Fig. 5a).
+To determine the importance of PPARα in the FGF21-JMJD3-
+autophagy axis, we utilized PPARα-KO mice. Fasting increased
+LC3-II/I ratios and autophagy gene expression in control mice,
+but these effects were blunted in PPARα-KO mice (Fig. 5b).
+Conversely, activation of PPARα by treatment with an agonist,
+a b c
+e
+ACTIN 50 -
+37 -
+LC3-I
+LC3-II
+p62
+10 -
+15 -
+75 -
+50 -
+Fd 
+Fgf21 f/f Fgf21-LKO 
+Fs Fd Fs 
+1.0 0.7 0.2 17 22 22 0.9 0.4 0.2 1.6 1.1 1.9 Ratio
+(II/I)
+1.0 2.2 2.9 0.2 0.1 0.1 1.6 2.1 2.7 2.2 1.7 1.9
+kd
+Fd Fs
+15
+10
+5
+0
+f/f
+LKO
+Puncta #/cell
+** ** LC3 LC3 LC3 LC3 
+Fd Fs Fd Fs
+Fgf21 f/f Fgf21-LKO
+p62 p62 p62 p62 
+Fgf21 f/f (Fd)
+Fgf21 f/f (Fs)
+Fgf21-LKO (Fd)
+Fgf21-LKO (Fs)
+Rel mRNA level
+**
+**
+10
+2
+0
+8
+4
+6 **
+** **
+** **
+**
+**
+**
+**
+**
+Tfeb Atgl Jmjd3 Pgc1α Ulk1 Atg7
+Rel mRNA level 4
+2
+0
+6
+Veh FGF21
+**
+NS
+** **
+**
+**
+**
+**
+**
+** **
+C57BL/6 
+f
+% of input
+0.5
+0
+Tfeb
+Ulk1
+Map1l3a
+Atg3
+Atg7
+Bnip1
+Fgf21
+Atgl
+Hsl
+Pgc1 Tfeb
+Ulk1
+Map1l3a
+Atg3
+Atg7
+Bnip1Fgf21
+Atgl
+Hsl
+Pgc1
+Jmjd3
+
+Tfeb
+Ulk1
+Map1l3a
+Atg3
+Atg7
+Bnip1Fgf21
+Atgl
+Hsl
+Pgc1
+1
+1.5
+2
+**
+**
+*
+*
+**
+**
+** **
+**
+Liver ChIP; JMJD3 (n = 3) 
+IgG (Veh)
+IgG (FGF21)
+JMJD3 (Veh)
+JMJD3 (FGF21)
+**
+C57BL/6 
+g
+Full HBSS Full HBSS (1 h)
+PMH siCtl siFgf 21
+50 -
+37 -
+kd
+10 -
+15 -
+150 -
+100 -
+150 -
+100 -
+250 -
+150 -
+37 -
+25 -
+d
+Veh FGF21 
+LC3-I
+LC3-II 10 -
+15 -
+ACTIN 50 -
+37 -
+p62 75 -
+50 -
+1.0 1.3 2.0 13 12 18 Ratio (II/I)
+1.0 1.3 1.0 0.6 0.5 0.2
+kd
+h
+Full S/F
+Ad: Empty 
+siRNA: Ctl
+Jmjd3 
+Ctl
+LC3-I 
+JMJD3 
+Jmjd3 
+Fgf21
+Full S/F Full S/F
+ACTIN
+FGF21 
+PMH
+250 -
+150 -
+LC3-II 10 -
+15 -
+50 -
+37 -
+37 -
+25 -
+kd
+** ** *
+**
+**
+**
+*
+** *
+% of H3
+0
+5
+10
+15
+Liver ChIP; H3K27-me3 (n = 3) 
+IgG (Veh)
+IgG (FGF21)
+H3K27-me3 (Veh)
+H3K27-me3 (FGF21)
+**
+C57BL/6 
+JMJD3
+FGF21
+ACTIN
+LAMP2
+LAMP1
+LC3-I
+LC3-II
+Fig. 3 Fasting-induced FGF21 promotes hepatic autophagy. a–c FGF21 floxed or FGF21-LKO mice were fasted (Fs) for 24 h, or refed (Fd) for 24 h after
+fasting. a LC3 and p62 levels in liver extracts detected by IB. The ratios of the LC3-II/I and p62 band intensities are shown below the blot. (n = 3 mice).
+b LC3 or p62 was detected by IHC analysis. Representative images of liver sections and the average number of LC3-II puncta/cell (right, n = 10
+hepatocytes) are shown (scale bar = 10 μm for LC3, 50 μm for p62). c The mRNA levels of the indicated genes measured by q-RTPCR (n = 5–8 mice).
+d The indicated hepatic proteins detected by IB with the ratios of the LC3-II/I with the band intensities of p62 relative to the first lane shown below the blot
+(n = 3 mice). e, f C57BL/6 mice were treated with FGF21 (0.1 mg/kg) for 3 h. e Effects of FGF21 on occupancy of JMJD3 (left) and H3K27-me3 levels
+(right) at the indicated genes (n = 3 mice). f Hepatic mRNA levels measured by q-RTPCR (n = 6–8 mice). g Effects of siRNA-mediated downregulation of
+FGF21 on levels of indicated proteins in PMH incubated with M199 or HBSS medium. h PMH were transfected with siFGF21 or control RNA for 48 h and
+infected with Ad-JMJD3 or Ad-empty for 24 h. Cells were cultured in serum-free or complete M199 medium for 12 h and levels of the indicated proteins
+were determined by IB (n = 2 culture dishes). Source data are provided as a Source Data file. All values are presented as mean ± SD. Statistical significance
+was measured using the f Mann–Whitney test or b, c, e two-way ANOVA with the Bonferroni post-test. *P < 0.05, **P < 0.01, and NS statistically not
+significant.
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z ARTICLE
+NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications 5
+
+WY14643, increased LC3-II/I ratios and expression of autophagy
+genes in a JMJD3-dependent manner in PMH (Fig. 5c) and
+increased the interaction of JMJD3 with PPARα (Supplementary
+Fig. 7c). The effects of FGF21 treatment (Fig. 5d) or JMJD3
+expression (Fig. 5e, Supplementary Fig. 7d) on autophagy were
+also blunted in PPARα-KO mice. Further, FGF21 treatment
+increased co-occupancy of JMJD3 and PPARα at Tfeb, Atg7, and
+Atgl genes (Fig. 5f). Consistent with these results, the interaction
+of JMJD3 with PPARα was increased after treatment with FGF21,
+but not with rapamycin (Supplementary Fig. 7e, f). In reporter
+assays, expression of JMJD3 enhanced PPARα-mediated transactivation of Tfeb-luc and Atg7-luc (Fig. 5g). Collectively, these
+findings demonstrate that PPARα is a key component of the
+induction of autophagy network genes mediated by the fastingtriggered FGF21-JMJD3 axis.
+JMJD3 phosphorylation at T1044 is critical for its function. We
+further investigated the mechanism by which FGF21 signaling
+activates JMJD3. In mass spectrometry analysis, Thr-1044 was the
+only phosphorylation site detected in JMJD3 from FGF21-treated
+hepatocytes (Fig. 6a, Supplementary Fig. 8a). Indeed, p-Thr
+JMJD3 levels for WT-JMJD3, but not T1044A-JMJD3, were
+increased by FGF21 treatment in PMH (Fig. 6b, Supplementary
+Fig. 8b). These results indicate that JMJD3 is phosphorylated at
+Thr-1044 in response to FGF21.
+We next examined the role of the FGF21 signal-induced
+JMJD3 phosphorylation in induction of autophagy genes. JMJD3
+was detected in the cytoplasmic and mitochondrial fractions and
+FGF21 treatment increased nuclear localization of JMJD3 in
+PMH (Supplementary Fig. 8c, d) and also in Hepa1c1c7 cells
+(Fig. 6c). Further, FGF21 treatment increased the interaction of
+JMJD3 with PPARα, the expression of Atgl, Atg7, and Tfeb and
+the LC3 II/I ratio (Fig. 6d, Supplementary Fig. 8e, f). These
+FGF21-mediated effects were blocked by the p-defective T1044A
+mutation of JMJD3, while effects similar to those in FGF21-
+treated cells were observed even in vehicle-treated cells with a pmimic T1044E mutation (Fig. 6c, d, Supplementary Fig. 8d–f).
+Notably, FGF21-induced phosphorylation of JMJD3 was detected
+in both the cytoplasm and nucleus of FGF21-treated cells, while
+the interaction of JMJD3 with PPARα was detected only in the
+nucleus (Supplementary Fig. 8g). Collectively, these results
+indicate that FGF21-induced phosphorylation of JMJD3 is critical
+for its activation and for the induction of autophagy genes.
+FGF21-activated PKA mediates the phosphorylation of JMJD3.
+Analysis of JMJD3 sequence adjacent of Thr-1044 revealed motifs
+for several kinases, including PKA, as well as, a well-known
+FGF21
+Veh
+15
+10
+5
+0
+GFP
+Cre
+Puncta #/cell AAV:
+** ** LC3 LC3 LC3 LC3 
+AAV-GFP AAV-Cre
+Veh FGF21 FGF21 Veh
+p62 p62 p62 p62 
+a b c
+AAV-GFP (Veh)
+AAV-GFP (FGF21)
+AAV-Cre(Veh)
+AAV-Cre(FGF21)
+Rel mRNA level 4
+1
+0
+3
+2
+5
+** **
+Tfeb Ulk1 Atg7
+**** ** **
+Jmjd3 f/f Jmjd3 f/f Jmjd3 f/f
+250 -
+150 - JMJD3
+ACTIN
+50 -
+37 -
+LC3-I
+LC3-II 10 -
+15 -
+Veh
+AAV-GFP AAV-Cre
+FGF21 Veh FGF21
+1.0 1.4 0.6 11 10 9 0.3 0.3 0.3 0.3 0.4 0.3 Ratio (II/I)
+kd
+LAMP1
+LAMP2
+150 -
+100 - 150
+100 -
+d Jmjd3 f/f PMH
+50 -
+37 -
+10 -
+15 -
+75 -
+50 -
+IB: ACTIN
+IB: LC3-I/II
+IB: p62
+Veh
+GFP Cre
+FGF21 Veh FGF21
+AAV:
+kd
+FGF21
+Veh
+Triglyceride
+(µg/mg protein) 80
+20
+0
+GFP
+Cre
+60
+40
+**
+NS
+AAV: ( Jmjd3)
+( Jmjd3)
+( Jmjd3)
+( Jmjd3)
+( Jmjd3)
+e Jmjd3 f/f PMH f
+**
+**
+30
+0
+siControl
+siJmjd3
+40
+10 **
+Colocalization of puncta
+with lipid (#/cell)
+Merge
+Bodipy
+Merge Merge Merge
+GFP-LC3
+Veh FGF21
+siControl siJmjd3
+GFP-LC3 GFP-LC3 GFP-LC3
+Bodipy Bodipy Bodipy
+Veh FGF21
+Hepa1c1c7
+20
+FGF21
+Veh
+Fig. 4 FGF21-induced hepatic autophagy is largely dependent on JMJD3. a–c JMJD3-floxed mice were infected with AAV-TBG-Cre or AAV-GFP for
+12 weeks (n = 6 mice/group), and injected i.v. with vehicle or FGF21 (0.1 mg/kg) for 3 h. a The indicated hepatic proteins were detected by IB (n = 3 mice).
+b LC3 or p62 was detected in liver sections by IHC and the number of LC3-II puncta/cell were quantified (right, n = 10 hepatocytes) (scale bar = 10 μm for
+LC3, 50 μm for p62). c Hepatic mRNA levels of the indicated autophagy-related genes measured by q-RTPCR (n = 5 mice). d, e PMH from JMJD3-floxed
+mice were infected with AAV-TBG-GFP or AAV-TBG-Cre for 72 h, and treated with vehicle or FGF21 (100 ng/ml) for 12 h. d Levels of the indicated
+proteins measured by IB (n = 3 culture dishes). e Levels of cellular triglycerides (TG) (n = 10 culture dishes). f Hepa1c1c7 cells were transfected with GFPLC3 plasmid and with control (siC) or JMJD3 siRNA as indicated. After 72 h, cells were supplemented with 400 μM oleic acid for 6 h before incubation in
+serum-free DMEM containing vehicle or 100 ng/ml FGF21 for 12 h. Cells were stained for lipid droplets with BODIPY (red) and imaged by confocal
+microscopy. Co-localization of GFP-LC3 puncta (green) and BODIPY in the merged images is indicated by white arrows. The average number/cell (right,
+n = 20 cells) of fluorescent puncta that co-localized with lipid staining is shown (scale bar = 5 μm). Source data are provided as a Source Data file. All
+values are presented as mean ± SD. Statistical significance was measured using the (b, c, e, f) two-way ANOVA with the Bonferroni post-test. **P < 0.01,
+and NS statistically not significant.
+ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z
+6 NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications
+
+FGF21 signaling kinase, ERK18,19 (Supplementary Fig. 9a). Fasting overnight increased the phosphorylation of JMJD3 and both
+PKA and ERK in control mice, but not in FGF21-LKO mice
+(Fig. 6e), consistent with mediation of the phosphorylation by
+fasting-induced FGF21. Indeed, FGF21 treatment in mice
+increased phosphorylation of JMJD3 and both PKA and ERK
+(Fig. 6f) and increased the interaction of JMJD3 with PKA, but
+not with ERK (Supplementary Fig. 9b). In in vitro kinase assays,
+PKA, but not ERK, phosphorylated WT-JMJD3, but not T1044AJMJD3 (Fig. 6g) and in GST pull down assays, PKA directly
+interacted with JMJD3 through the domain containing Thr-1044
+(Fig. 6h, Supplementary Fig. 9c). Importantly, in PMH, FGF21-
+induced phosphorylation of JMJD3 was significantly blunted by
+treatment with an inhibitor of PKA, but not of MEK/ERK
+14,561
+PPARα-cistrome
+(15,117)
+616 230 Genes
+number
+Downregulated
+genes in Jmjd3
+depleted mice
+(846) 
+d
+Ratio (II/I)
+50 -
+37 -
+10 -
+15 -
+ACTIN
+LC3-I
+LC3-II
+Fd Fs Fd Fs
+C57BL/6 Pparα-KO 
+Pparα-KO Pparα-KO 
+Pparα-KO (Fd) 
+Pparα-KO (Fs) 
+Pparα-KO (Veh) 
+Pparα-KO (FGF21) 
+1.0 2.6 2.4 24 28 25 2.8 2.4 1.8 1.8 1.3 2.7
+WT(Fd)
+WT(Fs)
+1
+Rel mRNA level 4
+0
+2
+6 **** **** ****
+Tfeb Atgl Atg7
+b c
+e
+WY14643:
+15 LC3-I
+10
+AAV-GFP
+ACTIN
+50
+37
+JMJD3
+250
+150
+1.0 1.4 0.9 9 11 8
+AAV-Cre
+kd – + − +
+LC3-II
+0.4 0.6 0.5 0.9 1.2 1.5 Ratio (II/I)
+( Jmjd3) 
+Jmjd3 f/f PMH
+WT (Veh)
+WT (FGF21)
+Rel mRNA level 4
+0
+2
+6 ****
+****
+****
+Tfeb Atgl Atg7
+GO ID Gene ontology term p-Value
+GO:0006955 Immune response 1.45E–33
+GO:0048583 Response to stimulus 5.25E–20
+GO:0006629 Lipid metabolic process 1.28E–10
+GO:0006631 Fatty acid metabolic process 1.28E–07
+GO:0034440 Lipid oxidation 3.77E–05
+GO:0031410 Cytoplasmic vesicle 6.66E–05
+GO:0006914 Autophagy 8.84E–05
+GO:0005764 Lysosome 1.57E–04
+GO:0016298 Lipase activity 9.18E–03
+a
+FGF21
+ACTIN 50 -
+37 -
+LC3-I
+LC3-II 10 -
+15 -
+C57BL/6 
+1.0 0.8 1.3 12 15 16 1.3 1.0 1.1 0.9 1.3 1.3 Ratio (II/I)
+− + − +
+AAV-GFP(Veh)
+AAV-GFP(WY14643)
+AAV-Cre(Veh)
+AAV-Cre(WY14643)
+Rel mRNA level
+Tfeb Atgl Atg7
+6
+0
+2
+8
+4
+****
+**** ****
+Ad-GFP
+Ad-Jmjd3
+Puncta #/cell
+** ** 25
+15
+5
+0
+C57BL/6
+Pparα-KO
+10
+20
+Ad: GFP GFP Jmjd3 Jmjd3
+C57BL/6
+p62 p62 p62 p62 
+LC3 LC3 LC3 LC3 Rel luciferase activity 
+f g
+0.02
+0
+0.04
+0.06 **
+** Atg7
+IgG JMJD3
+% of input
+0.02
+0
+0.08
+0.04
+0.06
+**
+** Tfeb
+2nd Ab: IgG JMJD3
+Tfeb, Atg7, Atgl PPARα
+siC (Veh) JMJD3
+siC (FGF21)
+siPparα (Veh)
+siPparα (FGF21)
+Re-ChIP; (1st Ab: PPAR)
+PMH
+0.02
+0
+0.06
+0.04
+** Atgl **
+IgG JMJD3
+2
+0
+6
+4 **
+**
+****
+JMJD3
+PPARα
+siPparα – –
+–
+– – +
+– +
++
++ + –
+– –
+– – + +
+Tfeb_luc
+Tfeb(PPRE)_luc X
+Atg 7_luc
+Atg 7(PPRE)_luc X
+– –
+–
+– – +
+– +
++
++ + –
+– –
+– – + +
+4
+0
+12
+8 **
+**
+****
+– –
+–
+– – +
+– +
++
++ + –
+– –
+– – + + – –
+–
+– – +
+– +
++
++ + –
+– –
+– – + +
+Fig. 5 JMJD3 coactivates PPARα to induce hepatic autophagy. a Venn diagram (top) for genes with PPARα cistrome detected by ChIP-seq and hepatic
+genes inhibited by liver JMJD3 downregulation (as shown in Fig. 1b). G/O analysis (bottom) of the overlapping genes. b WT or PPARα-KO mice were
+fasted (Fs) for 24 h or refed for 24 h (Fd) after fasting. Levels of LC3 in liver extracts measured by IB with the LC3-II/I ratios shown below the blot (top, n =
+3 mice). The mRNA levels of indicated genes (bottom, n = 5 mice). c PMH from JMJD3-floxed mice were infected with AAV-GFP or AAV-Cre for 72 h and
+treated with vehicle or WY14643 for 12 h. The indicated proteins were detected by IB with the LC3-II/I ratios shown below the blot (top, n = 3 culture
+dishes). The mRNA levels of indicated genes (bottom, n = 5 mice). d C57BL/6 or PPARα-KO mice were fasted for 1 h and treated with vehicle or 0.1 mg/kg
+FGF21 for 3 h. Hepatic levels of LC3 measured by IB with the LC3-II/I ratios shown below the blot (top, n = 3). The mRNA levels of indicated genes
+(bottom, n = 5 mice). e LC3 and p62 detected by IHC. Representative images of liver sections (left) and the average number of puncta/cell (right, n = 10
+hepatocytes) are shown (scale bar = 10 μm for LC3, 50 μm for p62). f re-ChIP: Hepatocytes were transfected with PPARα siRNA, 72 h later, cells were
+treated with FGF21 for 2 h. PPARα was immunoprecipitated followed by immunoprecipitation of JMJD3, and enrichment of Tfeb, Atg7, and Atgl sequences
+was determined (n = 3 culture dishes). g Hepa1c1c7 cells were transfected with a luciferase reporter containing the PPARα binding site or mutated site
+from Tfeb or Atg7 and with plasmids and siRNAs as indicated. After 36 h, the cells were treated with 50 μM WY14643 and 100 ng/ml FGF21 overnight.
+Luciferase activities were normalized to β-galactosidase activities (n = 4 culture dishes). Source data are provided as a Source Data file. b–g Values are
+presented as mean ± SD. Statistical significance was measured using the g one- or b–f two-way ANOVA with the Bonferroni post-test. **P < 0.01.
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z ARTICLE
+NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications 7
+
+(Fig. 6i). These findings indicate that FGF21 signal-activated PKA
+mediates the phosphorylation of JMJD3, which is important for
+induction of autophagy.
+Beneficial FGF21 effects on fatty liver are JMJD3-dependent.
+FGF21 and its analogs have beneficial lowering lipid effects in obese
+animals and humans26–28. Knowing that JMJD3 promotes hepatic
+autophagy, including lipophagy (Fig. 2), and mitochondrial fatty
+acid oxidation15, and importantly, FGF21-induced autophagy is
+dependent on JMJD3 (Fig. 4), we next asked whether JMJD3 has a
+role in mediating the lipid-lowering effects of FGF21. Administration of FGF21 to high-fat diet (HFD) obese mice decreased
+body weight without significant changes in food intake and
+decreased the size of liver (Fig. 7a). Levels of hepatic lipids and
+TG (Fig. 7b) and long-chain acylcarnitine were decreased,
+d
+c
+kd
+− + − + − + − + − + − +
+IB: f-JMJD3
+-
+-
+-
+-
+Input
+IB: PPARα
+-
+-
+IB: PPARα
+FGF21 75
+50
+75
+50
+250
+150
+IP:M2 (f-JMJD3) IP:IgG
+JMJD3/PPARα interaction PMH
+Vehor
+FGF21 
+30 min PMH
+flag-Jmjd3 LC-MS/MS
+analysis 2 days
+P-value: 2.1e–06
+JMJD3
+P
+Thr-1044
+a
+FGF21
+ACTIN
+f-JMJD3 -
+-
+-
+-
+WT T1044A
+250
+150
+-
+-
+Input
+Jmjd3:
+− + − +
+IP: f-JMJD3 IB: p-Thr
+p-Thr
+JMJD3
+JMJD3 Thr-phosphorylation
+kd
+250
+150
+50
+37
+PMH
+b
+f i
+FGF21
+e
+IB: ACTIN
+IB: JMJD3
+IP: JMJD3 IB: p-Thr JMJD3
+IP: f-JMJD3 IB: p-Thr
+Input
+-
+-
+-
+-
+-
+-
+Input
+Fd Fs
+Fgf21 f/f
+Fd Fs
+Fgf21-LKO
+JMJD3 Thr-phosphorylation
+kd
+250
+150
+250
+150
+50
+37
+PKA/ERK phosphorylation
+p-PKA
+(longer
+exposure)
+p-ERK
+PKA
+ERK
+-
+-
+-
+-
+-
+-
+-
+-
+p-PKA
+-
+-
+Fd Fs
+Fgf21 f/f
+Fd Fs
+Fgf21-LKO
+kd
+50
+37
+50
+37
+50
+37
+50
+37
+50
+37
+Hepa1c1c7
+f-JMJD3 f-JMJD3 f-JMJD3 f-JMJD3 f-JMJD3 f-JMJD3
+Merge Merge Merge Merge Merge Merge
+Veh FGF21 Veh FGF21 Veh FGF21
+Jmjd3: WT T1044A T1044E 
+FGF21
+WT T1044A T1044E
+Atg7
+− + − + − +
+**
+NS
+**
+PMH
+p-Thr
+JMJD3
+JMJD3 -
+-
+kd
+-
+-
+FGF21 (3 h)
+250
+150
+250
+150
+IP:JMJD3
+–+–+
+lgG
+JMJD3 Thr-phosphorylation 
+g
+HepG2 transfect w/ 
+f-Jmjd3(WT) or T1044A mutant
+f-JMJD3 immunoprecipitation
+-
+-
+IB: p-Thr
+IB: f-JMJD3
+-
+-
+strip
+kd
+250
+150
+250
+150
+Jmjd3
+ATP
+PKA
+ERK1/2
+– +
+–
+–
+–
+– –
+– –––
+– –
+– ––
++
++++
++ + +
++ +
+In vitro kinase assay
+4
+0
+6
+2
+Atgl
+0
+6
+2
+4
+− + − + − +
+NS
+** **
+Rel mRNA level
+C57BL/6
+p-ERK
+ERK
+-
+-
+-
+-
+kd Veh FGF21 
+50
+37
+50
+37
+50
+37
+50
+37
+p-PKA
+PKA
+-
+-
+-
+-
+− +
+-
+-
+-
+-
+IB: f-JMJD3
+kd
+250
+150
+250
+150
+PMH
+− +
+kd
+− + − +
+0.0
+0.5
+1.0
+1.5
+p-Thr/JMJD3
+** ** NS
+Veh H89 PD98059
+–FGF21
++FGF21
+1
+GST-JMJD3
+IB: PKA
+IB: ERK1/2
+-
+-
+-
+-
+Input(10%)GST
+1
+50
+37
+50
+37
+23 4
+GST pull-down
+3
+450 840 1200 1641
+JMJD3
+domain 
+FL
+1
+2
+4
+GST
+Thr-1044
+h
+y28
+y27
+y26
+y25
+y24
+y23
+y22
+y21
+y18
+y16
+y15
+y14
+y13
+y12
+y11
+y10
+y9
+y6y4
+b3
+b5
+b6
+b7
+b8
+b9
+b12
+b14b15
+b16
+b17b18
+b21
+b24
+b25
+b26
+V K
+100
+80
+60
+40
+% of base peak
+20
+0
+500
+b (3)-98
+b (6)-98
+bo (6)-98
+y (28)-98**
+y (4)y (10)**y* (11)**
+b (5)
+y* (13)**
+b (18)-98
+y (16)**
+bo (17)**
+yo (28)**
+y0 (14)**
+y (18)**
+y (21)**
+y (23)**
+y (25)**
+y (27)**
+y (24)**
+y (22)**
+y (12)
+b (12)
+b (14)
+y (15)
+y (16)y (17)
+b (18)
+b (9) 1000
+m/z
+1500 Observed
+0.0e+0
+2.0e+3
+4.0e+3
+6.0e+3
+8.0e+3
+Ion current
+1.0e+4
+1.2e+4
+T P T A P A PPP P A A P A A Q P T P P S A P V P G K K
+Phos
+Veh
+WT
+WT
+T1044AT1044E
+WT
+T1044A
+T1044E
+WT
+WTWTWTT1044AT1044A
+Veh (lgG)
+H89
+(PKA
+inhibitor)
+PD98059
+(MEK/ERK
+inhibitor)
+Fig. 6 Phosphorylation of JMJD3 by FGF21-activated PKA is critical for autophagy induction. a Experimental outline (top) and spectrum from LC-MS/
+MS analysis identifying a JMJD3 peptide containing phosphorylated Thr-1044 (bottom). b PMH were transfected with plasmids as indicated, and after
+48 h, were treated with vehicle or FGF21 (100 ng/ml) for 30 min. p-Thr-JMJD3 levels were detected by IP/IB and input protein by IB (n = 3 culture dishes).
+c Hepa1c1c7 cells were transfected with JMJD3 expression plasmids and treated with vehicle or FGF21 for 30 min. Flag-JMJD3 (green) was detected by
+immunofluorescence (scale bar = 5 μm). d PMH were transfected with JMJD3 expression plasmids as indicated and treated with vehicle or FGF21 for
+30 min for CoIP (left) or 2 h for qRT-PCR (right). PPARα in flag-JMJD3 immunoprecipitates or in input detected by IB (left) and the mRNA levels of the
+indicated genes (right, n = 3 culture dishes). e FGF21-floxed or -LKO mice were fasted for 24 h or refed for 24 h after fasting. Levels of proteins were
+detected by IB (left) and p-Thr JMJD3 were detected by IP/IB (right) (n = 3 mice). f C57BL/6 mice were treated with 0.1 mg/kg FGF21 for 3 h and then,
+phosphorylated levels of PKA, ERK, and JMJD3 were detected by IB (n = 3 mice). g Immunoprecipitated flag-JMJD3 was incubated with ATP, PKA, or
+ERK1/2 as indicated and levels of p-Thr-JMJD3 were detected by IB. h Schematic of fragments of JMJD3 that were fused to GST (top). Binding of PKA or
+ERK1/2 to GST-JMJD3 proteins was detected by IB (bottom). i PMH were treated with FGF21 and with vehicle or a PKA (H89,10 μM) or MEK/ERK
+(PD98059, 40 μM) inhibitor for 30 min. Levels of p-Thr-JMJD3 were detected by IP/IB (top) and quantified (bottom, n = 4 culture dishes). Source data are
+provided as a Source Data file. d, i Values are presented as mean ± SD. Statistical significance was measured using (d, i) two-way ANOVA with the
+Bonferroni post-test. **P < 0.01, and NS statistically not significant.
+ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z
+8 NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications
+
+and levels of serum ketone bodies (Fig. 7c) and glucose tolerance (Fig. 7d) were increased. O2 consumption and CO2 production (Fig. 7e, Supplementary Fig. 10) were increased,
+indicating increased energy expenditure. FGF21 treatment also
+increased autophagy gene expression and autophagy (Fig. 7f, g).
+Each of these FGF21-mediated effects was blunted in hepatic
+JMJD3-downregulated mice (Fig. 7a–g). These results demonstrate that JMJD3 is required for FGF21-induced autophagy
+and beneficial outcomes, particularly lowering lipids, in obese
+mice.
+0 30 60 90 120
+a
+d
+HFD (4 weeks) b
+AAV-GFP or AAV-Cre
+Jmjd3 f/f
+Veh or FGF21 for 4 weeks (with HFD)
+0 1 2 3 4 5 6 7 8
+20
+25
+30
+35
+Body weight (g)
+Time (weeks)
+c
+0
+1
+2
+3
+Serum β-HDB (mM)
+**
+**
+Intensity (×104
+)
+4
+0
+C2
+C3
+C4
+OH-C4
+C5
+C6
+C16
+C16:1
+C18
+C18:1
+2
+6
+8 *
+*
+** *
+*
+* ** **
+NS
+NS
+NS
+NS
+** * ** ** ** *
+*
+*
+0
+100
+200
+300
+400
+500
+0 15 30 60 120
+(Min)
+**
+Blood glucose
+(mg/dl) 
+GTT
+GFP_FGF21 (HFD)
+Cre_FGF21 (HFD)
+( Jmjd3) 
+GFP_Veh (HFD)
+GFP_Veh (ND)
+GFP_Veh GFP_FGF21 Cre_FGF21
+8
+2
+0
+6
+4
+10
+**
+** **
+** **
+**
+**
+**
+Rel mRNA level
+**
+**
+Tfeb Ulk1 Atg7 Atgl Pgc1
+f g
+kd
+FGF21
+JMJD3
+p62
+ACTIN
+250 -
+150 -
+LC3-I
+LC3-II
+75 -
+50 -
+10 -
+15 -
+50 -
+37 -
+− + +
+AAV: GFP Cre GFP
+1.0 2.2 2.1 29 35 20 0.5 0.4 0.7 Ratio (II/I)
+1.0 0.9 1.2 0.2 0.3 0.4 1.0 1.3 1.3
+Autophagy flux
+( Jmjd3) 
+LC3 LC3 LC3 
+FGF21 –++
+AAV: GFP Cre GFP
+Puncta #/cell
+** **
+20
+10
+0
+30
+GFP_Veh
+GFP_FGF21
+Cre_FGF21
+( Jmjd3) 
+HFD
+VO2 (ml/kg/h)
+O2 consumption
+Dark (5 pm~5 am) light (5 am–5 pm)
+p = 0.0048
+0
+200
+400
+600
+800
+GFP_FGF21 Cre_FGF21
+VCO2 (ml/kg/h)
+e
+GFP_Veh GFP_FGF21 Cre_FGF21
+Liver acylcarnitine (+HFD)
+( Jmjd3) 
+CO2 production
+p = 0.0002
+0
+200
+400
+600
+800
+GFP_FGF21 Cre_FGF21
+(+HFD)
+0
+100
+200
+300
+400
+500
+Light Dark
+VCO2 (ml/kg/h)
+0
+100
+200
+300
+400
+500
+Light Dark
+VO2 (ml/kg/h)
+**
+**
+**
+**
+FGF21 − + +
+AAV:GFP Cre GFP
+( Jmjd3) 
+GFP
+−
+ND HFD
+GFP_Veh
+GFP_FGF21
+Cre_FGF21
+( Jmjd3) 
+GFP_Veh (ND)
+HFD
+Liver TG
+(mg/g tissue) 100
+0
+50
+150
+200
+250 ** **
+ORO ORO ORO 
+FGF21 −+ +
+AAV: GFP Cre GFP
+H&E H&E H&E 
+( Jmjd3) 
+HFD
+GFP_Veh
+GFP_FGF21
+Cre_FGF21 ( Jmjd3) 
+g/day
+3 5 7 8 (weeks) 0
+1
+2
+3
+4 Food intake
+(+HFD)
+( Jmjd3) ( Jmjd3) 
+Fig. 7 FGF21-mediated reversal of defective autophagy and hepatosteatosis in obese mice is dependent on JMJD3. JMJD3-floxed mice fed a HFD for
+4 weeks were injected with the indicated viruses and then treated with vehicle or FGF21 every 2 days for 4 weeks with continued feeding of a HFD. a–f n =
+5 mice/group, g n = 3 mice/group. a Experimental outline (top), body weights, food intakes, and images of liver. b Neutral lipids in liver sections stained
+with H&E and Oil Red O detected by IHC (left) and liver TG levels (right) (scale bar = 50 μm). c Levels of liver acylcarnitine species (left) and serum
+β-hydroxybutyric acid (β-HDB) (right). d Glucose tolerance test (GTT). e O2 consumption (left) and CO2 production (right) rates measured by indirect
+calorimetry. f Relative mRNA levels of the indicated hepatic proteins. g Levels of the indicated proteins in liver extracts from mice measured by IB with the
+LC3-II/I ratio and p62 band intensities shown below the blot (left), liver sections with LC3 detected by IHC (middle), and the number of LC3-II puncta/cell
+(right, n = 10 hepatocytes) (scale bar = 10 μm). Source data are provided as a Source Data file. a–g Values are presented as mean ± SD. Statistical
+significance was measured using the (b, c, e line graph, f, g) one-way or d two-way ANOVA with the Bonferroni post-test, and (e, bar graph) Student’s
+t-test. *P < 0.05, **P < 0.01, and NS statistically not significant.
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z ARTICLE
+NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications 9
+
+Expression of KLB in fatty livers improves FGF21 signaling.
+Circulating FGF21 levels are highly elevated in non-alcoholic fatty
+liver disease (NAFLD) patients, as well as, in obese animals,
+suggestive of impaired FGF21 signaling18,29,30. Further, decreased
+autophagic flux and defective autophagy have been implicated in
+the development of NAFLD5,6,31. We, therefore, examined the
+effect of a HFD on FGF21 signaling and hepatic autophagy
+in mice.
+Responsiveness to FGF21, as measured by increased p-PKA
+and p-ERK levels, was impaired, and FGF21-mediated induction
+of autophagy was absent in HFD obese mice compared to lean
+mice (Fig. 8a). Since β-Klotho (KLB) is the essential coreceptor
+for FGF21 action18,19, and its hepatic expression is downregulated
+in obesity32, we examined the effect of feeding a HFD for different
+lengths of time on expression of JMJD3, KLB, and FGFR. The
+mRNA levels of JMJD3 and KLB were decreased, whereas those of
+Fgfr1 and Fgfr4 were increased, after feeding a HFD (Fig. 8b),
+suggesting that decreased expression of KLB may contribute to
+FGF21 resistance in obesity.
+We, therefore, further tested whether restoring KLB levels in
+obese mice can rescue FGF21 signaling and subsequently,
+expression of JMJD3 and hepatic autophagy (Fig. 8c, top).
+Viral-mediated liver-specific expression of KLB in HFD obese
+mice resulted in increased p-ERK and p-PKA levels, increased
+JMJD3 protein levels, and increased ratios of LC3II/I proteins
+(Fig. 8c). These results suggest that restoring expression of KLB in
+obese mice improves FGF21 signaling and consequently, FGF21-
+induced autophagy.
+Expression of JMJD3 and autophagy genes is reduced in
+NAFLD. To assess potential human relevance of our findings, we
+examined the expression of JMJD3 and key autophagy genes in
+livers of human NAFLD patients. Autophagy has been reported
+to be defective in these patients5,6,31. Intriguingly, hepatic mRNA
+levels of JMJD3, TFEB, ULK1, ATG7, and ATGL, were all
+decreased in both simple steatosis and advanced NASH-fibrosis
+patients compared to normal subjects (Fig. 9a). The mRNA levels
+of KLB was also decreased in the patients (Fig. 9a) with decreased
+p-ERK levels, suggesting impaired FGF21 signaling18,29,30
+(Fig. 9b). Protein levels of JMJD3, TFEB, ATG7, ULK1, LC3-II,
+and p-ERK, detected by IB of liver extracts (Fig. 9b) or IHC of
+liver sections (Fig. 9c), were decreased in the patients. While these
+results in humans are only correlative and do not necessarily link
+a defective FGF21-JMJD3 axis with defective autophagy in the
+patients, these findings are consistent with results in obese mice
+(Figs. 7 and 8), suggesting that the FGF21-JMJD3-autophagy axis
+is dysregulated in NAFLD.
+Discussion
+The present study shows that histone demethylase JMJD3 is a key
+epigenetic activator of hepatic autophagy as part of a fastinginduced FGF21-JMJD3 signaling axis in mice. Numerous
+autophagy-network genes are induced by this axis under nutrient
+deprivation, including autophagy components, ATG7, LC3, and
+ULK1, autophagy gene activators, TFEB and Pgc-1α7, a lipase for
+autophagy-mediated lipid degradation, ATGL17, and expression
+of JMJD3 and FGF21, so that this axis likely has a major impact
+on autophagy. Since JMJD3 is conserved in many organisms13,14,
+including plants, yeast, C. elegans, mice, and humans, JMJD3-
+mediated epigenetic induction of autophagy might be a common
+adaptive mechanism for cellular survival and the maintenance of
+energy balance when nutrient deprivation persists.
+Defective autophagy contributes to abnormal accumulation of
+hepatic TG and to fatty liver5,6 but the underlying mechanisms
+are not clearly understood. In this study, we identify a signaling
+mechanism by which JMJD3 promotes autophagy, including
+lipophagy, mediated by the fasting-induced hepatokine, FGF21.
+Impaired autophagy in FGF21-LKO mice strongly suggests that
+Veh FGF21 p-ERK/ERK
+*
+ND HFD
+NS
+a c
+ACTIN 50 -
+37 -
+LC3-I
+LC3-II 10 -
+15 -
+p-ERK 50 -
+37 -
+ERK 50 -
+37 -
+Veh
+ND HFD 
+FGF21 Veh FGF21 
+C57BL/6 
+kd
+Rel mRNA level HFD: 0 8 12 16 0 8 12 16 0 8 12 16 0 8 12 16 
+Jmjd3
+**
+**
+**
+Klb
+NS
+p = 0.07*
+b Fgfr1
+p = 0.06
+*
+Fgfr4
+**
+* NS NS
+Time (weeks)
+(3 h)
+JMJD3
+KLB
+ACTIN
+ND HFD
+FGF21: + −
+AAV: GFP Klb
+−
+GFP
++−+
+Normal chow
+or HFD
+8 weeks
+AAV-GFP
+or Klb
+4 weeks
+FGF21 (3 h)
+& Sac
+C57BL/6
+p-PKA
+p-ERK
+PKA
+ERK
+50 -
+37 -
+10 -
+15 -
+50 -
+37 -
+50 -
+37 -
+kd
+50 -
+37 -
+250 -
+150 -
+50 -
+37 -
+150 -
+100 -
+50 -
+37 -
+50 -
+37 -
+p-PKA
+PKA
+p-PKA/PKA
+10
+0
+20
+30
+40
+50
+ND HFD
+**
+NS
+10
+0
+20
+30
+40
+50
+LC3-I
+LC3-II
+0.0
+0.5
+1.0
+1.5
+0.0
+0.5
+1.0
+1.5
+0
+1
+2
+3
+0
+1
+2
+3
+Fig. 8 Expression of KLB in obese mice restores FGF21 signaling and autophagy. a Mice that had been fed a ND or HFD for 12 weeks were treated i.v. for
+3 h with 0.1 mg/kg FGF21, and hepatic levels of the indicated proteins were detected by IB (left, n = 3 mice). The ratios of band intensities for the indicated
+proteins are shown (right). b Mice were fed a HFD for the times indicated and mRNA levels of Klb, JMJD3, Fgfr1, and Fgfr4 were measured by q-RTPCR
+(n = 3 mice). c Mice fed a HFD for 8 weeks were injected with AAV-TBG-KLB or AAV-TBG-GFP. Four weeks later, the mice were treated i.v. with vehicle or
+0.1 mg/kg FGF21 for 3 h, and hepatic protein levels of the indicated proteins were detected by IB (n = 2 mice). Source data are provided as a Source Data
+file. a, b Values are presented as mean ± SD. Statistical significance was measured using the a two-way ANOVA with the Bonferroni or b one-way ANOVA
+with the Dunnett post-test *P < 0.05, **P < 0.01, and NS, statistically not significant.
+ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z
+10 NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications
+
+hepatic FGF21-induced physiologically during fasting can activate
+autophagy in an autocrine/paracrine manner. Remarkably,
+FGF21-mediated increases in autophagy and decreases in hepatic
+TG levels in mice were markedly attenuated by downregulation of
+hepatic JMJD3. Furthermore, JMJD3-mediated decreases in
+hepatic TG levels were largely abolished by liver-specific downregulation of ATG7 in mice, suggesting the critical role of functional autophagy in regulation of lipid levels by JMJD3. Recently,
+JMJD3 was shown to promote browning of white adipose tissue
+upon cold exposure, thereby increasing energy expenditure33. It
+b c
+250 -
+150 -
+Actin
+LC3-I
+LC3-II 10 -
+15 -
+Normal Steatosis NASH-fibrosis
+JMJD3
+50 -
+37 -
+100 -
+75 - ATG7
+Human IB study
+150 -
+100 -
+ULK1
+kd
+50 -
+37 -
+ERK
+p-ERK 50 -
+37 -
+Normal Steatosis NASH_fibrosis
+Rel protein level
+JMJD3
+1
+0.5
+0
+1.5
+1
+0.5
+0
+1.5
+ULK1
+1
+0.5
+0
+1.5
+ATG7
+1
+0.5
+0
+1.5
+** **
+1
+0.5
+0
+1.5
+p-ERK
+Rel protein level
+Normal Steatosis NASH-fibrosis
+Human IHC study
+ATG7 ATG7 ATG7
+JMJD3 JMJD3 JMJD3 
+LC3 LC3 LC3 
+Protein level quantitation
+a
+2
+0.5
+0
+1.5
+1
+2.5
+ULK1
+** *
+Rel mRNA level 
+2
+0.5
+0
+1.5
+1
+** * JMJD3
+** * TFEB
+2
+0.5
+0
+1.5
+1
+2.5
+2
+0.5
+0
+1.5
+1
+2.5 ** **
+ATGL
+** **
+2
+0.5
+0
+1.5
+1
+2.5 4
+1
+0
+3
+2
+KLB
+** **
+ATG7
+20
+5
+0
+15
+10
+25
+FGFR1
+NS **
+Human: Normal Steatosis NASH-fibrosis
+d
+Nucleus
+Fasting-induced
+hepatic FGF21
+FGF21, JMJD3, and
+autophagy genes
+JMJD3
+P T-1044
+PPARα
+PKA
+P
+Epigenetic induction by
+demethylation of H3K27-me3 
+PKA
+P
+JMJD3
+P T-1044
+PPARα
+JMJD3
+FGF21 FGF21
+Autocrine manner
+FGF21
+FGF21
+FGF21
+FGF21/JMJD3:
+feed-forward
+loop 
+FGF21
+**** ****
+****
+*
+** ****
+LC3-II
+100 -
+75 - TFEB 1
+0.5
+0
+1.5
+TFEB
+*
+**
+Hepatocyte
+FGF21-JMJD3-autophagy axis 
+Fig. 9 Expression of JMJD3, TFEB, and autophagy genes is reduced in NAFLD patients. Liver samples from normal, simple steatosis and NASH-fibrosis
+patients were analyzed. a The mRNA levels of the indicated genes measured by q-RTPCR (n = 15 individuals). b Levels of the indicated proteins in liver
+samples detected by IB (left, n = 4 normal, n = 5 patients, 3 to 4 pooled samples/lane) and quantified (right). c LC3, JMJD3, and ATG7 were detected in
+liver sections by IHC. LC3 puncta are indicated by yellow arrows (scale bar = 10 μm for LC3, 50 μm for JMJD3 and ATG7). Source data are provided as a
+Source Data file. a, b Values are presented as mean ± SD. Statistical significance was measured using the a, b one-way ANOVA with the Bonferroni posttest. *P < 0.05, **P < 0.01, and NS statistically not significant. d Model: in response to fasting, JMJD3 is phosphorylated at Thr-1044 by FGF21 signalingactivated PKA in mouse hepatocytes, which promotes its nuclear localization and interaction with the nuclear receptor PPARα to epigenetically induce
+transcription of genes involved in autophagy and lipid degradation, including Atg7, Ulk1, Atgl, Tfeb, and Pgc-1α, and as a positive feed-forward loop, JMJD3
+and FGF21 expression. Induced hepatic FGF21 sustains the activation of the FGF21-JMJD3-autophagy axis in an autocrine manner when fasting continues.
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z ARTICLE
+NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications 11
+
+will be, thus, interesting to see whether JMJD3 is also activated in
+adipocytes by fasting-induced FGF21 signaling to regulate energy
+balance as is the case in the liver.
+Nutrient deprivation in the liver promotes hydrolysis of TG
+from lipid droplets to supply free fatty acids for mitochondrial βoxidation for energy production and substrates for ketone body
+formation. Recently, we have shown that JMJD3, together with
+the fasting-sensing factors, SIRT1 and PPARα, promotes fatty
+acid β-oxidation, and that liver-specific downregulation of JMJD3
+led to fatty liver and glucose intolerance15. In the present study,
+we further show that JMJD3 promotes autophagy-mediated lipid
+degradation and that JMJD3 is important for FGF21-mediated
+beneficial effects on decreased liver TG levels and improved
+autophagy in obese mice. These findings, together, identify
+JMJD3 as a key epigenetic activator mediating hepatic fasting
+responses by inducing transcription of hepatic network genes
+involved in autophagy-mediated lipolysis and fatty acid βoxidation to maintain energy balance.
+Despite extensive studies on FGF2118,19, intracellular signaling
+mechanisms by which the FGF21 signal is transformed to epigenetic regulation of genes is poorly understood. The present
+study reveals that FGF21-activated PKA mediates the phosphorylation of JMJD3, which is important for its nuclear localization and activation of autophagy genes. In recent
+phosphoproteome studies in adipocytes, FGF21 treatment
+increased phosphorylation of numerous kinases in addition to
+ERK1/2, including PKA34, which supports our conclusion that
+PKA is a mediator of the FGF21-JMJD3-autophagy axis. Our
+studies in vivo, hepatocytes, and in vitro provide strong evidence
+that PKA-mediated phosphorylation of JMJD3 at Thr-1044 in
+response to FGF21 acts as a key epigenetic switch to activate
+JMJD3, which results in induction of autophagy genes by
+demethylation of histone H3K27-me3 (Model, Fig. 9d). The critical role of PKA in mediating the FGF21-JMJD3-autophagy axis
+was surprising since FGF21 signaling is usually through the ERK
+pathway18,19. Further, we observed that inhibition of ERK, like
+PKA, also blocked FGF21-mediated autophagy (Supplementary
+Fig. 11), but not phosphorylation of JMJD3 (Fig. 6i), suggesting
+that ERK either acts downstream of PKA or independently of
+PKA/JMJD3. Further studies will be required to fully understand
+the interaction between PKA and ERK in response to
+FGF21 signaling.
+There is increasing evidence that the cellular response to
+nutrient deficiency involves intriguing feed-forward autoregulatory loops. Upon nutrient deprivation, TFEB, a key transcriptional activator of autophagy, increases expression of Tfeb
+itself and also of Pgc-1α and Pparα, transcriptional activators of
+Tfeb7. Recently, JMJD3, together with SIRT1 and PPARα, was
+shown to form a positive autoregulatory loop upon fasting, and
+induces hepatic expression of their own genes, as well as, that of
+Fgf2115. In the present study, we further show that FGF21 activates JMJD3 via phosphorylation and in turn, this FGF21-
+activated JMJD3 induces expression of Fgf21. JMJD3 also epigenetically upregulates expression of its own gene and gene
+activators of autophagy, Tfeb, Pgc-1α, Sirt1, and Pparα. Thus,
+fasting triggers a positive feed-forward loop for autophagy
+induction wherein key components of the loop, including Jmjd3,
+Fgf21, Tfeb, and Pparα, positively regulate expression of each
+other to reinforce and amplify cellular responses to the fasting
+signal in the liver.
+Circulating FGF21 levels are elevated in NAFLD patients18,29,30,
+suggestive of FGF21 resistance in obesity and defective autophagy
+has been implicated in the development and pathogenesis of
+NAFLD5,6,31. In the current study, we observed that hepatic
+expression of the FGF21 coreceptor35, KLB, is reduced in human
+NAFLD patients, as well as in obese mice, consistent with
+decreased FGF21 signaling. Remarkably, in vivo rescue of KLB
+expression in obese mice restored p-ERK and p-PKA levels,
+indicative of improved responsiveness to FGF21 signaling, and
+increased hepatic autophagy. We also observed that hepatic
+expression of autophagy components, ATG7, ULK1, and LC3-II,
+as well as autophagy gene activators, JMJD3 and TFEB, and pERK levels are decreased in NAFLD patients. Although correlative, these results suggest that a defective FGF21-JMJD3 axis may
+contribute to decreased autophagy flux in these patients, which
+has been reported previously34. Additional studies in humans will
+be required to determine whether there is a causal link between
+decreased FGF21 signaling and JMJD3 levels and decreased
+expression of autophagy genes and development of fatty liver in
+the patients.
+Autophagy was shown to improve health and extend
+longevity36,37. Intriguingly, both JMJD3 and FGF21 extend life
+span in mice14,38, which potentially could be a result of their
+effects on promoting autophagy as shown in this study. Conversely, defective autophagy has been implicated in many diseases
+and aging36,37. Small molecule modulators targeting autophagy
+have been extensively studied as possible pharmacological agents
+for treatment of human diseases39,40. In this study, FGF21-
+induced phosphorylation of JMJD3 at Thr-1044 was important
+for induction of genes involved in hepatic autophagy and lipid
+degradation. Notably, such epigenetic regulators like JMJD3 often
+act in a gene-specific manner15 and posttranslational modifications of gene regulatory proteins may also modulate transcriptional outcomes in a gene-selective manner16,41,42. FGF21 signalinduced phosphorylation of JMJD3 at a single residue, Thr-1044,
+may, thus, provide a highly specific therapeutic option for treatment of NAFLD and other diseases associated with autophagy
+dysfunction.
+Methods
+Materials and reagents. Information on antibodies is provided in Supplemental
+Table 1. Rapamycin, bafilomycin A1, WY14643, oleic acid, and inhibitors of ERK
+and PKA were purchased from Sigma Inc, ON-TARGETplus mouse siRNAs for
+PPARα (J-040740), CREB1 (J-040959), FOXO1 (J-041127), FGF21 (M-063178-01-
+0005), and JMJD3 (J-063799) from Dharmacon, Inc, adenoviruses for JMJD3 and
+shRNA for ATG7 and KLB AAV viruses from Vector Builder, and AAV-TBG-Cre
+from Vector Biolabs.
+Animal experiments. For liver-specific downregulation of JMJD3, 8-week-old
+male JMJD3-floxed mice15 were injected with AAV-TBG-Cre or -GFP (1.0 to 2.0 ×
+1011 active viral particles), and 12 weeks later the mice were fasted overnight or
+injected with FGF21 (0.1 mg/kg) 3 h before killing. For adenoviral expression of
+JMJD3, C57BL/6 mice were injected with Ad-GFP (control) or Ad-JMJD3 (0.5 to
+1.0 × 109 active viral particles) 4 weeks before killing. For hepatic expression of
+JMJD3 or shRNA for ATG7, C57BL/6 male mice were injected with Ad-JMJD3 or
+Ad-shATG7 for 4 weeks before killing. PPARα-KO (Jackson Lab) and FGF21-LKO
+mice22 were fasted for 24 h or fed with normal chow. For hepatic downregulation
+of JMJD3 in obese mice, male JMJD3-floxed mice fed a HFD (60% fat; Research
+Diets) for 4 weeks were injected with AAV-TBG-Cre or -GFP and administrated
+FGF21 (5 mg/kg, i.v.) once every 2 days for 4 weeks as reported26. For GTT,
+mice were fasted overnight and injected i.p. with 2 g/kg glucose, and blood glucose
+levels were measured using an Accu-Chek Aviva Glucometer (Roche), and liver
+TG levels were measured using a Kit (Abcam, ab65336). The metabolic rate was
+measured by indirect calorimetry using the Comprehensive Lab Animal Monitoring System (Columbus Instruments). Mice were housed individually and
+maintained at 23 °C with 12 h light/dark cycles. Food and water were available ad
+libitum and O2 consumption and CO2 production were measured. All animal use
+and viral protocols were approved by Institutional Animal Use and Care and
+Biosafety Committees at the University of Illinois at Urbana-Champaign (UIUC).
+Metabolomic analysis. For measuring acylcarnitine levels, liver samples (5 mg)
+were mixed with 500 μl of 90% of acetonitrile, sonicated for 10 s, and placed on ice
+for 20 min. After centrifugation at 14,000 rpm for 10 min, 100 μl of the supernatant
+was collected, and then, analyzed by using the Q-Exactive MS system (Thermo
+Fisher Scientific). Software Xcalibur 4.1.31.9 was used for data acquisition and
+analysis. The samples (15 μl) were injected into a Dionex Ultimate 3000 series
+HPLC system instrument in an isocratic flow (0.35 mL/min; 50% methanol in
+water with 0.1 % formic acid). Mass spectra were acquired under positive ESI
+ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z
+12 NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications
+
+(sheath gas flow rate, 49; aux gas flow rate: 12; sweep gas flow rate, 2; spray voltage,
+3.5 kV; capillary temp, 259 °C; Aux gas heater temp, 419 °C) and the AGC target
+was 1E6 with a maximum injection time of 50 ms. The acylcarnitines were identified by the accurate mass. For measuring serum β-hydroxybutyrate level, 150 μl of
+acetonitrile was added to 50 μl of blood. Samples were vortexed, centrifuged at
+14,000 rpm at 4 °C for 10 min, 100 μl of supernatant was transferred into a glass
+vial and derivatized by adding 50 μl of N-Trimethylsilyl-N-methyl trifluoroacetamide + 1% trimethylchlorosilane (Thermo Fischer Scientific) for 1 h at
+50 °C, and then, injected into the GC-MS system consisting of Agilent 7890B gas
+chromatography and an Agilent 5977 A MSD. Separation performed on a ZB-5MS
+capillary column (Phenomenex). A constant flow rate of 2 ml/min for the helium
+carrier gas was maintained at 70 °C for 5 min, followed by increases of 5 °C/min to
+120 °C, then 40 °C/min to 300 °C for 5 min. The mass spectrometer operated in
+positive electron impact mode at 69.9 eV ionization energy at m/z 33–600 scan
+range. Samples were analyzed in combined scan/SIM mode (m/z 233). βhydroxybutyrate identification was performed using the mass spectra obtained
+from the authentic standards (Sigma-Aldrich) and additionally confirmed with
+NIST08 and W8N08 libraries (John Wiley & Sons, Inc.). A calibration curve was
+generated for the 10-0.15 mM concentration range. Quantitation was performed
+using Mass Hunter Quantitative Analysis B.08.00 (Agilent Inc.) software. LC-MS
+and GC-MS analyses were performed in the Metabolomics Laboratory of Roy J.
+Carver Biotechnology Center, University of Illinois at Urbana-Champaign.
+RNA-seq. JMJD3 was downregulated by infection of JMJD3-floxed mice with
+AAV-TBG-Cre, and controls were injected with AAV-GFP. The mRNAs from
+livers of fasted mice (n = 3/group) were prepared using the RNeasy mini prep kit
+(Qiagen). The cDNA libraries were sequenced using an Illumina HiSeq2000
+(Illumina, San Diego, CA) to produce paired-end 100 bp reads. One library of reads
+per biological sample was examined for sequencing errors prior to mapping.
+Sequencing alignment was performed by STAR ver 2.5.0a. Gene ontology analysis
+was performed using the program DAVID.
+ChIP-seq. JMJD3-floxed mice were infected with AAV-TBG-Cre or AAV-GFP for
+3 months and fasted for 16 h (n = 2/group). The precleared liver chromatin
+samples were immunoprecipitated with H3K27-me3 antibody, chromatin was
+eluted, and DNA was isolated. Samples containing 18 ng of DNA were used for
+genomic sequencing (Biotechnology Center, UIUC). Raw sequencing reads were
+processed using the AQUAS pipeline (https://github.com/kundajelab/chipseq_
+pipeline, git commit version id: 910ba91b9e9ba51f51497b39134c8e737a5184a5),
+which is based on the ENCODE (phase-3) histone ChIP-seq pipeline specifications.
+The project-specific parameters used were ‘-type histone -species mm10 –use_
+pooled_ctl’. Specifically, reads were mapped to the mouse reference genome
+(mm10) using bwa (version 0.7.13). Post-alignment filtering was done by Samtools
+(version 1.2) and Picard (version 1.126). Peak calling was done by MACS (version
+2.1.0). The final overlapped peaks across replicates were determined as the H3K27-
+me3 enriched regions. Mouse gene annotation (refGene) for mm10 was downloaded from the UCSC Genome Browser. GO analysis was performed using
+DAVID (david.abcc.ncifcrf.gov).
+Mass spectrometry. Flag-mouse JMJD3 was expressed in PMH and 48 h later,
+the cells were treated with 5 µM MG132 for 4 h and then, treated with FGF21
+(100 ng/ml) for 30 min. Flag-JMJD3 was purified by binding to M2 agarose, the
+beads were washed 10 times with IP buffer, and the bound proteins were analyzed
+by LC-MS/MS. Mass spec analyses were carried out using a Thermo LTQ Fusion
+Orbitrap connected to a Thermo Dionex 3000 nano RSLC. Chromatography was
+accomplished using a 15-cm Thermo Acclaim PepMap 100 C-18 column with
+mobile phase of 0.1% FA in water (A) and acetonitrile with 0.1% FA (B) at a flow
+rate of 300 nl/min and temperature at 40 °C. Peptides were eluted from 5% B to
+60% B in 60 min. The mass spectrometer was operating in the data dependent
+mode, and precursor scans from 300 to 1500 m/z (120,000 resolution) were followed by collision (35% NCE, 1.6 m/z isolation window, 60 s exclusion window).
+Raw data were analyzed by in house Mascot Server (version 2.5.1) against the
+NCBIProt Mus musculus database 0829 (1 September 2019) containing
+150,813 sequences. Search parameters were: peptide mass tolerance 10 ppm; fragment tolerance 0.6 Da; cleavage agent was trypsin; miscleaves 2,3,4; variable
+modifications were set for Acetyl (Protein-term), Oxidation (M), Phospho (ST),
+Phospho (Y); FDR 1%. Protein identification and PTM cutoff were set for p < 0.05.
+The p value for the identification and characterization of the phosphorylated
+JMJD3 peptide was calculated using Mascot43 (Matrix Science (London, UK),
+which uses probability based scoring.
+Transmission electron microscopy. Mouse liver samples were fixed in Karnovsky’s fixative and with 2% osmium tetroxide followed by the addition of 3%
+potassium ferricyanide for 30 min. After washing with water, samples were stained
+with uranyl acetate, dehydrated with ethanol, and the sample was embedded in
+epoxy using the Epon substitute Lx112. Ultrathin sections were stained with uranyl
+acetate and lead citrate, and imaged with a Hitachi H600 transmission electron
+microscopy (TEM).
+Immunofluorescence. Hepa1c1c7 cells were transfected with expression plasmids
+for GFP-LC3 and JMJD3 and 48 h later were incubated in complete media or HBSS
+for 2 h. Lipids were stained with BODIPY and counterstained with DAPI and were
+detected by confocal microscopy. For IHC, proteins in mouse liver were detected
+using an HRP/DAB kit (ab64261, Abcam). Nuclei were stained with hematoxylin,
+and samples were imaged with a Nanozoomer (Hamamatzu). Liver tissue was
+frozen in OCT compound, sectioned, and stained with H&E and Oil Red O.
+ChIP, re-ChIP, and CoIP. Liver tissue was minced, washed twice in PBS, and then
+incubated with 1% formaldehyde for 10 min at 37 °C. Glycine was added to
+125 mM for 5 min at room temperature. Chromatin solutions in sonication buffer
+(50 mM Tris-HCl, pH 8.0, 2 mM EDTA, and 1% SDS) were sonicated four times
+with 10 s intervals using a QSonica XL-2000 instrument at power output setting 8.
+Then, chromatin sample was precleared and chromatin was immunoprecipitated
+using 1–2 µg of antibody or IgG. The immune complexes were collected by
+incubation with a Protein G Sepharose slurry for 1 h, washing with 0.1% SDS,
+1% Triton X-100, 2 mM EDTA, 20 mM Tris-HCl, pH 8.0, three times containing
+successively 150 mM NaCl, 500 mM NaCl, or 0.25 M LiCl, and then eluted and
+incubated overnight at 65 °C to reverse the crosslinking. DNA was isolated for
+qPCR. For re-ChIP, chromatin samples were immunoprecipitated with the first
+antibody, the beads were washed, chromatin was eluted with 10 mM DTT, diluted
+20X with 20 mM Tris-HCl, pH 8.0, 150 mM NaCl, 2 mM EDTA, 1% Triton X-100,
+and immunoprecipitated with the second antibody. Sequences of primers used for
+the qPCR are in Supplementary Table 2. For CoIP, cell extracts were prepared by
+brief sonication in CoIP buffer (50 mM Tris–HCl, pH 8.0, 150 mM NaCl, 2 mM
+EDTA, 0.5% NP‐40, 5% glycerol). The samples were incubated with 1-2 μg of
+antibodies for 3 h and 30 μl of a 25% protein G agarose slurry was added. One hour
+later, beads were washed with CoIP buffer three times and bound proteins were
+detected by IB.
+Cell culture. Primary mouse hepatocytes (PMH) were isolated by collagenase
+(0.8 mg/ml, Sigma, Inc) perfusion through the portal vein of mice anesthetized with
+isoflurane. Hepatocytes were filtered through a cell strainer (100 µm nylon, BD),
+washed with M199 medium, resuspended in M199 medium, centrifuged through
+45% Percoll (Sigma, Inc.), and cultured in M199 medium containing 10% FBS.
+Hepa1c1c7 and HepG2 cells were cultured in DMEM containing 10% FBS.
+Luciferase reporter assays. DNA fragments near Tfeb and Atg7 that contained
+PPARα peaks9 were amplified by PCR from mouse genomic DNA and cloned into
+the pGL3-basic vector (Promega). The DR1 motifs were mutated using sitedirected mutagenesis (Agilent Tech). Hepa1c1c7 cells were transfected with indicated plasmids and luciferase activities were normalized to β-galactosidase
+activities.
+Nuclear localization studies. Nuclear and cytoplasmic fractions of the PMH cells
+were isolated using NE-PER Nuclear and Cytoplasmic Extraction Reagents
+(Thermo-Fisher Scientific Inc.) and the proteins were detected by IB. Cytoplasmic
+GAPDH and nuclear LAMIN-A were detected to assess the quality of the fractionation. For imaging studies, Hepa1c1c7 cells were fixed with 4% paraformaldehyde, permeabilized with PBS containing 3% BSA, 0.1% Triton X-100,
+incubated with M2 antibody for 2 h, washed and incubated with Alexa Fluor 488-
+conjugated donkey anti-mouse IgG for 1 h. Nuclei were stained with Hoechst
+33,258 and imaged by confocal microscopy (Zeiss, LSM700).
+In vitro kinase assay. Flag-JMJD3 proteins expressed in HepG2 cells were isolated
+by M2-agarose, the beads were washed with the lysis buffer and with kinase buffer
+(50 mM Tris-HCl, pH 7.5, 10 mM MgCl2, 1 mM DTT). Flag-proteins bound to
+M2-agarose were incubated with 20 μM ATP and 20 ng of PKA (Biorbyt) or ERK1/
+2 (MyBiosource) in kinase buffer at 30 °C for 30 min, and JMJD3 phosphorylation
+at Thr was detected by IB.
+GST pull down assay. Bacterially expressed and affinity purified GST-JMJD3
+proteins15 were incubated with Pka or ERK1/2, and bound proteins were
+detected by IB.
+Quantification of mRNA. RNA was isolated from liver and quantified by qRTPCR, normalized to 36b4 mRNA. Primer sequences are in Supplementary
+Table 2.
+NAFLD patient study. Liver specimens from 15 unidentifiable normal individuals
+or steatosis or severe NASH-fibrosis patients were obtained from the Liver Tissue
+Procurement and Distribution System that operates under a contract from the
+National Institutes of Health. Because the specimens or data were not collected
+specifically for this study and no one on our study team has access to the subject
+identifiers linked to the specimens or data, this study is not considered human
+subjects research and ethical approval was not required (See §46.104 in Part 46—
+Protection Of Human Subjects in the Electronic Code of Federal Regulations at the
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z ARTICLE
+NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications 13
+
+following link: https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=
+&SID=83cd09e1c0f5c6937cd9d7513160fc3f&pitd=20180719&n=pt45.1.46&r=-
+PART&ty=HTML#se45.1.46_1104). Protein levels were detected by IB and IHC
+and mRNA levels were quantified by q-RTPCR.
+Statistical analyses. GraphPad Prism 6 (GraphPad software version 6.01) was
+used for data analysis. Statistical significance was determined by the
+Mann–Whitney test or one- or two-way ANOVA with the Bonferroni post-test for
+single or multiple comparisons as appropriate. Whenever relevant, the assumptions
+of normality were verified using the Shapiro–Wilk test, Kolmogorov-Smirnov test
+and the D’agostino-Pearson omnibus test. P-values < 0.05 were considered as statistically significant.
+Reporting summary. Further information on research design is available in
+the Nature Research Reporting Summary linked to this article.
+Data availability
+The data that support the findings of this study are available from the corresponding
+author upon reasonable request. The RNA-seq and ChIP-seq data are deposited in the
+GEO database with the Accession Numbers GSE137555 [https://www.ncbi.nlm.nih.gov/
+geo/query/acc.cgi?acc=GSE137555] and GSE138157 [https://www.ncbi.nlm.nih.gov/geo/
+query/acc.cgi?acc=GSE138157], respectively. The mass spectrometry proteomics data
+have been deposited to the ProteomeXchange Consortium via the PRIDE partner
+repository (http://www.ebi.ac.uk/pride) with the dataset identifier PXD015672. The
+source data underlying Figs. 1a, e–g, 2a–e, g, 3a–h, 4a–f, 5b–g, 6b, d–I, 7a–h, 8a–c, and
+9a, b and Supplementary Figs. 1a–c, 3a–f, 5, 6a–c, 7a, c–f, 8b–g, 9b, c, 10, and 11 are
+provided as a Source Data file.
+Received: 27 March 2019; Accepted: 16 December 2019;
+References
+1. Levine, B. & Klionsky, D. J. Development by self-digestion: molecular
+mechanisms and biological functions of autophagy. Dev. Cell 6, 463–477 (2004).
+2. Mizushima, N. & Komatsu, M. Autophagy: renovation of cells and tissues. Cell
+147, 728–741 (2011).
+3. Singh, R. et al. Autophagy regulates lipid metabolism. Nature 458, 1131–1135
+(2009).
+4. Levine, B. & Kroemer, G. Autophagy in the pathogenesis of disease. Cell 132,
+27–42 (2008).
+5. Yang, L., Li, P., Fu, S., Calay, E. S. & Hotamisligil, G. S. Defective hepatic
+autophagy in obesity promotes ER stress and causes insulin resistance. Cell
+Metab. 11, 467–478 (2010).
+6. Czaja, M. J. Function of autophagy in nonalcoholic fatty liver disease. Dig. Dis.
+Sci. 61, 1304–1313 (2016).
+7. Settembre, C. et al. TFEB controls cellular lipid metabolism through a
+starvation-induced autoregulatory loop. Nat. Cell Biol. 15, 647–658 (2013).
+8. Seok, S. et al. Transcriptional regulation of autophagy by an FXR-CREB axis.
+Nature 516, 108–111 (2014).
+9. Lee, J. M. et al. Nutrient-sensing nuclear receptors coordinate autophagy.
+Nature 516, 112–115 (2014).
+10. Byun, S. et al. A postprandial FGF19-SHP-LSD1 regulatory axis mediates
+epigenetic repression of hepatic autophagy. EMBO J. 36, 1755–1769 (2017).
+11. Fullgrabe, J. et al. The histone H4 lysine 16 acetyltransferase hMOF regulates
+the outcome of autophagy. Nature 500, 468–471 (2013).
+12. Shin, H. J. et al. AMPK-SKP2-CARM1 signalling cascade in transcriptional
+regulation of autophagy. Nature 534, 553–557 (2016).
+13. Shi, Y. Histone lysine demethylases: emerging roles in development,
+physiology and disease. Nat. Rev. Genet. 8, 829–833 (2007).
+14. Merkwirth, C. et al. Two conserved histone demethylases regulate
+mitochondrial stress-induced longevity. Cell 165, 1209–1223 (2016).
+15. Seok, S. et al. Fasting-induced JMJD3 histone demethylase epigenetically activates
+mitochondrial fatty acid beta-oxidation. J. Clin. Invest. 128, 3144–3159 (2018).
+16. Byun, S. et al. Postprandial FGF19-induced phosphorylation by Src is critical
+for FXR function in bile acid homeostasis. Nat. Commun. 9, 2590 (2018).
+17. Sathyanarayan, A., Mashek, M. T. & Mashek, D. G. ATGL promotes
+autophagy/lipophagy via SIRT1 to control hepatic lipid droplet catabolism.
+Cell Rep. 19, 1–9 (2017).
+18. Fisher, F. M. & Maratos-Flier, E. Understanding the physiology of FGF21.
+Annu. Rev. Physiol. 78, 223–241 (2016).
+19. Kliewer, S. A. & Mangelsdorf, D. J. A dozen years of discovery: insights into
+the physiology and pharmacology of FGF21. Cell Metab. 29, 246–253 (2019).
+20. Mizushima, N., Yoshimori, T. & Levine, B. Methods in mammalian autophagy
+research. Cell 140, 313–326 (2010).
+21. Chen, L. et al. Fasting-induced hormonal regulation of lysosomal function.
+Cell Res. 27, 748–763 (2017).
+22. Markan, K. R. et al. Circulating FGF21 is liver derived and enhances glucose
+uptake during refeeding and overfeeding. Diabetes 63, 4057–4063 (2014).
+23. Fisher, F. M. et al. Integrated regulation of hepatic metabolism by fibroblast
+growth factor 21 (FGF21) in vivo. Endocrinology 152, 2996–3004 (2011).
+24. Fu, T. et al. MicroRNA 34a inhibits beige and brown fat formation in obesity
+in part by suppressing adipocyte fibroblast growth factor 21 signaling and
+SIRT1 function. Mol. Cell. Biol. 34, 4130–4142 (2014).
+25. Montagner, A. et al. Liver PPARalpha is crucial for whole-body fatty acid
+homeostasis and is protective against NAFLD. Gut 65, 1202–1214 (2016).
+26. Xu, J. et al. Fibroblast growth factor 21 reverses hepatic steatosis, increases
+energy expenditure, and improves insulin sensitivity in diet-induced obese
+mice. Diabetes 58, 250–259 (2009).
+27. Gaich, G. et al. The effects of LY2405319, an FGF21 analog, in obese human
+subjects with type 2 diabetes. Cell Metab. 18, 333–340 (2013).
+28. Talukdar, S. et al. A long-acting FGF21 molecule, PF-05231023, decreases
+body weight and improves lipid profile in non-human primates and type 2
+diabetic subjects. Cell Metab. 23, 427–440 (2016).
+29. Dushay, J. et al. Increased fibroblast growth factor 21 in obesity and
+nonalcoholic fatty liver disease. Gastroenterology 139, 456–463 (2010).
+30. Li, H. et al. Fibroblast growth factor 21 levels are increased in nonalcoholic
+fatty liver disease patients and are correlated with hepatic triglyceride. J.
+Hepatol. 53, 934–940 (2010).
+31. Gonzalez-Rodriguez, A. et al. Impaired autophagic flux is associated with
+increased endoplasmic reticulum stress during the development of NAFLD.
+Cell Death Dis. 5, e1179 (2014).
+32. Fu, T. et al. Aberrantly elevated microRNA-34a in obesity attenuates hepatic
+responses to FGF19 by targeting a membrane coreceptor beta-Klotho. Proc.
+Natl Acad. Sci. USA 109, 16137–16142 (2012).
+33. Pan, D. et al. Jmjd3-mediated H3K27me3 dynamics orchestrate brown fat
+development and regulate white fat plasticity. Dev. Cell 35, 568–583 (2015).
+34. Minard, A. Y. et al. mTORC1 is a major regulatory node in the
+FGF21 signaling network in adipocytes. Cell Rep. 17, 29–36 (2016).
+35. Ding, X. et al. betaKlotho is required for fibroblast growth factor 21 effects on
+growth and metabolism. Cell Metab. 16, 387–393 (2012).
+36. Madeo, F., Zimmermann, A., Maiuri, M. C. & Kroemer, G. Essential role for
+autophagy in life span extension. J. Clin. Invest. 125, 85–93 (2015).
+37. Rubinsztein, D. C., Marino, G. & Kroemer, G. Autophagy and aging. Cell 146,
+682–695 (2011).
+38. Zhang, Y. et al. The starvation hormone, fibroblast growth factor-21, extends
+lifespan in mice. Elife 1, e00065 (2012).
+39. Vakifahmetoglu-Norberg, H., Xia, H. G. & Yuan, J. Pharmacologic agents
+targeting autophagy. J. Clin. Invest. 125, 5–13 (2015).
+40. Lim, H. et al. A novel autophagy enhancer as a therapeutic agent against
+metabolic syndrome and diabetes. Nat. Commun. 9, 1438 (2018).
+41. Kim, D. H. et al. A dysregulated acetyl/SUMO switch of FXR promotes
+hepatic inflammation in obesity. EMBO J. 34, 184–199 (2015).
+42. Kemper, J. K. et al. FXR acetylation is normally dynamically regulated by p300
+and SIRT1 but constitutively elevated in metabolic disease states. Cell Metab.
+10, 392–404 (2009).
+43. Perkins, D. N., Pappin, D. J., Creasy, D. M. & Cottrell, J. S. Probability-based
+protein identification by searching sequence databases using mass
+spectrometry data. Electrophoresis 20, 3551–3567 (1999).
+Acknowledgements
+We thank Matthew J. Potthoff at the University of Iowa for providing liver samples from
+FGF21-LKO mice. We also thank Giyeong Kim for constructing the Tfeb and Atg7
+luciferase reporter plasmids containing PPARα cistrome. Liver tissues of normal subjects
+and NAFLD patients were obtained through the Liver Tissue Cell Distribution System,
+University of Minnesota, which was funded by NIH Contract # HHSN276201200017C.
+Petri dish, mouse, and liver images in the figures are unmodified images provided by
+Servier Medical Art, licensed under a Creative Commons License [https://
+creativecommons.org/licenses/by/3.0/legalcode]. This study was supported by an
+American Heart Association post-doctoral fellowship to SB (17POST33410223), an
+American Heart Association scientist development award (16SDG27570006) to Y.C.K.,
+and by grants from the American Diabetes Association (1-16-IBS-156) and National
+Institutes of Health (DK062777 and DK095842) to J.K.K.
+Author contributions
+S.B., S.S. and J.K.K. designed research; S.B., S.S., and Y.C.K. performed experiments; S.B.,
+S.S., Y.C.K., B.K. and J.K.K. analyzed data; N.I. provided JMJD3-flox mice; H.E.X. provided purified FGF21; P.Y. performed proteomic analysis; Y.C.K., Y.Z. and J.M. performed genomic analyses, and S.B., S.S., B.K. and J.K.K. wrote the paper.
+Competing interests
+The authors declare no competing interests.
+ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z
+14 NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications
+
+Additional information
+Supplementary information is available for this paper at https://doi.org/10.1038/s41467-
+020-14384-z.
+Correspondence and requests for materials should be addressed to J.K.K.
+Peer review information Nature Communications thanks Rongrong Fan and other,
+anonymous, reviewer(s) for their contribution to the peer review of this work.
+Reprints and permission information is available at http://www.nature.com/reprints
+Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in
+published maps and institutional affiliations.
+Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation,
+distribution and reproduction in any medium or format, as long as you give appropriate
+credit to the original author(s) and the source, provide a link to the Creative Commons
+license, and indicate if changes were made. The images or other third party material in this
+article are included in the article’s Creative Commons license, unless indicated otherwise in
+a credit line to the material. If material is not included in the article’s Creative Commons
+license and your intended use is not permitted by statutory regulation or exceeds the
+permitted use, you will need to obtain permission directly from the copyright holder. To
+view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.
+© The Author(s) 2020
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-14384-z ARTICLE
+NATURE COMMUNICATIONS | (2020) 11:807 | https://doi.org/10.1038/s41467-020-14384-z | www.nature.com/naturecommunications 15
+

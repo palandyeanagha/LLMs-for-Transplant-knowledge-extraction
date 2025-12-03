@@ -1,0 +1,642 @@
+arXiv:1606.04172v2 [stat.ME] 14 Sep 2016
+A Threshold-free Prospective Prediction Accuracy Measure
+for Censored Time to Event Data
+YAN YUAN∗†
+School of Public Health, University of Alberta, Edmonton, AB T6G1C9, Canada
+QIAN M. ZHOU†
+Department of Statistics and Actuarial Science
+Simon Fraser University, Burnaby, B.C. V5A1S6, Canada
+Department of Mathematics and Statistics
+Mississippi State University, Starkville, Mississippi 39762, USA
+BINGYING LI
+Department of Statistics and Actuarial Science
+Simon Fraser University, Burnaby, B.C. V5A1S6, Canada
+HENGRUI CAI
+School of Public Health, University of Alberta, Edmonton, AB T6G1C9, Canada
+ERIC J. CHOW
+Fred Hutchinson Cancer Research Center
+Seattle Children’s Hospital, University of Washington, Seattle, Washington, USA
+GREGORY T. ARMSTRONG
+Department of Epidemiology and Cancer Control, Division of Neuro-Oncology
+St. Jude Children’s Research Hospital, Memphis, TN 38105, USA
+October 15, 2018
+† To whom correspondence should be addressed. † Dr. Yuan and Dr. Zhou contributed equally to this work.
+1
+
+Abstract
+Prediction performance of a risk scoring system needs to be carefully assessed before its
+adoption in clinical practice. Clinical preventive care often uses risk scores to screen asymp￾tomatic population. The primary clinical interest is to predict the risk of having an event by
+a pre-specified future time t0. Prospective accuracy measures such as positive predictive val￾ues have been recommended for evaluating the predictive performance. However, for com￾monly used continuous or ordinal risk score systems, these measures require a subjective cut￾off threshold value that dichotomizes the risk scores. The need for a cut-off value created bar￾riers for practitioners and researchers. In this paper, we propose a threshold-free summary in￾dex of positive predictive values that accommodates time-dependent event status. We develop
+a nonparametric estimator and provide an inference procedure for comparing this summary
+measure between competing risk scores for censored time to event data. We conduct a simula￾tion study to examine the finite-sample performance of the proposed estimation and inference
+procedures. Lastly, we illustrate the use of this measure on a real data example, comparing two
+risk score systems for predicting heart failure in childhood cancer survivors.
+Censored event time; Positive predictive value; Precision-recall curve; Risk prediction; Screen￾ing; Time-dependent prediction accuracy
+1 Introduction
+Clinical medicine is facing a paradigm shift from current diagnosis and treatment practices to
+prevention through earlier intervention based on risk prediction [1]. Diagnosis and treatment ap￾proaches help individual patients seek relief from their symptoms. However, evidence is mount￾ing that health interventions may be more effective in improving long-term health outcomes when
+they target asymptomatic individuals who are predicted to be at high risk for the condition of in￾terest [2, 3]. The condition of interest typically has the following characteristics: 1) its seriousness
+may result in a high risk of mortality or significantly affect the quality of life; 2) early detec￾tion/intervention can make a difference in disease prognosis; and importantly but subtly 3) its
+event rate is low. A prevention approach to medicine relies on the development of risk scores to
+stratify individuals into different risk groups. Early intervention strategies are typically recom￾mended to subjects who are in the high-risk group.
+†Dr. Yuan and Dr. Zhou contributed equally to this work.
+2
+
+In the prevention paradigm, the use of risk scores as population screening tools is increasingly
+advocated in clinical practices, e.g. [4]. For example, one systematic review identified forty-six
+algorithms that predict the risk of type 2 diabetes [5]. Another study established several risk score
+systems to predict congestive heart failure for childhood cancer survivors who are at an elevated
+risk due to treatment toxicity [6]. One of the defining characteristics of screening is a low event rate
+in the targeted asymptomatic population. Taking the aforementioned two diseases as an example,
+the crude prevalence of undiagnosed type 2 diabetes, a common disease, was low at 3.5% in 1987
+and 5.7% in 1992 [7], while the cumulative event rate of congestive heart failure by 35 years post
+childhood cancer diagnosis was 4.7% [6]. The event rate is much lower for other notable conditions
+such as cancer, multiple sclerosis, AIDS, dementia, COPD and perinatal conditions. A low event
+rate and a focus on prevention necessitate the development of screening tools such as risk scores.
+Before a risk scoring system is adopted for clinical screening, evaluation of its predictive accu￾racy is critical. The most popular accuracy metric used in the clinical literature is the area under
+the receiver operating characteristic (ROC) curve (AUC). The AUC is a summary index of two ac￾curacy metrics - sensitivity and specificity - which are both retrospective metrics. Thus, the AUC
+does not reflect the prospective predictive accuracy of risk score systems. Indeed, one influential
+article criticized these retrospective metrics as being of little use for clinicians because clinical in￾terest almost always focuses on prediction [8]. In contrast, a prospective accuracy measure, such
+as positive predictive value (PPV), can prospectively answer the question: "Can risk scores be
+trusted?" Unfortunately, a risk score with high sensitivity and specificity, and thus a high AUC,
+can have poor PPV when applied to low-prevalence populations. This limitation is often over￾looked by clinicians and biomedical researchers. Despite its popularity, studies confirm that the
+AUC is insensitive in evaluating risk prediction models. For example, including a marker with a
+risk ratio of 3.0 showed little improvement on the AUC, while it could shift the predicted 10-year
+disease risk for an individual patient from 8% to 24% [9]. This range would result in different
+recommendations on follow-up/intervention strategies.
+Compared to the AUC, the PPV provides a more appropriate assessment of the prospective
+prediction performance of the risk score [10], making the PPV a superior metric for risk score sys￾tems used as screening tools. The PPV is calculated with data from a prospective cohort, where the
+risk scores are computed using baseline information and the outcome is followed prospectively.
+3
+
+Originally, the PPV was defined for a dichotomous test. Moskowitz and Pepe (2004) extended the
+definition of PPV for a continuous risk score [10]. Assuming that the higher the risk score, the
+greater the individual risk, the PPV is defined as the probability of having the disease when the
+risk score value is larger than a given cut-off value z,
+PPV(z) = Pr{D = 1 | Z ≥ z} and NPV(z) = Pr{D = 0 | Z < z}, (1)
+where D = 1 indicates the presence of the disease, and D = 0 indicates the absence of the disease.
+Zheng et al. (2008) further generalized the definition to accommodate the censored event time
+outcome [11]. Since the PPV is threshold dependent, as seen in (1), it is often evaluated at either
+several fixed specificities or several fixed quantiles of the . Such evaluations allow the comparison
+across different risk score systems [10, 12]. The selection of specificities or quantiles can be sub￾jective, and it is possible that different systems could outperform others, depending on the cut-off
+points selected [13].
+For the above reasons, a threshold-free summary metric for the PPV is needed to facilitate
+its clinical usage. Two curves of PPV have been investigated in the literature. Raghavan et al.
+(1989) and Zheng et al. (2010) considered a curve of PPV versus quantiles of the risk score [13, 14].
+However, they did not provide a summary index of the proposed PPV curve. A second curve is
+called the precision-recall (PR) curve, which was proposed in the information retrieval community
+[14, 15], where precision is equivalent to the PPV and recall is equivalent to the sensitivity. The
+relationship of PR and ROC curves and the area under them has been discussed in Davis and
+Goadrich [16]. They showed that the PR curve of a risk score system dominates that of another
+system if its ROC curve is also dominant. However, such a relationship does not exist for the area
+under these two curves [16, 17]. Two recent papers illustrated the advantage of using the area
+under the PR curve over the AUC for predicting low prevalence diseases [18, 19]. We refer to the
+summary metric for the area under the PR curve as the average positive predictive value (AP) [18].
+These previous research on the area under the PR curve have only considered binary outcomes.
+However, for many clinical applications, the outcome is time to event.
+We make three contributions in the assessment of risk scoring systems for clinical screening.
+First, we define a time-dependent AP, APt0
+for censored event time outcomes. We propose a robust
+nonparametric estimator of APt0 without modeling assumptions on the relationship between the
+4
+
+risk score and event time. Secondly, we provide a statistical inference procedure to compare the
+APt0
+two risks scores regarding . Thirdly, we provide an R package to implement our method.
+The paper is organized as follows. In Section 2, we introduce the definition and interpretation of
+APt0
+. In Section 3, we present the inference procedures for estimating APt0
+of a single risk score as
+well as the comparison between two competing risk scores. In Section 4, we conduct a simulation
+study to investigate the performance of the proposed estimation and inference procedures in finite
+samples. In Section 5, we illustrate the proposed metric APt0 by analyzing two risk score systems
+with data from the Childhood Cancer Survival Study [20]. We conclude with a discussion and
+suggestions for future work in Section 6.
+2 Time-dependent Average Positive Predictive Values
+Consider a continuous risk score Z. Let T be the time to the event of interest. Time-dependent
+PPV and TPF [11, 21] are defined as
+PPVt0
+(z) = Pr{T < t0 | Z ≥ z} and TPFt0
+(z) = Pr{Z ≥ z | T < t0}. (2)
+In the above setting, the event status is time-dependent, i.e., Dt0 = I(T < t0), where I(·) is an
+identity function. Consequently, the PPV and TPF are also functions of t0.
+Following [18], we define APt0
+, as the area under the time-dependent PR curve {(TPFt0
+(z), PPVt0
+(z)), z ∈
+R},
+APt0 =
+Z
+R
+PPVt0
+(z)dTPFt0
+(z). (3)
+Note that the TPF describes the distribution function of Z in “cases" who experience the event
+by time t0, i.e. T < t0. It can be shown that APt0 = EZ1
+{PPVt0
+(Z1)}, where Z1 denotes the risk
+score in cases. In the real data example of Section 5, we will show that AP is estimated to be 0.114
+at t0 = 35 years for a risk score system. That is, by 35 years post diagnosis, we expect that on
+average 11.4% of the subjects with a high risk score (compared to the risk score of a randomly
+selected case) will experience the event of interest.
+In addition, PPVt0
+(z) can be written as PPVt0
+(z) = P(Z ≥ z | T < t0)P(T < t0)/P(Z ≥ z) =
+πt0
+{1 − F1(z)} / {1 − F(z)}, where F1(z) = Pr(Z < z | T < t0) = P(Z1 < z) is the distribution
+function of the risk score Z1 for cases, F(z) = P(Z < z) is the distribution function of the risk
+5
+
+score Z for the target population, and πt0 = Pr(T < t0) is the event rate by time t0 in the target
+population. Thus, the AP can be written as
+APt0 = πt0
+Z
+R
+1 − F1(z)
+1 − F(z)
+dF1(z). (4)
+A perfect risk score system would always assign higher values to cases, individuals with T < t0,
+compared to those controls, individuals with T ≥ t0, i.e. P(Z ≥ Z1 | T ≥ t0) = 0. This leads
+to APt0 = 1 from equation (4). A non-informative risk score system would randomly assign risk
+scores to both cases and controls. i.e., P(Z ≥ z | T ≥ t0) = P(Z ≥ z | T < t0) for each z, which
+leads to APt0 = πt0
+. Thus, the theoretical range of APt0
+is [πt0
+, 1].
+3 Estimating and Comparing APt0
+3.1 Nonparametric Estimator of APt0
+for a single risk score
+Often, the event times of some subjects are censored due to the end of the study or loss to
+follow up. Due to censoring, one can only observe X = min{T, C} where C is the censoring time,
+and δ = I(T < C). Let {(Xi
+, δi
+, Zi), i = 1, · · · , n} be n independent realizations of (X, δ, Z).
+In the presence of censoring, event status at t0, I(Ti < t0), may not be observed for some sub￾jects. We suggest using the inverse probability weighting (IPW) [22, 23] to account for censoring.
+The time-dependent PPV and TPF are estimated by
+PPV d t0
+(z) = ∑
+n
+i=1 wbt0,i
+I(Zi ≥ z)I(Xi < t0)
+∑
+n
+i=1
+I(Zi ≥ z)
+and TPF dt0
+(z) = ∑
+n
+i=1 wbt0,i
+I(Zi ≥ z)I(Xi < t0)
+∑
+n
+i=1 wbt0,iI(Xi < t0)
+,
+where wbt0,i
+is the inverse of the estimated probability that the time-dependent event status I(Ti <
+t0) is observed, specifically
+wbt0,i =
+I(Xi < t0)δi
+Gb(Xi)
++
+I(Xi ≥ t0)
+Gb(t0)
+,
+where Gb(c) is a consistent estimator of the survival function of the censoring time, G(c) = Pr(C ≥
+c). Note that the proposed estimator does not imposes any assumptions on the relationship be￾tween the risk score Z and the event time T. Under the assumption of independent censoring,
+i.e., the censoring time C is independent of both the event time T and the risk score Z, G(c) can
+6
+
+be obtained by the nonparametric Nelson-Aalen or Kaplan-Meier estimator. If the censoring time
+C depends on the risk score Z, additional model assumptions might be required. For example, a
+proportional hazards (PH) model could be fit to estimate Gz(t) = Pr(C ≥ c | Z = z).
+Based on the estimated PPVt0
+(z) and TPFt0
+(z), APt0
+can be estimated by
+APc t0 =
+∑
+n
+j=1
+I(Xj ≤ t0)wˆt0,jPPV d t0
+(Zj)
+∑
+n
+j=1
+I(Xj ≤ t0)wˆt0,j
+. (5)
+[22] shows that PPV d t0
+(z) and TPF dt0
+(z) are both consistent estimators, and thus, APc t0
+is also a
+consistent estimator of APt0
+for any given value of t0.
+In practice, we often deal with discrete risk scores, where tied risk scores are common. To
+accommodate risk scores with ties, following [24], we modify the above estimator (5) by replacing
+PPV d t0
+(Zj) with
+PPV g t0
+(Zj) = ∑
+n
+i=1 wbt0,i
+
+I(Zi > Zj) + 1
+2
+I(Zi = Zj)
+	
+I(Xi < t0)
+∑
+n
+i=1
+
+I(Zi > Zj) + 1
+2
+I(Zi = Zj)
+	 .
+To construct confidence intervals, we suggest the nonparametric bootstrap [25] method. Specif￾ically, let APc B
+t0 =
+n
+APc b
+t0
+, b = 1, 2, · · · , B
+o
+denote the estimated APt0
+obtained from B bootstrape
+resamples. A 95% confidence interval (CI) for the APt0
+is given as (APc B,0.025
+t0
+, APc B,0.975
+t0
+), where
+APc B,0.025
+t0
+and APc B,0.975
+t0
+are the 2.5% and 97.5% empirical percentiles of the APc B
+t0
+, respectively.
+3.2 Comparing two risk scores
+We consider comparing two risk scores Z1 and Z2 on the APt0
+scale. In many studies, both
+risk scores Z1 and Z2 are calculated for each individual. With the paired data, we can quantify the
+relative predictive performance of Z1 vs. Z2, using the ratio of their respective time-dependent
+AP,
+rAPt0 = APZ1,t0/APZ2,t0
+,
+where APZ1,t0
+and APZ2,t0 denote the time-dependent AP for Z1 and Z2 at t0 respectively. For a
+single risk score Z, the ratio APZ,t0/πt0
+can be regarded as the relative predictive performance of
+Z compared to a non-informative risk score.
+The AP ratio rAPt0
+can be estimated by rAP dt0 = APc Z1,t0/APc Z2,t0
+, where APc Z1,t0
+and APc Z2,t0
+are
+7
+
+the the nonparametric estimator APc t0
+in (5) of Z1 and Z2 respectively. The standard percentile
+bootstrap method descried in Section 3.1 can be used to construct a CI for rAPt0
+or test H0 :
+rAPt0 = 1 for any given time point t0. Specifically, the CI could be obtained based on the empirical
+percentiles of the B bootstrap counterparts of of rAP dt0
+, denoted by rAP db
+t0 = APc b
+Z1,t0
+/APc b
+Z2,t0
+, where
+APc b
+Z1,t0
+and APc b
+Z2,t0
+are the estimated APt0
+for Z1 and Z2 based on the same bootstrap resample,
+b = 1, · · · , B.
+4 Simulation study
+We conducted a simulation study to examine the performance of the time-dependent AP esti￾mator in finite samples. In this simulation study, we considered two risk scores U1 and U2. They
+were generated from a standard normal distribution N(0, 1). The event time associated with both
+risk scores for the ith subject was generated from the following model
+log(Ti) = 7.2 − 1.1Ui1 − 2.5Ui2 − 1.5log(U
+2
+i1
+) + ǫT,
+where ǫT ∼ N(0, 1.5). This setting provides an example where the ROC curves of the two risk
+scores cross at time t0 = 8, shown in Figure 1, with AUCU1,t0
+and AUCU2,t0
+are similar in values.
+On the other hand, the PR curve of U1 dominates that of U2 over the most range of the TPR with
+APt0
+of U1 greater than that of U2.
+The censoring time Ci was generated following Ci = min(Ai
+, Bi +1) where, Ai ∼ Uni f orm(0, 50),
+and Bi ∼ Gamma(25, 0.75). This configuration results in about 50% of censoring overall. Let
+Xi = min(Ti
+, Ci), δi = I(Ti ≤ Ci). In this setting, the censoring time is independent of both the
+event time and risk scores.
+We considered three prediction time points t0 where the corresponding event rates are, r =
+P(Ti < t0), 0.01, 0.05 and 0.1, respectively. To allow a reasonable number of events by t0, we
+generated the data {(Xi
+, δi
+, U1i
+, U2i), i = 1, ..., n} with sample size n being 2000 and 5000 (Tables 1
+and 2). In each table, we report the following summary statistics based on 1000 repetitions: bias,
+empirical standard error (ESE) of the estimator, average standard errors from bootstrap (ASEb
+),
+and the empirical coverage probability (ECOVPb
+) of 95% confidence intervals obtained from 1000
+bootstrap resamples as described in Section 3.
+8
+
+0.0 0.2 0.4 0.6 0.8 1.0
+0.0 0.2 0.4 0.6 0.8 1.0
+FPF
+TPF
+U1: 0.841
+U2: 0.848
+non−informative
+0.0 0.2 0.4 0.6 0.8 1.0
+0.0 0.2 0.4 0.6 0.8 1.0
+TPF
+PPV
+U1: 0.364
+U2: 0.266
+non−informative
+Figure 1: The ROC curves in the left panel and the precision-recall curves in the right panel for
+the two risk scores U1 and U2 at t0 = 8 when the event rate is 5%. The numbers shown in graph
+correspond to the AUC and the AP values.
+These results show that the estimators of both time-dependent AP and ratio of AP, AP1/AP2,
+between the two risk scores had small biases in all t0 values and different sample sizes. The
+bias decreases with increasing event rate and increasing sample size. Also, the standard errors
+ASEb obtained from bootstrap were close to the empirical standard errors. Thus, the confidence
+intervals attained the nominal coverage probabilities for both smaller sample size 2000 and larger
+sample size 5000.
+We remark that this simulation provides an illustrative example of the relationship between
+ROC curve and PR curve as well as the relationship between the AUC and the AP investigated
+in [16]. When the ROC curves of two competing risk scores cross, the PR curves cross too. In
+situations like this, the AUC and the AP may rank the risk scores differently. In our simulation
+setting, U2 outperforms U1 according to the AUC, which indicates that U2 is better at discriminat￾ing between cases and controls. On the other hand, U1 outperforms U2 according to the AP, which
+suggests that U1 is a better screening tool for stratifying subjects into different risk groups.
+5 Data Analysis
+In this section, we illustrate the use of APt0 metric with a data set from the Childhood Cancer
+Survivor Study [20]. This cohort follows children who were initially treated for cancer at 26 US
+9
+
+Table 1: Results of simulation with sample size 2000.
+t0 Event rate TRUE BIAS ESE ASEb ECOVPb
+(%)
+0.5 0.0101 AP1 0.182 0.0365 0.0810 0.0795 92.3
+AP2 0.124 0.0339 0.0689 0.0678 93.0
+rAP 1.47 0.4890 1.5300 1.7600 95.1
+8 0.0495 AP1 0.364 0.0096 0.0527 0.0516 92.5
+AP2 0.266 0.0129 0.0452 0.0450 93.4
+rAP 1.37 0.0140 0.3290 0.3320 95.7
+36 0.0991 AP1 0.462 0.0098 0.0534 0.0558 95.9
+AP2 0.375 0.0118 0.0493 0.0501 94.5
+rAP 1.23 0.0135 0.2310 0.2420 94.9
+Table 2: Results of simulation with sample size 5000.
+t0 Event rate TRUE BIAS ESE ASEb ECOVPb
+(%)
+0.5 0.0101 AP1 0.182 0.0185 0.0500 0.0504 93.1
+AP2 0.124 0.0155 0.0416 0.0417 94.8
+rAP 1.47 0.1550 0.7060 0.7600 93.8
+8 0.0495 AP1 0.364 0.0042 0.0337 0.0333 92.9
+AP2 0.266 0.0049 0.0291 0.0288 93.7
+rAP 1.37 0.0060 0.2160 0.2100 95.4
+36 0.0991 AP1 0.462 0.0034 0.0354 0.0346 95.5
+AP2 0.375 0.0037 0.0310 0.0313 94.1
+rAP 1.23 0.0051 0.1490 0.1510 95.0
+and Canada institutions between 1970 and 1986 and who survived at least 5 years after their
+cancer diagnosis. Among the survivors, cardiovascular disease has been recognized as a leading
+contributor to morbidity and mortality [26]. To inform future screening and intervention strategy
+for congestive heart failure (CHF) in this population, [6] developed several risk score systems
+using the CCSS data and validated them on external cohorts. For the purpose of illustration, we
+chose two of these risk scores and evaluated their predictive performance using the proposed
+APt0
+.
+We included 11,457 subjects in our analysis from the CCSS study who met the original study
+inclusion criteria and had both risk scores. In this data, a total of 248 subjects experienced the
+CHF. Between the two risk scoring systems we focused on in this data analysis, the simpler model
+used information on age at cancer diagnosis, sex, whether the patient was exposed to chest radio￾therapy, and whether the patient was exposed to a particular chemotherapy agent. We refer to
+this model as the simple model. The more elaborate model, known as the heart dose model, in￾10
+
+cluded detailed clinical information on the average radiation dose to the heart and the cumulative
+dose of the specific chemotherapy agent, along with age at diagnosis and sex. This is an example
+where a simple risk score system utilizes minimum treatment information and can be used for
+any patient by virtually all clinicians, while the more complex risk score system demands specific
+dose information which may not be readily available to clinicians providing long-term follow-up
+care. We used the original risk scores of the simple model and the heart dose model from the refer￾ence study [6]. Briefly, these scores were constructed via linear combinations of the corresponding
+covariates, where the regression coefficients were obtained from Poisson regression models.
+Table 3 reports the estimated APt0 with 95% CIs for both the simple model (denoted by APs,t0
+)
+and heart dose model (denoted by APh,t0
+) at t0 = 20 and 35 years post-diagnosis where the cor￾responding estimated event rates were 1.3% and 4.7% respectively. These two models were com￾pared using the ratio of AP, i.e. rAPt0 = APh,t0
+/APs,t0
+. In addition, we also provided the estimated
+time-dependent AUC (AUCt0
+) at these two time points as well as the difference of AUCs between
+these two models ∆AUCt0 = AUCh,t0 − AUCs,t0
+. To illustrate the time-varying performance for
+each model as well as the comparison between these two models over time, APt0
+, AUCt0
+, rAPt0
+and ∆AUCt0 versus t0 were plotted in Figure 2. Note that we assumed independent censoring in
+estimating the AP and the AUC.
+The results in Table 3 show that the heart dose model outperforms the simple model at both
+time points. For example, the estimated AP20 of the heart dose model is 0.075, which indicates
+that by 20 years post-diagnosis, using the risk score from the heart dose model, we expect that on
+average 7.5% subjects with a high risk score (compared to the risk score of a randomly selected
+case) will experience heart failure. This AP is almost six times of the event rate 1.3%, which
+corresponds to the AP of a non-informative risk score system. In contrast, the estimated AP20 for
+the simple model is 0.039, roughly half of that of the heart dose model (rAP20=1.96, 95%CI:1.41-
+2.88). At 35 years post diagnosis, the heart dose model is significantly better than the simple
+model with rAP35 = 1.45 (95%CI: 1.26 - 1.70). Indeed, The plots (c) and (d) in Figure 2 show that in
+terms of the APt0
+, the heart dose model outperforms the simple model at identifying the high risk
+subjects from the targeted population at all time points considered. On the other hand, the AUCs
+are similar between these two models, as seen in plot (d). Especially, ∆AUC is not significantly
+different from 0 at the beginning and towards the end of the time period that were considered,
+11
+
+For example ∆AUC35 = 0.01 (95% CI: -0.02 - 0.03, p=0.47), shown in Table 3. It suggests that
+according to the AUC, there is not much performance difference between the two models. If, due
+to incorporating more information, the heart dose model is indeed superior to the simple model
+in terms of identifying the high risk individuals, the results in Table 3 and Figure 2 implies that
+the AP is a better metric for discriminates the risk prediction performance than the AUC does.
+Table 3: Estimated APt0
+and AUCt0 with 95% CIs for two risk scoring systems at t0 = 20 and 35
+years, respectively. The comparison of APs is measured by rAP and the comparison of AUCs is
+measured by ∆AUC.
+t0 Event rate Risk score system AP AUC
+20 years 0.013 Simple 0.039 (0.029, 0.052) 0.79 (0.75, 0.82)
+Heart dose 0.077 (0.050, 0.127) 0.82 (0.78, 0.86)
+Comparison 1.96 (1.41, 2.88) 0.03 (0.01, 0.05)
+35 years 0.047 Simple 0.079 (0.066, 0.095) 0.81 (0.78, 0.84)
+Heart dose 0.114 (0.092, 0.144) 0.82 (0.78, 0.85)
+Comparison 1.45 (1.26, 1.70) 0.01 (-0.02, 0.03)
+6 Discussion
+One of the main goals of clinical risk prediction is to screen the asymptomatic population and
+to stratify them for tailored intervention. Prospective accuracy measures such as PPVt0
+is preferred
+for this purpose. However, the calculation of PPVt0 demands a threshold for continuous risk
+scores, which can create practical difficulties for evaluating risk score systems, especially when
+more than two systems are compared. In this paper, we defined and interpreted APt0
+, which
+is the area under the time-dependent precision-recall curve, for event time data. We proposed
+a nonparametric estimator of APt0
+and a ratio estimator of APt0
+for comparing two competing
+risk score systems. We suggested the use of the bootstrap method for inference, which is broadly
+applicable in practical settings. We also developed an R package APtools for download available
+in CRAN which implements our method for binary and survival outcomes.
+The AUC has been the most widely used performance metric in the clinical research commu￾nity. A number of authors have pointed out that the AUC is informative on the classification
+performance and discrimination power [27, 11, 18], but not an appropriate metric for assessing
+the prospective accuracy performance [10, 11]. Consistent with the criticism on the insensitivity
+12
+
+15 20 25 30 35
+0.00 0.02 0.04 0.06 0.08 0.10
+ (a)
+Time (year)
+APt0
+simple
+heart dose
+non−informative
+15 20 25 30 35
+0.50 0.55 0.60 0.65 0.70 0.75 0.80 0.85
+ (b)
+Time (year)
+AUCt0
+simple
+heart dose
+non−informative
+15 20 25 30 35
+1.0 1.5 2.0 2.5 3.0
+ (c)
+Time (year)
+rAPt0
+15 20 25 30 35
+−0.02 0.00 0.02 0.04 0.06 0.08
+ (d)
+Time (year)
+∆AUCt0
+Figure 2: CCSS Data analysis: panel (a) shows the estimates of the time-dependent AP for the sim￾ple model APs,t0
+and heart dose model APh,t0
+; panel (b) shows the estimates of the time-dependent
+AUC for the simple model AUCs,t0
+and heart dose model AUCh,t0
+; panel (c) shows the estimates
+of rAPt0 = APh,t0
+/APs,t0
+, the ratio of the time-dependent AP of the heart dose model over that of
+the simple model; panel (d) shows the estimates of ∆AUCt0 = AUCh,t0 − AUCs,t0
+, the difference of
+the time-dependent AUC between the heart dose model and the simple model. The dotted lines
+in panels (c) and (d) represent the pointwise 95%CI for rAPt0
+and ∆AUCt0
+, respectively.
+of the AUC in evaluating risk prediction models (See [9]), our data analysis illustrated that using
+the AUC as the metric, the performance of the simple model and the heart dose model appears
+close. However,based on the AP, the heart dose model outperforms the simple model and could
+be preferred in clinical screening. Thus the conclusion reached based on the AUC in this example
+may mislead researchers and clinicians.
+It should be noted that when comparing different risk score systems, the ranking of their AUCs
+13
+
+and APs are not necessarily concordant; our simulation study in Section 4 gives such an example.
+As the purpose of this article is to introduce a time-dependent APt0
+, we refer readers to [16] for
+insight on the relationship between the ROC curve and PR curve and to [17] where the relationship
+between the AUC and the AP is illuminated. Thus, risk scores which perform well in separating
+cases from controls may perform poorly in identifying a higher risk subpopulation, which is the
+goal of screening. Compared to the AUC, the AP as the summary metric of PPV is better suited in
+evaluating the usefulness of the risk scores and comparing the prospective prediction performance
+among competing risk scores, when the objective is screening through risk stratification.
+[11, 13] proposed to use the curves of PPVt0 versus risk score quantiles as an assessment tool
+for quantifying prospective prediction accuracy. One curve corresponds to one particular value
+of t0, which limits its ability to assess the accuracy across time points. In contrast, plotting APt0
+against time could facilitate visualizing the performance of different risk score systems over time
+in one single plot.
+Unlike the AUC, the AP is event rate dependent and should be estimated in a prospective
+cohort or population-based study. AP cannot be estimated from a case-control study; the estimate
+will be of very little use because the prevalence rate is artificially fixed by the study design. While
+the range of the AUC is always between 0.5 and 1, the range of AP is between the event rate and
+1. While AP’s wide range could be advantageous in differentiating risk score systems, caution is
+needed when re-evaluating risk score systems in other study populations for the same outcome.
+This is because the underlying event rate may differ among populations. Thus, it is possible that
+AP will select different risk score systems as superior for the same outcome in different study
+populations.
+For future work, we will consider estimating the time-dependent AP with multiple markers,
+as well as the incremental value of AP by adding new markers on top of an existing risk profile. In
+addition, similar to the partial AUC, partial AP could be defined as the area over a certain range
+of interest, such as those at the low values of TPF where PPV is typically high. Competing risk in
+the context of AP is another topic that needs to be addressed for event time data.
+14
+
+Acknowledgments
+The authors would like to thank Yan Chen for data support. Dr. Zhou’s research is supported
+by the Natural Sciences and Engineering Research Council of Canada. Dr. Yuan’s research is sup￾ported by the Canadian Institutes of Health Research. The CCSS was supported by the National
+Cancer Institute (CA55727, G.T. Armstrong, Principal Investigator).
+References
+[1] Wright CF, Zimmern RL. Conceptual issues for screening in the genomic era-time for an up￾date? Epidemiology, biostatistics, and public health 2014; 11(4).
+[2] Espeland M. Reduction in weight and cardiovascular disease risk factors in individuals with
+type 2 diabetes: one-year results of the look ahead trial. Diabetes care 2007; .
+[3] James MT, Hemmelgarn BR, Tonelli M. Early recognition and prevention of chronic kidney
+disease. The Lancet 2010; 375(9722):1296–1309.
+[4] Goff DC, Lloyd-Jones DM, Bennett G, Coady S, D’Agostino RB, Gibbons R, Greenland P,
+Lackland DT, Levy D, O’Donnell CJ, et al.. 2013 acc/aha guideline on the assessment of car￾diovascular risk: a report of the american college of cardiology/american heart association
+task force on practice guidelines. Journal of the American College of Cardiology 2014; 63(25_PA).
+[5] Buijsse B, Simmons RK, Griffin SJ, Schulze MB. Risk assessment tools for identifying individ￾uals at risk of developing type 2 diabetes. Epidemiologic reviews 2011; :mxq019.
+[6] Chow EJ, Chen Y, Kremer LC, Breslow NE, Hudson MM, Armstrong GT, Border WL, Feijen
+EA, Green DM, Meacham LR, et al.. Individual prediction of heart failure among childhood
+cancer survivors. Journal of Clinical Oncology 2015; 33(5):394–402.
+[7] Lindström J, Tuomilehto J. The diabetes risk score. Diabetes care 2003; 26(3):725–731.
+[8] Grimes DA, Schulz KF. Uses and abuses of screening tests. The Lancet 2002; 359(9309):881–884.
+[9] Cook NR. Use and misuse of the receiver operating characteristic curve in risk prediction.
+Circulation 2007; 115(7):928–935.
+15
+
+[10] Moskowitz CS, Pepe MS. Quantifying and comparing the predictive accuracy of continuous
+prognostic factors for binary outcomes. Biostatistics 2004; 5(1):113–127.
+[11] Zheng Y, Cai T, Pepe MS, Levy WC. Time-dependent predictive values of prognostic biomark￾ers with failure time outcome. Journal of the American Statistical Association 2008; 103(481):362–
+368.
+[12] Wald N, Bestwick J. Is the area under an roc curve a valid measure of the performance of a
+screening or diagnostic test? Journal of medical screening 2014; :0969141313517 497.
+[13] Zheng Y, Cai T, Stanford JL, Feng Z. Semiparametric models of time-dependent predictive
+values of prognostic biomarkers. Biometrics 2010; 66(1):50–60.
+[14] Raghavan V, Bollmann P, Jung GS. A critical investigation of recall and precision as mea￾sures of retrieval system performance. ACM Transactions on Information Systems (TOIS) 1989;
+7(3):205–229.
+[15] Manning CD, Schütze H. Foundations of statistical natural language processing, vol. 999. MIT
+Press, 1999.
+[16] Davis J, Goadrich M. The relationship between precision-recall and roc curves.
+Proceedings of the 23rd International Conference on Machine Learning, ICML ’06,
+ACM: New York, NY, USA, 2006; 233–240, doi:10.1145/1143844.1143874. URL
+http://doi.acm.org/10.1145/1143844.1143874.
+[17] Su W, Yuan Y, Zhu M. A relationship between the average precision and the area under the
+roc curve. Proceedings of the 2015 International Conference on The Theory of Information Retrieval,
+ACM, 2015; 349–352.
+[18] Yuan Y, Su W, Zhu M. Threshold-free measures for assessing the performance of medical
+screening tests. Frontiers in Public Health 2015; 3.
+[19] Ozenne B, Subtil F, Maucort-Boulch D. The precision–recall curve overcame the optimism of
+the receiver operating characteristic curve in rare diseases. Journal of clinical epidemiology 2015;
+68(8):855–859.
+16
+
+[20] Robison LL, Armstrong GT, Boice JD, Chow EJ, Davies SM, Donaldson SS, Green DM, Ham￾mond S, Meadows AT, Mertens AC, et al.. The childhood cancer survivor study: a national
+cancer institute–supported resource for outcome and intervention research. Journal of Clinical
+Oncology 2009; 27(14):2308–2318.
+[21] Heagerty PJ, Lumley T, Pepe MS. Time-dependent ROC curves for censored survival data
+and a diagnostic marker. Biometrics 2000; :337–344.
+[22] Uno H, Cai T, Tian L, Wei L. Evaluating prediction rules for t-year survivors with censored
+regression models. Journal of the American Statistical Association 2007; 102(478).
+[23] Lawless JF, Yuan Y. Estimation of prediction error for survival models. Statistics in medicine
+2010; 29(2):262–274.
+[24] Pepe MS. The statistical evaluation of medical tests for classification and prediction. Oxford Univer￾sity Press, USA, 2003.
+[25] Efron B. Bootstrap methods: another look at the jackknife. The Annals of Statistics 1979; 7(1):1–
+26.
+[26] Oeffinger KC, Mertens AC, Sklar CA, Kawashima T, Hudson MM, Meadows AT, Friedman
+DL, Marina N, Hobbie W, Kadan-Lottick NS, et al.. Chronic health conditions in adult sur￾vivors of childhood cancer. New England Journal of Medicine 2006; 355(15):1572–1582.
+[27] Gail MH, Pfeiffer RM. On criteria for evaluating models of absolute risk. Biostatistics 2005;
+6(2):227–239.
+17
+

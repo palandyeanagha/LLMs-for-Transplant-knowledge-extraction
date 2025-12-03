@@ -1,0 +1,1243 @@
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+Annual Review of Biomedical Engineering
+Circulating Tumor Cells:
+Diagnostic and Therapeutic
+Applications
+Eric Lin,1,2,3,∗ Thong Cao,4,∗ Sunitha Nagrath,1,2,3
+and Michael R. King4
+1Department of Chemical Engineering, University of Michigan, Ann Arbor, Michigan 48109,
+USA; email: snagrath@umich.edu
+2University of Michigan Comprehensive Cancer Center, Ann Arbor, Michigan 48109, USA
+3Biointerfaces Institute, University of Michigan, Ann Arbor, Michigan 48109, USA
+4Department of Biomedical Engineering, Vanderbilt University, Nashville, Tennessee 37235,
+USA; email: mike.king@vanderbilt.edu
+Annu. Rev. Biomed. Eng. 2018. 20:329–52
+First published as a Review in Advance on
+March 14, 2018
+The Annual Review of Biomedical Engineering is
+online at bioeng.annualreviews.org
+https://doi.org/10.1146/annurev-bioeng-062117-
+120947
+Copyright c 2018 by Annual Reviews.
+All rights reserved
+∗These authors contributed equally to this article.
+Keywords
+circulating tumor cell, CTC, metastasis, microfluidics, TRAIL,
+tumor-draining lymph node
+Abstract
+Metastasis contributes to poor prognosis in many types of cancer and is the
+leading cause of cancer-related deaths. Tumor cells metastasize to distant
+sites via the circulatory and lymphatic systems. In this review, we discuss
+the potential of circulating tumor cells for diagnosis and describe the exper￾imental therapeutics that aim to target these disseminating cancer cells. We
+discuss the advantages and limitations of such strategies and how they may
+lead to the development of the next generation of antimetastasis treatments.
+329
+Click here to view this article's 
+online features:
+• Download figures as PPT slides
+• Navigate linked references
+• Download citations
+• Explore related articles
+• Search keywords
+ANNUAL 
+REVIEWS Further
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+Contents
+1. INTRODUCTION . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 330
+2. CIRCULATING TUMOR CELL ISOLATION TECHNOLOGIES. . . . . . . . . . . . 332
+2.1. CellSearchTM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 332
+2.2. Affinity-Based Microfluidic Devices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 333
+2.3. Filtration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 333
+2.4. Inertial-Based Size Separation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 334
+2.5. Dean Flow Fractionation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 335
+2.6. Dielectrophoresis. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 335
+2.7. Integrated Devices. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 336
+3. CIRCULATING TUMOR CELLS AS A THERAPEUTIC TARGET. . . . . . . . . . . 337
+3.1. Therapeutics Directed at Circulating Tumor Cells . . . . . . . . . . . . . . . . . . . . . . . . . . . 337
+3.2. TRAIL-Based Circulating Tumor Cell Therapeutics . . . . . . . . . . . . . . . . . . . . . . . . . 338
+3.3. Circulating Tumor Cell Therapeutics in Tumor-Draining Lymph Nodes . . . . . 340
+3.4. Antitumor Vaccines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 344
+4. CONCLUSION . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 345
+1. INTRODUCTION
+Early diagnosis in most types of cancer remains challenging due to the lack of symptoms in
+the early stage and the small size of the primary tumor. For instance, mammography, the most
+common screening tool for the detection of early-stage breast cancers, can detect on average
+80–90% of breast cancers at an early stage in women without symptoms, and reduces the risk
+of death by 15% in all women screened. Mammography is a somewhat accurate screening tool,
+but the rate of false negatives remains around 20% and the rate of false positives is more than
+30% (1). Mammography also detects indolent localized cancers that may not require treatment
+(2). In studies of early detection of lung cancer, computed tomography (CT) reduces mortality by
+7–20% but has a low screening accuracy (96% false positive) (3). Moreover, the radiation from
+CT scans gives rise to long-term risk for some cancers (4). In another example, prostate-specific
+antigen (PSA) has been used for the early detection of prostate cancer, but the overdiagnosis rate
+and whether it contributes to a reduction in deaths remain unknown (5).
+Before cancer metastasizes, cancer cells are disseminated from the primary tumor site to remote
+sites via blood circulation (Figure 1). Circulating tumor cells (CTCs) were first discovered in 1869
+during an autopsy of a metastatic cancer patient by Ashworth (6), who observed that the cancer
+cells in a site distant from the tumor resembled the original tumor. This observation implied that
+in order for the cancer cells to have reached the distant site, they would have had to be transported
+there through the blood. Ever since, CTCs have been considered an important factor in metastasis
+and a primary cause of deaths attributable to cancer.
+Metastasis can be described as a five-step process (Figure 1): (a) Cancer cells detach from
+the primary tumor, (b) invade the blood circulation, (c) survive in circulation, (d ) extravasate into
+distant organs, and (e) proliferate at the secondary site(s). CTCs found in the peripheral blood
+of cancer patients often indicate metastasis (7, 8). CTCs have clinical potential as prognostic
+biomarkers to predict treatment efficacy, progression-free survival, and overall survival in patients
+(9–13). There is increasing evidence that CTCs that entered the circulation could be a good
+surrogate biomarker not only for prognosis but also for detection and monitoring of disease (8,
+330 Lin et al.
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+Basement
+membrane
+Loss of tight
+junction and
+E-cadherin
+EMT
+Collagen fibers Invasion
+Extravasation
+MET
+Successful
+metastasis
+proliferation and
+angiogenesis
+Successful
+metastasis
+proliferation and
+angiogenesis
+Resistance to
+anoikis Immune cells
+Blood vessel
+Dormant
+metastasis
+Survival mechanism of CTCs:
+• Undergoing EMT
+• Resisting anoikis
+• Evading immune cells
+• Withstanding the circulation fluidic forces
+Intravasation
+Normal
+epithelial
+cells
+β-catenin
+Tight
+junction
+E-cadherin
+Epithelial
+tumor cells
+Mesenchymal￾like tumor cells
+White blood
+cells
+Endothelial
+cells
+ial
+nin
+n
+erin
+tumor c
+Mesenc
+like tum
+White b
+cells
+Endothe
+cells
+Figure 1
+Cancer metastasis involving the detachment of circulating tumor cells (CTCs) from the primary tumor and their invasion into the
+circulation, survival in the circulation, extravasation, and proliferation. Abbreviations: EMT, epithelial-to-mesenchymal transition;
+MET, mesenchymal-to-epithelial transition.
+9, 14–17). The potential use of CTCs in many research areas has acquired great momentum in
+recent years. Developments include the selection of neoadjuvant and adjuvant therapy, detection
+of recurrent disease, examination of pharmacodynamic biomarkers, and identification of novel
+therapeutic targets, enabling a personalized therapeutic approach (12, 13, 18, 19, 20, 21).
+Compared with traditional tissue biopsy, which is an invasive procedure and presents a static
+“snapshot” of the tumor, liquid biopsy involving CTC and/or circulating tumor DNA (ctDNA)
+analyses is noninvasive and can provide real-time information about the disease burden, the evo￾lution of the tumor, and the tumor’s heterogeneity (22). More specifically, CTCs contain in￾formation related to the initiation of metastasis, whereas ctDNA is more representative of the
+bulk of the metastatic tumor (22). Although intratumor heterogeneity is widely recognized as a
+primary way to reduce the effectiveness of molecular targeted therapy, thorough investigation of
+such heterogeneity remains challenging due to the difficulty of performing multiple tissue biop￾sies to acquire spatial and temporal samples (23). The molecular and genetic profiling of CTCs
+represents a possible alternative to study tumor subpopulations during disease progression and to
+monitor changes in response to therapy.
+CTCs are strong prognostic and diagnostic factors because they are present in early disease
+progression (24). Several studies have detected CTCs in blood in early-stage cancer. For example,
+Stott et al. (17) detected CTCs in patients with localized prostate cancer, Zhang et al. (25) extracted
+CTCs from patients with early-stage lung cancer, and Murlidhar et al. (26) showed the presence
+of CTCs in early-stage lung cancer not only in peripheral blood but also in pulmonary veins.
+www.annualreviews.org • Circulating Tumor Cells 331
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+CTC enumeration is a powerful tool in early screening, monitoring of disease progression and
+treatment, and indication of cancer relapse (27). CTCs also have great potential to provide clinical
+and therapeutic information when combined with downstream analysis (27). Some studies have
+suggested that CTC enumeration alone is not sufficient to guide therapeutic decisions (28) but
+that molecular analysis of CTCs should be performed to determine how to target therapy (29).
+Mutations in genes such as KRAS, EGFR, and HER2 and in the estrogen receptor (ER) genes can
+be identified through the screening of CTCs (30). The differences between individual CTCs and
+the primary tumor may enable new insights through the comparison of CTC genomes with those
+of the primary and metastatic tumors (27). RNA profiling or sequencing on single or pooled CTCs
+can provide extensive information to identify signaling pathways and splice variants relevant to
+metastatic potential and therapy resistance (31). Ex vivo culture of patient-derived CTCs can be
+adopted in tests of drug efficacy (32) and can enable multiplexed proteomic analyses of CTCs (33).
+The main challenge in the study of CTCs is posed by their extreme rarity: They represent
+as few as one cell per 109 hematologic cells in the blood of patients with metastatic cancer (15).
+The plasticity and phenotypic alterations of CTCs further hamper the detection and isolation
+of these cells (27). A given isolation technology can therefore be characterized through four
+parameters: recovery, purity, throughput, and clinical relevance. CTC recovery indicates the
+ability of a technology to enumerate CTCs. Sample purity determines whether further downstream
+analysis can be performed. Throughput indicates the volume of blood sample that can be processed
+and constrains the overall number of CTCs that can be recovered. Clinical relevance refers to the
+biological and therapeutic information that can be obtained from the isolated CTCs. An optimal
+technology would have high CTC recovery and purity, high throughput for sample processing, and
+the ability to retain heterogeneous CTC populations for further downstream analysis to provide
+clinical suggestions.
+In the following sections, we categorize CTC isolation technologies on the basis of the ap￾proaches adopted. We briefly describe each category with examples of relevant studies, and com￾pare the technologies in terms of their performance and potential beyond enumeration.
+2. CIRCULATING TUMOR CELL ISOLATION TECHNOLOGIES
+2.1. CellSearchTM
+CellSearchTM is the first and so far the only CTC assay approved by the US Food and Drug
+Administration for clinical use in patients with metastatic breast, colorectal, and prostate cancer
+(24). CellSearch can correlate the number of isolated CTCs with prognosis (34), thereby showing
+reduced progression-free survival and overall survival for patients with metastatic cancer who have
+five or more CTCs (breast and prostate cancers) or three or more CTCs (colorectal cancer) per
+7.5 mL blood (35–37). A blood sample is collected in a CellSaveTM tube to be preserved for up to
+96 h, then preprocessed with Ficoll centrifugation for removal of red blood cells (RBCs) by density
+gradient. CTCs in the buffy coat are magnetically labeled with Ferrofluid, which is a suspension
+of antibody-coated magnetic nanoparticles, then extracted through the application of a magnetic
+field. The extracted CTCs are immunostained against cytokeratin, CD45, and 4
+,6-diamidino-2-
+phenylindole (DAPI), then imaged with fluorescence microscopy for identification.
+CellSearch offers recovery rates of 12% in a cell line with low levels of epithelial cell adhesion
+molecule (EpCAM) expression (MDA-MB-231), 44% in a cell line with moderate levels of Ep￾CAM expression (BT20), and more than 75% in cell lines with high levels of EpCAM expression
+(T47D and SKBR3) (8). The rate of CTC recovery in clinical samples is much lower, whereas
+other technologies demonstrate orders-of-magnitude-higher numbers of CTCs recovered. The
+332 Lin et al.
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+monitoring of mesenchymal CTCs remains challenging, as CellSearch demonstrates an even lower
+recovery rate (2%) for mesenchymal breast cancer cell lines (38). OB-Cadherin has been proposed
+as a potential mesenchymal marker to capture cells undergoing epithelial-to-mesenchymal tran￾sition (39, 40). Further analysis using CellSearch has also been limited due to low sample purity
+(0.01–0.1%) (41).
+2.2. Affinity-Based Microfluidic Devices
+The CTC chip, developed in 2007 by Nagrath et. al (15), is the first immunocapture microfluidic
+technology. This polydimethylsiloxane (PDMS)-based device consists of 78,000 microposts coated
+with antibodies against EpCAM, enabling the capturing of CTCs expressing the antigen through
+a one-step process that does not require prelabeling or processing of whole-blood samples. The
+CTC chip offers a throughput of 1 mL/h, a CTC recovery rate of 74–80% among cell lines with
+different levels of EpCAM expression, and purity of 50%. CTCs have been identified in more
+than 99% (115 out of 116) patient samples from lung, prostate, pancreatic, breast, and colon
+tumors.
+The geometrically enhanced differential immunocapture (GEDI) chip also employs microposts
+but with enhanced geometry to maximize CTC–wall interactions. The GEDI chip contains 5,000
+silicon microposts coated with anti–prostate-specific membrane antigen antibodies (10). The mi￾croposts in each row are staggered to enhance contact between larger cells and the microposts.
+The geometry of the microposts increases the sample’s purity in comparison to the CTC chip as
+a result of a reduction in the number of collisions between smaller cells and the microposts. The
+GEDI chip offers a throughput of 1 mL/h, a recovery rate of 85% in blood against LNCaP cells,
+and purity of 68%.
+The herringbone chip (HB chip) uses a structure other than microposts—namely staggered
+herringbone grooves—to create microvortices and lateral movement (17). In the HB chip, CTCs
+are passively mixed through secondary flows and therefore have a greater chance of interacting
+with the antibody-coated PDMS surface. The HB chip offers a higher rate of CTC recovery (92%
+against PC3 cells in blood) than that of the CTC chip due to the higher encounter rate between
+cells and the surfaces, but it yields lower sample purity (14%) due to the same effect.
+The graphene oxide chip (GO chip) eliminates geometrical structures but incorporates nano￾materials to achieve CTC capture. The GO chip uses antibody-coated nanosheets on a flat surface
+made of silicon substrate and takes advantage of the nanomaterial’s high ratio of surface area to
+volume for sensitive capture of CTCs (42). The GO chip has 59,000 flower-shaped gold patterns
+that absorb nanosheets to be functionalized with EpCAM. The GO chip can operate at a higher
+flow rate (3 mL/h) while offering a similar rate of recovery (more than 82.3%) compared with
+those of the CTC chip.
+Due to their high sensitivity and specificity, microfluidics-based CTC isolation methods have
+been widely adopted in both basic and clinical studies. However, the potential of these methods
+is limited due to their low throughput and inability to retrieve heterogeneous populations of
+CTCs. Moreover, efficient release of CTCs from captured substrates remains an active area of
+investigation, obstructing downstream studies of isolated CTCs.
+2.3. Filtration
+Isolation by size of epithelial tumor cells (ISET) is one of the first modern filtration approaches
+to CTC purification (43). A blood sample is fixed with paraformaldehyde to eliminate cell de￾formability for better recovery through polycarbonate (PC) membranes. The PC membranes are
+www.annualreviews.org • Circulating Tumor Cells 333
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+track-etched to create calibrated 8-µm-diameter cylindrical pores. The preprocessed blood sample
+is aspirated through the membranes under vacuum, trapping CTCs in the pores and allowing the
+rest of the blood cells to freely pass. The cells on the membranes are then washed with buffer and
+subjected to immunostaining for CTC identification. The CTC recovery rate in clinical samples
+is similar to that of CellSearch, with variation depending on the type of cancer (44). The main
+challenge of ISET involves cells clogging the membranes. In order to avoid randomized pore
+overlapping during fabrication, the porosity of the PC membranes is kept low (<2%) so that the
+CTCs are not lost through fused pores (45). Because of the membranes’ low porosity, they are
+easily clogged by the abundant blood cells occupying the pores.
+More recent filtration approaches have employed microfabrication and different materials to
+overcome the limitations of traditional track-etched PC membranes. For example, the parylene
+C microfilter reported by Zheng et al. (46) contains 16,000 embedded filter pores (5.6–12.6%
+porosity) to achieve a recovery rate of 89%, 6 log purification, and a throughput of 7.5 mL in
+10 min. Zheng et al. (45) later created a 3D microfilter that enables the enrichment of viable
+cells without fixation. This 3D microfilter applies two layers of staggered parylene membranes
+with pores (7.0–14.5% porosity), allowing CTCs to rest on the second layer below the pores of
+the first layer. The device reduces stress on the cell membrane and sustains cell viability during
+filtration. It offers a recovery rate of 86% against unfixed MCF7 cells from 1 mL of blood and 3
+log purification [(4.5–11) × 106 white blood cells (WBCs) per milliliter], but has a 1 mL sample
+volume due to the propensity for clogging.
+Overall, size-based filtration techniques offer a biomarker-independent technique for CTC
+isolation, but yield low recovery and low purity compared with affinity-based approaches. Addi￾tional concerns include the low sample capacity resulting from cell clogging, cell viability, and
+intermediate throughput.
+2.4. Inertial-Based Size Separation
+A technique introduced by Di Carlo et al. (47) involves the inertial migration of particles to achieve
+high-throughput cell separation in microfluidic channels. Particles flowing through microfluidic
+channels can be focused into certain designated streamlines due to the equilibrium of two inertial
+lift forces: shear gradient and wall lift forces (47). Hur et al. (48) developed the Vortex Chip by using
+microscale laminar vortices to retain large numbers of CTCs in assigned areas at high throughput
+(0.6 mL/min) on the basis of the inertial migration of particles. CTCs are trapped by the vortices
+in the side chambers at higher flow rates and are released when the vortices are discontinued at
+reduced flow rates. An adapted Vortex Chip demonstrated an improved performance of 8–26%
+recovery against MCF7 cells in a single device and 28–37% in double rounds (the performance
+was similar in 10-fold-diluted blood or lysis blood) (49). Clinical sensitivity of 50–88% and purity
+of 0.5–12.7 WBCs per milliliter (1–95% overall purity) have been reported (49, 50).
+In another example, Hyun et al. (51) created a parallel multiorifice flow fractionation (p￾MOFF) device in which a series of contraction/expansion microchannels are placed parallel on a
+chip to continuously isolate CTCs. The series of orifices induces stronger inertial lift forces on
+CTCs because they are larger in size than WBCs, thereby moving the CTCs to the center of
+the microchannels and the WBCs toward the side outlets. In this technique, a blood sample is
+preprocessed with RBC lysis and diluted in buffer to a total volume of 10 mL. p-MOFF offers a
+recovery rate of more than 91.6% against MCF7 and MDA-MB-231 cells, a WBC removal rate of
+90.8% (1 log), and throughput of 0.6 mL/min. In clinical samples, at least one CTC per 7.5 mL of
+blood was identified in 19 of 24 (79%) patients with metastatic and adjuvant breast cancer. Thus,
+inertial size-based separation has demonstrated high performance in terms of throughput and
+334 Lin et al.
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+cell recovery. Emerging techniques are addressing the issue of high purity without any negative
+selection, making these approaches highly attractive.
+2.5. Dean Flow Fractionation
+Dean flow is secondary flow arising from the centrifugal effects characterized by counterrotating
+vortices, where the flow at the center of the channel is directed outward around a curve while
+the flow at the top and bottom of the channel is directed inward. The drag force generated
+from Dean flow is correlated with the size of the particles and the curvature of the channel and,
+therefore, moves the different-sized particles to separate equilibrium positions (47). Hou et al.
+(52) reported a spiral device in which twofold-diluted blood is injected along with a sheath buffer
+flow. The sheath buffer retains blood cells close to the outer wall at the inlet, and the Dean
+flow circulates the blood components along the spiral channel. Because of their smaller size,
+blood cells make one full Dean circulation from inlet to outlet, remaining at the position close
+to the outer wall at the outlet. However, CTCs encounter stronger inertial lift forces as they
+approach the inner wall that prevent them from completing a full Dean circulation, remaining at
+the inner wall at the outlet. The application of a two-stage cascade spiral system improved the
+purity of the sample, achieving an overall cell line recovery rate of 85%, 3 log WBC depletion,
+and throughput of 3 mL/h. In clinical samples, the spiral device has demonstrated sensitivity of
+100% in 20 patients with lung cancer and purity of 0.1–10% (441 ± 319.5 WBCs per milliliter).
+Subsequently, Warkiani et al. introduced a slanted spiral device (53) and a multiplex spiral device
+(54) to improve the throughput (7.5 mL of blood in less than 10 min) and purity (4 log WBC
+depletion).
+Lin et al. (55) created the Labyrinth device, which focuses both CTCs andWBCs into individual
+streamlines. Smaller cells, such as WBCs, remain unfocused in most Dean flow fractionation
+technologies due to the weaker lift force they encounter compared with that of CTCs. The
+Labyrinth device incorporates sharp corners on top of mild curves to enhance the passive migration
+of smaller cells to their equilibrium positions, achieving complete focusing of these cells. The
+device offers a recovery rate of more than 90% against cell lines from breast, pancreatic, prostate,
+and lung cancers; clinical sensitivity of 95% in pancreatic and breast cancer samples (72 out of
+76); 4–5 log WBC depletion through two-stage double devices; and an extremely high flow rate of
+2.5 mL/min. Figure 2 presents the design of a Labyrinth device along with representative images
+of a breast cancer CTC isolated using this device. Overall, studies have demonstrated that these
+techniques perform very well, given their high throughput, recovery rates, and purity.
+2.6. Dielectrophoresis
+Dielectrophoresis (DEP) exploits differences in electrical properties among distinct cells, which
+depend on cell composition, morphology, and phenotype (56). In DEP, when nonuniform electric
+fields are applied to electrodes of different sizes, cells shift positions either toward (pDEP) or away
+from (nDEP) the source of the fields. At low ac frequencies, buffer ions accumulate on the cell
+membrane and form a capacitive layer, moving the cell along with the gradient of the electric
+field (nDEP). At high ac frequencies, the capacitive layer does not form, due to the swift shifting
+of the field, and the concentrated electrics (in the interior of the cell) move the cell toward the
+higher field (pDEP). The crossover frequency is defined as the frequency at which nDEP transits
+to pDEP. Due to their larger surface area, CTCs possess a DEP crossover frequency of 20–
+75 kHz (across more than 80 tumor cell lines) (57), whereas WBCs have a crossover frequency of
+more than 85 kHz (58).
+www.annualreviews.org • Circulating Tumor Cells 335
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+CD45
+DAPI
+a b CK/CD45/DAPI CK
+CK/CD45/DAPI/Phase
+Phase
+10 μm 10 μm
+10 μm 10 μm
+10 μm 10 μm
+Figure 2
+Inertial microfluidics–based separation of circulating tumor cells (CTCs) from a patient with breast cancer. (a) A microfluidic
+Labyrinth device applies differential lift and Dean forces to separate cells on the basis of size. (b) Breast cancer CTCs stained positive
+for cytokeratin and 4
+,6-diamidino-2-phenylindole (DAPI) and negative for CD45. Breast CTCs are shown in red, and the two
+leukocytes are shown in green.
+DEP separation is achieved in two ways: DEP field-flow fractionation (DEP-FFF) and DEP
+trapping. ApoStreamTM employs DEP-FFF to continuously isolate CTCs. After diluted buffy
+coat is infused with a sucrose sheath buffer, a frequency of 45–65 kHz is applied to attract CTCs
+toward and repel WBCs from the electrodes (58). CTCs are collected through the bottom outlet
+while WBCs levitate in the buffer and exit through a waste outlet. A recovery rate of ∼70% has
+been observed against both epithelial and mesenchymal cell lines, along with sample purity of
+∼0.3% (or ∼10,000 WBCs per milliliter) and throughput of 7.5 mL in ∼1 h.
+Another commercial technology, DEPArrayTM, employs DEP trapping to manipulate cells at
+the single-cell level. DEP cages are created through an array of programmable electrodes that
+levitate cells through nDEP and trap them via adjacent electrodes that are in the counter phase
+(59). The cells trapped in cages are characterized with immunofluorescent staining. DEPArray
+is designed as a downstream tool for the recovery of single CTCs following upstream CTC
+enrichment (e.g., CellSearch) (60). However, a cell loss rate of 40% has been reported during
+the use of the DEPArray system (60). Although the performance of traditional DEP-based CTC
+isolation is limited due to lower throughput, DEP has been proven to have great potential in
+manipulating cells.
+2.7. Integrated Devices
+Several technologies utilize multiple concepts for CTC enumeration. The CTC iChip incor￾porates lateral displacement, inertial focusing, and immunomagnetic selection into an integrated
+microfluidic system (61). Blood is first incubated with antibody-coated magnetic microbeads prior
+to processing. The first phase of the iChip “debulks” the blood through deterministic lateral dis￾placement that hydrodynamically depletes cells smaller than 8 µm (e.g., monocytes, lymphocytes,
+RBCs, and platelets). In the second phase, the remaining cells are aligned through a sequence
+of sinusoidal channels by inertial focusing. The third phase involves a magnetic field that sepa￾rates magnetic-labeled cells from nonlabeled cells. Either positive selection using EpCAM, where
+336 Lin et al.
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+CTCs are labeled, or negative selection using CD45 and CD15, whereWBCs are labeled, could be
+employed (posiChip or negiChip, respectively). posiChip has a recovery rate of 78–99% in cell lines
+expressing EpCAM, purity of 1,500 WBCs per milliliter, and throughput of 8 mL/h. negiChip
+has a recovery rate of 95–97% regardless of EpCAM expression, but lower sample purity of
+32,000 WBCs per milliliter.
+Ultraspecific microfluidic devices combine inertial microfluidics and immunomagnetism, en￾abling whole-blood processing without the need for preprocessing (62). A blood sample is injected
+with phosphate-buffered saline fluid buffer into an inertial sorting module to enumerate CTCs.
+The CTC-enriched stream then enters a passive mixer, where it is combined with EpCAM-coated
+magnetic microbeads. On-chip incubation is performed in four reservoirs for enhanced bead–cell
+labeling. The mixture drains directly into a magnetic sorter, where the labeled cells are collected
+by use of a magnetic field and unlabeled cells are directed into a waste outlet by the sheath buffer.
+Such ultraspecific microfluidic devices have a recovery rate of more than 90%, purity of 83% in
+14 clinical samples, and throughput of up to 10 mL/h using parallel devices. Studies have shown
+that the integrated approach offers the best of both techniques, as these approaches yield high
+recovery along with high specificity.
+3. CIRCULATING TUMOR CELLS AS A THERAPEUTIC TARGET
+Cancer therapies that target CTCs are compelling, considering that more than 90% of deaths
+due to cancer are related to metastasis (63). Metastasis begins when a small population of tumor
+cells, namely CTCs, break away from the primary tumor site and intravasate into the peripheral
+circulation (64, 65). Once in the circulation, CTCs travel to distant sites where they tether,
+roll, and eventually extravasate into the underlying tissue in a selectin-dependent manner (66).
+Ultimately, metastasizing cancer cells can form secondary tumors. Although conventional surgery
+and radiation may be effective at excising primary tumors, secondary tumors are much smaller
+and more difficult to detect until they prove fatal. Therefore, the development of technologies
+that directly target CTCs before they have the chance to form secondary tumors could potentially
+reduce metastasis-related deaths.
+Many cancer types metastasize into the lymph nodes, as well as the circulatory system (67). At
+first glance, tumor cells engrafting in the lymph nodes seems counterintuitive, since the lymph
+nodes are epicenters of immune cell congregation and immunosurveillance. However, tumor
+cells can release tumor-associated factors that convert the immunogenic microenvironment of the
+lymph nodes into an immunosuppressive state that can tolerate and even promote the localization
+of metastasizing cancer cells (68). The presence of cancer cells in the lymph nodes necessitates
+therapeutics that can not only selectively target cancer cells in lymph nodes but also reverse the
+immunosuppressive state of the lymph nodes.
+3.1. Therapeutics Directed at Circulating Tumor Cells
+Because tumor metastasis is responsible for more than 90% of cancer-related deaths and most
+distant metastases are formed by tumor cells leaving the primary tumor microenvironment and
+intravasating into the circulatory system, anti-CTC therapeutics have the potential to neutralize
+cancer metastasis and reduce cancer-related deaths (69). A straightforward approach to reducing
+metastasis and cancer-related deaths is to remove CTCs from the circulation of metastasizing
+patients. However, two main challenges faced by all CTC-capturing techniques are the rarity
+of these cells and the lack of a unique identifiable marker. The number of CTCs is relatively
+low in circulation—around 1–100 CTCs per milliliter of blood or approximately 1–100 CTCs per
+www.annualreviews.org • Circulating Tumor Cells 337
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+106–107 leukocytes (70, 71). Existing CTC isolation techniques, including gradient centrifugation,
+microfiltration, and EpCAM antibody targeting, are hampered by the limited volume of blood that
+can be processed per trial (10–50 mL) and by a high background level of contaminating leukocytes
+that routinely reduces the purity of the CTCs to below 1% (15, 72–74). Therefore, any CTC
+selection technique must be able to process large volumes of blood while attaining high purity.
+A recently proposed CTC removal process consisting of a sequential combination of two
+semiautomated technologies—leukapheresis followed by counterflow centrifugation elutriation—
+aims to address the above-described limitations (75, 76). Leukapheresis is a well-established density
+filtration technology that is used clinically to harvest peripheral blood mononuclear cells (PBMCs)
+from whole blood. Importantly, it can process the entire blood volume of a patient multiple times
+over in a single session. Because CTCs and PBMCs have comparable density and size, leukapheresis
+has been used to isolate CTCs from metastatic patients, yielding comparable results to other CTC
+enrichment techniques (71, 77).
+Following leukapheresis, the CTC isolation purity can be further improved with elutriation.
+Elutriation is a process that is used to separate the subpopulations, primarily monocytes, of isolated
+PBMCs by their size, and has been used to purify monocytes from dendritic cells (DCs) for
+immunotherapy applications (78, 79). The size of CTCs can be similar to that of monocytes.
+Thus, the enriched population of monocytes after elutriation is expected to contain CTCs as well.
+The combination of leukapheresis and elutriation of 10 L of blood spiked with CaOV-3 tumor cells
+yielded enrichment of up to 78% CTCs (75). CTCs with established surface markers (EpCAM,
+cytokeratins, and CD45−) can further be enriched using fluorescence-activated cell sorting (80, 81).
+An in vivo photoacoustic flow cytometry system was recently developed to detect and ablate
+CTCs in tumor-bearing mice in a label-free manner (82–84). The advantage of this technology is
+that it can process large volumes of blood; specifically, 5 L of blood can be processed in under 2 h.
+Also, the technique has a high threshold sensitivity, as it is able to detect a single CTC from 107
+normal blood cells (85–87). However, this technique has been tested only in a melanoma-bearing
+mouse model (82).
+3.2. TRAIL-Based Circulating Tumor Cell Therapeutics
+After CTCs have entered the circulatory system, they travel to distant organs, extravasate out of
+blood vessels and into the underlying tissue, and form secondary tumors. Similar to circulating
+leukocytes, CTCs use interactions between selectins and ligands to tether, roll, and arrest onto
+the vascular wall before subsequent extravasation into the distal site (66, 88–90). This knowledge
+of the molecular mechanisms involved in CTC extravasation has led to the development of a
+selectin-based implantable shunt device that can capture and eradicate CTCs (91). The device is
+a microtube with its luminal surface functionalized with E-selectin molecules and tumor necrosis
+factor–related apoptosis-inducing ligand (TRAIL) to facilitate CTC rolling and eventual tumor
+cell apoptosis, respectively.
+TRAIL has generated extensive research attention as a cancer therapeutic because it can
+selectively induce apoptosis in a variety of tumor cell lines while sparing most normal cells.
+TRAIL induces cell death in target cells through binding to death receptors DR4 and DR5,
+giving rise to the extrinsic caspase-dependent apoptosis signaling pathway (92). Although the
+clinical success of TRAIL therapy for solid tumors has been somewhat limited because some
+cancer cell types exhibit varying degrees of TRAIL resistance, TRAIL-resistant cancer cells
+become more sensitive to TRAIL after they have detached from the extracellular matrix (93).
+Moreover, tumor cells become more “sensitized” to TRAIL when exposed to fluid shear stress
+(94). In the circulatory system, where wall shear stress can range from 0.5 to 4.0 dyn/cm2 in
+338 Lin et al.
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+the venous circulation and up to 30.0 dyn/cm2 in the arterial circulation, CTCs experience a
+significantly higher shear environment than cells in the primary tumor site (95). Furthermore,
+CTC sensitivity to caspase-dependent apoptosis is positively correlated with fluid shear stress
+level and exposure time (94, 96, 97). Thus, the natural detachment of metastatic CTCs from
+the primary tumor microenvironment and into the higher shear environment of the circulatory
+system makes them especially vulnerable to TRAIL-based therapy.
+More recently, liposomes functionalized with TRAIL and E-selectin molecules readily attach
+onto circulating leukocytes under flow, thus turning these leukocytes into “unnatural killer cells”
+within the circulatory system that can induce apoptosis in any CTCs they come into contact with
+(98, 99). More importantly, mice bearing colorectal CTCs experienced a reduction of tumor cells
+lodged in the lungs as well as a significantly higher rate of apoptosis (Figure 3). Density of COLO 205 cells in lung (cells/mm3 × 103)
+Experimental group Experimental group
+ES/TRAIL sTRAIL ES Buffer
+10
+8
+6
+4
+2
+0
+c
+a b ES/TRAIL sTRAIL
+ES Buffer
+ES/TRAIL sTRAIL ES Buffer
+Apoptotic COLO 205
+cells in lung (% of total)
+100
+80
+60
+40
+20
+0
+d **
+80 μm 30 μm
+*
+* *
+* *
+* * * *
+Figure 3
+E-selectin (ES)- and tumor necrosis factor–related apoptosis-inducing ligand (TRAIL)-coated liposomes
+induce apoptosis of lodged COLO 205 cells in the lungs. (a) Schematic of a mouse lung and a two-photon
+excited fluorescence (2PEF) image of lodged COLO 205 cells ( green) in the lung tissue ( yellow). (b) 2PEF
+images of lodged COLO 205 cells ( green) stained with Annexin V apoptosis marker (red ) in different
+experimental groups in lung tissue. Red and blue arrows mark apoptotic and nonapoptotic cells, respectively.
+White circles mark regions of autofluorescence. (c) Arrested COLO 205 cell density in lung tissue of
+different experimental groups. (d ) Percentage of apoptotic COLO 205 cells of different experimental groups.
+In panels c and d, red, green, and blue dots represent distinct animals in the studies. Gray asterisks represent
+statistical significance: ∗p < 0.01, ∗∗p < 0.0001 (one-way ANOVA with Tukey posttest). Bars represent
+(from top to bottom): maximum, Q3, median, Q1, and minimum. Abbreviation: sTRAIL, soluble TRAIL.
+Adapted with permission from Reference 98.
+www.annualreviews.org • Circulating Tumor Cells 339
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+Apoptosis
+Platelet
+TRAIL receptor TRAIL Adhesion receptors
+Coadhesion
+Figure 4
+Schematic of engineered platelets expressing tumor necrosis factor–related apoptosis-inducing ligand
+(TRAIL) to kill circulating tumor cells in the circulation. Adapted with permission from Reference 110.
+Aside from leukocytes, platelets also routinely interact with CTCs in the bloodstream, making
+them attractive candidates for therapeutic vehicles. Platelets facilitate the progression of metas￾tasis through CTC–platelet aggregation (100–102). They do so in multiple ways: They protect
+CTCs by shielding antigen-derived epitopes on tumor cells that are normally recognized by
+circulating immune cells and increase CTC extravasation potential by inducing an epithelial￾to-mesenchymal-like transition (103–106). Multiple studies have introduced platelet-targeting
+liposomes that contain platelet aggregation inhibitors to prevent CTC–platelet aggregation (107–
+109). As an alternative to existing antiaggregation therapies, several studies have proposed antitu￾moral therapeutics that exploit the natural tendency of CTC–platelet aggregation. For example,
+Li et al. (110, 111) engineered platelets to express TRAIL on their plasma membrane (Figure 4).
+With this technique, hematopoietic stem and progenitor cells were transduced with lentiviral vec￾tors containing the TRAIL gene and a megakaryocyte-specific promoter (Figure 5). Sixty days
+after bone marrow transplantation, bioluminescence images revealed a significant reduction in
+metastasis in mice with TRAIL-expressing platelets (Figure 6). From the standpoint of CTC
+therapeutics, platelets are increasingly being explored as potential antitumoral vehicles due to
+their interactions with CTCs (112).
+3.3. Circulating Tumor Cell Therapeutics in Tumor-Draining Lymph Nodes
+In patients with melanomas, carcinomas, and sarcomas, the first route of metastasis is via the tumor￾draining lymph nodes (TDLNs) (113–116). With melanomas in particular, 80% of metastasizing
+tumor cells travel to the lymph nodes, while the remaining 20% enter the circulation or directly
+seed (117). Among patients with lung, breast, and colorectal cancers, around 29–37% are diagnosed
+with metastases in their lymph nodes (67). Therefore, metastatic lymph node prognosis is an
+important indicator of metastatic burden pre- and posttreatment in many types of cancer therapy
+(118–121).
+The lymphatic system is a network of vessels that exist throughout the interstitial space of
+tissues and organs in the body. The body uses these lymphatic vessels to remove waste, toxins,
+and other unwanted materials from the organs. More importantly, the vessels transport lymph,
+340 Lin et al.
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+αIIβ-TRAIL Ubc-TRAIL
+CMV
+enhancer
+HIV-1
+flap R U5 Promoter Transgene WRE ΔU3 R U5
+Ubc promoter eGFP
+Ubc promoter TRAIL
+αIIβ promoter eGFP
+αIIβ promoter TRAIL
+a
+b c
+eGFP
+Dami 293T
+Dami 293T
+TRAIL
+Nontransduced
+αIIβ promoter
+Ubc promoter
+Protein level
+Cell count
+25 μm
+Figure 5
+Cells transduced with megakaryocyte-specific lentiviral expression vectors express target protein only in a lineage-specific manner.
+(a) Schematic of lentiviral vectors for expression of enhanced green fluorescent protein (eGFP) and tumor necrosis factor–related
+apoptosis-inducing ligand (TRAIL) in megakaryocytes. (b) Gene expression after transduction of Ubc-eGFP, αIIβ-eGFP,
+Ubc-TRAIL, and αIIβ-TRAIL in the promegakaryocytic cell line Dami and the human embryonic kidney cell line 293T.
+(c) Immunofluorescence images of surface-bound TRAIL in Ubc-TRAIL- and αIIβ-TRAIL-transduced Dami and 293T cells. Nuclei
+were stained with 4
+,6-diamidino-2-phenylindole (DAPI) (blue). Abbreviations: CMV, cytomegalovirus; HIV, human immunodeficiency
+virus; WRE, woodchuck hepatitis virus posttranscriptional regulatory element. Adapted with permission from Reference 110.
+a fluid containing immune cells, throughout the body to protect it from unwanted antigens. All
+of the lymphatic vessels drain into lymph nodes, where innate immune response transitions into
+adaptive immunity: Antigen presenting cells such as DCs and macrophages travel there to prime
+na¨ıve T and B cells with the processed antigens (122). For the most up-to-date understanding of
+how immune cells home to the lymph nodes, see Reference 122.
+Tumor cells have several means of escaping the immune response, including the production
+and release of immunosuppressive factors, impairment of immune cell priming, and recruitment
+www.annualreviews.org • Circulating Tumor Cells 341
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+Day 0
+irradiation
+Day 1
+BMT
+Day 30
+cancer cells
+Day 60
+BLI and histology
+αIIβ-TRAIL Empty vector
+100
+80
+60
+Photons/(s · cm2 · sr) (× 106)
+40
+20
+a
+c d
+Empty
+vector
+αIIβ-TRAIL
+αIIβ-TRAIL Empty vector
+e
+300 μm
+H
+H
+H
+T
+T
+b
+Liver MET BLI signals
+[photons/(s · cm2 · sr)]
+107
+108
+106
+105
+104
+αIIβ-TRAIL Empty vector
+*
+Figure 6
+Tumor necrosis factor–related apoptosis-inducing ligand (TRAIL)-expressing platelets reduce systemic metastases. (a) Schematic of
+TRAIL-expressing platelet gene therapy in a PCa experimental metastasis model. (b) Liver metastatic burden in mice with TRAIL￾expressing platelets (red circles) or empty vector–transduced platelets (blue squares) on day 60 after bone marrow transplantation (BMT).
+The black lines show means ± SEM (standard error of the mean). The gray asterisk indicates statistical significance: ∗p < 0.05.
+(c) Bioluminescence (BLI) images of mice on day 60 after BMT. (d ) Liver samples from mice with empty vector–transduced or TRAIL￾expressing platelets. (e) Hematoxylin and eosin staining of liver sections. Abbreviations: H, hepatocytes; T, cancer cells. Adapted with
+permission from Reference 110.
+of suppressive immune cells instead of cytotoxic immune cells (123–125). When these cancer￾derived immunosuppressive factors drain into the lymph nodes, they can change the lymphatic
+system from an immune-responsive environment into an immune-repressive one that tolerates
+tumor metastasis.
+Natural killer (NK) cells are innate response immune cells that reside mostly in the paracortex
+of the lymph nodes. NK cells exert a natural cytotoxic effect against TRAIL-sensitive tumor
+cells through their constitutive expression of TRAIL on the cell surface and on their cytoplasmic
+granules, which are released during an immune response (126–128). However, tumor cells possess
+many mechanisms to evade NK cell–mediated tumor cytotoxicity, including downregulation of
+their expression of major histocompatibility complex (MHC) class I, shedding of ligands for
+activation receptors, and secretion of inhibitory cytokines that can reduce TRAIL expression on
+NK cells (68, 129–132). To overcome these limitations, researchers have explored enhancing NK
+cell proliferation and cytokine production with in vivo stimulation using cytokines or ex vivo
+activation/expansion methods (133–135). However, these studies were met with limited success
+due to an increase in systemic toxicity, suppression by MHC molecules, and rejection from the
+host (136). To enhance the intrinsic tumor-suppressing capability of NK cells in the TDLN,
+342 Lin et al.
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+Anti-TRAIL FITC
+b
+MAL
+NH2
+a
+c d
+Naked
+24 h
+TRAIL/IgG
+24 h
+TRAIL/anti-NK1.1
+24 h
+TRAIL/anti-NK1.1
+48 h
+TRAIL/anti-NK1.1
+72 h
+TRAIL/anti-NK1.1
+96 h
+DAPI 
+Anti-human
+TRAIL
+MAL
+MAL
+MAL
+MAL
+MAL
+MAL
+MAL
+NH2
+NH2
+NH2
+NH2
+NH2
+NH2
+NH2
+NH2
+0
+25
+50
+75
+100
+Naked TRAIL/IgG TRAIL/anti-NK1.1
+24 h
+48 h
+72 h
+24 h 24 h 96 h
+NK cells bound
+with liposomes (%)
+Treatment group
+Count
+B220+ 200 B cells
+0
+100 101 102 103
+CD3+ 200 T cells
+0
+100 101 102 103
+CD11c+ 200 DCs
+0
+100 101 102 103
+CD335+ 200 NK cells
+0
+100 101 102 103
+DSPE-mPEG2000-maleimide
+DSPE-mPEG2000
+Egg PC
+Cholesterol
+TRAIL
+Anti-NK1.1
+NK1.1
+20 μm
+Figure 7
+Pharmacokinetics of tumor necrosis factor–related apoptosis-inducing ligand (TRAIL)/anti-NK1.1
+liposomes. (a) Schematic of liposome formulation. (b) Representative flow cytometry histograms showing
+TRAIL/anti-NK1.1 liposomes’ attachment level to different cell types within the lymph nodes. (c) Confocal
+fluorescence images of TRAIL/anti-NK1.1 liposomes bound to natural killer (NK) cells isolated from the
+inguinal lymph. (d ) Percentage of NK cells bound with liposomes at different time points. Abbreviations:
+DC, dendritic cell; DAPI, 4
+,6-diamidino-2-phenylindole; DSPE, 1,2-distearoyl-sn-glycero-3-
+phosphoethanolamine; FITC, fluorescein isothiocyanate; IgG, immunoglobulin G; mPEG,
+monomethoxypoly(ethylene glycol); PC, phosphatidylcholine. Adapted with permission from Reference 138.
+Chandrasekaran et al. (137, 138) developed TRAIL-decorated liposomes that specifically bind to
+NK cells in the tumor-draining inguinal lymph node and effectively prevent the metastatic spread
+of the primary tumor. Liposomes were functionalized with TRAIL and anti-NK1.1 antibodies via
+thiolation; the liposomes then selectively bound to NK cells (Figure 7). After 6 weeks, NK cells in
+the tumor-draining inguinal lymph nodes were able to significantly suppress the metastatic burden
+(Figure 8). These results substantiate the antitumoral therapeutic potential of NK cells in the
+draining lymph nodes and elsewhere. Although NK cells naturally exhibit antitumoral capability,
+they are susceptible to becoming anergic against tumor cells. Current and future NK cell–based
+immunotherapy must overcome NK cell paralysis while expanding these cells’ existing antitumoral
+potential.
+www.annualreviews.org • Circulating Tumor Cells 343
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+a
+Buffer
+Week 6 Week 4 Week 2
+Soluble TRAIL TRAIL/IgG Anti-NK1.1 TRAIL/anti-NK1.1
+Max
+Min
+BLI (arbitrary units)
+bTotal flux (photons/s)
+Time (weeks)
+109
+108
+107
+106
+105
+104
+23456
+NS
+d
+Buffer
+Soluble TRAIL
+TRAIL/IgG
+Anti-NK1.1
+TRAIL/anti-NK1.1
+Total flux (photons/s)
+1010
+109
+109
+108
+108
+106
+107
+105
+104
+Buffer
+Soluble TRAIL
+TRAIL/IgG
+Anti-NK1.1
+TRAIL/anti-NK1.1
+*
+*
+**
+**
+c Total flux (photons/s) 107
+105
+106
+104
+103
+Buffer
+Soluble TRAIL
+TRAIL/IgG
+Anti-NK1.1
+TRAIL/anti-NK1.1
+Figure 8
+Metastatic burden in the tumor-draining inguinal lymph nodes. (a) Bioluminescence (BLI) images of mice treated with tumor necrosis
+factor–related apoptosis-inducing ligand (TRAIL)/anti-NK1.1 liposomes showing a reduction of tumor growth in the inguinal lymph
+node. (b) Total tumor flux in the inguinal lymph nodes with time. (c) Total flux from the inguinal lymph nodes in mice from different
+treatment groups at week 2. (d ) Total flux from the inguinal lymph nodes in mice from different treatment groups at week 6. In panels c
+and d, bars represent (from top to bottom): maximum, Q3, median, Q1, and minimum. Plus signs represent means. In panel d, gray
+asterisks represent statistical significance: ∗p < 0.05, ∗∗p < 0.01. Abbreviations: IgG, immunoglobulin G; NK, natural killer; NS,
+nonsignificant. Adapted with permission from Reference 138.
+3.4. Antitumor Vaccines
+As antigen presenting cells, DCs sample the tissue and tumor microenvironments and phagocytose
+tumor-derived antigens (139, 140). DCs have the special ability to process the phagocytosed
+antigens, present them to na¨ıve T cells residing in the lymph nodes, and trigger the proliferation
+of CD8+ cytotoxic T lymphocytes (CTLs) against the tumor cells in the lymph nodes (141).
+Several strategies have been proposed that utilize DCs as vehicles to deliver tumor antigens to
+the lymph nodes with the aim of activating or expanding the patient’s immune response against
+tumor cells. One such strategy is to coadminister tumor lysates in conjunction with the potent DC
+adjuvants CpG oligodeoxynucleotides so as to elicit an immune response (142, 143). However,
+344 Lin et al.
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+the tumor-induced immunosuppressive microenvironment of the TDLNs prevents a sustained
+and robust CTL response, even in the presence of highly immunogenic antigens (144, 145).
+Interestingly, the administration of an adjuvant alone, without tumor antigen, is enough to elicit
+an immune response despite the immunosuppressive state of the TDLNs (146, 147). However,
+novel therapeutic strategies that prevent and/or reverse the immunosuppressive state of TDLNs
+may still be warranted to maximize the potential of antitumoral CTL responses.
+Synthetic implantable scaffolds that mimic the natural lymph nodes chemically and struc￾turally and can accommodate an immunogenic microenvironment provide great spatiotemporal
+control and are promising alternative locations for immune cells to cross-talk, proliferate and
+disperse (123). Hydrogels made from monomethoxy-PEG-co-polylactic-co-glycolic acid copoly￾mer hydrogels release granulocyte-macrophage colony-stimulating factor to attract DCs into the
+matrix (148). Viral vectors containing tumor antigens are then injected locally into the implanted
+hydrogels to activate the recruited DCs. These cells then travel to the TDLNs to activate the
+proliferation of CTLs. In a different model, proposed by the Mooney group (149, 150), instead
+of using viral vectors to introduce tumor-derived antigens to DCs, the antigens and adjuvants are
+immobilized into the hydrogel matrix. These authors observed sustained DC recruitment into the
+scaffolds that resulted in a significant and sustained proliferation of antigen-specific CTLs. These
+results convincingly demonstrate the superior antitumoral therapeutic potential of DC priming
+using implantable synthetic scaffolds in comparison to treatments without scaffolds.
+4. CONCLUSION
+While surgical removal of cancerous tissue may be curative, by the time most patients are diag￾nosed, their disease might have progressed to a stage where surgery may not be an option. There￾fore, early detection can change the pace of cancer management. CTCs could be that potential
+biomarker for detection, not only because of their specificity but also because they are amenable to
+serial sampling during the course of disease. Establishing CTCs as a potential biomarker for early
+diagnosis, monitoring, staging, prognosis, and therapeutics of cancer can drastically change the
+current paradigm of cancer diagnosis and management. To establish CTCs as a robust biomarker
+for early diagnosis of cancer, the technology has to meet the challenge of addressing both the phys￾ical and biological heterogeneity of circulating cells in blood. In this review, we have discussed
+technologies for CTC isolation that are evolving rapidly to enable molecular characterization
+beyond enumeration. We have highlighted emerging approaches focusing on high throughput,
+purity, and recovery of heterogeneous population, which are key to developing a robust and re￾liable diagnostic test based on CTCs. Given the momentum this field has recently gained, it will
+not be too long before we see a blood-based diagnostic test for cancer in a clinic near us.
+In addition, in this review we have described recent and ongoing research aiming to neutralize
+CTCs and stop metastatic spread through both the circulation and the tumor-draining lymphatic
+system. Each therapeutic approach has its own strengths as well as limitations for different cancers.
+The research summarized here illustrates the possibility that these therapeutics, alone and in con￾junction with existing clinically approved antitumoral therapies, may one day neutralize metastasis
+of a broad range of tumor types systemically, as well as reduce the number of metastasis-related
+deaths.
+The challenges ahead include gaining a better understanding of the biological makeup of
+CTCs to improve the rate of CTC removal from circulation. While TRAIL-based therapeutics
+are promising for TRAIL-sensitive tumor cells, a similarly robust system is needed for cancer
+cells that may not be sufficiently responsive to TRAIL. Immunotherapy involving the priming
+of DCs, whether from bolus administration of adjuvants or through an implantable synthetic
+www.annualreviews.org • Circulating Tumor Cells 345
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+lymph node–mimicking scaffold, must ultimately overcome or reverse the immunosuppressive
+microenvironment of the TDLNs.
+DISCLOSURE STATEMENT
+The authors are not aware of any affiliations, memberships, funding, or financial holdings that
+might be perceived as affecting the objectivity of this review.
+LITERATURE CITED
+1. Bednarz-Knoll N, Alix-Panabieres C, Pantel K. 2012. Plasticity of disseminating cancer cells in patients
+with epithelial malignancies. Cancer Metastasis Rev. 31:673–87
+2. Marshall E. 2010. Public health. Brawling over mammography. Science 327:936–38
+3. Aberle DR, Adams AM, Berg CD, Black WC, Clapp JD, et al. (Natl. Lung Screen. Trial Res. Team).
+2011. Reduced lung-cancer mortality with low-dose computed tomographic screening. N. Engl. J. Med.
+365:395–409
+4. Albert JM. 2013. Radiation risk from CT: implications for cancer screening. Am. J. Roentgenol. 201:W81–
+87
+5. Edwards BK, Ward E, Kohler BA, Eheman C, Zauber AG, et al. 2010. Annual report to the nation
+on the status of cancer, 1975–2006, featuring colorectal cancer trends and impact of interventions (risk
+factors, screening, and treatment) to reduce future rates. Cancer 116:544–73
+6. Ashworth TR. 1869. A case of cancer in which cells similar to those in the tumors were seen in the blood
+after death. Aust. Med. J. 14:146–49
+7. Allard WJ, Matera J, Miller MC, Repollet M, Connelly MC, et al. 2004. Tumor cells circulate in the
+peripheral blood of all major carcinomas but not in healthy subjects or patients with nonmalignant
+diseases. Clin. Cancer Res. 10:6897–904
+8. Cristofanilli M, Budd GT, Ellis MJ, Stopeck A, Matera J, et al. 2004. Circulating tumor cells, disease
+progression, and survival in metastatic breast cancer. N. Engl. J. Med. 351:781–91
+9. Cristofanilli M, Hayes DF, Budd GT, Ellis MJ, Stopeck A, et al. 2005. Circulating tumor cells: a novel
+prognostic factor for newly diagnosed metastatic breast cancer. J. Clin. Oncol. 23:1420–30
+10. Riethdorf S, Fritsche H, Muller V, Rau T, Schindlbeck C, et al. 2007. Detection of circulating tumor ¨
+cells in peripheral blood of patients with metastatic breast cancer: a validation study of the CellSearch
+system. Clin. Cancer Res. 13:920–28
+11. Yagata H, Nakamura S, Toi M, Bando H, Ohno S, Kataoka A. 2008. Evaluation of circulating tumor
+cells in patients with breast cancer: multi-institutional clinical trial in Japan. Int. J. Clin. Oncol. 13:252–56
+12. Kurihara T, Itoi T, Sofuni A, Itokawa F, Tsuchia T, et al. 2008. Detection of circulating tumor cells in
+patients with pancreatic cancer: a preliminary result. J. Hepatobiliary Pancreat. Surg. 15:189–95
+13. Khoja L, Backen A, Sloane R, Menasce L, Ryder D, et al. 2012. A pilot study to explore circulating
+tumour cells in pancreatic cancer as a novel biomarker. Br. J. Cancer 106:508–16
+14. Maheswaran S, Sequist SV, Nagrath S, Uluks L, Brannigan B, et al. 2008. Detection of mutations in
+EGFR in circulating lung-cancer cells. N. Engl. J. Med. 359:366–77
+15. Nagrath S, Sequist SV, Maheswaran S, Bell DW, Irimia D, et al. 2007. Isolation of rare circulating
+tumour cells in cancer patients by microchip technology. Nature 450:1235–39
+16. Stott SL, Hsu CH, Tsukrov DI, Yu M, Miyamoto DT, et al. 2010. Isolation of circulating tumor cells
+using a microvortex-generating herringbone chip. PNAS 107:18392–97
+17. Stott SL, Lee RJ, Nagrath S, Yu M, Mitamoto DT, et al. 2010. Isolation and characterization of circu￾lating tumor cells from patients with localized and metastatic prostate cancer. Sci. Transl. Med. 2:25ra23
+18. Cen P, Ni X, Yang J, Graham DY, Li M. 2012. Circulating tumor cells in the diagnosis and management
+of pancreatic cancer. Biochim. Biophys. Acta 1826:350–56
+19. Soeth E, Grigoleit U, Moellmann B, Roder C, Schniewind B, et al. 2005. Detection of tumor cell ¨
+dissemination in pancreatic ductal carcinoma patients by CK 20 RT-PCR indicates poor survival.
+J. Cancer Res. Clin. Oncol. 131:669–76
+346 Lin et al.
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+20. Hoffmann K, Kerner C, Wilfert W, Mueller M, Thiery J, et al. 2007. Detection of disseminated pan￾creatic cells by amplification of cytokeratin-19 with quantitative RT-PCR in blood, bone marrow and
+peritoneal lavage of pancreatic carcinoma patients. World J. Gastroenterol. 13:257–63
+21. de Albuquerque A, Kubisch I, Breier G, Stamminger G, Fersis N, et al. 2012. Multimarker gene analysis
+of circulating tumor cells in pancreatic cancer patients: a feasibility study. Oncology 82:3–10
+22. Alix-Panabieres C, Pantel K. 2013. Circulating tumor cells: liquid biopsy of cancer.Clin. Chem. 59:110–18
+23. Gazzaniga P, Raimondi C, Nicolazzo C, Carletti R, di Gioia C, et al. 2015. The rationale for liquid
+biopsy in colorectal cancer: a focus on circulating tumor cells. Expert Rev. Mol. Diagn. 15:925–32
+24. Husemann Y, Geigl JB, Schubert F, Musiani P, Meyer M, et al. 2008. Systemic spread is an early step in ¨
+breast cancer. Cancer Cell 13:58–68
+25. Zhang Z, Shiratsuchi H, Lin J, Chen G, Reddy RM, et al. 2015. Expansion of CTCs from early stage
+lung cancer patients using a microfluidic co-culture model. Cancer Res. 75:12393–97
+26. Murlidhar V, Reddy RM, Fouladdel S, Zhao L, Ishikawa MK, et al. 2017. Poor prognosis indicated by
+venous circulating tumor cell clusters in early-stage lung cancers. Cancer Res. 77:5194–206
+27. Pantel K, Speicher MR. 2016. The biology of circulating tumor cells. Oncogene 35:1216–24
+28. Smerage JB, Barlow WE, Hortobagyi GN, Winer EP, Leyland-Jones B, et al. 2014. Circulating tumor
+cells and response to chemotherapy in metastatic breast cancer: SWOG S0500. J. Clin. Oncol. 32:3483–89
+29. Wan L, Pantel K, Kang Y. 2013. Tumor metastasis: moving new biological insights into the clinic. Nat.
+Med. 19:1450–64
+30. Alix-Panabieres C, Pantel K. 2014. Challenges in circulating tumour cell research. Nat. Rev. Cancer
+14:623–31
+31. Gorges TM, Kuske A, Rock K, Mauermann O, M ¨ uller V, et al. 2016. Accession of tumor heterogeneity ¨
+by multiplex transcriptome profiling of single circulating tumor cells. Clin. Chem. 62:1504–15
+32. Zhang Z, Shiratsuchi H, Palanisamy N, Nagrath S, Ramnath N. 2017. Expanded circulating tumor
+cells from a patient with ALK-positive lung cancer present with EML4-ALK rearrangement along with
+resistance mutation and enable drug sensitivity testing: a case study. J. Thorac. Oncol. 12:397–402
+33. Jordan NV, Bardia A, Wittner BS, Benes C, Ligorio M, et al. 2016. HER2 expression identifies dynamic
+functional states within circulating breast cancer cells. Nature 537:102–6
+34. Kaiser J. 2010. Cancer’s circulation problem. Science 327:1072–74
+35. Giuliano M, Giordano A, Hsu L, Handy BC, Ueno NT, et al. 2011. Circulating tumor cells as prognostic
+and predictive markers in metastatic breast cancer patients receiving first-line systemic treatment. Breast
+Cancer Res. 13:R67
+36. Cohen SJ, Punt CJ, Iannotti N, Saidman BH, Sabbath KD, et al. 2008. Relationship of circulating
+tumor cells to tumor response, progression-free survival, and overall survival in patients with metastatic
+colorectal cancer. J. Clin. Oncol. 26:3213–21
+37. Ignatiadis M, Lee M, Jeffrey SS. 2015. Circulating tumor cells and circulating tumor DNA: challenges
+and opportunities on the path to clinical utility. Clin. Cancer Res. 21:4786–800
+38. Mostert B, Kraan J, Bolt-de Vries J, van der Spoel P, Sieuwerts AM, et al. 2011. Detection of circulating
+tumor cells in breast cancer may improve through enrichment with anti-CD146. Breast Cancer Res. Treat.
+127:33–41
+39. Zhang T, Boominathan R, Foulk B, Rao C, Kemeny G, et al. 2016. Development of a novel c-MET-based
+CTC detection platform. Mol. Cancer Res. 14:539–47
+40. Bitting RL, Boominathan R, Rao C, Kemeny G, Foulk B, et al. 2013. Development of a method to isolate
+circulating tumor cells using mesenchymal-based capture. Methods 64:129–36
+41. Andree KC, van Dalum G, Terstappen LW. 2016. Challenges in circulating tumor cell detection by the
+CellSearch system. Mol. Oncol. 10:395–407
+42. Yoon HJ, Kim TH, Zhang Z, Azizi E, Pham TM, et al. 2013. Sensitive capture of circulating tumour
+cells by functionalized graphene oxide nanosheets. Nat. Nanotechnol. 8:735–41
+43. Vona G, Sabile A, Louha M, Sitruk V, Romana S, et al. 2000. Isolation by size of epithelial tumor cells:
+a new method for the immunomorphological and molecular characterization of circulating tumor cells.
+Am. J. Pathol. 156:57–63
+www.annualreviews.org • Circulating Tumor Cells 347
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+44. Farace F, Massard C, Vimond N, Drusch F, Jacques N, et al. 2011. A direct comparison of CellSearch
+and ISET for circulating tumour-cell detection in patients with metastatic carcinomas. Br. J. Cancer
+105:847–53
+45. Zheng S, Lin HK, Lu B, Williams A, Datar R, et al. 2011. 3D microfilter device for viable circulating
+tumor cell (CTC) enrichment from blood. Biomed. Microdevices 13:203–13
+46. Zheng S, Lin H, Liu JQ, Balic M, Datar R, et al. 2007. Membrane microfilter device for selective capture,
+electrolysis and genomic analysis of human circulating tumor cells. J. Chromatogr. A 1162:154–61
+47. Di Carlo D, Irimia D, Tompkins RG, Toner M. 2007. Continuous inertial focusing, ordering, and
+separation of particles in microchannels. PNAS 104:18892–97
+48. Hur SC, Mach AJ, Di Carlo D. 2011. High-throughput size-based rare cell enrichment using microscale
+vortices. Biomicrofluidics 5:22206
+49. Sollier E, Go DE, Che J, Gossett DR, O’Byrne S, et al. 2014. Size-selective collection of circulating
+tumor cells using Vortex technology. Lab Chip 14:63–77
+50. Che J, Yu V, Dhar M, Renier C, Matsumoto M, et al. 2016. Classification of large circulating tumor
+cells isolated with ultra-high throughput microfluidic Vortex technology. Oncotarget 7:12748–60
+51. Hyun KA, Kwon K, Han H, Kim SI, Jung HI. 2013. Microfluidic flow fractionation device for label-free
+isolation of circulating tumor cells (CTCs) from breast cancer patients. Biosens. Bioelectron. 40:206–12
+52. Hou HW, Warkiani ME, Khoo BL, Li ZR, Soo RA, et al. 2013. Isolation and retrieval of circulating
+tumor cells using centrifugal forces. Sci. Rep. 3:1259
+53. Warkiani ME, Guan G, Luan KB, Lee WC, Bhagat AA, et al. 2014. Slanted spiral microfluidics for the
+ultra-fast, label-free isolation of circulating tumor cells. Lab Chip 14:128–37
+54. Warkiani ME, Khoo BL, Tan DSW, Bahag AAS, Lim WT, et al. 2014. An ultra-high-throughput spiral
+microfluidic biochip for the enrichment of circulating tumor cells. Analyst 139:3245–55
+55. Lin E, Rivera-Baez L, Fouladdel S, Yoon HJ, Guthrie S, et al. 2017. High-throughput microfluidic ´
+Labyrinth for the label-free isolation of circulating tumor cells. Cell Syst. 5:295–304
+56. Becker FF, Wang SB, Huang Y, Pethig R, Vykoual J, Gascoyne PR. 1995. Separation of human breast
+cancer cells from blood by differential dielectric affinity. PNAS 92:860–64
+57. Jackson JM,WitekMA, Kamande JW, Soper SA. 2017.Materials and microfluidics: enabling the efficient
+isolation and analysis of circulating tumour cells. Chem. Soc. Rev. 46:4245–80
+58. Gascoyne PR, Shim S. 2014. Isolation of circulating tumor cells by dielectrophoresis. Cancers 6:545–79
+59. Manaresi N, Romani A, Medoro G, Altomare L, Leonardi A, et al. 2003. A CMOS chip for individual
+cell manipulation and detection. IEEE J. Solid-State Circuits 38:2297–305
+60. Peeters DJ, De Laere B, Van den Eynden GG, Van Laere SJ, Rothe F, et al. 2013. Semiautomated iso- ´
+lation and molecular characterisation of single or highly purified tumour cells from CellSearch enriched
+blood samples using dielectrophoretic cell sorting. Br. J. Cancer 108:1358–67
+61. Ozkumur E, Shah AM, Ciciliano JC, Emmink BL, Miyamoto DT, et al. 2013. Inertial focusing for tumor
+antigen-dependent and -independent sorting of rare circulating tumor cells. Sci. Transl. Med. 5:179ra47
+62. Jack RM, Grafton MMG, Rodrigues D, Giraldez MD, Griffith C, et al. 2016. Ultra-specific isolation of
+circulating tumor cells enables rare-cell RNA profiling. Adv. Sci. 3:1600063
+63. Greene BT, Hughes AD, King MR. 2012. Circulating tumor cells: the substrate of personalized
+medicine? Front. Oncol. 2:69
+64. Maheswaran S, Haber DA. 2010. Circulating tumor cells: a window into cancer biology and metastasis.
+Curr. Opin. Genet. Dev. 20:96–99
+65. Riethdorf S, Wikman H, Pantel K. 2008. Biological relevance of disseminated tumor cells in cancer
+patients. Int. J. Cancer 123:1991–2006
+66. Chambers AF, MacDonald IC, Schmidt EE, Koop S, Morris VL, et al. 1995. Steps in tumor metastasis:
+new concepts from intravital videomicroscopy. Cancer Metastasis Rev. 14:279–301
+67. Steeg PS. 2006. Tumor metastasis: mechanistic insights and clinical challenges. Nat. Med. 12:895–904
+68. Chandrasekaran S, King M. 2014. Microenvironment of tumor-draining lymph nodes: opportunities for
+liposome-based targeted therapy. Int. J. Mol. Sci. 15:20209–39
+69. Chaffer CL, Weinberg RA. 2011. A perspective on cancer cell metastasis. Science 331:1559–64
+70. Allard WJ. 2004. Tumor cells circulate in the peripheral blood of all major carcinomas but not in healthy
+subjects or patients with nonmalignant diseases. Clin. Cancer Res. 10:6897–904
+348 Lin et al.
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+71. Franklin WA, Glaspy J, Pflaumer SM, Jones RB, Hami L, et al. 1999. Incidence of tumor-cell contami￾nation in leukapheresis products of breast cancer patients mobilized with stem cell factor and granulocyte
+colony-stimulating factor (G-CSF) or with G-CSF alone. Blood 94:340–47
+72. Gertler R, Rosenberg R, Fuehrer K, Dahm M, Nekarda H, Siewert JR. 2003. Detection of circulat￾ing tumor cells in blood using an optimized density gradient centrifugation. Recent Results Cancer Res.
+162:149–55
+73. Baker MK, Mikhitarian K, OstaW, Callahan K, Hoda R, et al. 2003. Molecular detection of breast cancer
+cells in the peripheral blood of advanced-stage breast cancer patients using multimarker real-time re￾verse transcription–polymerase chain reaction and a novel porous barrier density gradient centrifugation
+technology. Clin. Cancer Res. 9:4865–71
+74. Vona G, Estepa L, Beroud C, Damotte D, Capron F, et al. 2004. Impact of cytomorphological detection ´
+of circulating tumor cells in patients with liver cancer. Hepatology 39:792–97
+75. Eifler RL, Lind J, Falkenhagen D, Weber V, Fischer MB, Zeillinger R. 2011. Enrichment of circulating
+tumor cells from a large blood volume using leukapheresis and elutriation: proof of concept. Cytometry
+B 80:100–11
+76. Fischer JC, Niederacher D, Topp SA, Honisch E, Schumacher S, et al. 2013. Diagnostic leukapheresis
+enables reliable detection of circulating tumor cells of nonmetastatic cancer patients. PNAS 110:16580–
+85
+77. Ross AA, Cooper BW, Lazarus HM, Mackay W, Moss TJ, et al. 1993. Detection and viability of tumor
+cells in peripheral blood stem cell collections from breast cancer patients using immunocytochemical
+and clonogenic assay techniques. Blood 82:2605–10
+78. Mazzolini G, Alfaro C, Sangro B, Feijoo E, Ruiz J, et al. 2005. Intratumoral injection of dendritic cells en- ´
+gineered to secrete interleukin-12 by recombinant adenovirus in patients with metastatic gastrointestinal
+carcinomas. J. Clin. Oncol. 23:999–1010
+79. Dohnal AM, Graffi S, Witt V, Eichstill C, Wagner D, et al. 2009. Comparative evaluation of techniques
+for the manufacturing of dendritic cell–based cancer vaccines. J. Cell. Mol. Med. 13:125–35
+80. Warkiani ME, Wu L, Tay AKP, Han J. 2015. Large-volume microfluidic cell sorting for biomedical
+applications. Annu. Rev. Biomed. Eng. 17:1–34
+81. Gorges TM, Pantel K. 2013. Circulating tumor cells as therapy-related biomarkers in cancer patients.
+Cancer Immunol. Immunother. 62:931–39
+82. Nedosekin DA, Sarimollaoglu M, Ye J-H, Galanzha EI, Zharov VP. 2011. In vivo ultra-fast photo￾acoustic flow cytometry of circulating human melanoma cells using near-infrared high-pulse rate lasers.
+Cytometry A 79:825–33
+83. Kim J-W, Galanzha EI, Zaharoff DA, Griffin RJ, Zharov VP. 2013. Nanotheranostics of circulating
+tumor cells, infections and other pathological features in vivo. Mol. Pharm. 10:813–30
+84. Wei X. 2016. Monitoring circulating tumor cells by in-vivo flow cytometry. Presented at Asia Commun.
+Photonics Conf., Wuhan, China, Nov. 2–5
+85. Zharov VP, Galanzha EI, Shashkov EV, Khlebtsov NG, Tuchin VV. 2006. In vivo photoacoustic flow
+cytometry for monitoring of circulating single cancer cells and contrast agents. Opt. Lett. 31:3623–25
+86. Novak J, Georgakoudi I, Wei X, Prossin A, Lin CP. 2004. In vivo flow cytometer for real-time detection
+and quantification of circulating cells. Opt. Lett. 29:77–79
+87. Galanzha EI, Kim J-W, Zharov VP. 2009. Nanotechnology-based molecular photoacoustic and pho￾tothermal flow cytometry platform for in-vivo detection and killing of circulating cancer stem cells.
+J. Biophotonics 2:725–35
+88. Chambers AF, Naumov GN, Vantyghem SA, Tuck AB. 2000. Molecular biology of breast cancer metas￾tasis: clinical implications of experimental studies on metastatic inefficiency. Breast Cancer Res. 2:18
+89. MacDonald IC, Groom AC, Chambers AF. 2002. Cancer spread and micrometastasis development:
+quantitative approaches for in vivo models. BioEssays 24:885–93
+90. Gakhar G, Navarro VN, Jurish M, Lee GY, Tagawa ST, et al. 2013. Circulating tumor cells from prostate
+cancer patients interact with E-selectin under physiologic blood flow. PLOS ONE 8:e85143
+91. Rana K, Liesveld JL, King MR. 2009. Delivery of apoptotic signal to rolling cancer cells: a novel
+biomimetic technique using immobilized TRAIL and E-selectin. Biotechnol. Bioeng. 102:1692–702
+www.annualreviews.org • Circulating Tumor Cells 349
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+92. Wang S, El-Deiry WS. 2003. TRAIL and apoptosis induction by TNF-family death receptors. Oncogene
+22:8628–33
+93. Phipps LE, Hino S, Muschel RJ. 2011. Targeting cell spreading: a method of sensitizing metastatic
+tumor cells to TRAIL-induced apoptosis. Mol. Cancer Res. 9:249–58
+94. Mitchell MJ, King MR. 2013. Fluid shear stress sensitizes cancer cells to receptor-mediated apoptosis
+via trimeric death receptors. New J. Phys. 15:015008
+95. Turitto VT. 1982. Blood viscosity, mass transport, and thrombogenesis. Prog. Hemost. Thromb. 6:139–77
+96. Mitchell MJ, King MR. 2013. Computational and experimental models of cancer cell response to fluid
+shear stress. Front. Oncol. 3:44
+97. Luo C-W, Wu C-C, Chang H-J. 2014. Radiation sensitization of tumor cells induced by shear stress:
+the roles of integrins and FAK. Biochim. Biophys. Acta 1843:2129–37
+98. Mitchell MJ, Wayne E, Rana K, Schaffer CB, King MR. 2014. TRAIL-coated leukocytes that kill cancer
+cells in the circulation. PNAS 111:930–35
+99. Wayne EC, Chandrasekaran S, Mitchell MJ, Chan MF, Lee RE, et al. 2016. TRAIL-coated leukocytes
+that prevent the bloodborne metastasis of prostate cancer. J. Control. Release 223:215–23
+100. Labelle M, Hynes RO. 2012. The initial hours of metastasis: the importance of cooperative host–tumor
+cell interactions during hematogenous dissemination. Cancer Discov. 2:1091–99
+101. Gay LJ, Felding-Habermann B. 2011. Contribution of platelets to tumour metastasis. Nat. Rev. Cancer
+11:123–34
+102. Gay LJ, Felding-Habermann B. 2011. Platelets alter tumor cell attributes to propel metastasis: program￾ming in transit. Cancer Cell 20:553–54
+103. Nieswandt B, Hafner M, Echtenacher B, Mannel DN. 1999. Lysis of tumor cells by natural killer cells ¨
+in mice is impeded by platelets. Cancer Res. 59:1295–300
+104. Bambace NM, Holmes CE. 2011. The platelet contribution to cancer progression. J. Thromb. Haemost.
+9:237–49
+105. Weber MR, Zuka M, Lorger M, Tschan M, Torbett BE, et al. 2016. Activated tumor cell integrin αvβ3
+cooperates with platelets to promote extravasation and metastasis from the blood stream. Thromb. Res.
+140:S27–36
+106. Labelle M, Begum S, Hynes RO. 2011. Direct signaling between platelets and cancer cells induces an
+epithelial-mesenchymal-like transition and promotes metastasis. Cancer Cell 20:576–90
+107. Wenzel J, Zeisig R, Fichtner I. 2009. Inhibition of metastasis in a murine 4T1 breast cancer model by
+liposomes preventing tumor cell–platelet interactions. Clin. Exp. Metastasis 27:25–34
+108. Zhang Y, Wei J, Liu S, Wang J, Han X, et al. 2017. Inhibition of platelet function using liposomal
+nanoparticles blocks tumor metastasis. Theranostics 7:1062–71
+109. Zhang W, Dang S, Hong T, Tang J, Fan J, et al. 2012. A humanized single-chain antibody against
+β3 integrin inhibits pulmonary metastasis by preferentially fragmenting activated platelets in the tumor
+microenvironment. Blood 120:2889–98. Erratum. 2014. Blood 123:302
+110. Li J, Sharkey CC, Wun B, Liesveld JL, King MR. 2016. Genetic engineering of platelets to neutralize
+circulating tumor cells. J. Control. Release 228:38–47
+111. Li J, Ai Y, Wang L, Bu P, Sharkey CC, et al. 2016. Targeted drug delivery to circulating tumor cells via
+platelet membrane-functionalized particles. Biomaterials 76:52–65
+112. Best MG, Sol N, Kooi I, Tannous J,Westerman BA, et al. 2015. RNA-seq of tumor-educated platelets en￾ables blood-based pan-cancer, multiclass, and molecular pathway cancer diagnostics. Cancer Cell 28:666–
+76
+113. Morton DL. 1992. Technical details of intraoperative lymphatic mapping for early stage melanoma.
+Arch. Surg. 127:392–99
+114. Ross MI. 1997. Lymphatic mapping and sentinel node biopsy for early stage melanoma: how we do it at
+the M.D. Anderson Cancer Center. J. Surg. Oncol. 66:273–76
+115. Ariel IM. 1988. Incidence of metastases to lymph nodes from soft-tissue sarcomas. Semin. Surg. Oncol.
+4:27–29
+116. Van Trappen PO, Pepper MS. 2002. Lymphatic dissemination of tumour cells and the formation of
+micrometastases. Lancet Oncol. 3:44–52
+350 Lin et al.
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+117. Leong SPL, Nakakura EK, Pollock R, Choti MA, Morton DL, et al. 2011. Unique patterns of metastases
+in common and rare types of malignancy. J. Surg. Oncol. 103:607–14
+118. Massucco P, Ribero D, Sgotto E, Mellano A, Muratore A, Capussotti L. 2009. Prognostic significance
+of lymph node metastases in pancreatic head cancer treated with extended lymphadenectomy: not just a
+matter of numbers. Ann. Surg. Oncol. 16:3323–32
+119. Murakami Y, Uemura K, Sudo T, Hayashidani Y, Hashimoto Y, et al. 2010. Number of metastatic
+lymph nodes, but not lymph node ratio, is an independent prognostic factor after resection of pancreatic
+carcinoma. J. Am. Coll. Surg. 211:196–204
+120. Gugliemetti G, Sukhu R, Conca Baenas MA, Meeks J, Sjoberg DD, et al. 2016. Number of metastatic
+lymph nodes as determinant of outcome after salvage radical prostatectomy for radiation-recurrent
+prostate cancer. Actas Urol. Esp. 40:434–39
+121. Maccio L, Barresi V, Domati F, Martorana E, Cesinaro AM, et al. 2016. Clinical significance of pelvic
+lymph node status in prostate cancer: review of 1,690 cases. Intern. Emerg. Med. 11:399–404
+122. Andrian von UH, Mempel TR. 2003. Homing and cellular traffic in lymph nodes. Nat. Rev. Immunol.
+3:867–78
+123. Weiden J, Tel J, Figdor CG. 2017. Synthetic immune niches for cancer immunotherapy. Nat. Rev.
+Immunol. 11:107
+124. Munn DH, Mellor AL. 2006. The tumor-draining lymph node as an immune-privileged site. Immunol.
+Rev. 213:146–58
+125. Bhatia A, Kumar Y. 2014. Cellular and molecular mechanisms in cancer immune escape: a comprehensive
+review. Expert Rev. Clin. Immunol. 10:41–62
+126. Zamai L, Ahmad M, Bennett IM, Azzoni L, Alnemri ES, Perussia B. 1998. Natural killer (NK) cell￾mediated cytotoxicity: differential use of TRAIL and Fas ligand by immature and mature primary human
+NK cells. J. Exp. Med. 188:2375–80
+127. Smyth MJ, Cretney E, Takeda K, Wiltrout RH, Sedger LM, et al. 2001. Tumor necrosis factor–related
+apoptosis-inducing ligand (TRAIL) contributes to interferon γ–dependent natural killer cell protection
+from tumor metastasis. J. Exp. Med. 193(6):661–70
+128. Schuster IS, Wikstrom ME, Brizard G, Coudert JD, Estcourt MJ, et al. 2014. TRAIL+ NK cells control
+CD4+ T cell responses during chronic viral infection to limit autoimmunity. Immunity 41:646–56
+129. Wu JD, Higgins LM, Steinle A, Cosman D, Haugk K, Plymate SR. 2004. Prevalent expression of the
+immunostimulatory MHC class I chain–related molecule is counteracted by shedding in prostate cancer.
+J. Clin. Investig. 114:560–68
+130. Garcia Lora A, Algarra I, Garrido F. 2003. MHC class I antigens, immune surveillance, and tumor
+immune escape. J. Cell. Physiol. 195:346–55
+131. Groh V,Wu J, Yee C, Spies T. 2002. Tumour-derived solubleMIC ligands impair expression of NKG2D
+and T-cell activation. Nature 419:734–38
+132. Lee J-C, Lee K-M, Kim D-W, Heo DS. 2004. Elevated TGF-β1 secretion and down-modulation of
+NKG2D underlies impaired NK cytotoxicity in cancer patients. J. Immunol. 172:7335–40
+133. Ruggeri L, Capanni M, Urbani E, Perruccio K, Shlomchik WD, et al. 2002. Effectiveness of donor
+natural killer cell alloreactivity in mismatched hematopoietic transplants. Science 295:2097–100
+134. Ishikawa E, Tsuboi K, Saijo K, Harada H, Takano S, et al. 2004. Autologous natural killer cell therapy
+for human recurrent malignant glioma. Anticancer Res. 24:1861–71
+135. Lundqvist A, McCoy JP, Samsel L, Childs R. 2007. Reduction of GVHD and enhanced antitumor effects
+after adoptive infusion of alloreactive Ly49-mismatched NK cells from MHC-matched donors. Blood
+109:3603–6
+136. Cheng M, Chen Y, Xiao W, Sun R, Tian Z. 2013. NK cell–based immunotherapy for malignant diseases.
+Cell. Mol. Immunol. 10:230–52
+137. Chandrasekaran S, McGuire MJ, King MR. 2014. Sweeping lymph node micrometastases off their feet:
+an engineered model to evaluate natural killer cell mediated therapeutic intervention of circulating tumor
+cells that disseminate to the lymph nodes. Lab Chip 14:118–27
+138. Chandrasekaran S, Chan MF, Li J, King MR. 2016. Super natural killer cells that target metastases in
+the tumor draining lymph nodes. Biomaterials 77:66–76
+www.annualreviews.org • Circulating Tumor Cells 351
+
+Downloaded from www.annualreviews.org. New York University (ar-252537) IP: 216.165.95.172 On: Mon, 03 Nov 2025 17:42:28
+BE20CH14_Nagrath-King ARI 29 April 2018 11:32
+139. Banchereau J, Steinman RM. 1998. Dendritic cells and the control of immunity. Nature 392:245–52
+140. Ma Y, Shurin GV, Peiyuan Z, Shurin MR. 2013. Dendritic cells in the cancer microenvironment.
+J. Cancer 4:36–44
+141. Fridman WH, Pages F, Saut ` es-Fridman C, Galon J. 2012. The immune contexture in human tumours: `
+impact on clinical outcome. Nat. Rev. Cancer 12:298–306
+142. Azuma M, Ebihara T, Oshiumi H, Matsumoto M, Seya T. 2014. Cross-priming for antitumor CTL
+induced by soluble Ag+ polyI:C depends on the TICAM-1 pathway in mouse CD11c+/CD8α+ dendritic
+cells. OncoImmunology 1:581–92
+143. Wu A, Oh S, Gharagozlou S, Vedi RN, Ericson K, et al. 2007. In vivo vaccination with tumor cell lysate
+plus CpG oligodeoxynucleotides eradicates murine glioblastoma. J. Immunother. 30:789–97
+144. Pinzon-Charry A, Maxwell T. 2005. Dendritic cell dysfunction in cancer: a mechanism for immunosup￾pression. Immunol. Cell 83:451–61
+145. Banchereau J, Palucka AK, Dhodapkar M, Burkeholder S, Taquet N, et al. 2001. Immune and clinical
+responses in patients with metastatic melanoma to CD34+ progenitor–derived dendritic cell vaccine.
+Cancer Res. 61:6451–58
+146. Jeanbart L, Ballester M, de Titta A, Corthesy P, Romero P, et al. 2014. Enhancing efficacy of anticancer ´
+vaccines by targeted delivery to tumor-draining lymph nodes. Cancer Immunol. Res. 2:436–47
+147. Thomas SN, Vokali E, Lund AW, Hubbell JA, Swartz MA. 2014. Targeting the tumor-draining lymph
+node with adjuvanted nanoparticles reshapes the anti-tumor immune response. Biomaterials 35:814–24
+148. Liu Y, Xiao L, Joo K-I, Hu B, Fang J, Wang P. 2014. In situ modulation of dendritic cells by injectable
+thermosensitive hydrogels for cancer vaccines in mice. Biomacromolecules 15:3836–45
+149. Ali OA, Huebsch N, Cao L, Dranoff G, Mooney DJ. 2009. Infection-mimicking materials to program
+dendritic cells in situ. Nat. Mater. 8:151–58
+150. Ali OA, Lewin SA, Dranoff G,Mooney DJ. 2016. Vaccines combined with immune checkpoint antibodies
+promote cytotoxic T-cell activity and tumor eradication. Cancer Immunol. Res. 4:95–100
+352 Lin et al.
+

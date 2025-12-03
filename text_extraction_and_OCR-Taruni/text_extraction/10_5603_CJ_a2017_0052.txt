@@ -1,0 +1,1034 @@
+Address for correspondence: Dr. Concetta Schiano, MChem, PhD, IRCCS SDN, Via E. Gianturco 113, 80143, Naples, Italy, 
+tel: (+39) 081 2408260, fax: (+39) 081 668841, e-mail: cschiano@sdn-napoli.it
+Received: 27.09.2016 Accepted: 13.04.2017
+Heart failure: Pilot transcriptomic analysis 
+of cardiac tissue by RNA-sequencing 
+Concetta Schiano1
+, Valerio Costa2
+, Marianna Aprile2
+, Vincenzo Grimaldi3
+, 
+Ciro Maiello4
+, Roberta Esposito2
+, Andrea Soricelli1, 5, Vittorio Colantuoni6
+, 
+Francesco Donatelli7
+, Alfredo Ciccodicola2, 8, Claudio Napoli1, 3
+1
+IRCCS SDN, Naples, Italy 2
+Institute of Genetics and Biophysics “Adriano Buzzati-Traverso”, National Research Council, Naples, Italy 3
+University of Studies of Campania “Luigi Vanvitelli”, Naples, Italy 4
+Department of Cardiothoracic Science, U.O.S.D. of Heart Transplantation, Monaldi Hospital, Naples, Italy 5
+Department of Motor Sciences and Healthiness, University of Naples “Parthenope”, Naples, Italy 6
+Department of Science and Technology, University of Sannio, Benevento, Italy 7
+Department for Cardiovascular and Metabolic Disease, Division of Cardiothoracic Surgery, 
+Faculty of Medicine, University of Milan, Italy 8
+Department of Science and Technology, University of Naples “Parthenope”, Naples, Italy
+Abstract
+Background: Despite left ventricular (LV) dysfunction contributing to mortality in chronic heart 
+failure (HF), the molecular mechanisms of LV failure continues to remain poorly understood and 
+myocardial biomarkers have yet to be identified. The aim of this pilot study was to investigate specific 
+transcriptome changes occurring in cardiac tissues of patients with HF compared to healthy condition 
+patients to improve diagnosis and possible treatment of affected subjects. 
+Methods: Unlike other studies, only dilated cardiomyopathy (DCM) (n = 2) and restrictive cardio￾myopathy (RCM) (n = 2) patients who did not report family history of the disease were selected with 
+the aim of obtaining a homogeneous population for the study. The transcriptome of all patients were 
+studied by RNA-sequencing (RNA-Seq) and the read counts were adequately filtered and normalized 
+using a recently developed user-friendly tool for RNA-Seq data analysis, based on a new graphical user 
+interface (RNA-SeqGUI).
+Results: By using this approach in a pairwise comparison with healthy donors, we were able to identify 
+DCM- and RCM-specific expression signatures for protein-coding genes as well as for long noncoding 
+RNAs (lncRNAs). Differential expression of 5 genes encoding different members of the mediator com￾plex was disclosed in this analysis. Interestingly, a significant alteration was found for genes which had 
+never been associated with HF until now, and 27 lncRNA/mRNA pairs that were significantly altered 
+in HF patients. 
+Conclusions: The present findings revealed specific expression pattern of both protein-coding and 
+lncRNAs in HF patients, confirming that new LV myocardial biomarkers could be reliably identified 
+using Next-Generation Sequencing-based approaches. (Cardiol J 2017; 24, 5: 539–553)
+Key words: cardiovascular disease, heart failure, noncodingRNA, mediator complex, 
+RNA-sequencing
+www.cardiologyjournal.org 539
+BASIC SCIENCE AND EXPERIMENTAL cardiology
+Cardiology Journal
+2017, Vol. 24, No. 5, 539–553
+DOI: 10.5603/CJ.a2017.0052
+Copyright © 2017 Via Medica
+ORIGINAL article ISSN 1897–5593
+
+Introduction 
+Cardiomyopathies are a heterogeneous group 
+of myocardial diseases resulting in cardiac dysfunc￾tion, which are clinically manifested with heart 
+failure (HF). With the rapid evolution of molecular 
+genetics in cardiology, the knowledge and literature 
+of the complex interplay between genetics and 
+cardiomyopathies have significantly expanded over 
+the past few decades. Inherited cardiomyopathies 
+include a wide spectrum of clinical phenotypes, 
+which classically include dilated cardiomyopathy 
+(DCM), hypertrophic cardiomyopathy (HCM), 
+restrictive cardiomyopathy (RCM), and others [1]. 
+DCM is characterized by an increase in both left 
+ventricular (LV) mass and volume with thinning 
+and stretching of LV wall [1]. HCM is characterized 
+by inappropriate myocardial hypertrophy (without 
+identifiable etiology such as hypertension, aortic 
+stenosis or other contributing factors), interstitial 
+fibrosis, myofiber disarray, disorganized myocardial 
+architecture and impaired LV performance [1]. 
+RCM is a heart-muscle disease resulting in im￾paired ventricular filling with normal or decreased 
+diastolic volume of either or both ventricles [1]. 
+However, one phenotypic pattern may progress to 
+another, or many others may manifest as more than 
+one phenotype [2]. HF is a multi-factorial condition 
+occurring in about 2–3% of the adult population 
+[2–4]. The main cause is coronary artery disease 
+(CAD) and it is a consequence of myocardial in￾farction (MI) [2–4]. The onset and progression of 
+HF are closely related to several molecular and 
+cellular alterations.
+In recent years, advances in drug treatment 
+have significantly improved the prognosis of HF pa￾tients. However, there are still several limitations 
+on the benefits of medical therapy for patients with 
+refractory end-stage disease, which often require 
+mechanical support or heart transplantation. Thus, 
+the development of novel and effective therapeutic 
+treatments for HF is a major challenge today and 
+requires a detailed knowledge of HF molecular 
+pathogenesis. 
+Global gene expression profiling comparing 
+disease vs. a healthy condition is a valuable ap￾proach for discovering new potential biomarkers 
+for diagnosis/prediction of disease severity and 
+for identifying novel drug targets. Particularly, 
+whole-transcriptome analysis is increasingly ac￾quiring a key role in the knowledge of mechanisms 
+responsible for complex diseases, elucidating the 
+involvement of multiple genes and pathways in 
+pathological mechanisms. 
+Over the last decade, global gene expression 
+analysis using microarrays has been widely applied 
+to cardiovascular research [5, 6]. Most transcrip￾tome studies on MI have been performed in rodents 
+due to higher accessibility to homogenous popula￾tions and myocardial tissue at defined stages of the 
+disease [5, 6]. Although gene expression studies 
+have elucidated many crucial molecular alterations 
+involved in HF pathophysiology, they do not fully 
+capture the complexity of human transcriptome 
+[7]. Human myocardial tissue is difficult to obtain 
+and usually comes from heterogeneous patient 
+cohorts, generally in late-stage cardiomyopathies 
+of different etiologies leading to HF. Despite these 
+limitations, global gene expression analysis using 
+microarrays has been widely applied to the field of 
+cardiovascular research. However, although gene 
+expression studies have elucidated many crucial 
+molecular alterations involved in HF pathophysi￾ology, they could not fully capture the complexity 
+of human transcriptome [7]. The introduction of 
+RNA-Sequencing (RNA-Seq) has overcome some 
+drawbacks of previously used technologies, al￾lowing a simultaneous investigation of different 
+layers of transcriptome complexity at an in-depth 
+level of resolution [8, 9]. Indeed, RNA-Seq analysis 
+revealed alterations of cytoskeletal and nucleocyto￾plasmic transport-related genes, as well as of other 
+key pathways in HF [7–12]. Interestingly, several 
+studies have also highlighted the importance of 
+noncoding RNAs (ncRNAs) in failing human hearts 
+[13, 14]. Currently, the best-characterized ncRNAs 
+in the heart are the microRNAs (miRNAs), which 
+finely modify mRNA expression through post￾transcriptional silencing. Recently, several miRNAs 
+have been found to be associated with cardiovascu￾lar disease (CVD) [13]. Functional analyses have 
+demonstrated that several dysregulated miRNAs 
+may exert either positive or negative regulatory 
+effects on cardiac hypertrophic pathways. Indeed, 
+miR-1, miR-133, miR-378, miR-185 and miR-155 
+showed anti-hypertrophic effects [15–18]; while 
+miR-208 family, miR-212/132, miR-23 and miR-199 
+promoted hypertrophy in cardiomyocytes [19, 20]. 
+Unlike miRNAs, long noncoding RNAs (lncRNAs) 
+are much less well characterized, and how they 
+function in biology and gene regulation remains an 
+attractive area of investigation [14].
+In the last several years, some lncRNAs have 
+been identified and their function has been impli￾cated in different biological processes. However, 
+only a few lncRNAs were associated to cardiomy￾opathy and heart biology, as myosin heavy chain￾associated RNA transcript (MHRT) [21]. It is
+540 www.cardiologyjournal.org
+Cardiology Journal 2017, Vol. 24, No. 5
+
+a cluster of lncRNAs transcribed from the MYH7 
+gene that encodes the bMHC protein. MHRT ex￾pression is heart specific and it is expressed at low 
+levels in the fetal heart, increasing in the adult heart. 
+Furthermore, higher levels of long intergenic RNA 
+(lincRNA) predicting cardiac remodeling (LIPCAR) 
+in plasma from HF patients following ischemic car￾diomyopathy were independently associated with 
+an elevated risk for future cardiovascular death and 
+predictive for LV remodeling [22]. This effect was 
+also reported for ANRIL, KCNQ1OT1, MIAT, and 
+MALAT1 in a cohort of 414 MI patients [23]. Nev￾ertheless, the specific functions of these transcripts 
+within the heart or vascular tissue remain relatively 
+unknown. Moreover, ANRIL was shown to be highly 
+expressed in atherosclerotic plaques and might be an 
+accurate regulator in the inflammatory nuclear factor 
+kappa B pathway [24]. Therefore, the importance 
+of the altered expression of lncRNAs in human HF 
+induces exploration of their putative involvement 
+and functional roles in myocardial disease [24].
+In this pilot study, a systematic transcrip￾tome analysis was performed, by RNA-Seq on 
+myocardial tissue specimens from HF patients vs. 
+healthy donors (HD) in order to reveal evidence of 
+a distinctive expression network signature in end￾stage HF diseased hearts. This approach may offer 
+important insights into the complex pathogenesis 
+of advanced cardiac failure, as well as for identify￾ing potential targets for therapeutic intervention. 
+Initially highlighted were classic heart disease￾associated coding and noncoding genes, whose 
+expression was significantly altered as MYH6, 
+MYH7 and MHRT. Then, differentially expressed 
+genes (DEGs) were screened and their possible 
+roles in the pathogenesis of HF were explored by 
+using multiple bioinformatics methods to identify 
+specific transcriptomic signatures. 
+Methods 
+Patients and tissue samples collection
+This study was performed according to the 
+principles outlined in the Helsinki Declaration, and 
+was approved by the local Ethics Committee. Eight 
+heart biopsies were collected from heart trans￾plantation candidates. The diagnosis of HF (DCM, 
+n = 2; RCM, n = 2) was determined by medical 
+history, pathological and instrumental examination. 
+LV tissue specimens (n = 4 for organ donors and 
+n = 4 for recipients) were acquired during surgical 
+intervention at the “Monaldi” Hospital. Cardiac 
+tissue samples were harvested and snap frozen 
+in liquid nitrogen at the time of cardiac surgery. 
+Clinical features of patients are shown in Table 1. 
+RNA extraction, library preparation 
+and sequencing
+Heart tissue samples were homogenized by 
+Tissue Lyser Disruption system (Qiagen) and total 
+RNA was isolated with TRIzol Reagent (Invitro￾gen) according to manufacturer protocol. cDNA 
+library preparation was performed starting from 
+4 µg of total RNA using Illumina TruSeq Librar￾ies and then sequenced at high coverage on the 
+Illumina HiSeq2000 Next-Generation Sequencing 
+(NGS) platform available at Tigem Institute in 
+Pozzuoli (Naples) [25]. (RNA integrity and quality 
+are detailed in Supplementary Methods — see 
+journal website).
+Table 1. Demographic and clinical characteristics of patients affected by cardiomyopathy.
+Characteristics Donors data Recipients data
+Subjects 4 4
+Gender female 3/4 (77%) 2/2 (50%)
+Age [years] 57.5 ± 11.7 57.5 ± 10.2
+Waiting time on transplantation list [months] Accidental death 10 ± 10.3
+Body mass index [kg/m2
+] 26.4 ± 4.2 27.1 ± 3.3
+Serum creatinine [mg/dL] 1.32 ± 0.2 1.4 ± 0.1
+Total cholesterol [mg/dL] 152.0 ± 30.4 177.0 ± 43.0
+Low density lipoprotein [mg/dL] 96.50 ± 32.2 108.2 ± 27.7
+Diabetes No No
+Statin treatment No No
+Smoking No No
+Data are mean values ± standard deviation
+www.cardiologyjournal.org 541
+Concetta Schiano et al., RNA-sequencing approach in cardiac disease
+
+RNA-Seq data analysis
+The quality control on raw reads was per￾formed using FastQC (http://www.bioinformatics.
+babraham.ac.uk/projects/fastqc/). High-quality 
+reads were mapped to the human reference tran￾scriptome (Ensembl v70) and to human reference 
+genome (GRCh37/hg19) using TopHat2 v2.0.10 
+[26]. Only unique mapped reads were used to 
+quantify gene expression in each sample. Gene 
+expression as reads counts were estimated after 
+filtering (Proportion test implemented in NOISe￾qBio package in R) and normalization of raw reads 
+counts using RNA-SeqGUI developed in R lan￾guage [27]. Principal component analysis (PCA), 
+mean average and density plots were generated 
+using the graphical user interface (GUI). Differ￾ential expression between patients was evaluated 
+using the non-parametric NOISeqBIO function [28] 
+implemented in RNA-SeqGUI. A posterior prob￾ability (PP) > 0.95 was used to determine DEGs. 
+RNA-Seq datasets were submitted to GEO public 
+resource and the accession number to the data 
+files is GSE71613 (http://www.ncbi.nlm.nih.gov/
+geo/query/acc.cgi?acc=GSE71613). 
+Gene ontology and pathway analysis
+The Kyoto Encyclopedia of Genes and Genom￾es (KEGG) (http://www.genome.ad.jp/kegg/) [29] 
+is an authoritative database containing a variety of 
+biochemical pathways. In addition, the Database 
+for Annotation, Visualization and Integration Dis￾covery (DAVID) (https://david.ncifcrf.gov) [30] is 
+a gene functional classification tool that organizes 
+and condenses abundant heterogeneous annota￾tion content. Functional enrichment analysis was 
+conducted in order to recognize the DEG enriched 
+biochemical pathways using KEGG database, gene 
+ontology (GO) associated biological functions and 
+PANTHER Gene analysis tools version 10.0 (http://
+www.pantherdb.org/tools) [31]. Furthermore, 
+DAVID online tools were applied for the GO and 
+KEGG pathway enrichment analyses with a p value 
+set to < 0.05 (according to Benjamini-Hochberg 
+correction) were considered significantly enriched.
+Because of a lack of strand specificity in the 
+sequencing protocol, for the analysis of lncRNAs, 
+only intergenic RNAs and antisense RNAs were 
+selected — annotated in Ensembl v70 — ex￾cluding transcripts showing overlap with protein 
+coding genes. Transcriptional start sites (TSSs) 
+of lncRNAs and protein-coding genes were down￾loaded from Ensembl v70 annotation, using the 
+tool Table Browser of UCSC Genome Browser 
+(http://genome.ucsc.edu/cgi-bin/hgTables) [32]. 
+Differentially expressed lncRNAs, between LV 
+tissues from HF vs. HD samples, were associated 
+with the nearest TSS of protein coding genes using 
+the function “closestBed” of BEDTools [33] with 
+default parameters. 
+Data validation by qRT-PCR 
+and statistical analysis 
+One microgram of total RNA, from HF patients 
+and HD, was reverse-transcribed to cDNA using 
+the SuperScript® IV (Invitrogen), following the 
+manufacturer’s protocol. Primer sequences and 
+corresponding polymerase chain reaction (PCR) 
+conditions are shown in the Table S1 (see journal 
+website, supplementary file). Gene expression 
+was quantitatively determined by quantitative 
+real-time PCR (qRT-PCR) analysis (detailed in 
+Supplementary Methods — see journal web￾site). Results were analyzed by threshold cycle 
+(Ct) approach and normalized to RPS18, used as 
+housekeeping gene [34]. Relative expression levels 
+of the target genes were shown as fold change (FC), 
+calculated through the 2–DDCt method [34]. Results 
+are reported as mean ± standard error of three 
+single experiments. Differences between experi￾mental groups were analyzed by the ANOVA and
+t Student’s tests, considering significant a p value
+< 0.05 (*) and particularly significant a p < 0.01 (**).
+Results
+Transcriptome analysis of cardiac tissues 
+This pilot study investigates the changes 
+occurring in the transcriptome of cardiac tissues 
+in HF patients and healthy subjects by RNA-Seq 
+technology. Clinical characteristics of individuals 
+are reported in Table 1. We isolated total RNA 
+from LV myocardium of patients with DCM and 
+RCM obtained at the time of heart transplantation. 
+Control samples were obtained from transplant do￾nor hearts. The cause of death in these individuals 
+was road accident. All HD had no history of myo￾cardial disease or active infections or significant 
+comorbidities, such as hypertension, diabetes and 
+hypercholesterolemia at the time of transplanta￾tion. Three of four subjects were female (77%) 
+with a mean age of 58 ± 11.7 years. Donors and 
+recipients were of Caucasian ethnicity.
+Globally, RNA-Seq produced paired-end reads 
+with a sufficient quality and read coverage per 
+sample to perform reliable gene expression analy￾sis (Fig. S1A–C — see journal website) [35]. 
+The expression levels of protein-coding and non￾coding genes have been analyzed for all samples. 
+542 www.cardiologyjournal.org
+Cardiology Journal 2017, Vol. 24, No. 5
+
+Multidimensional scaling analysis confirmed high 
+correlation and reproducibility among individual 
+samples of each group (Fig. S1D — see journal 
+website). PCA revealed that the two different 
+groups of patients, with different HF etiology 
+(DMC/RCM), significantly differed (Fig. S1E — 
+see journal website). RNA-Seq revealed that 
+about 15,800 genes (Ensembl v70) were expressed 
+in heart specimens and about 500 of them are cur￾rently annotated as lncRNAs by the GENCODE 
+Consortium. As the classification of lncRNAs is 
+far from complete and most of these transcripts 
+overlap protein-coding loci, the focus was specifi￾cally on the lincRNAs and antisense lncRNAs that 
+can be unequivocally quantified by RNA-Seq. As 
+a general observation there were significant differ￾ences between HF and HD transcriptomes, an at￾tempt was made to identify genes with differential 
+expression that were potentially associated with 
+disease etiology.
+Significant alterations in the protein-coding 
+transcriptome of HF vs. HD
+RNA-SeqGUI allows virtually quantifying all 
+expressed genes in a cell or tissue [15]. The initial 
+determination for each sample was the expression 
+level of 56,622 loci (Ensembl v70), then the focus 
+turned to the identification of DEGs between the 
+groups under evaluation. First, we compared the 
+gene expression profiles of HF vs. HD; next, DCM 
+vs. HD; finally, RCM vs. HD subjects.
+Data analysis revealed that 2,428; 470 and 
+3,685 genes were significantly altered in the 
+three groups, respectively (Fig. 1A). The degree 
+of differential expression was variable and ranged 
+from +6.3 to –5.3 log2FC between HF and HD; 
+Figure 1. Analysis of differentially expressed genes in heart failure (HF) and heart donor (HD) groups. A. Volcano plot 
+reporting on the y axis 1-P (posterior probability) in log10 scale and on the x axis log10FC (fold change calculated 
+as disease/healthy samples). Genes identified as significantly differentially expressed (PP > 0.95) are shown as red 
+dots; B. Scatter plot of normalized (counts per million [CPM]) mediator complex (MED) gene expression values. Each 
+circle represents a unique gene encoding a mediator complex family member. Black circles indicate differentially 
+expressed gene (DEGs); C, D. Bar graph reporting the results of the “Pathway” and “Gene Ontology (GO) Molecular 
+Function” analysis used to infer the function of DEGs identified by RNA sequencing. Categories are reported on the 
+x axis, DEGs’ number on the y axis.
+A B C
+D
+www.cardiologyjournal.org 543
+Concetta Schiano et al., RNA-sequencing approach in cardiac disease
+
+from +10.6 to –5.5 log2FC between DCM and HD 
+and from +6.4 to –5.9 log2FC between RCM and 
+HD. Most of DEGs (about 78%, 61%, and 65%, 
+respectively) were significantly overexpressed in 
+HF, DCM, and RCM patients, indicating a strong in￾duction in gene transcription. As shown in Table 2, 
+the HAPLN1 gene is always up-regulated when 
+HF was analyzed, DCM and RCM groups (log￾2FC = +6.3; +6.2 and +6.4, respectively). 
+Furthermore, the two most up-regulated genes 
+were: CFAP61 and COL9A1 (log2FC = +4.6 and 
++4.5) in HF group; MTRNR2L1 and MYOZ1 
+(log2FC = +10.6 and +5.3) in DCM group; and 
+CFAP61 and COL9A1 (log2FC = +5.0 for both 
+genes) in RCM group. Similarly, the three most 
+down-regulated genes were TRAJ39, TRAJ49, 
+and CTRB1 (log2FC = –5.3; –4.7 and –4.7) when 
+HF vs. HD was analyzed; TRAJ39, CTRB1, 
+and CXCL14 (log2FC = –5.5; –4.9 and –4.6) in 
+DCM vs. HD; and RSPO4, EDN2, and SELE 
+(log2FC = –5.9; –5.7 and –5.7) in RCM vs. control 
+group (Table 2).
+Interestingly, RNA-Seq analysis revealed the 
+differential expression of 5 genes encoding different 
+subunits of the mediator complex (MED): MED12, 
+MED13L, MED14, MED17, MED23 (Fig. 1B; 
+Table 3) (see the discussion section below). 
+Gene ontology and KEGG pathway 
+enrichment analysis of DEGs
+DAVID, Venny and Pathway analysis tools 
+were used to determine molecular processes and 
+biological pathways associated with the DEGs 
+detected. We first associated differentially ex￾pressed mRNAs with three structured networks: 
+biological process (BP), molecular function (MF) 
+and cellular component (CC) in HF patients only 
+(Tables S2–S5 — see journal website, sup￾plementary file). Results showed a significant 
+enrichment (p < 0.05 adjusted by the accepted 
+Benjamini-Hochberg correction method) of par￾ticular biological processes when specific genes 
+were altered. In particular, bioinformatic analysis 
+revealed a significant alteration of “focal adhesion”, 
+Table 2. Top 10 up-regulated and down-regulated genes
+HF top 10 DEGs DCM top 10 DEGs RCM top 10 DEGs
+Up-regulated log2FC Up-regulated DEGs log2FC Up-regulated DEGs log2FC
+HAPLN1 6.31 MTRNR2L1 10.56 HAPLN1 6.41
+CFAP61 4.64 HAPLN1 6.21 CFAP61 5.05
+COL9A1 4.54 MYOZ1 5.32 COL9A1 5.00
+MYOZ1 4.47 FOSB 4.49 CENPA 4.08
+HAND1 4.39 HAND1 4.20 KIAA1211 4.07
+KIAA1211 3.84 CFAP61 4.05 ASB18 3.96
+UNC80 3.83 SYT12 3.92 UNC80 3.86
+TNN 3.76 COL9A1 3.85 RHCG 3.80
+COMP 3.71 UNC80 3.81 COMP 3.69
+CENPA 3.65 COMP 3.73 WBSCR17 3.55
+Down-regulated log2FC Down-regulated log2FC Down-regulated log2FC
+TRAJ39 –5.30 TRAJ39 –5.55 RSPO4 –5.92
+TRAJ49 –4.72 CTRB1 –4.94 EDN2 –5.74
+CTRB1 –4.72 CXCL14 –4.59 SELE –5.70
+PGA4 –4.57 TRAJ49 –4.36 MYOG –5.40
+ADAMTS8 –4.54 PGA5 –4.20 GDA –5.34
+PGA5 –4.51 PGA3 –4.15 PGA4 –5.31
+PGA3 –4.50 PGA4 –4.08 ADAMTS8 –5.24
+GJD2 –4.49 ADAMTS8 –4.07 TRAJ49 –5.21
+EDN2 –4.20 GJD2 –4.07 ADAMTS4 –5.20
+ETNPPL –3.89 NMUR1 –3.88 MT1A –5.17
+HF — heart failure; DCM — dilated cardiomyopathy; DEGs — differentially expressed gene; RCM — restrictive cardiomyopathy
+544 www.cardiologyjournal.org
+Cardiology Journal 2017, Vol. 24, No. 5
+
+“regulation of actin cytoskeleton” and “oxidative 
+phosphorylation” (adjusted p values 5.64–11, 2.30–1
+and 1.27–12, respectively) (Fig. 1C). 
+The GO analysis further validated this experi￾mental set up, demonstrating that many biological 
+processes and molecular functions, already associ￾ated with HF, were also enriched in these datasets, 
+including “cell-adhesion”, “cell-proliferation”, 
+“cell-differentiation”, “transcription”, “apoptosis”, 
+“proteolysis”, etc. (Fig. 1D; Tables S2–S5). Next, 
+by KEGG pathway analysis found a number of 
+biological pathways characterized by up- or down￾regulated genes when under comparison (Fig. 2). 
+The predominant up- and down-regulated pathways 
+are summarized in Table S5, including related 
+genes (345 up- and 239 down-regulated), and top 
+10 are represented in Figure 2A, B. Specific DEGs 
+of the first two classes significantly altered are 
+shown in Figure 2C–E (up-regulated DEGs) and 
+Figure 2D–F (down-regulated DEGs). 
+Based on Pubmed literature, some genes which 
+had not been previously reported showed an asso￾ciation with human heart tissue. Among them, for 
+instance, ADAMTS8 and ADAMTSL4 were local￾ized predominantly in plasma cells and lung tissue 
+(Table S6 — see journal website, supplemen￾tary file) [36]. ADAMTS8 and ADAMTSL4 genes 
+were particularly down-regulated in HF vs. HD 
+(–4.54 fold; false discovery rate [FDR] < 0.05 and 
+–2.62 fold; FDR < 0.05 respectively). Both genes 
+and many others in GO categories constitute an 
+extremely rich source for potential target genes in 
+HF understanding and prevention (Tables S2–S5). In 
+addition, KEGG analysis demonstrated that several 
+pathways were also altered in HF compared to HD; 
+particularly in Figure 3A, were shown “cell adhe￾sion molecules” pathway and graphically, heatmaps 
+were also reported (Fig. 3B–C) of “focal adhesion” 
+(39 up- and 9 down-regulated genes) and “cardiac 
+muscle contraction” (3 up- and 20 down-regulat￾ed genes) significantly altered in all HF patients
+(Fig. 3A–C; Table S5). Finally, in order to identify
+a potential disease-specific signature, gene ex￾pression levels were compared in DCM and RCM 
+groups. The Figure S1D–E (Fig. S1D–E — see 
+journal website, supplementary file) shows the 
+PCA of the distinct considered groups: DCM and 
+RCM compared to HD, providing a quick display of 
+overall variability in screening and can highlight in￾consistent samples. 114 genes were found in which 
+expression was significantly altered between the 
+two conditions, using mean gene expression values 
+of HD as the background condition (Fig. S2A–C — 
+see journal website, supplementary file). As 
+shown in Figure S2D clusters of disease-specific 
+genes belonging to the “TNF signaling pathway”, 
+“phagosome”, “cytokine-cytokine receptor interac￾tion” were identified.
+In the analysis of DCM vs. HD, DEGs were 
+470 ranging between FC = –5.5 (like TRAJ39 gene) 
+and FC = +10.6 (MTRNR2L1 gene). Of all DEGs 
+about 61% (285 genes) were up-regulated and 39% 
+(185 genes) were down-regulated. In analysis of 
+RCM vs. HD, DEGs were 3,685 ranging between 
+Table 3. Differentially expressed genes of me￾diator subunits in heart failure (HF) versus heart 
+donor (HD) comparison.
+Mediator subunit HD HF
+MED1 15.23 18.80
+MED4 21.87 21.40
+MED6 9.45 9.90
+MED7 9.95 8.56
+MED8 19.33 18.15
+MED9 38.19 34.63
+MED10 19.88 16.74
+MED11 11.23 10.78
+MED12 22.26 33.96
+MED13 15.34 19.67
+MED13L 14.21 24.12
+MED14 19.77 28.94
+MED15 50.06 52.49
+MED16 30.56 23.39
+MED17 15.07 20.73
+MED18 9.38 8.78
+MED19 8.57 7.51
+MED20 13.49 12.50
+MED21 27.18 22.09
+MED22 27.09 26.63
+MED23 8.23 13.93
+MED24 58.19 64.20
+MED25 51.35 33.88
+MED26 3.94 4.52
+MED27 13.41 11.23
+MED28 16.27 16.33
+MED29 34.59 36.30
+MED30 5.94 5.95
+MED31 3.07 3.04
+CDK8 8.29 11.83
+CCNC 15.90 18.48 
+Gene expression values of mediator complex subunits expressed 
+in counts per million. Differentially expressed gene of mediator 
+complex subunits are shown in bold red color.
+www.cardiologyjournal.org 545
+Concetta Schiano et al., RNA-sequencing approach in cardiac disease
+
+a FC = –5.9 (like RSPO4 gene) and FC = +6.4 
+(HAPLN1 gene). Of all DEGs about 65% (2,390 
+genes) were up-regulated and 35% (1,295 genes) 
+were down-regulated. 
+The similarly of HF vs. HD comparisons, DCM 
+and RCM DEGs compared to non-failing hearts 
+were examined by GO and KEGG enrichment 
+analyses separately. DEGs with higher expression 
+levels in DCM were enriched for “cardiovascular” 
+(p = 5.0 × 10–5) in disease class and were enriched 
+for “cardiac muscle contraction” (p = 2.0 × 10–6) 
+in KEGG pathway. The GO analysis showed that 
+the DEGs clustered in MF, BP, and CC and were 
+significantly enriched for terms related to “extra￾cellular region” (p = 1.6 × 10–13) and “cell junction”
+(p = 3.3 × 10–4). Similarly, DEGs with higher ex￾pression levels in RCM were enriched for “cardio￾vascular” (p = 2.4 × 10–12) in disease class. Instead, 
+KEGG analysis was significantly enriched for “focal 
+adhesion” (p = 1.6 × 10–3) and “ECM-receptor 
+interaction” (p = 2.9 × 10–3). Finally, GO analysis 
+showed that RCM DEGs clustered in MF, BP, and 
+CC and were significantly enriched for terms re￾lated to “cell adhesion molecules” (p = 3.9 × 10–3) 
+and “cardiac muscle contraction” (p = 1.3 × 10–2).
+Transcriptome analysis of failing hearts 
+identifies differentially expressed lncRNAs
+Since lncRNA are emerging as crucial contrib￾utors to human diseases, the aim of this investiga￾tion was whether these non-coding RNAs may po￾tentially have a role in HF. Therefore a systematic 
+analysis of RNA-Seq datasets to identify lncRNAs 
+differentially expressed (DE) was undertaken in 
+Figure 2. Pathway analysis of the top 10 significantly altered genes; A, B. Pathway analysis of the top 10 significantly 
+changed up- and down-regulated differentially expressed gene (DEGs) when comparing heart failure and heart donor. 
+In the panels C/E and D/F are reported specific up- and down-regulated DEGs of the first and second more abundant 
+pathway; CPM — counts per million.
+A B
+C D
+E F
+546 www.cardiologyjournal.org
+Cardiology Journal 2017, Vol. 24, No. 5
+
+HF vs. HD. In this data-driven analysis. Focus 
+was mainly on intergenic and antisense lncRNAs, 
+which do not overlap protein-coding loci and that 
+can be unambiguously quantified using RNA-Seq. 
+Differential expression analysis revealed that 
+140 lncRNA were significantly deregulated in HF 
+vs. HD. Among them, 33 non-coding genes were up￾regulated and 107 were down-regulated (Fig. 3D; 
+Table 4). As lncRNA may act to regulate gene 
+expression of surrounding protein-coding genes, 
+DE lncRNAs were associated, through an auto￾matic computational pipeline, with the transcrip￾tion start site of the nearest protein-coding gene. 
+Of these, 27 (24 up- and 3 down-regulated) lncR￾NAs were DE (Table 4). Interestingly, among the 
+most altered lncRNAs/gene and lincRNA/gene 
+pairs we found EPHA5-AS1/EPHA5 and JAK1/
+/RP11-182I10 genes, respectively. EPHA5-AS1 
+is located on chromosome 4q13.2 and Ensembl 
+annotates 3 different isoforms transcribed from 
+this locus, with a long isoform composed of 
+4 exons (1,177 nucleotide in length). Moreover, 
+EPHA5-AS1 has a partial overlap with the 5’UTR 
+of EPHA5 gene (Fig. 4A), suggesting a direct 
+regulatory role of this antisense lncRNA on the 
+sense protein-coding gene. To address whether 
+a potential correlation may exist, normalized 
+expression values of both the protein-coding 
+and the lncRNA in all samples were compared. 
+Interestingly, it was observed that both of them 
+were significantly up-regulated in HF compared 
+to HD (Fig. 4B), and the expression values had
+a high positive correlation (Pearson’s coefficient 
+= 0.89). Also similarly revealed, was a positive 
+correlation between JAK1 and RP11-182I10, 
+a lincRNA/mRNA transcribed in the same orien￾tation of JAK1 gene and was localized very close 
+to this gene (Fig. 4C). Boxplots in Figure 4D 
+show the expression values of both genes under 
+two different conditions (FDR < 0.05).
+Figure 3. Pathways most affected in heart failure (HF) versus heart donor (HD) from RNA sequencing analysis. 
+A. Graphical representation of the KEGG pathway “Cell adhesion molecules”. Red boxes indicate genes down-regulat￾ed in HF, green the ones up-regulated. “Focal adhesion” and “Cardiac muscle contraction” pathway are reported in the 
+panels B and C as heatmaps (with the hierarchical clustering option). The degree of differential expression between 
+the two HF and HD groups is indicated by a three-color code (down-regulated genes are depicted in red, up-regulated 
+genes in green and genes with little-to-none variation are indicated in black). Similarly, panel D shows the heatmap 
+(with the hierarchical clustering option) of long non-coding RNAs differentially expressed in HF versus HD samples.
+A B C
+D
+www.cardiologyjournal.org 547
+Concetta Schiano et al., RNA-sequencing approach in cardiac disease
+
+RNA-Seq validation
+To validate the results of the analysis between 
+two conditions, qRT-PCR on the same RNAs used for 
+RNA-Seq experiments were performed (Table S1).
+Under analysis was the expression of several se￾lections of significantly altered genes, including 
+all GO categories, comparing HF and HD groups 
+(Tables S2–S5). Particularly, altered cytoskeletal 
+components, closely involved in the regulation of the 
+actin and myosin cytoskeleton and muscle contrac￾tion, included: ACTA2, ACTG2, NMUR1, MYL4, 
+and MYH10. Moreover, the following transcription 
+factors involved in heart development and morpho￾genesis were selected: TBX20, SHOX2, HOPX and 
+MSX1. Furthermore, among significantly DEGs, 
+the retinoic acid producing enzyme ALDH1A2 was 
+chosen for validation. Finally, among genes encoding 
+for ionic channels, we selected: SLC8A1, CHRNE, 
+HCN2, BDKRB2, and CACNA1G.
+All DEGs analyzed by qRT-PCR confirmed the 
+expression trends obtained by RNA-Seq analysis. 
+In Figure S3 (see journal website, supplemen￾tary file) observation revealed that FC measured 
+by RNA-Seq (count per million [CPM]) was con￾firmed also by qRT-PCR (2–DDCt).
+Discussion
+Although a limited number of patients partici￾pated, the main findings of the present study were:
+1. The identification of specific changes oc￾curring in the transcriptome of HF patients 
+Table 4. Long noncoding RNAs (lncRNA) differentially expressed (DE) in heart failure versus heart
+donor groups.
+DE lncRNA DE associated-protein-coding gene lncRNA log2FC Protein-coding log2FC
+RP11-427H3 AAK1 1.25 1.34
+LINC00342 ANKRD36C 0.87 0.85
+LUCAT1 ARRDC3 –1.34 0.81
+LINC00900 CADM1 1.28 1.06
+SFTA1P CELF2 2.57 0.50
+RP11-261C10 CEP170 0.95 0.72
+RP11-807H7 EPHA5 1.20 1.27
+RP11-479J7 FAM78B –3.28 –3.07
+GDNF-AS1 GDNF 2.58 1.84
+RP11-441O15 GOT1 1.30 –0.32
+AC018647 HERPUD2 2.10 0.52
+RP11-182I10 JAK1 1.10 0.39
+AC096574 LRRFIP1 1.81 0.59
+CROCCP2 NBPF1 0.60 0.55
+RP11-121C2 NFXL1 1.14 –2.70
+LINC01011 NQO2 0.72 –0.51
+AC010096 OSR1 0.65 –1.43
+RP11-33B1 PDE5A 1.06 0.65
+RP11-10L7 PPM1K 1.39 1.42
+RP11-1114A5 RBMX 0.75 0.38
+NEAT1 SLC25A45 –0.47 1.01
+RP11-480A16 TNK2 0.82 0.77
+RP11-1275H24 TNRC18 0.62 0.61
+USP46-AS1 USP46 0.89 0.95
+OVAAL XPR1 1.60 1.31
+MIRLET7DHG ZNF169 0.97 1.01
+RP11-457M11 ZNF322 0.97 0.93
+548 www.cardiologyjournal.org
+Cardiology Journal 2017, Vol. 24, No. 5
+
+compared to healthy subjects. In particular, 
+bioinformatic analysis revealed a significant 
+alteration of “focal adhesion”, “regulation of 
+actin cytoskeleton” and “oxidative phospho￾rylation” in HF cardiomyocytes;
+2. The identification of some genes, which had 
+not been previously reported, had an as￾sociation with human heart tissue and HF 
+(ADAMTS8, ADAMTSL4, ACTA2, ACTG2 
+and NMUR1);
+3. The identification of a potential disease-spe￾cific signature, comparing gene expression 
+levels in DCM and RCM groups, revealing 
+as significantly DEGs, genes belonging to 
+the “TNF signaling pathway”, “phagosome”, 
+“cytokine-cytokine receptor interaction”;
+4. The identification of altered levels of genes 
+encoding 5 MED subunits that play a fun￾damental role in human HF. Among these, 
+to date, MED17 has not yet been associated 
+with CVD;
+5. The identification of specific non-coding RNAs 
+that potentially have a role in HF. Focusing 
+mainly on intergenic and antisense lncRNAs, 
+differential expression analysis revealed that 
+EPHA5-AS1/EPHA5 and JAK1/RP11-182I10 
+genes (a lncRNAs/gene and lincRNA/gene 
+pairs respectively) were significantly deregu￾lated in HF vs. HD.
+Cardiomyocyte cytoskeleton is essential to 
+maintain cell morphology and regulate contrac￾tion and relaxation. Alterations in cytoskeletal 
+Figure 4. Genomic localization of differentially expressed antisense long noncoding RNA (lncRNAs); panels A (EPHA5/
+/EPHA5-AS1) and C (JAK1/RP11-182I10) show the schematic graphical representations of lncRNA/mRNA and long 
+intergenic RNAs (lincRNAs)/mRNA pairs (RefSeq genes) that are significantly altered in heart failure patients. In panels
+B and D the expression levels (normalized values, counts per million [CPM]) of both the gene and the neighbor lncRNA 
+associated to it (Pearson’s coefficient = 0.89) are reported (FDR < 0.05); HD — heart donor; HF — heart failure. 
+A
+B
+C
+D
+www.cardiologyjournal.org 549
+Concetta Schiano et al., RNA-sequencing approach in cardiac disease
+
+components have been found in both animal mod￾els of HF and in humans [37, 38]. Specifically, an 
+increase in cytoskeletal proteins together with
+a loss of contractile filaments has been suggested 
+as the morphological cause of heart dysfunction 
+[37, 38]. The number of genes involved in this 
+structural disruption continues increasing; however, 
+other cytoskeleton and contractile fiber genes are 
+expected to play a role in these pathologies. As pre￾viously reported, most genes encoding components 
+for a wide variety of cellular compartments and 
+pathways, such as: contractile and transduction ap￾paratus, gene transcription and splicing machinery, 
+and calcium regulation, were associated with DCM 
+[11]. An example of altered genes, also deregulated 
+in this condition and was represented by ACTC1, 
+DSG2, MYH6, SGCD (Tables S2–S5). On the other 
+hand, genetic mutations in familial RCM are not 
+well defined, since there is significant overlap in 
+the mutations between RCM, DCM, and HCM [12]. 
+Also in RCM, accordingly to previous studies and 
+presently identified genes encoding sarcomere (e.g. 
+ACTC1, MYH7, and TNNT2), Z-disk proteins (e.g. 
+MYPN), and intermediate filament network (e.g. 
+DES) (Tables S2–S5). Interestingly, in the pres￾ent study, a large number of genes were identified 
+that had not been previously correlated with HF. 
+Although the specific GO category/term is strongly 
+associated with this pathology, significantly altered 
+genes were found associated to “myocardial infarc￾tion susceptibility” and “cardiomyopathy” only when 
+down-modulated genes were considered. DEGs 
+were also significantly enriched in “immune re￾sponse” and “inflammation-related” pathways. Fur￾thermore, other genes involved in “angiogenesis” 
+and “cytoskeleton” were significantly altered in HF 
+vs. HD as well as some genes with very important 
+biochemical/biological functions in other tissues 
+or organs (Table S6). The list of genes includes: 
+ACTA2, NMUR1, ACTG2, KCNJ5, GATA6, MSX1, 
+ZNF385B, ADAMTS8, ADAMTSL4 and COMP. In 
+particular, ACTA2 and ACTG2 have been associated 
+with HF for the first time in this study. Specifically, 
+these genes were down-regulated both in DCM and 
+RCM conditions. In the analysis of DCM and RCM 
+vs. control group, ACTA2 gene reported a FC = –2.7 
+and –3.3, respectively. This trend was also confirmed 
+for ACTG2, with a FC = –8.2 and –7.5 in DCM and 
+RCM, respectively. As previously reported, these 
+genes encode highly conserved molecules belonging 
+to the actin family proteins, involved in cell motility, 
+structure and integrity of the contractile apparatus 
+[39]. Noteworthy, NMUR1 gene is particularly 
+down-regulated in HF (–3.78 fold; FDR < 0.05); 
+this gene is endogenously expressed in adult rat 
+cardiomyocytes, where it is involved in modulat￾ing L-type Ca(2+) channels [40]. Thus, this study 
+suggests that the altered levels of NMUR1 may also 
+play a significant role in human HF.
+Generally, the findings of this study indi￾cate a more complex transcriptome alteration in 
+RCM compared to DCM. Indeed, in DCM filtered 
+list a total of 50 genes which were differentially 
+expressed whereas RCM tissues displayed 516 
+common DEGs. Nevertheless, despite the differ￾ent etiologies of DCM and RCM, it is conceivable 
+that both pathologies can share similar functional 
+changes that are responsible for HF. 
+Moreover, bioinformatic functional analysis 
+demonstrated that DEGs binding-related genes 
+(1,892 up-regulated and 536 down-regulated genes) 
+were differentially expressed in failing samples 
+when compared with non-failing hearts (Fig. 2A). 
+Interestingly, our analysis also revealed the 
+differential expression of 5 genes encoding various 
+subunits of the MED: MED12, MED13L, MED14, 
+MED17, MED23 when a PP > 0.95 was used to 
+determine DEGs (Fig. 1B; Table 3). To date, altera￾tions in MED complex genes have been associated 
+with several human multifactorial diseases, includ￾ing CVDs [41–44]. To date, only MED17 has not 
+yet been associated with CVD. All differentially 
+expressed MED were up-regulated in HF patients. 
+In particular, MED12 expression was found altered 
+in DCM and RCM groups when we used a PP > 0.80.
+Noteworthy, MED17 gene is up-regulated in RCM 
+patients (+0.50 fold; FDR < 0.05); this gene con￾stitute a subunit of MED head module and interact 
+with Pol II and the general transcription factors for 
+both transcription and nucleotide excision repair 
+mechanisms [45]. Thus, our pilot study suggests 
+that the altered levels of MED subunits may play
+a fundamental role in human HF. In particular, since 
+that MED complex has been also shown to work in 
+cooperation with ncRNAs in regulating gene tran￾scription [41], it would be relevant to investigate 
+MED17 functions in order to understand its role in 
+the onset and progression of RCM. 
+To date, several reports indicate that other 
+classes of RNAs, other than protein-coding, are 
+potential contributors to human diseases [46, 47], 
+mainly as they are able to regulate gene expression 
+at the transcriptional, post-transcriptional, and epi￾genetic levels [48, 49]. Among these ncRNAs, the 
+class of lncRNAs plays an important role in several 
+conditions such as cancer, liver disease and central 
+nervous system disorders among many others. 
+Exploratory studies performed on the lncRNA in 
+550 www.cardiologyjournal.org
+Cardiology Journal 2017, Vol. 24, No. 5
+
+the cardiovascular setting have thus far identified 
+only few lncRNA associated with CVDs [50, 51]. 
+Specific studies looking at lncRNAs in HF remain 
+lacking [51]. 
+To investigate whether lncRNAs may poten￾tially have a role in heart diseases, systematic 
+analysis of RNA-Seq datasets to identify lncRNAs 
+DE in HF was performed. Differential expression 
+analysis revealed 140 significantly deregulated 
+lncRNA in HF vs. HD. Among them, 24% of non￾coding genes were up-regulated and 76% were 
+down-regulated. A searched for all the 140 DE 
+lncRNAs the nearest protein-coding genes and 
+we could find only 27 pairs of lncRNA-genes that 
+are both differentially expressed was done. Of all,
+27 genes (about 20%) were DE (Table 4). Interest￾ingly, among associated DE lncRNAs and protein 
+coding genes, we found EPHA5-AS1 (annotated 
+also as RP11-807H7.1), a lncRNA transcribed anti￾sense to EPHA5 gene. Both the protein-coding and 
+the lncRNA are up-regulated in HF vs. HD (Fig. 4). 
+Moreover, EPHA5-AS1 has a partial overlap with 
+the 5’UTR of EPHA5 gene (Fig. 4), which suggests 
+a direct regulatory role of this antisense lncRNA 
+on the sense protein-coding gene. Ephrin recep￾tors have diverse activities, including widespread 
+effects on the actin cytoskeleton, cell-substrate 
+adhesion, intercellular junctions, cell shape, and 
+cell movement [52]. However, this is the first 
+report about its deregulation in cardiomyopathies.
+Similarly, a positive correlation between JAK1 
+and the lincRNA RP11-182I10 was observed. Differ￾ent from EPHA5-AS1, RP11-182I10 is transcribed 
+on the same strand of JAK1 gene in a typical head￾to-tail orientation (Fig. 4C). The expression values 
+of both genes under two different conditions were 
+also increased (FDR < 0.05) (Fig. 4D). JAK1 gene 
+encodes a protein-tyrosine kinase member, operat￾ing fundamental roles as the intracellular signaling 
+effector of cytokine receptors. The activation and/or 
+inactivation of members of the Janus kinase family 
+are causally linked to different human diseases, as 
+hemopoietic malignancies, immunodeficiency and 
+inflammatory diseases [53]. However, EPHA5 and 
+the JAK1 gene have never been identified as altered 
+in patients with cardiomyopathies. These novel 
+changes could be responsible for altered contrac￾tion and cell disruption in HF subjects, which may 
+suggest novel therapeutic approaches.
+Conclusions
+The present findings revealed specific expres￾sion pattern of both protein-coding and lncRNAs 
+in HF patients, confirming that new LV myocardial 
+biomarkers could be reliably identified using Next￾Generation Sequencing-based approaches.
+For patients awaiting heart transplantation, 
+there are differences in survival on the basis of type 
+of heart disease (DCM or RCM). The knowledge 
+of an expression network signature in end-stage 
+HF diseased hearts may offer important insights 
+into the complex pathogenesis of advanced cardiac 
+failure, it may also provide potential targets for 
+therapeutic intervention.
+All the novel changes revealed could be re￾sponsible for altered contraction and cell disruption 
+in HF subjects. However, many of these factors, 
+play critical roles in heart development and ho￾meostasis as well as in other human diseases, an 
+original list of novel candidate genes with potential 
+implications in HF is offered. These findings reveal 
+a specific expression pattern of both protein-coding 
+and lncRNAs in HF patients, confirming that new 
+LV myocardial biomarkers can be reliably identified 
+using NGS-based approaches. Interestingly, for 
+many of these proteins; pharmacological agonists 
+and antagonists could be developed, raising excit￾ing possibilities for new therapeutic approaches.
+Acknowledgements
+We thank Dr. Casamassimi and Dr. Rienzo (De￾partment of Biochemistry, Biophysics and General 
+Pathology, Second University of Naples, Italy) for 
+their valuable technical support in the first steps 
+of this study.
+This work was supported by grants from 
+“Ministero della Salute” [project code GR-2011-
+02349436] and “RRC 2013-2015” [project code 
+RRC-2015-2360454].
+Conflict of interest: None declared
+References
+1. Modesto K, Sengupta PP. Myocardial mechanics in cardiomyopa￾thies. Prog Cardiovasc Dis. 2014; 57(1): 111–124, doi: 10.1016/j.
+pcad.2014.03.003, indexed in Pubmed: 25081406.
+2. McMurray J, Adamopoulos S, Anker SD, et al. ESC Guidelines 
+for the diagnosis and treatment of acute and chronic heart failure 
+2012: The Task Force for the Diagnosis and Treatment of Acute 
+and Chronic Heart Failure 2012 of the European Society of 
+Cardiology. Developed in collaboration with the Heart Failure 
+Association (HFA) of the ESC. European Heart Journal. 2012; 
+33(14): 1787–1847, doi: 10.1093/eurheartj/ehs104.
+3. Roger VL. Epidemiology of heart failure. Circ Res. 2013; 113(6): 
+646–659, doi:  10.1161/CIRCRESAHA.113.300268, indexed in 
+Pubmed: 23989710.
+4. Ziaeian B, Fonarow G. Epidemiology and aetiology of heart failure. 
+Nat Rev Cardiol. 2016; 13(6): 368–378, doi: 10.1038/nrcardio.2016.25.
+www.cardiologyjournal.org 551
+Concetta Schiano et al., RNA-sequencing approach in cardiac disease
+
+5. Matkovich SJ, Zhang Y, Van Booven DJ, et al. Deep mRNA 
+sequencing for in vivo functional analysis of cardiac transcrip￾tional regulators: application to Galphaq. Circ Res. 2010; 106(9): 
+1459–1467, doi: 10.1161/CIRCRESAHA.110.217513, indexed in 
+Pubmed: 20360248.
+6. Napoli C, Lerman LO, Sica V, et al. Microarray analysis: a novel 
+research tool for cardiovascular scientists and physicians. Heart. 
+2003; 89(6): 597–604, doi:  10.1136/heart.89.6.597, indexed in 
+Pubmed: 12748210.
+7. Gora M, Kiliszek M, Burzynska B. Will global transcriptome 
+analysis allow the detection of novel prognostic markers in coro￾nary artery disease and heart failure? Curr Genomics. 2013; 
+14(6): 388–396, doi: 10.2174/1389202911314090006, indexed in 
+Pubmed: 24396272.
+8. Nagalakshmi U, Wang Z, Waern K, et al. The transcriptional land￾scape of the yeast genome defined by RNA sequencing. Science. 
+2008; 320(5881): 1344–1349, doi: 10.1126/science.1158441, in￾dexed in Pubmed: 18451266.
+9. Costa V, Aprile M, Esposito R, et al. RNA-Seq and human com￾plex diseases: recent accomplishments and future perspec￾tives. Eur J Hum Genet. 2013; 21(2): 134–142, doi:  10.1038/
+ejhg.2012.129, indexed in Pubmed: 22739340.
+10. Herrer I, Roselló-Lletí E, Rivera M, et al. RNA-sequencing anal￾ysis reveals new alterations in cardiomyocyte cytoskeletal genes 
+in patients with heart failure. Lab Invest. 2014; 94(6): 645–653, 
+doi: 10.1038/labinvest.2014.54, indexed in Pubmed: 24709777.
+11. Hershberger RE, Siegfried JD. Update 2011: clinical and ge￾netic issues in familial dilated cardiomyopathy. J Am Coll Car￾diol. 2011; 57(16): 1641–1649, doi:  10.1016/j.jacc.2011.01.015, 
+indexed in Pubmed: 21492761.
+12. Towbin J. Inherited Cardiomyopathies. Circulation Journal. 2014; 
+78(10): 2347–2356, doi: 10.1253/circj.cj-14-0893.
+13. Ounzain S, Micheletti R, Beckmann T, et al. Genome-wide pro￾filing of the cardiac transcriptome after myocardial infarction 
+identifies novel heart-specific long non-coding RNAs. Eur Heart 
+J. 2015; 36(6): 353–68a, doi: 10.1093/eurheartj/ehu180, indexed 
+in Pubmed: 24786300.
+14. di Salvo TG, Yang KC, Brittain E, et al. Right ventricular myo￾cardial biomarkers in human heart failure. J Card Fail. 2015; 
+21(5): 398–411, doi:  10.1016/j.cardfail.2015.02.005, indexed in 
+Pubmed: 25725476.
+15. He M, Yang Z, Abdellatif M, et al. GTPase Activating Protein 
+(Sh3 Domain) Binding Protein 1 Regulates the Processing of 
+MicroRNA-1 during Cardiac Hypertrophy. PLoS One. 2015; 
+10(12): e0145112, doi:  10.1371/journal.pone.0145112, indexed 
+in Pubmed: 26675618.
+16. Chen S, Puthanveetil P, Feng B, et al. Cardiac miR-133a overex￾pression prevents early cardiac fibrosis in diabetes. J Cell Mol 
+Med. 2014; 18(3): 415–421, doi: 10.1111/jcmm.12218, indexed 
+in Pubmed: 24428157.
+17. Ganesan J, Ramanujam D, Sassi Y, et al. MiR-378 controls car￾diac hypertrophy by combined repression of mitogen-activated 
+protein kinase pathway factors. Circulation. 2013; 127(21): 2097–
+2106, doi: 10.1161/CIRCULATIONAHA.112.000882, indexed in 
+Pubmed: 23625957.
+18. Heymans S, Corsten MF, Verhesen W, et al. Macrophage mi￾croRNA-155 promotes cardiac hypertrophy and failure. Circu￾lation. 2013; 128(13): 1420–1432, doi:  10.1161/CIRCULATIO￾NAHA.112.001357, indexed in Pubmed: 23956210.
+19. Ucar A, Gupta SK, Fiedler J, et al. The miRNA-212/132 family 
+regulates both cardiac hypertrophy and cardiomyocyte autoph￾agy. Nat Commun. 2012; 3: 1078, doi:  10.1038/ncomms2090, 
+indexed in Pubmed: 23011132.
+20. da Costa Martins PA, Salic K, Gladka MM, et al. MicroRNA￾199b targets the nuclear kinase Dyrk1a in an auto-amplification 
+loop promoting calcineurin/NFAT signalling. Nat Cell Biol. 2010; 
+12(12): 1220–1227, doi:  10.1038/ncb2126, indexed in Pub￾med: 21102440.
+21. Han P, Li W, Lin CH, et al. A long noncoding RNA protects 
+the heart from pathological hypertrophy. Nature. 2014; 
+514(7520): 102–106, doi: 10.1038/nature13596, indexed in Pub￾med: 25119045.
+22. Kumarswamy R, Bauters C, Volkmann I, et al. Circulating long 
+noncoding RNA, LIPCAR, predicts survival in patients with 
+heart failure. Circ Res. 2014; 114(10): 1569–1575, doi: 10.1161/
+CIRCRESAHA.114.303915, indexed in Pubmed: 24663402.
+23. Vausort M, Wagner DR, Devaux Y. Long noncoding RNAs in 
+patients with acute myocardial infarction. Circ Res. 2014; 115(7): 
+668–677, doi:  10.1161/CIRCRESAHA.115.303836, indexed in 
+Pubmed: 25035150.
+24. Molina-Navarro MM, Roselló-Lletí E, Tarazón E, et al. Heart 
+failure entails significant changes in human nucleocytoplas￾mic transport gene expression. Int J Cardiol. 2013; 168(3): 
+2837–2843, doi:  10.1016/j.ijcard.2013.03.192, indexed in Pub￾med: 23651824.
+25. Rienzo M, Costa V, Scarpato M, et al. RNA-Seq for the identifica￾tion of novel Mediator transcripts in endothelial progenitor cells. 
+Gene. 2014; 547(1): 98–105, doi:  10.1016/j.gene.2014.06.034, 
+indexed in Pubmed: 24952135.
+26. Kim D, Pertea G, Trapnell C, et al. TopHat2: accurate alignment 
+of transcriptomes in the presence of insertions, deletions and 
+gene fusions. Genome Biol. 2013; 14(4): R36, doi: 10.1186/gb￾2013-14-4-r36, indexed in Pubmed: 23618408.
+27. Russo F, Angelini C. RNASeqGUI: a GUI for analysing RNA-Seq 
+data. Bioinformatics. 2014; 30(17): 2514–2516, doi: 10.1093/bio￾informatics/btu308, indexed in Pubmed: 24812338.
+28. Soneson C, Delorenzi M. A comparison of methods for differen￾tial expression analysis of RNA-seq data. BMC Bioinformatics. 
+2013; 14: 91, doi:  10.1186/1471-2105-14-91, indexed in Pub￾med: 23497356.
+29. Kanehisa M. KEGG: Kyoto Encyclopedia of Genes and Genomes. 
+Nucleic Acids Res. 2000; 28(1): 27–30, doi: 10.1093/nar/28.1.27.
+30. Huang DaW, Sherman BT, Tan Q, et al. The DAVID Gene Func￾tional Classification Tool: a novel biological module-centric al￾gorithm to functionally analyze large gene lists. Genome Biol. 
+2007; 8(9): R183, doi:  10.1186/gb-2007-8-9-r183, indexed in 
+Pubmed: 17784955.
+31. Mi H, Muruganujan A, Thomas PD. PANTHER in 2013: model￾ing the evolution of gene function, and other gene attributes, 
+in the context of phylogenetic trees. Nucleic Acids Res. 2013; 
+41(Database issue): D377–D386, doi:  10.1093/nar/gks1118, in￾dexed in Pubmed: 23193289.
+32. Karolchik D, Hinrichs AS, Furey TS, et al. The UCSC Table 
+Browser data retrieval tool. Nucleic Acids Res. 2004; 32 (Da￾tabase issue): D493–D496, doi: 10.1093/nar/gkh103, indexed in 
+Pubmed: 14681465.
+33. Quinlan AR, Hall IM. BEDTools: a flexible suite of utilities 
+for comparing genomic features. Bioinformatics. 2010; 26(6): 
+841–842, doi:  10.1093/bioinformatics/btq033, indexed in Pub￾med: 20110278.
+34. Rienzo M, Schiano C, Casamassimi A, et al. Identification of 
+valid reference housekeeping genes for gene expression analysis 
+552 www.cardiologyjournal.org
+Cardiology Journal 2017, Vol. 24, No. 5
+
+in tumor neovascularization studies. Clin Transl Oncol. 2013; 
+15(3): 211–218, doi: 10.1007/s12094-012-0904-1, indexed in Pub￾med: 22855186.
+35. Costa V, Angelini C, De Feis I, et al. Uncovering the complex￾ity of transcriptomes with RNA-Seq. J Biomed Biotechnol. 
+2010; 2010: 853916, doi: 10.1155/2010/853916, indexed in Pub￾med: 20625424.
+36. Kelwick R, Desanlis I, Wheeler GN, et al. The ADAMTS (A 
+Disintegrin and Metalloproteinase with Thrombospondin motifs) 
+family. Genome Biol. 2015; 16: 113, doi:  10.1186/s13059-015-
+0676-3, indexed in Pubmed: 26025392.
+37. Kostin S, Hein S, Arnon E, et al. The cytoskeleton and re￾lated proteins in the human failing heart. Heart Fail Rev. 2000; 
+5(3): 271–280, doi: 10.1023/A:1009813621103, indexed in Pub￾med: 16228910.
+38. Zile MR, Green GR, Schuyler GT, et al. Cardiocyte cytoskeleton 
+in patients with left ventricular pressure overload hypertrophy. 
+J Am Coll Cardiol. 2001; 37(4): 1080–1084, indexed in Pub￾med: 11263612.
+39. Guo DC, Pannu H, Tran-Fadulu V, et al. Mutations in smooth 
+muscle alpha-actin (ACTA2) lead to thoracic aortic aneu￾rysms and dissections. Nat Genet. 2007; 39(12): 1488–1493, 
+doi: 10.1038/ng.2007.6, indexed in Pubmed: 17994018.
+40. Chen RX, Liu F, Li Y, et al. Neuromedin S increases L-type 
+Ca(2+) channel currents through G(i)a-protein and phospholi￾pase C-dependent novel protein kinase C delta pathway in adult 
+rat ventricular myocytes. Cell Physiol Biochem. 2012; 30(3): 
+618–630, doi: 10.1159/000341443, indexed in Pubmed: 22832358.
+41. Schiano C, Casamassimi A, Vietri MT, et al. The roles of media￾tor complex in cardiovascular diseases. Biochim Biophys Acta. 
+2014; 1839(6): 444–451, doi: 10.1016/j.bbagrm.2014.04.012, in￾dexed in Pubmed: 24751643.
+42. Muncke N, Jung C, Rüdiger H, et al. Missense mutations and 
+gene interruption in PROSIT240, a novel TRAP240-like gene, in 
+patients with congenital heart defect (transposition of the great 
+arteries). Circulation. 2003; 108(23): 2843–2850, doi: 10.1161/01.
+CIR.0000103684.77636.CD, indexed in Pubmed: 14638541.
+43. Grøntved L, Madsen MS, Boergesen M, et al. MED14 tethers 
+mediator to the N-terminal domain of peroxisome proliferator￾activated receptor gamma and is required for full transcriptional 
+activity and adipogenesis. Mol Cell Biol. 2010; 30(9): 2155–2169, 
+doi: 10.1128/MCB.01238-09, indexed in Pubmed: 20194623.
+44. Wang W, Huang Lu, Huang Y, et al. Mediator MED23 links insulin 
+signaling to the adipogenesis transcription cascade. Dev Cell. 
+2009; 16(5): 764–771, doi: 10.1016/j.devcel.2009.04.006, indexed 
+in Pubmed: 19460352.
+45. Kikuchi Y, Umemura H, Nishitani S, et al. Human mediator 
+MED17 subunit plays essential roles in gene regulation by as￾sociating with the transcription and DNA repair machineries. 
+Genes Cells. 2015; 20(3): 191–202, doi: 10.1111/gtc.12210, in￾dexed in Pubmed: 25482373.
+46. Femminella GD, Ferrara N, Rengo G. The emerging role of 
+microRNAs in Alzheimer’s disease. Front Physiol. 2015; 6: 40, 
+doi: 10.3389/fphys.2015.00040, indexed in Pubmed: 25729367.
+47. Clarke BD, Roby JA, Slonchak A, et al. Functional non-coding 
+RNAs derived from the flavivirus 3’ untranslated region. Virus 
+Res. 2015; 206: 53–61, doi: 10.1016/j.virusres.2015.01.026, in￾dexed in Pubmed: 25660582.
+48. Iyer MK, Niknafs YS, Malik R, et al. The landscape of long 
+noncoding RNAs in the human transcriptome. Nat Genet. 
+2015; 47(3): 199–208, doi:  10.1038/ng.3192, indexed in Pub￾med: 25599403.
+49. Juan L, Wang G, Radovich M, et al. Potential roles of microR￾NAs in regulating long intergenic noncoding RNAs. BMC Med 
+Genomics. 2013; 6 Suppl 1: S7, doi: 10.1186/1755-8794-6-S1-S7, 
+indexed in Pubmed: 23369519.
+50. Skroblin P, Mayr M. Circ Res. 2014; 115(7): 607–609, 
+doi: 10.1161/circresaha.114.304839.
+51. Philippen LE, Dirkx E, da Costa-Martins PA, et al. Non-coding 
+RNA in control of gene regulatory programs in cardiac develop￾ment and disease. J Mol Cell Cardiol. 2015; 89(Pt A): 51–58, 
+doi: 10.1016/j.yjmcc.2015.03.014, indexed in Pubmed: 25820097.
+52. Pasquale EB. Eph-ephrin bidirectional signaling in physiol￾ogy and disease. Cell. 2008; 133(1): 38–52, doi:  10.1016/j.
+cell.2008.03.011, indexed in Pubmed: 18394988.
+53. Babon JJ, Lucet IS, Murphy JM, et al. The molecular regulation 
+of Janus kinase (JAK) activation. Biochem J. 2014; 462(1): 1–13, 
+doi: 10.1042/BJ20140712, indexed in Pubmed: 25057888.
+www.cardiologyjournal.org 553
+Concetta Schiano et al., RNA-sequencing approach in cardiac disease
+

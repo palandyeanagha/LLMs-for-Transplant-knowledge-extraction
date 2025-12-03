@@ -1,0 +1,570 @@
+Genome Biology 2005, 6:R29
+comment reviews reports deposited research refereed research interactions information
+2005 Hayamizu et al. Volume 6, Issue 3, Article R29 Open Access Software
+The Adult Mouse Anatomical Dictionary: a tool for annotating and 
+integrating data
+Terry F Hayamizu*, Mary Mangan*†, John P Corradi*‡, James A Kadin* and 
+Martin Ringwald*
+Addresses: *The Jackson Laboratory, 600 Main Street, Bar Harbor, ME 04609, USA. †Current address: OpenHelix, 65 Main Street, Somerville, 
+MA 02145, USA. ‡Bristol-Myers Squibb Pharmaceutical Research Institute, 5 Research Parkway, Wallingford, CT 06492, USA. 
+Correspondence: Martin Ringwald. E-mail: ringwald@informatics.jax.org
+© 2005 Hayamizu et al.; licensee BioMed Central Ltd. 
+This is an Open Access article distributed under the terms of the Creative Commons Attribution License (http://creativecommons.org/licenses/by/2.0), 
+which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+Adult Mouse Anatomical Dictionary <p>The Adult Mouse Anatomical Dictionary was developed to provid the postnatal mouse. The ontology will be used to annotate and integrate different types of e an ontology for standardized nomenclature for anatomical term data pertinent to anatomy.</p> s in 
+Abstract
+We have developed an ontology to provide standardized nomenclature for anatomical terms in the
+postnatal mouse. The Adult Mouse Anatomical Dictionary is structured as a directed acyclic graph,
+and is organized hierarchically both spatially and functionally. The ontology will be used to annotate
+and integrate different types of data pertinent to anatomy, such as gene expression patterns and
+phenotype information, which will contribute to an integrated description of biological phenomena
+in the mouse.
+Rationale
+An important role for biological databases is the integration
+of different types of data. Ontologies aim to overcome the
+semantic differences encountered in data collection and rep￾resentation, providing common terminology in order to facil￾itate this integration. An anatomy ontology is a structured
+vocabulary of anatomical entities in which the terms have
+unique identities and relate to each other in meaningful ways.
+For many biological applications, anatomy ontologies are
+essential for standardized description of data directly related
+to anatomy, such as gene expression patterns and phenotype
+information.
+The Gene Expression Database (GXD) is a resource for gene
+expression information from the mouse [1]. GXD has been
+designed as an open-ended system able to store and integrate
+primary data from many types of expression assays, each of
+which describe gene expression at different levels of spatial
+resolution. Currently, both GXD and the Edinburgh Mouse
+Atlas Gene Expression (EMAGE) database [2] use terms from
+the Mouse Embryo Anatomy Nomenclature Database [3]
+developed by the Edinburgh Mouse Atlas Project (EMAP) to
+describe patterns of gene expression in the developing mouse.
+However, since GXD also collects gene expression data from
+mice at postnatal stages, including adult, it became apparent
+that extension of GXD to fully annotate expression data for
+adult structures would require the development of a control￾led vocabulary beyond the scope of the embryonic mouse
+anatomy ontology. Therefore, we developed an anatomy
+ontology for the postnatal mouse.
+Critical to this effort was the realization that existing sources
+of controlled vocabularies for anatomy were not sufficient for
+use with the adult mouse, for several reasons. First, none con￾forms well to the structure of the embryonic mouse anatomy
+ontology created by our Edinburgh collaborators, an impor￾tant factor in enabling planned integration between these
+ontologies (see below). Human-oriented anatomical ontolo￾gies have been developed (for example, the Foundational
+Model of Anatomy (FMA) [4], OpenGalen [5] and SNOMED
+Published: 15 February 2005
+Genome Biology 2005, 6:R29
+Received: 31 August 2004
+Revised: 8 November 2004
+Accepted: 11 January 2005
+The electronic version of this article is the complete one and can be 
+found online at http://genomebiology.com/2005/6/3/R29
+
+R29.2 Genome Biology 2005, Volume 6, Issue 3, Article R29 Hayamizu et al. http://genomebiology.com/2005/6/3/R29
+Genome Biology 2005, 6:R29
+CT [6], which covers human and veterinary medicine). In
+general, the complexity of the concepts represented by these
+ontologies, issues concerning their accessibility, as well as
+questions of relevance to the mouse, made it clear that they
+were neither well suited to nor adequate for our objectives.
+Thus, one of our goals was to follow the basic framework of
+the developmental ontology, while taking full advantage of
+the range of other resources available.
+Another major consideration involved determination of the
+hierarchical structure and format of the ontology. Our experi￾ence using the developmental ontology made it clear that a
+mechanism to provide alternative hierarchies would be a crit￾ical factor. Consequently, the Adult Mouse Anatomical Dic￾tionary is structured as a directed acyclic graph (DAG) in
+which an anatomical term can be represented as a child of
+more than one hierarchical parent term using both is-a and
+part-of relationships. The ontology is organized hierarchi￾cally in both spatial and functional ways, and contains more
+than 2,400 unique anatomical terms for the postnatal mouse.
+As GXD is part of the larger Mouse Genome Informatics
+(MGI) system, the ontology will also be used to annotate other
+types of data pertinent to adult mouse anatomy in order to
+provide an integrated description of a wide array of biological
+phenomena in the mouse.
+Developing an ontology for adult mouse 
+anatomy
+Anatomical terms
+GXD has extensive experience with the Mouse Embryo Anat￾omy Nomenclature Database, available through Theiler Stage
+(TS) 26, which is used by GXD and EMAGE to describe devel￾opmental gene expression patterns. Based on our annotation
+work, we continue to contribute to this ontology in the form
+of extensions and revisions, and by adding synonyms. Conse￾quently, an early objective was to ensure that the anatomy
+ontology for the postnatal (TS 28) mouse corresponds as
+much as possible, both in content and in structure, with the
+developmental ontology. This was done for consistency of
+nomenclature, because we were familiar with and confident
+of the utility of this format, and to facilitate the future integra￾tion of these ontologies. Eventually, the goal is to combine
+and integrate the ontologies to generate an anatomy ontology
+covering the entire lifespan of the laboratory mouse.
+With the developmental ontology as its framework, the effort
+was then focused on compiling an extensive list of anatomical
+terms for the postnatal mouse. The list was based on a
+number of major sources, including mouse atlases as well as
+anatomy and histology text resources [7-22]. For the most
+part, the preference was to focus on those that were mouse￾specific. However, others that were more general were never￾theless extremely valuable. The non-atlas format references
+were especially useful in the effort to refine anatomic and his￾tological details.
+Once the basic list of terms had been generated, we confirmed
+that each term on the initial list represented actual mouse
+structures. These determinations were usually clear but at
+times ambiguous. For example, for numerous structures
+described in anatomy and histology textbooks, no clear docu￾mented evidence was found for their existence in the mouse.
+Consequently, these have not been included in the ontology.
+Further work is ongoing to ensure accuracy. Careful attention
+was paid to validating each term, with the requirement for
+two or more reliable sources whenever possible. Concurrent
+with the textbook-based identification of terms was the con￾tinuing effort to expand the vocabulary using a research data￾driven approach. This method included extensive evaluation
+of published biomedical research literature, as well as data
+with anatomical attributes that have been collected in scien￾tific databases. For example, several mouse-specific datasets
+[23-26] were used as resources to find pertinent anatomical
+terms. The MGI list of all mouse tissues from which major
+publicly available cDNA libraries have been generated [24]
+includes cell types and tumors, as well as gross anatomical
+concepts. The relevant anatomical structures will eventually
+be translated using terms from the Adult Mouse Anatomical
+Dictionary. The data-driven approach was especially useful in
+determining the level of granularity (that is, level of detail of
+spatial resolution) expected to be required by users of the
+ontology.
+An additional consideration in determining the content of the
+vocabulary had to do with whether to include cell types. While
+cell type information is an important component in anatomi￾cal descriptions, this also introduces a level of complexity that
+is difficult to address adequately. We felt that it would be
+unfeasible to extend the representation to the cellular level
+owing to the large number of required hierarchical levels and
+leaf nodes. Therefore, it was concluded that the adult mouse
+anatomy ontology would not contain cell types, but that cell
+type terms would eventually be provided by the orthogonal
+controlled vocabulary for cell types currently being developed
+as part of the Open Biological Ontologies (OBO) effort [27].
+However, to conform to the Edinburgh developmental ontol￾ogy, we have included tissue type terms such as epithelium
+and mesenchyme, as well as defined cell type structures such
+as purkinje cell layer. In addition, we have also elected to
+include the term unfertilized egg and its synonyms.
+Hierarchical organization
+The anatomy ontology for mouse development is currently
+structured as a straight hierarchy. In this format, an anatom￾ical term can have only one parent and, thus, one place in the
+hierarchy. For example, the term femur is placed in the hier￾archy according to this limb bone's spatial location, as a sub￾structure of the upper leg, rather than as a part of the
+skeleton. In contrast, the brain is described as being part of
+the central nervous system, rather than as a part of the head.
+Based on our experience with the developmental ontology
+and anticipating planned revisions for it, we decided to
+
+http://genomebiology.com/2005/6/3/R29 Genome Biology 2005, Volume 6, Issue 3, Article R29 Hayamizu et al. R29.3
+comment reviews reports refereed research deposited research interactions information
+Genome Biology 2005, 6:R29
+represent the adult mouse anatomy ontology as a DAG, in
+which a given anatomical term is able to have more than one
+hierarchical parent. This allowed us flexibility in organizing
+the hierarchies, and provided a mechanism to create a more
+comprehensive view of the relationships between the ana￾tomical terms.
+For each of the anatomical terms being evaluated, any one of
+a number of pathways to that term could be conceptualized.
+However, it also soon became apparent that two fundamental
+characteristics could be determined for most of the terms: its
+spatial location within the animal and its functional contribu￾tion as part of a particular organ system. Consequently, we
+decided to use the distinction between spatial versus organ
+system representation as an organizational principle. Since
+'spatial part' does not itself represent a unique anatomical
+entity, it was not included as an independent node in the
+ontology. However, the initial division of the hierarchy into
+spatial and organ system components is immediately appar￾ent in the first level of substructures below the root node,
+TS28. As shown in Figure 1, this level is predominantly com￾prised of spatial parts: for example body, body cavity/lining,
+head/neck, limb and tail. Accordingly, terms defined by these
+superstructures are primarily organized according to spatial
+localization. In contrast, another branch of the hierarchy is
+indicated by the superstructure organ system, where the ana￾tomical terms are organized, as much as possible, according
+to their respective contribution to a specified functional
+system.
+Currently, the distinction between spatial and functional rela￾tionships is represented only implicitly. However, based on
+the parentage of anatomical structures, biologists will be able
+to intuitively discern both types of relationships. Further￾more, they should be able to perform most of the queries
+related to expression and phenotype data that are currently
+envisioned. Explicit representation of both relationship types
+might be a desirable feature for advanced knowledge repre￾sentation and computational analysis. On the other hand, it
+might also introduce unnecessary complexities to a biologist
+because, for example, many anatomical structures would
+have both spatial and functional relationships between them.
+Shielding the user from those complexities would require
+additional software development. A careful evaluation of the
+advantages and disadvantages of both approaches will direct
+our future work in this area.
+During the construction of the adult mouse anatomy DAG, we
+had to take into account the fact that terms representing some
+tissues would logically be spatially located in numerous parts
+of the ontology. Groups of tissues which meet this criteria
+include: blood vessel, bone, connective tissue, muscle, nerve,
+Hierarchical organization of th Figure 1 e adult mouse anatomy ontology
+Hierarchical organization of the adult mouse anatomy ontology. The hierarchy is divided into spatial and organ system components. Blocks indicate generic 
+group terms appropriate to multiple spatial regions.
+TS28
+ body
+ body cavity/lining
+ head/neck limb
+ organ system tail
+body
+ back
+ body blood vessel body bone
+ body connective tissue
+ body muscle
+ body nerve
+ body organ
+ body skin lower body
+ upper body
+upper body pectoral girdle/thoracic body wall
+thoracic cavity
+upper back
+thoracic cavity
+ thoracic cavity blood vessel
+ thoracic cavity connective tissue
+ thoracic cavity nerve thoracic cavity organ
+organ system
+ adipose tissue cardiovascular system
+ connective tissue endocrine system haemolymphoid system integumental system
+ muscle nervous system
+ sensory organs skeletal system
+ visceral organs
+
+R29.4 Genome Biology 2005, Volume 6, Issue 3, Article R29 Hayamizu et al. http://genomebiology.com/2005/6/3/R29
+Genome Biology 2005, 6:R29
+organ and skin, which are represented as terms in the organ
+system part of the hierarchy. To accommodate the need to
+represent these tissues in specific body regions, we devised
+modules (outlined as blocks in Figure 1) representing these
+generic groups. These have been included as subterms, when
+appropriate, within each spatial region. For nomenclature
+standardization (more on this below), the subgroup terms are
+preceded by superstructure name, in noun form (that is,
+abdomen) rather than as an adjective (for example, abdomi￾nal) whenever possible.
+Consequently, using the DAG format, we have been able to
+describe adult mouse anatomy from a variety of spatial and
+organ system perspectives. For example, the heart (Figure 2)
+is represented as a type of thoracic cavity organ, as well as a
+substructure of the cardiovascular system. As will be dis￾cussed below, some of these distinctions are conceptual and
+by their nature may be somewhat arbitrary. However, from
+our annotation work we know that the different breakdowns
+of the anatomy are indeed required to annotate, for example,
+different types of expression and phenotype data. It should be
+emphasized that refinements to the hierarchical organization
+of the ontology will continue to be made. These changes will
+not affect the identity of the terms themselves.
+Another issue in constructing the DAG was the use of is-a and
+part-of relationships between the terms. Overall, most of the
+relationships could be classified intuitively as part-of, indi￾cating that the term is a component of the more general term
+above it in the tree. For example, the upper body is consid￾ered to be part-of the body, and the heart is part-of the car￾diovascular system. In contrast, is-a relationships are used to
+indicate that an anatomical term represents an instance of the
+certain type or kind of the concept denoted by its parent term.
+For instance, the cardiovascular system is-a specific organ
+system, while cardiac muscle is-a type of muscle. It should be
+noted that there is no correlation between the is-a and part￾of relationships and the spatial versus organ system organi￾zation of the ontology, as shown in Figure 2. Further
+refinement of the relationships will undoubtedly be required,
+Example showing multiple hierarchical re Figure 2 presentations for a given anatomical term
+Example showing multiple hierarchical representations for a given anatomical term. The heart is represented both as (a) an organ in the thoracic cavity, 
+and (b) as a part of the cardiovascular organ system. (c) Detail page for the term heart showing immediate substructures. Note that both spatial and 
+functional representations contain is-a and part-of relationships.
+(b)
+I
+(a)
+ bronchus heart
+ lung oesophagus
+ outflow tract thymus
+ trachea
+organ system
+ cardiovascular system blood
+ blood vessel cardiovascular system endothelium heart lymphatic v essel
+ outflow tract
+(c)
+heart
+ heart apex heart atrium
+ heart endocardium heart myocardium
+ heart septum
+ heart valve
+ heart ventricle
+ impulse conducting system mesocardium
+ pericardium
+P
+P
+P
+P
+P
+P
+I
+I
+I
+I
+I
+I
+body
+ body organ
+ upper body organ
+ thoracic cavity organ
+P
+I
+I
+I
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+
+http://genomebiology.com/2005/6/3/R29 Genome Biology 2005, Volume 6, Issue 3, Article R29 Hayamizu et al. R29.5
+comment reviews reports refereed research deposited research interactions information
+Genome Biology 2005, 6:R29
+as well as additional types of relationships. For example, it
+may be useful to distinguish between 'regional' parts (for
+instance, head, neck, limb) versus 'systemic' parts (for
+instance, body muscle, body organ, body skin). These modifi￾cations can be easily accomplished using the DAG-Edit tool
+(see Software section below).
+Nomenclature considerations
+Our experience with the mouse developmental ontology, as
+well as extensive literature review, provided the primary basis
+for the naming conventions that were employed. Early in
+building the ontology, we realized that consistent nomencla￾ture, not only for a given term itself but for related terms and
+groups of terms, would be a critical requirement. Conse￾quently, whenever possible, the same name was used for a
+given anatomical structure or concept throughout the ontol￾ogy. For instance, we have used the term lung rather than
+'pulmonary' to precede each of the terms representing lung
+substructures. Another consideration regarded the need to
+clearly distinguish between terms. It is theoretically possible
+to precisely define an anatomical term based on a combina￾tion of the term name and the hierarchical lineage of the term.
+The term epithelium, for example, is represented as a sub￾term for many anatomical structures, and a given term's
+precise identity could be defined by its parental lineage. From
+a practical standpoint, this convention has proved to be prob￾lematic; multiple structures with the same term name would
+be impossible to distinguish in absence of its hierarchical con￾text. This would be complicated further by any additional
+pathway to a given term. For instance, epithelium of the lung
+alveoli is represented both as a part of the alveolus and as a
+type of lung epithelium. To address this issue, we have
+attempted to provide sufficient information in the term name
+(for example alveolus epithelium) so that it becomes easy to
+interpret and use the term unambiguously.
+Other factors that were considered were the requirements of
+the DAG-Edit software (see below), as well as features pro￾moting unambiguous identification of terms. Additional con￾ventions employed for the naming of anatomical terms
+included: structure names are preceded by superstructure
+names, in noun form; terms are used in singular form, when￾ever possible; all term names at the same level in the hierar￾chy are ordered alpha-numerically; and all characters are in
+lower case. Nomenclature consistency will also facilitate que￾rying for specific anatomical terms within the ontology.
+Software issues
+An ontology should contain a level of detail appropriate to the
+data being classified and the level at which queries are likely
+to be performed, while simultaneously providing sufficient
+flexibility to enable regular updating without needing to sig￾nificantly modify the hierarchies. Therefore, we recognized
+that the adult mouse anatomy ontology would require a for￾mat that was both robust and flexible, as well as the tools to
+accommodate the need for maintenance and updating. The
+DAG-Edit tool developed by the Gene Ontology (GO) Consor￾tium provides a graphical interface to handle any vocabulary
+that has a DAG data structure, and has been used by other
+groups to build ontologies for a wide range of biological sub￾jects, including the GO [28] and Mammalian Phenotype
+ontology [29]. We have utilized DAG-Edit both for construc￾tion of the adult mouse anatomy ontology and for mainte￾nance and editing. Furthermore, the MGI software group has
+developed a range of tools to handle a DAG-formatted ontol￾ogy, enabling navigation through the ontology and querying
+for terms (see below), as well as integration of the ontology
+with other information stored within the MGI database.
+Current status and future directions for the 
+Adult Mouse Anatomical Dictionary
+We have developed an ontology containing more than 2,400
+unique terms to provide standardized nomenclature for ana￾tomical structures in the postnatal mouse. The Adult Mouse
+Anatomical Dictionary can be accessed at the MGI web site
+[30]. The MGI Browser page (Figure 3) enables one to navi￾gate through the ontology in two ways. Browsing results in the
+display of progressively lower levels in the hierarchy. Infor￾mation about individual terms, including its relationship to
+other terms in the hierarchy, is shown in a 'Term Detail' page.
+Alternatively, one can search the ontology by using the
+'Query' field, which accepts any text string and searches for all
+terms in the vocabulary, including any synonyms, containing
+that string. The resulting 'Query Results' page displays all
+structures that match the query, and also provides links to the
+appropriate 'Term Detail' page. The adult mouse anatomy
+ontology can also be viewed and downloaded at the OBO web￾site [31]. The ontology can be saved in several different for￾mats including GO flat file and OBO formats, as well as XML/
+RDF and OWL.
+We will continue to expand and refine the Adult Mouse Ana￾tomical Dictionary in response to additional sources of infor￾mation, as well as the needs of the scientific community. As
+part of the ontology's ongoing development, we plan to:
+expand the list of terms, based on additional resources as they
+become available; further edit the hierarchies when neces￾sary; and provide alternative names for terms as synonyms. A
+limited number of synonyms have already been included (for
+example, see 'Term Detail' page for limb in Figure 3). It is
+envisioned that many more will be added as required, which
+will also aid in querying for specific terms in the ontology.
+Precise definitions for each of the terms will also be included
+as appropriate. Eventually, the adult mouse anatomy ontol￾ogy will be merged with the Anatomical Dictionary for Mouse
+Development to generate an anatomy ontology covering the
+entire lifespan of the laboratory mouse. The proposed effort
+will include representation of derived-from types of relation￾ships linking anatomical structures at subsequent develop￾mental stages. Such relationships will allow querying for
+progenitor and derivative tissues. These associations will also
+
+R29.6 Genome Biology 2005, Volume 6, Issue 3, Article R29 Hayamizu et al. http://genomebiology.com/2005/6/3/R29
+Genome Biology 2005, 6:R29
+enable analysis of differentiation pathways, thus enhancing
+the ability to explore biological phenomena occurring in the
+mouse.
+Anatomy vocabularies are being developed for other organ￾isms and there has been interest in integrating these ontolo￾gies at some level. One such effort is the XSPAN project [32],
+which aims to support cross-species interoperability between
+developmental anatomy ontologies. On a different scale,
+Standards and Ontologies for Functional Genomics (SOFG)
+[33] has set up an international effort to integrate anatomy
+ontologies of mouse and human. A recent project has been
+development of the SOFG Anatomy Entry List (SAEL) [34], a
+list of commonly used anatomical terms that will be directly
+linked to several major anatomy ontologies, particularly
+those for human and mouse. It is envisioned that this list will
+serve as a controlled vocabulary to describe low-resolution
+anatomical attributes of biological data. For example, the
+terms included have sufficient resolution to distinguish most
+samples used for microarray experiments. The Microarray
+Gene Expression Data (MGED) ontology will use the SAEL
+for describing anatomical attributes of mouse microarray
+data. The SAEL and the MGED ontology will also serve as
+entry points to more comprehensive anatomical resources
+such as the Adult Mouse Anatomical Dictionary.
+The Adult Mouse Anatomical Dictionary will be used as a
+resource to enable standardization and integration of many
+types of biological data pertinent to postnatal mouse anat￾omy, including expression, biological process, phenotype and
+pathology data. GXD currently uses terms from the ontology
+to annotate expression information at all postnatal stages.
+While expression results are currently annotated using an
+abridged version, efforts are underway to map expression
+data directly to the expanded adult mouse anatomy ontology.
+GO project curators use terms from the anatomy ontology to
+describe mouse anatomical concepts. The Mouse Genome
+Database (MGD) incorporates or associates relevant terms
+from the adult anatomy ontology into the Mammalian Pheno￾type Ontology, which is being developed to provide standard
+terms for annotating mouse phenotype data. Eventually, the
+standardized anatomy terms will be used to directly link gene
+expression and phenotype annotations within MGI via the
+anatomy. The mouse anatomy ontology is also being used to
+Using the Adult Mouse Anatomical Dictionary Browser Figure 3
+Using the Adult Mouse Anatomical Dictionary Browser. The MGI Browser allows the user to either browse (progressively navigate through the various 
+hierarchies) or search (enter a text string to query for terms, for example limb) within the adult mouse anatomy ontology. 'Term Detail' pages include the 
+unique numerical identifiers (that is MA ID numbers) for each term, as well as relevant definitions and/or synonyms.
+limb
+SEARCH
+BROWSE
+
+http://genomebiology.com/2005/6/3/R29 Genome Biology 2005, Volume 6, Issue 3, Article R29 Hayamizu et al. R29.7
+comment reviews reports refereed research deposited research interactions information
+Genome Biology 2005, 6:R29
+annotate phenotype data for the Eumorphia project [35]. In
+Pathbase, a database of mutant mouse pathology [36], ana￾tomical attributes of images for mutant postnatal mouse
+pathology are coded using terms based on the Adult Mouse
+Anatomical Dictionary. Furthermore, efforts are currently
+underway to incorporate the adult mouse anatomy ontology
+into the National Cancer Institute (NCI) Thesaurus, a knowl￾edgebase containing the working vocabularies used in NCI
+data systems [37].
+Anatomy is an important biological integrator. Like expres￾sion data, many biological processes and phenotypic observa￾tions relate to specific anatomical structures. We have
+successfully promoted the idea that such data should be
+described using the same anatomical descriptors. Specifi￾cally, we have shown that this can be achieved by describing
+more complex types of biological information in a modular
+fashion by combining terms from orthogonal vocabularies
+[38]. The combinatorial approach takes advantage of existing
+terms and relationships in the base ontologies. This approach
+is now being used by most of the resources and projects men￾tioned above. The use of common anatomical terms will allow
+for a direct integration of expression, biological process and
+phenotypic data in the mouse. Links provided with the anat￾omy terms will, for example, allow display of both expression
+data and phenotype information associated with specific ana￾tomical structures in the anatomical dictionary browser, as is
+already the case for developmental expression data [23]. Fur￾thermore, this type of integration will enable complex queries
+that directly correlate expression and phenotype data. For
+example, the system will allow queries such as "Which mouse
+mutants display phenotypes in a specific anatomical struc￾ture?" and "How does gene expression in this anatomical
+structure, or in precursors of this anatomical structure, differ
+between these mutants and wild type animals?" Answers to
+these types of queries hold the promise of providing direct
+insights into the molecular mechanisms underlying differen￾tiation and disease.
+Acknowledgements
+GXD is funded by NIH grant HD33745. M.M. and J.C. were supported by
+postdoctoral fellowships F32 HD08435-01 and F32 HG00215-01. The
+authors gratefully acknowledge the contributions of the EMAP, especially
+Richard Baldock, Jonathan Bard, Duncan Davidson and Matthew Kaufman.
+We especially thank David P. Hill for input into developing the ontology,
+Harold Drabkin for assistance and advice on using the DAG-Edit tool, and
+Constance Smith and Janice Ormsby for critical reading of the manuscript.
+We also thank colleagues from all the MGI projects for their contributions
+to an integrated community resource.
+References
+1. Hill DP, Begley DA, Finger JH, Hayamizu TF, McCright IJ, Smith CM,
+Beal JS, Corbani LE, Blake JA, Eppig JT, et al.: The mouse Gene
+Expression Database (GXD): updates and enhancements.
+Nucleic Acids Res 2004:D568-D571.
+2. Baldock RA, Bard JB, Burger A, Burton N, Christiansen J, Feng G, Hill
+B, Houghton D, Kaufman M, Rao J, et al.: EMAP and EMAGE: a
+framework for understanding spatially organized data. Neu￾roinformatics 2003, 1:309-325.
+3. Bard JL, Kaufman MH, Dubreuil C, Brune RM, Burger A, Baldock RA,
+Davidson DR: An internet-accessible database of mouse devel￾opmental anatomy based on a systematic nomenclature.
+Mech Dev 1998, 74:111-120.
+4. Rosse C, Mejino JL: A reference ontology for biomedical infor￾matics: the Foundational Model of Anatomy. J Biomed Inform
+2003, 36:478-500.
+5. Rector A, Gangemi A, Galeazzi E, Glowinski A, Rossi-Mori A: The
+GALEN CORE Model Schemata for Anatomy: towards a re￾usable application independent model of medical concepts.
+In Proceedings of the 12th International Congress of the European Federa￾tion for Medical Informatics, 1994: Amsterdam Edited by: Barahona P,
+Veloso M, Bryant J. IOS Press; 1994:229-233. 
+6. Wang AY, Sable JH, Spackman KA: The SNOMED clinical terms
+development process: refinement and analysis of content. In
+Proceedings of the 2002 AMIA Annual Symposium: Philadelphia Edited by:
+Kohane IS. Hanley and Belfusa; 2002:845-849. 
+7. Bard JBL, Kaufman MH: The Anatomical Basis of Mouse
+Development. San Diego: Academic Press; 1999. 
+8. Cook MJ: The Anatomy of the Laboratory Mouse. San Diego:
+Academic Press; 1965. 
+9. Fawcett DW: Bloom and Fawcett A Textbook of Histology.
+12th edition. Boca Raton: Chapman and Hall; 1994. 
+10. Franklin KBJ: The Mouse Brain in Stereotaxic Coordinates. San
+Diego: Academic Press; 1996. 
+11. Getty R: Sisson and Grossman's The Anatomy of the Domes￾tic Animal. 5th edition. Philadelphia: WB Saunders; 1975. 
+12. Gray H, Bannister LH, Berry MM, Williams A: Gray's Anatomy:
+The Anatomical Basis of Medicine & Surgery. 38th edition.
+Philadelphia: Churchill Livingstone; 1995. 
+13. Greene E: Anatomy of the Rat. New York: Hafner Publishing
+Company; 1965. 
+14. Gude WD: Histological Atlas of the Laboratory Mouse. New
+York: Plenum Publishing Corporation; 1982. 
+15. Kaufman MH: Atlas of Mouse Development. San Diego: Aca￾demic Press; 1992. 
+16. Popesko P, Rajtova V: A Colour Atlas of Anatomy of Small Lab￾oratory Animals. St Louis: Mosby International; 1992. 
+17. Roscoe B Jackson Memorial Library: Biology of the Laboratory
+Mouse. 2nd edition. Mineola: Dover Publications; 1981. 
+18. Rugh R: The Mouse: Its Reproduction and Development.
+Oxford: Oxford University Press; 1968. 
+19. International Committee on Veterinary Gross Anatomical Nomencla￾ture: Nomina Anatomica Veterinaria. 4th edition. Ithaca:
+Department of Veterinary Anatomy, Cornell University; 1994. 
+20. Sidman RL: Atlas of the Mouse Brain and Spinal Cord. Cam￾bridge: Harvard University Press; 1998. 
+21. Wheater PR: Functional Histology: A Text and Colour Atlas.
+2nd edition. Philadelphia; Churchill Livingstone; 1987. 
+22. Wirtschafter ZT: The Genesis of the Mouse Skeleton, A Labo￾ratory Atlas. Springfield: Charles C Thomasi; 1960. 
+23. Mouse Anatomical Dictionary Browser [http://www.informat
+ics.jax.org/searches/anatdict_form.shtml]
+24. MGI list of all mouse tissues from which major publicly avail￾able cDNA libraries have been generated [ftp://ftp.informat
+ics.jax.org/pub/reports/PRB_TissueMouse.sql.rpt]
+25. Mammalian Phenotype Ontology [http://www.informat
+ics.jax.org/searches/MP_form.shtml]
+26. Mouse Tumor Biology Database: organ/tissue list
+[http:tumor.informatics.jax.org/FMPro?-db=TumorInstance&-for
+mat=mtdp.html&-view]
+27. Bard J, Rhee SY, Ashburner M: An ontology for cell types. Genome
+Biol 2005, 6:R2.
+28. Harris MA, Clark J, Ireland A, Lomax J, Ashburner M, Foulger R, Eil￾beck K, Lewis S, Marshall B, Mungall C, et al.: Gene Ontology Con￾sortium: The Gene Ontology (GO) database and informatics
+resource. Nucleic Acids Res 2004:D258-D261.
+29. Smith CL, Goldsmith CW, Eppig JT: The Mammalian Phenotype
+Ontology as a tool for annotating, analyzing, and comparing
+phenotypic information. Genome Biol 2004, 6:R7.
+30. Adult Mouse Anatomical Dictionary Browser [http://
+www.informatics.jax.org/searches/AMA_form.shtml]
+31. Adult Mouse Anatomical Dictionary at the OBO website
+[http://cvs.sourceforge.net/viewcvs.py/obo/obo/ontology/anatomy/
+gross_anatomy/animal_gross_anatomy/mouse/MA.ontology]
+32. XSPAN: a cross-species anatomy project [http://
+www.xspan.org]
+33. SOFG: standards and ontologies for functional genomics
+
+R29.8 Genome Biology 2005, Volume 6, Issue 3, Article R29 Hayamizu et al. http://genomebiology.com/2005/6/3/R29
+Genome Biology 2005, 6:R29
+[http://www.sofg.org]
+34. Parkinson H, Aitken S, Baldock RA, Bard JBL, Burger A, Hayamizu TF,
+Rector A, Ringwald M, Roger J, Rosse C, et al.: The SOFG Anat￾omy Entry List (SAEL): an annotation tool for functional
+genomics data. Comp Funct Genomics 2004, 5:521-527.
+35. Gkoutos GV, Green ECJ, Hancock JM, Davidson D: Using ontolo￾gies to describe mouse phenotypes. Genome Biol 2005, 6:R8.
+36. Schofield PN, Bard JB, Booth C, Boniver J, Covelli V, Delvenne P,
+Ellender M, Engstrom W, Goessner W, Gruenberger M, et al.: Path￾base: a database of mutant mouse pathology. Nucleic Acids Res
+2004:D512-D515.
+37. Hartel FW, Fragoso G, Ong KL, Dionne R: Enhancing quality of
+retrieval through concept edit history. In Proceedings of the 2003
+AMIA Annual Symposium: Baltimore Edited by: Musen M. American
+Medical Informatics Association; 2003:279-283. 
+38. Hill DP, Blake JA, Richardson JE, Ringwald M: Extension and inte￾gration of the gene ontology (GO): combining GO vocabu￾laries with external vocabularies. Genome Res 2002,
+12:1982-1991.
+

@@ -1,0 +1,458 @@
+of October 6, 2025.
+This information is current as
+Feasibility
+Implementation and Demonstration of 
+4D Digital Subtraction Angiography:
+Strother and C. Mistretta
+Oberstar, B. Aagaard-Kienitz, D. Niemann, O. Ozkan, C. 
+B. Davis, K. Royalty, M. Kowarschik, C. Rohkohl, E.
+http://www.ajnr.org/content/34/10/1914
+doi: https://doi.org/10.3174/ajnr.A3529
+AJNR Am J Neuroradiol 2013, 34 (10) 1914-1921
+
+ORIGINAL RESEARCH
+BRAIN
+4D Digital Subtraction Angiography: Implementation and
+Demonstration of Feasibility
+B. Davis, K. Royalty, M. Kowarschik, C. Rohkohl, E. Oberstar, B. Aagaard-Kienitz, D. Niemann, O. Ozkan, C. Strother, and C. Mistretta
+ABSTRACT
+BACKGROUND AND PURPOSE: Conventional 3D-DSA volumes are reconstructed from a series of projections containing temporal
+information. It was our purpose to develop a technique which would generate fully time-resolved 3D-DSA vascular volumes having better
+spatial and temporal resolution than that which is available with CT or MR angiography.
+MATERIALS AND METHODS: After a single contrast injection, projections from the mask and fill rotation are subtracted to create a series
+of vascular projections. With the use of these projections, a conventional conebeam CT reconstruction is generated (conventional
+3D-DSA). This is used to constrain the reconstruction of individual 3D temporal volumes, which incorporate temporal information from the
+acquired projections (4D-DSA).
+RESULTS: Typically, 30 temporal volumes per second are generated with the use of currently available flat detector systems, a factor of
+200 increase over that achievable with the use of multiple gantry rotations. Dynamic displays of the reconstructed volumes are viewable
+from any angle. Good results have been obtained by using both intra-arterial and intravenous injections.
+CONCLUSIONS: It is feasible to generate time-resolved 3D-DSA vascular volumes with the use of commercially available flat
+detector angiographic systems and clinically practical injection protocols. The spatial resolution and signal-to-noise ratio of the time
+frames are largely determined by that of the conventional 3D-DSA constraining image and not by that of the projections used to
+generate the 3D reconstruction. The spatial resolution and temporal resolution exceed that of CTA and MRA, and the small vessel
+contrast is increased relative to that of conventional 2D-DSA due to the use of maximum intensity projections.
+ABBREVIATIONS: II  image intensifier; IA  intra-arterial; TOA  time of arrival
+I
+n 1980, when DSA was introduced,1-3 it was originally hoped
+that intravenous x-ray angiography would be feasible. However, the inability to clearly visualize vascular structures caused by
+vessel overlap as well as limited signal-to-noise ratio due to then
+available contrast medium and the image intensifier (II) detector
+technology quickly led to the adaption of techniques by use of
+small intra-arterial (IA) contrast injections in combination with
+the newly available real-time digital imaging capabilities. This capability greatly facilitated the development of the minimally invasive procedures by using x-ray angiography and the field of interventional radiology in general.
+The feasibility of obtaining rotational volume acquisitions by using a C-arm angiographic system equipped with an II was initially
+simulated in 1988 and then by use of an II-based apparatus, implemented in 1996 by Ning and Kruger.4,5 In 1997, Fahrig et al6,7 extended this work showing both in vitro and in vivo results. These
+systems, as well as currently used systems with flat detectors, allow
+creation of 1 3D-DSA volume per gantry rotation. Since the introduction of commercial angiographic systems and software suitable
+for performing 3D-DSA in 1999, the assessment of vasculature in
+interventional x-ray suites has been done by using the combination
+of 3D-DSA volume reconstructions (non–time-resolved) and multiple conventional 2D-DSA acquisitions. Multiple 2D acquisitions
+have been necessary because of 1) the need to visualize the sequences
+of vascularfilling and2) theinability to clearly see anatomic details on
+the 3D reconstructions because of the resulting overlap of arterial
+and, in some instances, venous structures. The need to obtain multiple 2D temporal series at the desired view angle obviously contributes significantly to the radiation exposure and contrast medium
+dose associated with these examinations.
+Received August 29, 2012; accepted after revision December 21.
+From the University of Wisconsin School of Medicine and Public Health (B.D., E.O.,
+B.A.-K., D.N, O.O., C.S., C.M.), Madison, Wisconsin; Siemens AG (K.R.), Healthcare
+Sector, Hoffman Estates, Illinois; and Siemens (M.K., C.R.), Research Collaborations,
+AX, Forchheim, Germany.
+Please address correspondence to Charles Strother, MD, Department of Radiology, University of Wisconsin School of Medicine and Public Health, 600 North
+Highland Ave, Madison, WI 53792; e-mail: cstrother@uwhealth.org.
+http://dx.doi.org/10.3174/ajnr.A3529
+1914 Davis Oct 2013 www.ajnr.org
+
+The method that we describe involves the use of a 3D-DSA
+vascular volume as a constraining image. The proposed reconstruction method uses all, or most of, the projections obtained
+after a rotational acquisition done before (mask run) and after (fill
+run) the injection of contrast medium. This constraining volume
+is combined with the acquired projections to form a time-series of
+3D volumes (4D-DSA). The 3D-DSA depicts an average of the
+vascular opacification present during the rotational acquisition.
+Each of the individual projections used to form the standard 3DDSA volume contains temporal information. Although it must be
+understood that a CT volume cannot be reconstructed from a
+single projection, we do not propose a new 3D-DSA volume reconstruction technique. We have developed algorithms that permit 3D-DSA time-resolved volumes (4D-DSA) to be generated by
+use of the constraining volume and single x-ray projections.
+Rather than 1 vascular volume per gantry rotation, this technique
+typically generates 30 time-resolved 3D-DSA volumes per second
+(by use of a currently available flat detector angiographic system),
+a rate 200 times faster than could be achieved by use of sequential gantry rotations, and at the same contrast and x-ray dose as
+used to obtain 1 standard 3D-DSA volume.
+This capability allows for the viewing of the vasculature in a dynamic display, at any angle, for all time points at any desired angle.
+This largely eliminates the problem of vessel overlap. The availability
+of a “library” of time-resolved 3D timeframes thus facilitates diagnosis by providing the ability to view the anatomy not only in any desired view but also to do this at any desired phase of vascular filling,
+thus eliminating any confusion that might occur as the result of vascular overlap. An additional benefit is that it provides a library of
+vascular roadmaps at any stage of vascular filling for use in endovascular therapeutic procedures.
+The purpose of the work was to investigate the feasibility of reconstructing time-resolved 3D vascular volumes (4D-DSA) from conventional
+3D-DSA acquisitions.
+MATERIALS AND METHODS
+Data Acquisition
+All images were acquired by use of either
+a biplane Artis dBA system or an Artis
+Zeego flat detector angiographic system
+(Siemens, Erlangen, Germany). All human and animal studies were performed
+under institutionally approved institutional review board and/or Animal Care
+and Use Committee protocols. Rotational images for subtracted 3D reconstructions were obtained by use of 5-, 8-,
+or 10-second acquisitions to capture the
+full cycle of contrast inflow and washout. To obtain a sufficient number of
+consistent projections for an accurate
+3D reconstruction and to capture inflow
+and washout, the rotational acquisition
+must be long enough to follow a bolus
+through the vasculature. This may be
+achieved by use of either multiple C-arm rotations or by use of
+C-arm rotations of an appropriate duration, for example, 5, 8, or
+10 seconds. It seems likely that, depending on the dynamics of the
+circulation, that is, fast or slow, there will be particular acquisition
+protocols that are optimal for particular conditions, for example,
+a 5-second acquisition for evaluation of a patient with an aneurysm at the circle of Willis or a fast-flow carotid cavernous fistula
+or an 8- or 10-second acquisition for a patient with occlusive
+disease in which filling occurs by collaterals. More experience is
+required before definite recommendations can be given regarding
+choice of an optimal acquisition protocol. Intravenous studies
+were performed after injection of iohexol (300 mg I/mL) into a
+peripheral vein at the rate of 4 mL/s over 8 –10 seconds followed
+by a 10-mL saline chase injected at the same rate. Intra-arterial
+studies were obtained by use of injection of 5–8 mL iohexol.
+Image Processing and Reconstruction Process
+Four-dimensional DSA reconstruction uses multiplicative projection processing to generate a series of time-resolved 3D volumes (4D-DSA) by embedding the time-resolved data from the
+standard projections of a rotational acquisition. Before back projection, the individual projections from the acquisition are spatially convolved to increase the SNR. They therefore form a low
+spatial frequency mask that basically enhances portions of the 3D
+constraining image that are present at each point in time. After a
+normalization step, this mask then provides proper projection
+weighting. As a result of the convolution process, the SNR of the
+individual timeframes is limited by the constraining image SNR
+ratio and not by the SNR of the individual projections. When the
+single projections are back-projected into the 3D volume, there is
+a tendency for the projection values from overlapping vessels to
+FIG 1. Schematic of 4D-DSA reconstruction. After creation of the 4D-DSA timeframes, each one
+may be viewed in a dynamic form showing the inflow and outflow of contrast from the vasculature, just as with a standard 2D-DSA series. As shown on the 2 series of 4 images at the bottom of
+the illustration, any selected time (in this case, the image framed in red in the top row of 4 images)
+may be viewed at any desired angle. Four possible views of the selected image are shown in the
+bottom row of 4 images.
+AJNR Am J Neuroradiol 34:1914 –21 Oct 2013 www.ajnr.org 1915
+
+cause the deposition of erroneous signal (an opacity shadow from
+opacified vessel to nonopacified vessel) into vessels in the 3D volume. To reduce this effect, for each timeframe, an angular (temporal) search is performed, looking for a range of time before and
+after the frame that is being projected. After this search, the minimum signal for each voxel is assumed to be due to the ray with the
+minimum degree of overlap; that value is then assigned to the
+timeframe being processed. For voxels requiring an angle other
+than the current angle as a result of the search, the temporal resolution is lower than the typical 30/s rate, as data from a different
+timeframe are substituted. The frequency of this depends on the
+sparsity of the vessel configuration. However, overall volume
+frame rates of 6 frames/s are typical. Figure 1 illustrates the steps in
+this process. Any of the time-resolved 3D timeframes (3D volumes) can be rotated for viewing at whatever angle the user
+thinks gives the clearest depiction of the relevant vasculature.
+These 3D timeframes can be viewed with playback speed reduced or increased, paused, or replayed as desired. The user
+interface provides for interactive 4D viewing of the 3D temporal volume timeframes and provides for a true interactive 4D
+viewing experience of the contrast-enhanced perfusion of a
+vascular network.
+Estimate of Relative SNR
+The SNR values for the acquired projections, for 3D-DSA and for
+4D-DSA, were estimated by placing regions of interest in the images. Because variations of the signal selected by the maximum
+intensity projection process can contribute to the standard deviation in a region of interest, the statistical variations in the
+4D-DSA image were measured from the difference between 2
+successive 4D-DSA frames that were rotated to the same position. In the 3D-DSA, these variations were very small, so no
+subtraction was performed. It was not possible to subtract sequential acquired projections because they are not 3D-rotatable and cannot be registered for subtraction. Thus, the presence of these potential signal variations in the acquired
+FIG 2. Images show a selected projection from a 3D-DSA rotational acquisition (top left), a 4D-DSA timeframe (center), and a standard 3D-DSA
+reconstruction (right). The SNRs of the 3 images at the region indicated by the yellow arrows are shown beneath each image. The single image
+at the bottom shows traces of the profile across the 2 arteries indicated by the red line. These images were obtained by use of an IA injection
+of contrast medium.
+1916 Davis Oct 2013 www.ajnr.org
+
+projection region of interest could have decreased the measured SNR shown in Fig 2.
+Simulation of Flow Information From 4D-DSA
+A digital phantom was constructed to simulate the various steps in
+signal curve generation. The phantom consisted of a vein and an
+artery running perpendicular to the vein. Each was assigned venous and arterial -variate time dependences. A 4D-DSA reconstruction was performed with the use of a constraining volume
+obtained from the reconstruction of the known vessel distribution. Signal curves were then generated from 2 selected regions
+of interest for different versions of the 4D-DSA reconstruction
+algorithm.
+Quantitative Color-Coded 4D-DSA
+Previous work has shown the ability to create color-coded parametric images from 2D-DSA series.8,9 Because the basic 4D-DSA
+images contain signal that is proportional to the contrast (iodine)
+concentration as a function of time, it is possible to also view these
+series as a color-coded display showing contrast time of arrival
+(TOA) in each pixel. TOA maps were created by first forming a
+volume showing the highest contrast concentration, that is, vessel
+opacification that occurred during the rotational acquisition
+(Cmax) and noting the time to reach Cmax/4 on a per-voxel basis.
+Color-coded 4D-DSA images were obtained by multiplying TOA
+maps by a binarized version of the 4D-DSA MIP timeframes.
+A method for displaying regions of
+vascular anatomy with increasing times
+of the contrast bolus arrival can be
+achieved by multiplying the TOA image by a sliding window that sequentially reveals pixels within a TOA range
+defined by the window. We refer to
+this as a bolus arrival mode. For the
+results illustrating this capability, we
+used a Gaussian display window with
+full width at half maximum of 20 4DDSA timeframes.
+RESULTS
+Simulation of Reconstruction
+Elements
+The angular search results in some distortion of the signal waveforms. When it
+is desired to generate quantitative signal
+curves, the effect of this can be limited
+because it is possible to omit points from
+the waveform for which the search resulted in the choice of a projection that is
+too remote (in time) from the current
+frame. The signal curve then can be interpolated by use of points for which the
+search resulted in a suitable temporal
+displacement, for example, below a chosen threshold.
+For the purpose of generating signal
+curves that correspond exactly to the
+signal curves in the acquired projections, it is possible to modify the basic reconstruction algorithm
+to include a binary version of the constraining image. In this case,
+the projection values are directly deposited in the 3D vascular
+space and will reproduce the signal curves provided by the projections. This series of 3D volumes does not accurately represent
+the actual opacification of the vascular network because of vessel
+overlap and the use of the back-projection step used to create
+these volumes. However, for the purpose of generating individual
+voxel signal curves, there are several characteristics of the 4D-DSA
+reconstruction algorithm that affect the resultant curves that
+aim to correct the vessel overlap problem inherent in the 3D
+timeframe volumes. This is demonstrated in the simulations performed with the digital phantom.
+As shown in Fig 3, after the basic back-projection step when
+the projections are multiplied by a binary constraining image (upper right), there are signal peaks caused by the alignment of the
+vessels with the projection direction. When these are present, they
+can occasionally give the impression of reversed flow. These peaks
+are somewhat reduced when the angular search is added to the
+reconstruction (Fig 3, lower left panel). Better results are obtained
+when the projections are normalized by dividing them by an estimate of the number of aligned voxels along the individual rays,
+obtained from the constraining image (Fig 3, lower right panel).
+These normalizing projection images (1 per projection) are created by forward projections of the thresholded and binarized conFIG 3. Demonstration of the effects of reconstruction elements on accuracy of reconstructed
+simulated vessel signal curves. The digital phantom is shown in the top frame on the left. The vessels
+in the phantom (phantom artery and phantom vein) had specified time dependence. These are considered to represent ground truth. The input time curves for these vessels are shown in each panel for
+comparison. C indicates constraining image; P, projections. The reconstructed wave forms are shown:
+1) after multiplication (represented by C  P) of the projections by a binary constraining image (top
+right); 2) multiplication of the projections by the binary constraining image plus an angular minimum
+search (represented by C  P  search, bottom left); and 3) multiplication of the projections by the
+binary constraining image followed by normalization by the estimate of the numbers of projected ray
+voxels obtained from the constraining image (CPNorm, bottom right). The y-axis shows arbitrary
+units of attenuation. The x-axis shows the projection number.
+AJNR Am J Neuroradiol 34:1914 –21 Oct 2013 www.ajnr.org 1917
+
+straining image. With the use of this method, the similarity of the
+reconstructed signal curves to those of the input signal curves is
+satisfactory. This technique effectively helps to weight deposition
+of the attenuation coefficient in voxels along a ray, resulting in
+more accurate 4D-DSA raw 3D temporal volume when a normalized projection is back-projected.
+Anatomic Display
+Imparting temporal resolution to an already reconstructed 3D vascular volume
+requires far fewer multiplicative projections than if the goal were to reconstruct
+a vascular (anatomic) volume itself by
+summing a limited number of projections. In our technique, the anatomic
+structures in those voxels have already
+been reconstructed. Time dependence
+can then be effectively performed with
+the use of a small number of multiplicative projections.10,11
+Figure 4 shows a series of 4D-DSA
+arterial phase images from a study performed for evaluation of an unruptured
+aneurysm. These illustrate the ability to
+view the time-resolved 4D series from
+any desired viewing angle. This ability to
+retrospectively view a dynamic angiographic sequence from any arbitrary view angle can potentially
+result in a significant reduction in radiation exposure because, in
+our experience, to obtain optimal views, it is not unusual to require multiple 2D acquisitions even when performing a “tarFIG 4. Four-dimensional DSA reconstruction from a 3D-DSA reconstruction performed for evaluation of an unruptured paraclinoid aneurysm.
+An IA injection of contrast was used for this examination. The top row shows selected timeframes viewed at the rate of 6 frames per second
+at a fixed viewing angle. The bottom row shows the same timeframes viewed at 4 different angles, which would have not been obtainable in a
+biplane acquisition because of the mechanical inability to position the A-plane gantry (red icon).
+FIG 5. Comparison of intravenous 3D-DSA and early arterial phase time from a 4D-DSA
+reconstruction. In the standard 3D-DSA on the left, the overlap of both arteries and veins
+obscures visualization of the internal carotid arteries. In this example, there is no viewing
+angle that will eliminate this overlap in the 3D-DSA. The image on the right is an early arterial
+timeframe from a 4D-DSA reconstruction viewed from the same angle as the 3D-DSA on the
+left. In this 4D image, the full course the right internal carotid artery is clearly visualized (red
+arrows). The red ellipse shows the position of the distal segments of the internal carotid
+arteries in both images.
+1918 Davis Oct 2013 www.ajnr.org
+
+geted” (single vessel) diagnostic examination. This ability also removes the need to obtain extreme cranial-caudal views that
+require passing x-rays through a highly attenuating path. With
+4D-DSA, such views can be achieved with the use of a reconstruction acquired from data acquired such that rays traverse a much
+less attenuating trajectory.
+Ourinitial efforts to useintravenousinjections of contrastin conjunction with DSA were hampered by the overlap of vascular structures on the 2D images.With 4D-DSA, this limitation is largely overcome because optimal views, which avoid overlap, can be chosen
+and viewed at any stage of vascular filling (any view angle at any
+timeframe and any timeframe at any view angle). This is illustrated in
+Fig 5, in which the course of the right internal carotid artery can be
+clearly seen in the early arterial phase 4D-DSA timeframe.
+SNR and Vessel Profiles
+Figure 2 shows a comparison of SNR values measured in the regions of interest indicated by the yellow arrows. The apparent
+SNR of the acquired projection may
+have been decreased because of anatomic variations during gantry rotation.
+Also shown are normalized vessel profiles along the red lines indicated. The
+profile across these 2 arteries on the acquired projection is noisy. Determination of the exact 4D-DSA spatial resolution requires more careful experiments
+with the use of well-defined phantoms.
+These studies are ongoing.
+Figure 6 illustrates the ability to color-code a 4D-DSA image such that
+quantitative information about blood
+flow can be extracted. This example
+shows a 4D reconstruction of a study
+performed for evaluation of an AVM.
+DISCUSSION
+In this report, we have demonstrated the
+feasibility of generating time-resolved
+3D-DSA vascular volumes with the use
+of commercially available flat detector
+angiographic systems and clinically
+practical injection protocols. A review of
+other angiographic methods (both timeresolved and non–time-resolved) indicates that 4D-DSA can provide spatial
+and temporal resolution that exceeds
+that of these competing techniques, for
+example, MRA and CTA. In particular,
+4D-DSA thus provides a new imaging
+technique with spatial and temporal resolution exceeding competing time-resolved angiographic techniques. Figure
+7 shows the relative voxel volume and
+frame duration for existing time-resolved angiographic methods. We emphasize that this was a feasibility study
+with implementation of the technique
+with the use of a prototype environment. Studies to understand
+the trade-offs of various acquisition and injection protocols are
+underway. Full understanding and optimization of these protocols will require significantly more experience and use of the
+technology.
+Validation studies will be required to establish the reconstructed matrix size and radiation dose that would be required to
+provide the highest-resolution 4D-DSA volumes. It is interesting
+to note that despite recent research developments in MR, the
+dominant commercial method is still time-resolved imaging of
+contrast kinetics (TRICKS), which has spatial and temporal resolution 2 orders of magnitude below that of 4D-DSA.12
+The availability of 4D-DSA provides the user with a technique
+that, from a single contrast injection and rotational acquisition
+(provided an acceptable constraining volume can be obtained),
+provides a library of time-resolved images that may be viewed
+from any desired angle at any time during contrast filling and
+FIG 6. Color-coded 4D-DSA and bolus arrival images. The sequence was displayed at a rate of 6
+frames per second for visualization of arrival times between 1 and 4.5 seconds. On the top of the
+figure, binarized 4D-DSA timeframes multiply a time-of-arrival map providing a dynamic display in
+which each pixel in each timeframe is represented by a quantitative time of arrival value. In the
+bottom half of the figure, a sliding Gaussian display window is used to show the passage of the
+bolus through the AVM. The 4D-DSA TOA volume (static) and 4D-DSA TOA (dynamic) 3D
+timeframes can be viewed from any angle. The 4D-DSA TOA (dynamic) 3D timeframes allow viewing
+of the temporal dynamics of the 4D-DSA TOA from any angle at any point in time forwhich datawere
+acquired. These images were obtained by use of an IA injection of contrast medium.
+AJNR Am J Neuroradiol 34:1914 –21 Oct 2013 www.ajnr.org 1919
+
+emptying. Although conventional 3D-DSA reconstructions are
+viewable at any angle, they do not allow viewing of the vasculature
+during different stages of filling and emptying, for example, a pure
+arterial phase or pure venous phase. Because 4D-DSA allows this,
+it should, in our opinion, allow the performance of many procedures requiring the use of x-ray angiography with significantly
+less x-ray exposure and contrast medium dose because it would
+reduce the need to obtain multiple 2D-DSA acquisitions. We also
+believe that because the time-resolved volume viewable from any
+angle at any time will largely eliminate the impact of vascular
+overlap, that 4D-DSA will provide a method that will again make
+the use of intravenous injections for angiographic studies an attractive alternative to conventional IA studies, thus potentially
+increasing the safety (less invasive) and efficacy (obtaining images
+of all relevant vasculature with a single injection and acquisition)
+of interventional and diagnostic procedures.
+It should be emphasized that 4D-DSA is a purely angiographic
+technique and as such only indirectly provides perfusion information, that is, it provides information about blood flow to tissue.
+This is because it is not possible to reconstruct the tissue surrounding vessels from only a single projection. Although the constraining volume is reconstructed from a large number of projections, the tissue perfusion represented by that volume is an
+average, over time, and thus cannot provide dynamic perfusion
+information. It is possible, however, that 4D-DSA could provide
+valuable arterial input function information for alternate schemes
+of measuring perfusion with a C-arm angiographic system.13
+All of the images shown in this report were reconstructed retrospectively and were not available at the time of the actual examinations. The reconstruction time per 4D-DSA frame is presently
+less than 1 second. Clinical validation of
+the anatomic and temporal accuracy as
+well as documentation regarding the
+value of the technique in reducing procedure times, x-ray exposure, and contrast medium dose will start once the
+technique is developed to a point at
+which it may be transferred to a clinical
+angiographic system.
+Four-dimensional DSA will ultimately
+be used along with 4Dfluoroscopy, a technique that will provide real-time fluoroscopic roadmap views from any arbitrary
+direction without a need for gantry movement. Together, 4D-DSA and 4D fluoroscopy should increase diagnostic capabilities and improve the safety and
+efficacy of endovascular interventions.
+CONCLUSIONS
+It is feasible to generate time-resolved
+3D-DSA vascular volumes with the use
+of commercially available flat detector
+angiographic systems and clinically
+practical injection protocols. The spatial
+resolution and SNR of the timeframes
+are largely determined by that of the
+conventional 3D-DSA constraining image and not by that of the projections used to generate the 3D
+reconstruction. The voxel volume and temporal resolution are
+theoretically almost 10 times that of CTA and MRA, and the
+small-vessel contrast is increased relative to that of conventional
+2D-DSA as the result of the ability to use MIP renderings. The
+availability of 4D-DSA should greatly reduce the need to acquire
+multiple 2D series during examinations. The availability of 4DDSA volumes viewable from any angle at any time completes the
+transition of DSA to a full 4D angiographic technique.12,13
+ACKNOWLEDGMENTS
+We dedicate this work to the memory of our colleague Dr Jan
+Bose, who recently passed away. Although Jan was not an author of this manuscript, his insights and guidance were invaluable as we worked to bring this technology from a concept to a
+reality. Jan was a dear friend and colleague; his memory will
+never leave us.
+Disclosures: Brian Davis—RELATED: Grant: Siemens Medical Sponsored Research
+Grant;* Support for Travel to Meetings for the Study or Other Purposes: Siemens Medical Sponsored Research Grant;* OTHER RELATIONSHIPS: We have a
+sponsored research agreement between UW Madison and Siemens Medical.
+Kevin Royalty—RELATED: Grant: Siemens Medical Solutions, USA,* Comments:
+Project was at least partially funded by Siemens Medical Solutions, USA; UNRELATED: Employment: Siemens Medical Solutions, USA, Comments: Full-time employee of Siemens Medical Solutions, USA; OTHER RELATIONSHIPS: I am also a
+graduate student at the University of Wisconsin (Department of BioMedical
+Engineering). Markus Kowarschik—UNRELATED: Employment: Full-time employee at Siemens Healthcare, Comments: Part of this research was funded by
+Siemens Healthcare. Erick Oberstar—RELATED: Grant: Siemen’s Medical Sponsored Research Grant;* Support for Travel to Meetings for the Study or Other
+Purposes: Siemens Medical Sponsored Research Grant;* OTHER RELATIONSHIPS:
+We have a sponsored research agreement between UW Madison and Siemens
+FIG 7. Relative spatial and temporal resolution for competing time-resolved angiography methods. The MRA values are based on the hybrid MRA method reported by Wu et al12 and provide
+0.69-mm pixel dimensions, leading to a voxel volume of 0.33 mm3
+. Typical frame times are 0.3
+seconds. The CTA estimate is based on the large area Aquilion system (Toshiba Medical Systems,
+Tokya, Japan)14 with a pixel dimension of 0.625 and frame rate of approximately 3/s. The 4D-DSA
+ultimate spatial resolution assuming a magnification factor of 1.5 and a pixel dimension 100 should
+easily support 200- pixel dimensions in a patient, leading to a voxel volume of 0.008 mm3
+.
+1920 Davis Oct 2013 www.ajnr.org
+
+Medical. David Niemann—RELATED: Siemens Healthcare,* Comments: Master
+Research Agreement between University of Wisconsin and Siemens Health Care.
+Charles Strother—RELATED: Grant: Siemens Healthcare* Comments: Sponsored
+research agreement between Siemens HealthCare and UW Madison; Support for
+Travel to Meetings for the Study or Other Purposes: Siemens Healthcare* Comments: Money for travel to scientific meetings included in budget of research
+grant; OTHER: License of Intellectual Property; UNRELATED: Consultancy: Siemens Healthcare, Comments: I am an unpaid advisor; Grants/Grants Pending:
+Siemens Healthcare;* Patents (planned, pending or issued): Siemens Healthcare,
+Comments: License of IP. Charles Mistretta—RELATED: Grant: Siemens Imaging
+Solutions,* Comments: Siemens/UW sponsored research grant; Support for
+Travel to Meetings for the Study or Other Purposes: The Siemens grant provides
+some travel money; UNRELATED: Patents (planned, pending or issued): Siemens
+has been licensed to develop 4D-DSA (*money paid to institution).
+REFERENCES
+1. Mistretta CA, Kruger RA, Houk TL, et al.Computerized fluoroscopy
+techniques for noninvasive cardiovascular imaging: SPIE. Appl Opt
+Instr Med 1978;152:65–71
+2. Kruger RA, Mistretta CA, Houk TL, et al.Computerized fluoroscopy
+in real time for noninvasive visualization of the cardiovascular
+system: preliminary studies. Radiology 1979;130:49 –57
+3. Strother CM, Sackett JF, Crummy AB, et al. Clinical applications of
+computerized fluoroscopy: the extracranial carotid arteries. Radiology 1980;136:781–83
+4. Ning R, Kruger RA. Computer simulation of image intensifierbased computed tomography detector: vascular application. Med
+Phys 1988;15:188 –92
+5. Ning R, Kruger RA.Image intensifier-based computed tomography
+volume scanner for angiography. Acad Radiol 1996;3:344 –50
+6. Fahrig R, Fox AJ, Lownie S, et al. Use of a C-arm system to generate
+true three-dimensional computed rotational angiograms: preliminary in vitro and in vivo results. AJNR Am J Neuroradiol
+1997;18:1507–14
+7. Fahrig R, Moreau M, Holdsworth DW. Three-dimensional computed tomographic reconstruction using a C-arm mounted XRII:
+correction of image intensifier distortion. Med Phys 1997;24:
+1097–106
+8. Strother CM, Bender F, Deuerling-Zheng Y, et al. Parametric color
+coding of digital subtraction angiography. AJNR Am J Neuroradiol
+2010;31:919 –24
+9. Lin CJ, Hung SC, Guo WY, et al. Monitoring peri-therapeutic cerebral circulation time: a feasibility study using color-coded quantitative DSA in patients with steno-occlusive arterial disease. AJNR
+Am J Neuroradiol 2012;33:1685–90
+10. Mistretta CA, Oberstar E, Davis B, et al. 4D-DSA and 4D
+fluoroscopy: preliminary implementation. Proceedings of SPIE Conference on Medical Imaging. San Diego, California, February 2010
+11. Davis B, Kowarschik M, Royalty K, et al. Progress in 4D digital subtraction angiography implementation: technical aspects. Presented
+at Annual Meeting of the American Society of Neuroradiology, New
+York. April 23–26, 2012
+12. Wu Y, Johnson K, Kecskemeti SR, et al. Time resolved contrast enhanced intracranial MRA using a single-dose delivered as sequential injections and highly constrained projection reconstruction
+(HYPR CE). Magn Reson Med 2011;65:536 –63
+13. Ganguly A, Fieselmann A, Marks M, et al. Cerebral CT perfusion using an interventional C-arm imaging system: cerebral
+blood flow measurements. AJNR Am J Neuroradiol 2011;32:
+1525–31
+14. Geleijns J, Salvado AM, de Bruin PW, et al. Computed tomography
+dose assessment for a 160 mm wide, 320 detector row, cone beam
+CT scanner. Phys Med Biol 2009;54:3141–59
+AJNR Am J Neuroradiol 34:1914 –21 Oct 2013 www.ajnr.org 1921
+

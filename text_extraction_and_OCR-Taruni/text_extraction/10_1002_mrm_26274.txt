@@ -1,0 +1,918 @@
+King’s Research Portal
+DOI:
+10.1002/mrm.26274
+Document Version
+Publisher's PDF, also known as Version of record
+Link to publication record in King's Research Portal
+Citation for published version (APA):
+Cruz, G., Atkinson, D., Henningsson, M., Botnar, R. M., & Prieto, C. (2017). Highly efficient nonrigid motion￾corrected 3D whole-heart coronary vessel wall imaging. Magnetic resonance in medicine : official journal of the
+Society of Magnetic Resonance in Medicine / Society of Magnetic Resonance in Medicine, 77(5), 1894-1908.
+https://doi.org/10.1002/mrm.26274
+Citing this paper
+Please note that where the full-text provided on King's Research Portal is the Author Accepted Manuscript or Post-Print version this may
+differ from the final Published version. If citing, it is advised that you check and use the publisher's definitive version for pagination,
+volume/issue, and date of publication details. And where the final published version is provided on the Research Portal, if citing you are
+again advised to check the publisher's website for any subsequent corrections.
+General rights
+Copyright and moral rights for the publications made accessible in the Research Portal are retained by the authors and/or other copyright
+owners and it is a condition of accessing publications that users recognize and abide by the legal requirements associated with these rights.
+•Users may download and print one copy of any publication from the Research Portal for the purpose of private study or research.
+•You may not further distribute the material or use it for any profit-making activity or commercial gain
+•You may freely distribute the URL identifying the publication in the Research Portal
+Take down policy
+If you believe that this document breaches copyright please contact librarypure@kcl.ac.uk providing details, and we will remove access to
+the work immediately and investigate your claim.
+Download date: 09. Nov. 2025
+
+FULL PAPER
+Highly Efficient Nonrigid Motion-Corrected 3D
+Whole-Heart Coronary Vessel Wall Imaging
+Gast~ao Cruz,1
+* David Atkinson,2 Markus Henningsson,1 Rene M. Botnar,1,3 and
+Claudia Prieto1,3
+Purpose: To develop a respiratory motion correction frame￾work to accelerate free-breathing three-dimensional (3D)
+whole-heart coronary lumen and coronary vessel wall MRI.
+Methods: We developed a 3D flow-independent approach for
+vessel wall imaging based on the subtraction of data with and
+without T2-preparation prepulses acquired interleaved with
+image navigators. The proposed method corrects both datasets
+to the same respiratory position using beat-to-beat translation
+and bin-to-bin nonrigid corrections, producing coregistered,
+motion-corrected coronary lumen and coronary vessel wall
+images. The proposed method was studied in 10 healthy sub￾jects and was compared with beat-to-beat translational correc￾tion (TC) and no motion correction for the left and right coronary
+arteries. Additionally, the coronary lumen images were compared
+with a 6-mm diaphragmatic navigator gated and tracked scan.
+Results: No significant differences (P > 0.01) were found
+between the proposed method and the gated and tracked
+scan for coronary lumen, despite an average improvement in
+scan efficiency to 96% from 59%. Significant differences
+(P < 0.01) were found in right coronary artery vessel wall thick￾ness, right coronary artery vessel wall sharpness, and vessel
+wall visual score between the proposed method and TC.
+Conclusion: The feasibility of a highly efficient motion correc￾tion framework for simultaneous whole-heart coronary lumen
+and vessel wall has been demonstrated. Magn Reson Med
+77:1894–1908, 2017. VC 2016 The Authors Magnetic Reso￾nance in Medicine published by Wiley Periodicals, Inc. on
+behalf of International Society for Magnetic Resonance in
+Medicine. This is an open access article under the terms of
+the Creative Commons Attribution License, which permits
+use, distribution and reproduction in any medium, provided
+the original work is properly cited.
+Key words: nonrigid motion; coronary vessel wall; coronary
+MRA; image navigators
+INTRODUCTION
+Coronary magnetic resonance angiography (MRA) has
+shown potential as a noninvasive diagnostic tool to
+assess the location and degree of lumen stenosis in coro￾nary heart disease (1). Because coronary atherosclerosis
+is not necessarily stenotic (2) due to outward remodeling
+of the vessel wall (3), both lumen and wall assessments
+are desirable to more comprehensively detect coronary
+atherosclerosis. Atherosclerotic plaque burden increases
+as disease develops, often without significant changes to
+the vessel lumen. Because coronary plaque burden has
+been correlated with risk of future coronary events (4),
+direct and noninvasive visualization of the vessel wall is
+desired. A three-dimensional (3D) flow-independent
+approach for vessel wall imaging was proposed recently
+(5) based on an interleaved acquisition and subtraction
+of data with [T2prep(þ)] and without [T2prep()] a T2-
+preparation prepulse. This approach simultaneously pro￾vides coronary lumen [T2prep(þ)] and vessel wall
+images; however, the required subtraction is particularly
+sensitive to respiratory motion corruption. Andia et al.
+(5) minimized respiratory motion using a one￾dimensional (1D) “pencil-beam” diaphragmatic navigator
+gating (6), with data being accepted only when both
+T2prep(þ) and T2prep() acquisitions were within the
+same small gating window of the respiratory cycle. This
+led to long and unpredictable acquisition times, because
+only a fraction of the acquired data was accepted for
+reconstruction (referred to as scan efficiency). Another
+limitation of 1D navigator gating is that only superior–
+inferior (SI) global translation can be corrected. Thus,
+motion from anterior–posterior (AP), right–left (RL), and
+nonrigid components remain uncorrected, which has
+been shown to be significant in some subjects (7,8).
+Additionally, heart motion is estimated indirectly from
+the right hemi-diaphragmatic displacement using a fixed
+linear correction factor of 0.6 (9). It has been shown that
+the optimal factor varies for different regions of the heart
+and also for different subjects, meaning that motion arti￾facts may not be resolved fully if a fixed factor is used.
+1
+King’s College London, Division of Imaging Sciences and Biomedical
+Engineering, London, United Kingdom.
+2
+Centre for Medical Imaging, University College London, London, United
+Kingdom.
+3
+Pontificia Universidad Catolica de Chile, Escuela de Ingenier  ıa, Santiago,
+Chile.
+Grant sponsor: MRC; Grant number: MR/L009676/1; Grant sponsor: BHF;
+Grant number: RG/12/1/29262; Grant sponsor: The Centre of Excellence in
+Medical Engineering, funded by the Wellcome Trust and EPSRC; Grant
+number: WT 088641/Z/09/Z; Grant sponsor: Department of Health, via the
+National Institute for Health Research comprehensive Biomedical Research
+Centre award to Guy’s & St Thomas’ NHS Foundation Trust in partnership
+with King’s College London and King’s College Hospital NHS Foundation
+Trust.
+*Correspondence to: Gastao Cruz, Division of Imaging Sciences and Bio- ~
+medical Engineering, The Rayne Institute, 4th Floor, Lambeth Wing, St
+Thomas’ Hospital, London, SE1 7EH, United Kingdom.
+E-mail: gastao.cruz@kcl.ac.uk
+Correction added after online publication 13 June 2016. Claudia Prieto’s
+affiliation was updated.
+The views expressed are those of the authors and not necessarily those of
+the National Health Service, the National Institute for Health Research, or
+the Department of Health.
+Received 16 November 2015; revised 20 April 2016; accepted 20 April
+2016
+DOI 10.1002/mrm.26274
+Published online 25 May 2016 in Wiley Online Library (wileyonlinelibrary.
+com).
+VC 2016 The Authors Magnetic Resonance in Medicine published by Wiley
+Periodicals, Inc. on behalf of International Society for Magnetic Resonance
+in Medicine. This is an open access article under the terms of the Creative
+Commons Attribution License, which permits use, distribution and
+reproduction in any medium, provided the original work is properly cited.
+Magnetic Resonance in Medicine 77:1894–1908 (2017)
+1894
+
+Several approaches have been proposed to address
+these limitations and compensate for motion in 3D coro￾nary MRA. Subject-specific scaling factors have been pro￾posed to improve motion correction (10,11) with no
+change in acquisition time. Model-independent 1D self￾navigation techniques that repeatedly measure the k-space
+center to infer the translational SI respiratory-induced
+motion of the heart have also been proposed (12,13).
+Because 1D self-navigation methods measure a projection
+of the entire field of view, the estimated respiratory
+motion may be corrupted by signal contributions from
+static tissues such as the chest wall. Recently, image navi￾gators (iNAVs) have been introduced to directly estimate
+the respiratory motion of the heart and allow separation of
+static tissues from the moving heart (14–20). Most of these
+approaches acquire a low-resolution image navigator
+before the actual coronary MRA acquisition to correct
+two-dimensional (2D) or 3D translational respiratory
+motion in a beat-to-beat fashion (15,17). To account for
+more complex motion, “respiratory binning” techniques
+have been proposed (18,21). Beat-to-beat approaches usu￾ally provide high-temporal but low-spatial resolution
+motion estimation, whereas binning approaches provide
+high-spatial but low-temporal motion estimation. In the
+binning approach, the acquired data are assigned to sev￾eral states of the breathing cycle (or “bins”) and are later
+corrected to a reference position using the motion esti￾mated from the binned images. 3D affine motion can be
+estimated from these bins and corrected in either k-space
+(18) or directly in the reconstruction (21). Reconstruction￾based nonrigid correction has also been applied to cardiac
+MR using motion derived from training data (22) or
+coupled reconstruction problems (23). An alternative
+approach to nonrigid correction has also been introduced
+in the form of localized autofocusing techniques (24–26).
+A recently introduced approach combined beat-to-beat
+2D translational correction with bin-to-bin 2D affine cor￾rection for coronary lumen imaging (20). However, that
+approach does not correct for motion in the AP direc￾tion, and only affine correction is performed in the other
+two directions directly in the k-space. In this study, we
+propose a combined motion correction approach for cor￾onary lumen and vessel wall imaging using beat-to-beat
+(intra-bin) 2D translational motion correction (RL and SI)
+and bin-to-bin (inter-bin) 3D nonrigid motion correction.
+Motion-corrected vessel wall images are obtained by
+acquiring a set of T2prep(þ)/T2prep() data interleaved
+with a 2D iNAV in every heartbeat, which is used for
+translation correction and binning. Bins are recon￾structed with soft-gated (27) iterative SENSE (28) and
+nonrigid motion estimated via image registration (29) is
+incorporated into a motion-compensated reconstruction
+(30). Subsequently, vessel wall images are obtained by
+subtraction as described by Andia et al. (5), producing a
+set of motion-corrected, coregistered 3D coronary lumen
+and vessel wall images. The proposed method (2D trans￾lation þ 3D nonrigid) was tested in 10 healthy subjects
+and compared with a diaphragmatic gated and tracked
+coronary MR angiogram, 2D translational motion correc￾tion, and no motion correction.
+METHODS
+Image Acquisition
+Data were acquired using an interleaved scanning frame￾work (31). Three scans were performed simultaneously:
+3D segmented whole-heart with T2 preparation
+[T2prep(þ)], 3D segmented whole-heart without T2 prepa￾ration [T2prep()], and 2D single-shot golden radial coro￾nal iNAV. The protocol was defined to acquire the
+T2prep(þ) and T2prep() datasets at alternating heart￾beats, with a 2D single-shot golden radial iNAV being
+acquired every heartbeat (Fig. 1a). In every other heartbeat,
+a T2 preparation pulse was applied [for T2prep(þ)], fol￾lowed by the 2D iNAV and a fat saturation pulse, prior to
+3D segmented data acquisition. The interleave scheme for
+the three scans is depicted in the sequence diagram of Fig￾ure 1a.
+Motion Estimation and Correction
+The framework for motion estimation and correction was
+performed in two steps: 2D beat-to-beat translational
+FIG. 1. Framework of the proposed approach. (a) Acquisition: Data are acquired using interleaved scanning, allowing for datasets with
+and without T2 preparation [T2prep(þ) and T2prep(), respectively] to be acquired simultaneously with a 2D iNAV. In each heartbeat, a
+T2 preparation prepulse (T2p) is applied [in T2prep(þ)], followed by the 2D iNAV, a spectral fat saturation pulse, and image acquisition
+(AQ). The arrows depict the way in which the three sequences interleave at runtime. (b) Reconstruction takes place in two steps. First,
+SI translation of the heart obtained from the 2D iNAVs is used to derive a 1D respiratory signal. Data are grouped into bins according to
+the respiratory position, and intra-bin beat-to-beat translational motion is corrected in k-space for each bin. Each binned dataset is
+reconstructed with soft gated iterative SENSE, and the resulting images are registered to retrieve a nonrigid motion field. Second, the
+motion fields are used in a GMD reconstruction to correct inter-bin nonrigid motion.
+Highly Efficient Motion-Compensated 3D Coronary Vessel Wall 1895
+
+motion correction followed by 3D bin-to-bin nonrigid
+motion correction, as shown in Figure 1b.
+Beat-to-Beat Translational Motion Estimation and
+Correction
+Beat-to-beat 2D translational motion was estimated from
+the iNAVs. Golden-radial iNAVs undergo a gridding
+reconstruction (32) using an iterative density compensa￾tion function (33), providing a set of low spatial, high
+temporal–resolution images. A region of interest was
+selected around the heart (20) and rigid image registra￾tion was performed (34) to estimate SI and RL global
+translational motion. Outliers due to deep breaths were
+removed prior to any corrections. K-space data with esti￾mated SI motion TSI > m þ 2s of the respiratory signal
+(where m is the average respiratory position and s is the
+corresponding standard deviation) were considered out￾liers and removed prior to reconstruction. Due to the dif￾ficulty of correcting and estimating motion in sparsely
+populated regions of the respiratory cycle, we opted to
+recover the approximately 5% most motion corrupted
+data points (outliers) via parallel imaging (28). The iNAV
+reference frame chosen for image registration corre￾sponded to the average position at end-expiration. SI
+motion information was also used to bin the 3D image
+data according to the position in the respiratory cycle.
+2D global translational correction was applied within
+each bin separately by the corresponding phase shift in
+k-space (35):
+K ¼ K0
+e2pik0
+T; [1]
+where K is the translation corrected k-space, K0 the
+acquired k-space, k0 the corresponding k-space trajectory
+and T the estimated 2D translation vector.
+Bin-to-Bin Nonrigid Motion Estimation
+Bin-to-bin 3D nonrigid motion is estimated from the data
+itself. After translational correction, each 3D bin is
+reconstructed with a soft gating (27,36) approach in
+which data are weighted according to their SI distance
+from the center of the bin, TSI. The binned, soft-gated
+reconstruction can be formulated as
+I^b ¼ arg minIb fWbðEIb  KbÞ
+2
+2g; [2]
+where Ib represents the reconstructed bin volumes; Wb is
+a diagonal matrix containing data weights for bin b; E is
+the encoding matrix that includes the Fourier transform,
+coil sensitivities and sampling operations; and Kb repre￾sents the acquired data at each bin. The diagonal ele￾ments of Wb were defined to be a linear function of the
+respiratory position of k-space data as follows:
+wb
+k ¼
+1; if ðRSIðbÞ  Tb
+SIðkÞ þ rÞ=r > 1
+0; if ðRSIðbÞ  Tb
+SIðkÞ þ rÞ=r < 0
+ðRSIðbÞ  Tb
+SIðkÞ þ rÞ=r; otherwise
+;
+8
+>><
+>>:
+[3]
+where wb
+k represents the diagonal weights for data k at
+bin b, RSI (b) is the radius of bin b (i.e., the SI distance
+from the bin center to the edge), Tb
+SI (k) is the distance of
+k-space point k to the center of bin b, and r is a parame￾ter defining the range of the soft gate. Points within the
+bin have unity weight, decreasing linearly to zero as the
+distance of bin radius plus soft gate range is reached.
+Increasing r reduces undersampling artifacts at the
+expense of minor blurring. Bins were reconstructed with
+iterative SENSE (28). Image registration based on free￾form deformations (29) was performed, using the
+end-expiration bin as reference (37), to estimate 3D non￾rigid respiratory motion.
+Translation Plus Nonrigid Motion Correction
+Translational correction is applied directly in k-space to
+correct intra-bin motion, as described above (Equation
+[1]). Inter-bin motion is corrected using the general
+matrix description (GMD) introduced by Batchelor et al.
+(30):
+I^¼ arg minIfEI  K2
+2g
+E ¼ X
+b
+AbFScUb; [4]
+where I^ is the motion-corrected volume, K represents
+the translation corrected k-space data, Ab is the sampling
+matrix for bin b, F is the Fourier transform, Sc represents
+the coil sensitivities for coil c, and Ub represents the
+nonrigid motion fields obtained via image registration.
+The GMD reconstruction was performed with a linear
+conjugate gradient method (38) using the relative resid￾ual as regularization to prevent noise amplification.
+Coronary Vessel Wall
+Coronary vessel wall was obtained via image subtraction
+of the T2prep(þ) from the T2prep() datasets, as
+described by Andia et al. (5), using
+IVW ¼ T2prepðÞ  lT2prepðþÞ; [5]
+where IVW is the vessel wall image and T2prep() and
+T2prep(þ) are the motion-corrected images without and
+with T2 preparation pulse, respectively. The parameter k
+is used to achieve maximum cancelation of signal from
+arterial blood. T2prep() and T2prep(þ) were registered
+using nonrigid deformation (29) prior to image subtrac￾tion to guarantee spatial alignment. The optimum value
+for k can be computed as a function of the heart rate and
+acquisition protocol as shown by Andia et al. (5).
+Experiments
+Acquisition
+Ten healthy subjects (age, 32 6 8 y) were scanned under
+free-breathing on a 1.5T clinical scanner (Philips
+Achieva, Philips Healthcare, Best, Netherlands) using a
+32-channel coil. Written informed consent was obtained
+from all subjects according to institutional guidelines,
+and the study was approved by our institutional review
+board. T2prep(þ), T2prep(), and iNAV data were
+acquired using an interleaved scanning framework (31).
+T2prep(þ) and T2prep() data were acquired with an
+1896 Cruz et al.
+
+ECG-triggered 3D balanced steady-state free precession
+sequence using the following parameters: coronal slices;
+RL phase encoding; in-plane resolution ¼ 1  1 mm; slice
+thickness ¼ 2 mm; field of view ¼ 300  300  90 mm; rep￾etition time/echo time ¼ 5.3/2.6 ms; flip angle ¼ 70 ;
+readout bandwidth (per pixel) ¼ 433 Hz; subject-specific
+acquisition window (range, 105.5–116.1 ms correspond￾ing to 20–22 k-space lines acquired per heartbeat); spec￾tral fat saturation prepulse; subject-specific mid-diastolic
+trigger; and a low-high (centric) Cartesian acquisition
+with radial-like k-space order in the ky and kz direction.
+The T2prep(þ) acquisition included a T2 preparation
+pulse with a duration of 80 ms and two 180  adiabatic
+refocusing pulses. A 2D golden radial iNAV was
+acquired using a single-shot spoiled gradient echo
+sequence using the following parameters: coronal slice
+(same geometry as the image data acquisition); in-plane
+resolution ¼ 4  4 mm; slice thickness ¼ 25 mm; field of
+view ¼ 300  300; repetition time/echo time ¼ 2.4/1.07
+ms; flip angle ¼ 5 ; acquisition window ¼ 47.2 ms with
+24 angular profiles per cardiac cycle. Additionally, an
+ECG-triggered 3D coronary MRA with diaphragmatic
+respiratory gating and tracking (6 mm gating window and
+tracking scaling factor of 0.6) was performed for compari￾son, using the T2prep(þ) protocol as described above.
+The acquisition order of the proposed approach and the
+gated and tracked coronary MRA scan was randomized.
+The 3D coronary MRA protocol had a nominal scan time
+of approximately 10 min at 60 beats/min.
+Reconstruction
+Three reconstructions for coronary lumen and the vessel
+wall were obtained from the same acquired data: (1)
+non–motion-corrected (NMC), (2) 2D translational correc￾tion (TC), and (3) the proposed two-step translational
+and nonrigid correction (TCþGMD). In addition, the 3D
+coronary MRA with a hemi-diaphragmatic navigator and
+respiratory-gated and corrected reconstruction (Gated)
+was used for comparison of coronary lumen images. The
+proposed method used the following (empirically cho￾sen) parameters: three bins automatically defined such
+that each bin had the same amount of data; the soft gate
+range (r) was set to 1 mm to keep any residual motion
+smaller than the voxel size; the minimum relative resid￾ual of the iterative reconstructions was set to 0.05%.
+Four representative datasets (two male, two female) with
+SI respiratory amplitude (average and standard devia￾tion) of 9.8 6 2.4 mm were binned and reconstructed
+using three, four, and five bins. All reconstructions pre￾sented similar results upon visual inspection. Recon￾structions were compared with the proposed method
+using three bins with metrics of lumen sharpness, vessel
+wall sharpness, and vessel wall thickness (described
+below). Data analysis was performed as described below;
+sharpness metrics were normalized to TCþGMD using
+three bins. One statistical difference (P < 0.01) was found
+between three bins and four bins. The remaining 17
+quantitative metrics (Table 1) did not differ significantly,
+therefore three bins were used in this study to minimize
+computational time. The stopping criterion (relative
+residual) was determined by inspecting the noise ampli￾fication through different iterations of these bin
+reconstructions.
+Respiratory outliers were automatically removed before
+TC and TCþGMD reconstructions as described above.
+For the TCþGMD, each bin was translation-corrected
+toward the central position of the bin. This translation￾Table 1
+Image Metric Results for TCþGMD Using Three, Four, and Five Bins.
+Image Metrics
+TCþGMD
+Three Bins Four Bins Five Bins
+Lumen sharpness, a.u.
+LCA, full length 1.00 6 0.26 0.96 6 0.24 0.99 6 0.25
+RCA, full length 1.00 6 0.14 0.99 6 0.13 0.99 6 0.16
+LCA, first 4 cm 1.00 6 0.17 0.96 6 0.16 0.94 6 0.19
+RCA, first 4 cm 1.00 6 0.28 0.99 6 0.27 0.98 6 0.28
+LCA, mid 1.00 6 0.47 0.96 6 0.43 0.97 6 0.44
+RCA, mid 1.00 6 0.19 0.96 6 0.17 0.97 6 0.21
+Wall sharpness, a.u.
+LCA, full length 1.00 6 0.09 1.09 6 0.20 1.08 6 0.27
+RCA, full length 1.00 6 0.37 1.07 6 0.42 0.99 6 0.33
+LCA, first 4 cm 1.00 6 0.16 1.10 6 0.19 1.08 6 0.24
+RCA, first 4 cm 1.00 6 0.40 1.08 6 0.42* 0.99 6 0.34
+LCA, mid 1.00 6 0.46 1.02 6 0.54 1.01 6 0.49
+RCA, mid 1.00 6 0.08 0.92 6 0.15 0.92 6 0.23
+Wall thickness, mm
+LCA, full vessel 1.17 6 0.15 1.21 6 0.11 1.14 6 0.12
+RCA, full vessel 1.22 6 0.16 1.17 6 0.13 1.09 6 0.09
+LCA, first 4 cm 1.13 6 0.15 1.18 6 0.15 1.12 6 0.13
+RCA, first 4 cm 1.16 6 0.15 1.16 6 0.15 1.11 6 0.11
+LCA, mid 1.09 6 0.16 1.13 6 0.06 1.06 6 0.11
+RCA, mid 1.17 6 0.18 1.07 6 0.10 1.06 6 0.06
+Average reconstruction time, s 1680 2200 2720
+*P ¼ 0.01 versus TCþGMD/4 bins.
+**P ¼ 0.01 versus TCþGMD/5 bins.
+Highly Efficient Motion-Compensated 3D Coronary Vessel Wall 1897
+
+corrected k-space (i.e., the k-space data of this group of
+bins) was reconstructed with the GMD (30) after nonrigid
+motion estimation. The TC approach used a 2D transla￾tional correction to a single reference followed by an
+iterative SENSE reconstruction, taking approximately
+120 s. The proposed TCþGMD required a set of 2D trans￾lational corrected soft-gated iterative SENSE bin recon￾structions (490 s), followed by nonrigid image
+registration (170 s) and finally a motion compensated
+reconstruction (1020 s) for a total of approximately
+1680 s. All reconstructions, image subtraction, and post￾processing were performed offline in MATLAB (Math￾Works, Natick, Massachusetts, USA) on a PC with 12
+CPUs (Intel Xeon 3.07 GHz). Coronary vessel wall images
+were obtained as described in Andia et al. (5), where a
+simulation study showed that the optimal l for a bal￾anced steady state free precession sequence lied between
+1.21 and 1.27. Consequently, l ¼ 1.25 was used in this
+study for all subtractions. All reconstructions were refor￾matted onto a 2D plane using “Soap-Bubble” software
+(39), facilitating the visualization of the right coronary
+artery (RCA) and left coronary artery (LCA). All image
+metrics were evaluated on reformatted images after
+4  zero-padding (0.25  0.25 mm in-plane reconstructed
+resolution).
+Data Analysis
+To evaluate the quality of motion correction, measures of
+vessel length, diameter, and sharpness were performed
+using Soap-Bubble on the lumen of T2prep(þ) images
+obtained with NMC, TC, TCþGMD, and gated recon￾structions. Lumen vessel length and diameter were
+obtained by tracking the visible length of each coronary
+vessel. Lumen vessel sharpness was computed by taking
+the maximum gradient normalized to maximum center
+line intensity of profiles along the visible portion of the
+vessel. Lumen vessel sharpness was normalized to the
+mean sharpness of the reference gated acquisition.
+Lumen diameter and sharpness metrics were measured
+separately for the proximal section (the first 4 cm of the
+vessel), midsection, and full length.
+To evaluate the impact of motion correction on the
+vessel wall images, metrics of vessel wall thickness and
+sharpness were computed on vessel wall images for
+NMC, TC, and TCþGMD. The vessel wall was not always
+visible in the distal sections of the coronaries; therefore,
+quantitative metrics for the full length were computed
+using predominantly the proximal and midsections. Ves￾sel wall sharpness was obtained by taking the maximum
+gradient normalized to maximum intensity of profiles
+along the visible portion of the vessel wall, but tracking
+each side of the vessel wall of each coronary independ￾ently with Soap-Bubble. Vessel wall sharpness was
+measured on a smaller vessel length than lumen sharp￾ness because the wall was not always visible in the dis￾tal sections of the vessel, particularly on TC and NMC
+images. Vessel wall thickness was computed by first
+manually defining 20 1D profiles across the visible ves￾sel wall of both RCA and LCA coronaries. Afterward, the
+average full width at half maximum of the selected pro￾files was computed to measure the vessel wall thickness.
+Vessel wall sharpness was normalized to the mean
+sharpness of the TCþGMD reconstruction. Vessel wall
+sharpness and thickness were measured separately for
+the proximal, mid, and full length coronary sections.
+Two experts (R.M.B. and M.H., with 20 and 7 years of
+experience in coronary MRA, respectively) blinded to
+the reconstruction methods were asked to score the
+sharpness of the coronary vessels on the following scale:
+0, extreme blurring; 1, significant blurring; 2, some
+blurring; 3, minor blurring; and 4, no blurring. Visual
+assessment was performed on both T2prep(þ) lumen and
+vessel wall images.
+Statistical significance of the automated metrics (vessel
+sharpness, vessel diameter, vessel length, and vessel
+thickness) was evaluated with a paired t test (P < 0.01);
+statistical significance of the visual evaluations was per￾formed with a Wilcoxon signed rank test (P < 0.01). This
+P value is stricter than that required by the Bonferroni
+correction on a P value of 0.05 for the coronary lumen
+and vessel wall comparisons (0.016 and 0.025, respec￾tively). Statistical significance was tested against the
+Gated acquisition for lumen images and against
+TCþGMD reconstruction for vessel wall images.
+RESULTS
+Scans were completed successfully in all subjects. Motion
+correction with insufficient quality to visualize the coro￾naries was obtained for one subject using the TC and
+TCþGMD approaches. This is thought to be due to the
+large SI respiratory amplitude of 30.8 mm and consider￾able cardiac motion in this subject. The gated acquisition
+had a scan efficiency of 29% in this case, and after two￾thirds of the scan all data were accepted due to low scan
+efficiency. This subject was treated as an outlier, and its
+results were not included in the statistics. The minimum,
+maximum, and average (and standard deviation) of the SI
+respiratory amplitude for the remaining subjects were
+7.8, 17.8, and 11.0 6 3.2 mm, respectively. The minimum,
+maximum, and average (and standard deviation) scan
+efficiencies for the gated acquisitions were 40%, 70%,
+and 59%6 11%, respectively.
+Metrics for lumen sharpness, vessel wall sharpness,
+and vessel wall thickness for the proposed TCþGMD
+using three, four, and five bins are shown in Table 1.
+Similar results were found with three, four, and five
+bins, except for a significant difference between the
+proximal vessel wall sharpness in the RCA between
+three and four bins. No significant differences were
+found for the remaining metrics; however, reconstruction
+time increased significantly when using additional bins.
+Three bins were used for all the remaining experiments
+in this study. For the proposed TCþGMD, the bin sizes
+(in millimeters) for the end-expiration, mid-cycle, and
+end-inspiration bins were 2.49 6 0.91, 2.30 6 1.50, and
+5.90 6 2.24, respectively. The corresponding undersam￾pling factors for these bins were 2.51 6 0.42, 2.21 6 0.35,
+and 3.15 6 0.51, respectively.
+Reformatted images for ated, TCþGMD, TC, and NMC
+with T2prep(þ) for subjects 1–4 are shown in Figure 2.
+Motion artifacts are visible in both coronaries in NMC,
+which are reduced by both TC and TCþGMD, although
+1898 Cruz et al.
+
+TCþGMD provides higher vessel sharpness in both the
+LCA and RCA (magnified box in subjects 1 and 2). These
+improvements are particularly visible in the distal part
+of the vessels (arrows in subjects 1 and 2). A set of
+T2prep(þ)/T2prep() with the corresponding vessel wall
+image for subject 5 is shown in Figure 3. Most of the ves￾sel wall in NMC is obscured by motion artifacts (arrows).
+Motion correction improves both T2prep(þ) and
+T2prep() images, making the vessel wall visible in TC
+and better delineated with TCþGMD (magnified). Vessel
+wall images for TCþGMD, TC, and NMC for subjects 1–4
+are shown in Figure 4. Corresponding cross-sectional
+views for the locations in Figure 4 are shown in Figure
+5. In Figure 4, the vessel wall for NMC appears blurred,
+whereas delineation of the vessel wall is considerably
+improved with TC and the sharpness of the wall further
+improved by TCþGMD. These improvements are clearly
+seen in the cross-section views in Figure 5. The wall is
+FIG. 2. Reformatted coronary lumen images [T2prep(þ)] for gated, TCþGMD, TC, and NMC for subjects 1–4. Blurring present in the
+NMC images is reduced with TC, and sharpness is further increased with TCþGMD (magnified boxes). The distal part of both coro￾naries is particularly affected by motion (arrows). Note that TC and TCþGMD have image quality similar to that for gated.
+Highly Efficient Motion-Compensated 3D Coronary Vessel Wall 1899
+
+not visible in most cases for NMC, becomes visible for
+most cases with TC, and appears better defined with
+TCþGMD. Residual artifacts are visible in the vessel
+wall images, originating from incomplete nulling of the
+blood pool in the subtraction. Inhomogeneities in the B0
+and B1 fields cause the T2prep to be spatially depend￾ent, leading to incomplete signal cancelation in some
+regions of the image.
+Metrics for T2prep(þ) coronary lumen evaluations are
+shown in Figure 6. Measured lumen vessel lengths were
+similar for gated and TCþGMD, with lower values for TC
+and NMC. Significant differences were found between
+gated and NMC for both coronaries. Lumen vessel length
+indicates reduced visibility of the distal part of both
+RCA and LCA when no motion compensation method is
+employed (NMC), showing gradual improvements with
+FIG. 3. Reformatted vessel wall images for TCþGMD, TC, and NMC for subject 5. Significant motion artifacts can be seen in all NMC
+images. Most artifacts were removed with TC and further corrected with TCþGMD (arrows). Residual artifacts in either T2prep(þ) or
+T2prep() contributed to blurring of the vessel wall and may have obscured it fully (magnified area in the Zoom row).
+1900 Cruz et al.
+
+FIG. 4. Reformatted vessel wall images for TCþGMD, TC, and NMC for subjects 1–4. The vessel wall is obscured in the NMC images.
+A significant improvement was obtained with TC, although small blurring remained. Vessel wall sharpness was further improved with
+TCþGMD. Colored lines in the NMC images mark the locations of the corresponding cross-sectional views shown in Figure 5 for
+TCþGMD, TC, and NMC.
+Highly Efficient Motion-Compensated 3D Coronary Vessel Wall 1901
+
+FIG. 5. Cross-sectional views of vessel wall images for TCþGMD, TC, and NMC for the corresponding subjects shown in Figure 4. For
+each subject, the RCA proximal (RCA-p) is shown in the top left box (yellow), the RCA mid/distal (RCA-md) is shown in the bottom left
+box (green), the LCA proximal (LCA-p) is shown in the top right box (red), and the LCA mid/distal (LCA-md) is shown in the bottom right
+box (blue). The vessel locations of the cross-sections are shown in corresponding colors in Figure 4. The vessel wall is obscured in the
+majority of the cases; TC significantly improves visualization of the vessel wall and TCþGMD further improves the delineation of the ves￾sel wall.
+1902 Cruz et al.
+
+FIG. 6. Image metrics for coronary lumen for nine subjects for gated, TCþGMD, TC, and NMC. (a, b) Vessel length along the LCA (a)
+and RCA (b) for nine subjects; each subject is assigned a different colored line. (c) Visual score of the coronary lumen images. (d, h, l)
+Vessel sharpness for the first 4 cm (d), midsection (h), and full length (l) of the LCA. (e, i, m) Vessel sharpness for the first 4 cm (e), mid￾section (i), and full length (m) of the RCA. (f, j, n) Lumen diameter for the first 4 cm (f), midsection (j), and full length (n) of the LCA. (g, k,
+o) Lumen diameter for the first 4 cm (g), midsection (k), and full length (o) of the RCA.*denotes a difference with P < 0.01.
+Highly Efficient Motion-Compensated 3D Coronary Vessel Wall 1903
+
+FIG. 7. Image metrics for vessel wall images for nine subjects for TCþGMD, TC, and NMC. (a) Visual score of the vessel wall images.
+(b, f, j) Vessel wall sharpness for the first 4 cm (b), midsection (f), and full length (j) of the LCA. (c, g, k) Vessel wall sharpness for the first
+4 cm (c), midsection (g), and full length (k) of the RCA. (d, h, l) Vessel wall thickness along the first 4 cm (d), midsection (h), and full
+length (l) of the LCA for nine subjects; each subject is assigned a different colored line. (e, i, m) Vessel wall thickness along the first
+4 cm (e), midsection (i), and full length (m) of the RCA for nine subjects; each subject is assigned a different colored line.* denotes a dif￾ference with P < 0.01.
+1904 Cruz et al.
+
+TC, TCþGMD, and gated. Similar results were found for
+lumen vessel sharpness, with significant differences
+between gated and NMC for both coronaries. TCþGMD
+had the smallest lumen diameter for both coronaries,
+whereas NMC had the largest due to blurring effects of
+respiratory motion. No significant differences were found
+in lumen diameter measurements. Lumen visual score
+results were as follows: 3.00 6 0.95 for gated, 3.19 6 0.46
+for TCþGMD, 2.79 6 0.76 for TC, and 1.29 6 0.72 for
+NMC. NMC was significantly different from gated
+according to lumen visual score. The gated acquisition
+had an acquisition time of 1051 6 66 s; NMC, TC, and
+TCþGMD had a fixed acquisition time of 620 s.
+Metrics for coronary vessel wall analysis are shown in
+Figure 7. Blurring due to motion resulted in increased ves￾sel wall thickness, as can be seen for NMC. Vessel wall
+thickness in NMC was not always visible. Out of the nine
+volunteers, NMC vessel wall thickness was not measured
+in two using the full length and was not measured in four
+using only the mid or proximal sections. The measured
+vessel wall thickness (in millimeters) using the full length
+for the LCA and RCA, respectively, were 1.20 6 0.20 and
+1.08 6 0.16 for TCþGMD, 1.276 0.26 and 1.21 6 0.13 for
+TC, and 1.80 6 0.39 and 1.42 6 0.14 for NMC. Significant
+differences were found between TCþGMD and NMC for
+both coronary arteries and between TCþGMD and TC for
+the RCA using the full length and the midsection. Vessel
+wall sharpness measures were in agreement with lumen
+vessel sharpness metrics, however significant differences
+were found between TCþGMD and NMC for both coro￾naries and between TCþGMD and TC for the RCA. Similar
+results were found for the vessel wall visual score:
+2.54 6 0.49 for TCþGMD, 2.15 6 0.64 for TC, and
+1.00 6 0.60 for NMC. Significant differences were found
+between TCþGMD and NMC and between TCþGMD and
+TC. Detailed results for all metrics are shown in Table 2.
+The corresponding P values for all metrics are provided in
+Supporting Table S1.
+DISCUSSION
+A novel approach for nonrigid respiratory motion correc￾tion for 3D whole-heart coronary MRI has been proposed
+and validated for simultaneous coronary lumen and ves￾sel wall imaging. The proposed method uses a combined
+approach to motion correction: small amplitude motion
+Table 2
+Image Metric Results for Lumen and Vessel Wall Imaging.
+Image Metrics Gated TCþGMD TC NMC
+Lumen vessel length, mm
+LCA 133.1 6 22.1 136 6 19.6 132.5 6 19.7 125.3 6 16.7*
+RCA 109.7 6 15.6 109.6 6 11.6 101.9 6 14.6 84.7 6 18.3*
+Lumen sharpness, a.u.
+LCA, full length 1.00 6 0.35 1.02 6 0.33 0.94 6 0.33 0.63 6 0.25*
+RCA, full length 1.00 6 0.27 0.96 6 0.40 0.89 6 0.36 0.65 6 0.28*
+LCA, first 4 cm 1.00 6 0.27 1.09 6 0.33 1.03 6 0.34 0.61 6 0.23*
+RCA, first 4 cm 1.00 6 0.32 0.99 6 0.40 0.89 6 0.35 0.65 6 0.34*
+LCA, mid 1.00 6 0.51 1.00 6 0.46 0.94 6 0.44 0.53 6 0.23*
+RCA, mid 1.00 6 0.30 0.95 6 0.37 0.87 6 0.35 0.62 6 0.26*
+Lumen diameter, mm
+LCA, full length 2.18 6 0.24 2.13 6 0.20 2.17 6 0.22 2.36 6 0.21
+RCA, full length 2.24 6 0.20 2.11 6 0.25 2.19 6 0.24 2.32 6 0.18
+LCA, first 4 cm 2.40 6 0.35 2.37 6 0.31 2.40 6 0.31 2.61 6 0.29
+RCA, first 4 cm 2.52 6 0.24 2.40 6 0.25 2.45 6 0.26 2.54 6 0.23
+LCA, mid 2.06 6 0.25 2.02 6 0.23 2.08 6 0.23 2.29 6 0.23
+RCA, mid 2.29 6 0.27 2.15 6 0.27 2.26 6 0.32 2.30 6 0.27
+Wall thickness, mm
+LCA, full vessel NA 1.20 6 0.20 1.27 6 0.16 1.80 6 0.39**
+RCA, full vessel NA 1.08 6 0.16 1.21 6 0.13** 1.42 6 0.14**
+LCA, first 4 cm NA 1.12 6 0.17 1.22 6 0.16 1.72 6 0.46**
+RCA, first 4 cm NA 1.01 6 0.13 1.16 6 0.18 1.51 6 0.12**
+LCA, mid NA 1.25 6 0.18 1.41 6 0.23 1.77 6 0.25**
+RCA, mid NA 1.09 6 0.11 1.35 6 0.19** 1.85 6 0.46**
+Wall sharpness, a.u.
+LCA, full length NA 1.00 6 0.17 0.93 6 0.19 0.51 6 0.15**
+RCA, full length NA 1.00 6 0.29 0.87 6 0.30** 0.65 6 0.34**
+LCA, first 4 cm NA 1.00 6 0.17 0.95 6 0.17 0.53 6 0.15**
+RCA, first 4 cm NA 1.00 6 0.30 0.85 6 0.30** 0.62 6 0.35**
+LCA, mid NA 1.00 6 0.30 0.87 6 0.36 0.53 6 0.25**
+RCA, mid NA 1.00 6 0.33 0.84 6 0.29** 0.67 6 0.30**
+Lumen visual score 3.00 6 0.95 3.19 6 0.46 2.79 6 0.76 1.29 6 0.72*
+Vessel wall visual score NA 2.54 6 0.49 2.15 6 0.64** 1.00 6 0.60**
+Scan efficiency, % 59 6 11 96 6 2 96 6 2 100
+NA, not available.
+*P ¼ 0.01 versus gated.
+**P ¼ 0.01 versus TCþGMD.
+Highly Efficient Motion-Compensated 3D Coronary Vessel Wall 1905
+
+is corrected with high temporal resolution intra-bin
+translational corrections; large amplitude motion is cor￾rected with low temporal resolution inter-bin nonrigid
+motion correction. Translational motion is estimated
+from a golden radial 2D iNAV, whereas nonrigid motion
+is estimated from the data itself via binning and image
+registration. This approach was combined with an inter￾leaved T2prep(þ)/T2prep() acquisition, yielding motion
+corrected, coregistered, 3D coronary lumen and vessel
+wall images in a user-defined fixed scan time.
+Bin-to-bin 3D nonrigid motion correction was per￾formed with the proposed TCþGMD approach after 2D
+(RL and SI) beat-to-beat intra-bin translational correction.
+TC approach corrects only for 2D (RL and SI) beat-to￾beat translational motion, thus AP motion remained
+uncorrected in the TC method. Both approaches were
+compared with a 6-mm gated and tracked reconstruction.
+The TCþGMD approach in lumen imaging [T2prep(þ)]
+showed improvements over TC and similar image quality
+to that for gated, while ensuring a predictable and highly
+efficient scan. No significant differences were found
+between gated and TCþGMD for lumen imaging. Whereas
+the proposed framework had a predictable scan time of
+approximately 1240 s (20 min) for a T2prep(þ) and
+T2prep() dataset (i.e., lumen and vessel wall imaging),
+the corresponding gated approach (5) would be expected
+to require at least 2 (1009 6 68) s (35 min at 60 beats/
+min) plus additional time required for dual gating. For
+this reason, only a gated T2prep(þ) data set was acquired
+in this study. The performance of the proposed TCþGMD
+on vessel wall imaging was compared with TC and NMC,
+showing improvements over both approaches. Significant
+differences were found between TCþGMD and TC for ves￾sel wall imaging in terms of vessel wall visual score, RCA
+vessel wall thickness, and RCA vessel wall sharpness.
+The proposed TCþGMD measured vessel wall thick￾ness (full visible length) of 1.20 6 0.20 mm and
+1.08 6 0.16 for the LCA and RCA, respectively. Accord￾ing to previous studies (40,41), the coronary vessel wall
+is expected to be approximately 1.0–1.1 mm thick. The
+reason for the slight overestimation of wall thickness
+may be two-fold: first, residual motion will manifest as
+blurring, increasing the apparent width of the vessels
+(and consequently the wall that is obtained by subtrac￾tion); second, the acquired spatial resolution
+(1  1  2 mm) may be insufficient to fully visualise the
+vessel wall and partial volume effects may occur, partic￾ularly in the distal part. Residual nonrigid motion may
+be addressed by increasing the number of bins in the
+framework. Here, the proposed TCþGMD was tested
+using three, four, and five bins, yielding similar results
+for different bins. Finer nonrigid motion correction is
+expected with increasing number of bins; however,
+undersampling artifacts also increase with the number of
+bins and may compromise motion estimation accuracy.
+For high number of bins, additional regularization in the
+bin reconstruction may be required (e.g., compressed
+sensing) to guarantee the reconstructions have sufficient
+quality for reliable motion estimation. The vessel wall
+was also partially obscured in some regions due to
+incomplete nulling of the blood pool. Field inhomogene￾ities may cause the T2 preparation to vary in space (42),
+therefore leading to an imperfect subtraction. This prob￾lem could be improved by optimizing the l parameter
+for each subject. If estimates of the B0 (43) and B1 (44)
+fields are available, then that information could be incor￾porated into a spatially varying l. Alternatively, this
+issue could be alleviated by employing additional 180 
+refocusing pulses during the T2 preparation or reducing
+the duration of the T2 preparation. The last solution will
+produce a more spatially uniform subtraction at the
+expense of contrast in the vessel wall image.
+In one subject with large respiratory amplitude
+(31 mm, subject 10) and considerable cardiac motion,
+the proposed motion correction approach was not suc￾cessful in removing all respiratory motion artifacts for
+both coronary lumen and vessel wall images. To tackle
+cases of large respiratory amplitudes, the proposed
+method could be combined with some level of gating
+while still maintaining high scan efficiencies.
+A coronal iNAV was chosen over a sagittal iNAV for
+this experiment, but in general any geometry and proto￾col can be used for interleaved scanning (31). Coronal
+orientation has been shown to produce a superior lung–
+liver interface leading to more accurate SI motion estima￾tion (45). Additionally, a coronal iNAV can use the
+geometry of the T2prep(þ)/T2prep(), simplifying the
+planning of the acquisition. The current framework uses
+a 2D iNAV, meaning that beat-to-beat translational cor￾rection is unavailable in one dimension (this was AP for
+the experiments performed). This limitation can be over￾come by extending the proposed approach to acquire a
+low-resolution 3D iNAV before or after image acquisi￾tion. A preliminary study in (46) indicates that reliable
+motion estimation may be obtained from a 3D iNAV
+with a spatial resolution of 5  10  10 mm, acquired in
+approximately 81 ms. Long-duration iNAVs could com￾promise the efficacy of preparation pulses; however,
+compressed sensing may also be used to reduce the
+acquisition time of the 3D iNAV. Arrhythmia rejection
+was not implemented for the current version of the
+framework; therefore, residual cardiac motion due to
+respiratory sinus arrhythmia (47) may still be present.
+(Arrhythmia rejection will be implemented in future
+studies.) Compressed sensing could be used alternatively
+to reconstruct undersampled data due to cardiac motion
+in order to maintain the same scan time.
+Future studies will explore more isotropic spatial reso￾lution to measure the vessel wall with increased accuracy.
+The increased acquisition time will be addressed by com￾bining accelerated reconstruction with motion correction
+to tolerate higher undersampling factors in both the bin￾ning and motion-compensated coronary lumen and vessel
+wall reconstructions, as recently proposed for 3D abdomi￾nal imaging (48). Further study on optimal l values is
+desired to produce more homogenous blood nulling in
+the vessel wall image. Future studies will validate the
+proposed method in patient scans and compare it with
+alternative motion correction approaches.
+CONCLUSION
+In conclusion, a framework for nonrigid respiratory
+motion correction of simultaneous coronary lumen and
+1906 Cruz et al.
+
+vessel wall imaging has been introduced, using an inter￾leaved scanning and a combination of 2D translational
+and 3D nonrigid motion correction. The proposed
+method allowed for 96% scan efficiency on average,
+reducing scan times by approximately 1.6  on average
+relative to a gated acquisition while maintaining similar
+image quality. No significant differences were observed
+in coronary lumen images between the proposed
+approach and the reference gated scans. Significant
+improvements in the RCA vessel wall sharpness, RCA
+vessel wall thickness, and vessel wall visual score were
+observed when comparing the proposed approach with
+translational motion correction alone.
+ACKNOWLEDGMENTS
+The authors acknowledge financial support from: (1)
+MRC: MR/L009676/1, (2) BHF: RG/12/1/29262, (3) The
+Centre of Excellence in Medical Engineering funded by
+the Wellcome Trust and EPSRC (WT 088641/Z/09/Z), (4)
+the Department of Health via the National Institute for
+Health Research (NIHR) comprehensive Biomedical
+Research Centre award to Guy’s & St Thomas’ NHS
+Foundation Trust in partnership with King’s College
+London and King’s College Hospital NHS Foundation
+Trust. The views expressed are those of the authors and
+not necessarily those of the NHS, the NIHR or the
+Department of Health.
+REFERENCES
+1. Kim Y, Danias P, Stubber M, et al. Coronary magnetic resonance angi￾ography for the detection of coronary stenoses. New Engl J Med 2001;
+345:1863–1869.
+2. Stone GW, Maehara A, Lansky AJ, et al. A prospective natural-history
+study of coronary atherosclerosis. New Engl J Med 2011;364:226–235.
+3. Okura H, Kobayashi Y, Sumitsuji S, et al. Effect of culprit-lesion
+remodeling versus plaque rupture on three-year outcome in patients
+with acute coronary syndrome. Am J Cardiol 2009;103:791–795.
+4. Kubo T, Imanishi T, Takarada S, et al. Assessment of culprit lesion
+morphology in acute myocardial infarction: ability of optical coher￾ence tomography compared with intravascular ultrasound and coro￾nary angioscopy. J Am Coll Cardiol 2007;50:933–939.
+5. Andia ME, Henningsson M, Hussain T, Phinikaridou A, Protti A,
+Greil G, Botnar RM. Flow-independent 3D whole-heart vessel wall
+imaging using an interleaved T2-preparation acquisition. Magn Reson
+Med 2013;69:150–157.
+6. Wang Y, Rossman PJ, Grimm RC, Riederer SJ, Ehman RL. Navigator￾echo-based real- time respiratory gating and triggering for reduction
+of respiration effects in three-dimensional coronary MR angiography.
+Radiology 1996;198:55–60.
+7. Manke D, Nehrke K, Bornert P, Rosch P, Dossel O. Respiratory
+motion in coronary magnetic resonance angiography: a comparison of
+different motion models. J Magn Reson Imaging 2002;15:661–671.
+8. Shechter G, Ozturk C, Resar JR, McVeigh ER. Respiratory motion of
+the heart from free breathing coronary angiograms. IEEE Trans Med
+Imaging 2004;23:1046–1056.
+9. Wang Y, Riederer SJ, Ehman RL. Respiratory motion of the heart:
+kinematics and the implications for the spatial resolution in coronary
+imaging. Magn Reson Med 1995;33:713–719.
+10. Moghari MH, Hu P, Kissinger KV, Goddu B, Goepfert L, Ngo L,
+Manning WJ, Nezafat R. Subject-specific estimation of respiratory
+navigator tracking factor for free-breathing cardiovascular MR. Magn
+Reson Med 2011;67:1665–1672.
+11. Taylor AM, Keegan J, Jhooti P, Firmin DN, Pennell DJ. Calculation of
+a subject-specific adaptive motion-correction factor for improved
+real-time navigator echo-gated magnetic resonance coronary angiogra￾phy. J Cardiovasc Magn Reson 1999;1:131–138.
+12. Stehning C, Bornert P, Nehrke K, Eggers H, Stuber M. Freebreathing
+whole-heart coronary MRA with 3D radial SSFP and self-navigated
+image reconstruction. Magn Reson Med 2005;54:476–480.
+13. Piccini D, Littmann A, Nielles-Vallespin S, Zenge MO. Respiratory
+self-navigation for whole-heart bright-blood coronary MRI: methods
+for robust isolation and automatic segmentation of the blood pool.
+Magn Reson Med 2012;68:571–579.
+14. Bhat H, Ge L, Nielles-Vallespin S, Zuehlsdorff S, Li D. 3D radial sam￾pling and 3D affine transform-based respiratory motion correction
+technique for free-breathing whole-heart coronary MRA with 100%
+imaging efficiency. Magn Reson Med 2011;65:1269–1277.
+15. Scott AD, Keegan J, Firmin DN. Beat-to-beat respiratory motion cor￾rection with near 100% efficiency: a quantitative assessment using
+high-resolution coronary artery imaging. Magn Reson Imaging 2011;
+29:568–578.
+16. Henningsson M, Koken P, Stehning C, Razavi R, Prieto C, Botnar RM.
+Whole-heart coronary MR angiography with 2D self-navigated image
+reconstruction. Magn Reson Med 2012;67:437–445.
+17. Henningsson M, Prieto C, Chiribiri A, Vaillant G, Razavi R, Botnar
+RM. Whole-heart coronary MRA with 3D affine motion correction
+using 3D image-based navigation. Magn Reson Med 2014;71:173–181.
+18. Pang J, Bhat H, Sharif B, Fan Z, Thomson LEJ, LaBounty T, Friedman
+JD, Min J, Berman DS, Li D. Whole-heart coronary MRA with 100%
+respiratory gating efficiency: self-navigated three-dimensional retro￾spective image-based motion correction (TRIM). Magn Reson Med
+2014;71:67–74.
+19. Pang J, Sharif B, Arsanjani R, Bi X, Fan Z, Yang Q, Li K, Berman DS,
+Li D. Accelerated whole-heart coronary MRA using motion-corrected
+sensitivity encoding with three-dimensional projection reconstruc￾tion. Magn Reson Med 2015;73:284–291.
+20. Aitken AP, Henningsson M, Botnar RM, Schaeffter T, Prieto C. 100%
+Efficient three-dimensional coronary MR angiography with two￾dimensional beat-to-beat translational and bin-to-bin affine motion
+correction. Magn Reson Med 2015;74:756–764.
+21. Prieto C, Doneva M, Usman M, Henningsson M, Greil G, Schaeffter
+T, Botnar RM. Highly efficient respiratory motion compensated free￾breathing coronary MRA using golden-step Cartesian acquisition.
+J Magn Reson Imaging 2015;41:738–746.
+22. Schmidt JFM, Buehrer M, Boesiger P, Kozerke S. Nonrigid retrospec￾tive respiratory motion correction in whole-heart coronary MRA.
+Magn Reson Med 2011;66:1541–1549.
+23. Odille F, Vuissoz P-A, Marie P-Y, Felblinger J. Generalized recon￾struction by inversion of coupled systems (GRICS) applied to free￾breathing MRI. Magn Reson Med 2008;60:146–157.
+24. Cheng JY, Alley MT, Cunningham CH, Vasanawala SS, Pauly JM,
+Lustig M. Nonrigid motion correction in 3D using autofocusing with
+localized linear translations. Magn Reson Med 2012;68:1785–1797.
+25. Ingle RR, Wu HH, Addy NO, Cheng JY, Yang PC, Hu BS, Nishimura
+DG. Nonrigid autofocus motion correction for coronary MR angiogra￾phy with a 3D cones trajectory. Magn Reson Med 2014;72:347–361.
+26. Loktyushin A, Nickisch H, Pohmann R, Scholkopf B. Blind multirigid €
+retrospective motion correction of MR images. Magn Reson Med
+2015;73:1457–1468.
+27. Johnson KM, Block WF, Reeder SB, Samsonov A. Improved least
+squares MR image reconstruction using estimates of k-space data con￾sistency. Magn Reson Med 2012;67:1600–1608.
+28. Pruessmann KP, Weiger M, Bornert P, Boesiger P. Advances in sensi- €
+tivity encoding with arbitrary k-space trajectories. Magn Reson Med
+2001;46:638–651.
+29. Modat M, Ridgway G, Taylor Z, Lehmann M, Barnes J, Hawkes D,
+Fox N, Ourselin S. Fast free-form deformation using graphics process￾ing units. Comput Meth Prog Bio 2010;98:278–284.
+30. Batchelor PG, Atkinson D, Irarrazaval P, Hill DLG, Hajnal J, Larkman
+D. Matrix description of general motion correction applied to multi￾shot images. Magn Reson Med 2005;54:1273–1280.
+31. Henningsson M, Mens G, Koken P, Smink J, Botnar RM. A new
+framework for interleaved scanning in cardiovascular MR: applica￾tion to image-based respiratory motion correction in coronary MR
+angiography. Magn Reson Med 2015;73:692–696.
+32. Greengard L, Lee JY. Accelerating the nonuniform fast Fourier trans￾form. SIAM Rev 2004;46:443–454.
+33. Zwart NR, Johnson KO, Pipe JG. Efficient sample density estimation
+by combining gridding and an optimized kernel. Magn Reson Med
+2012;67:701–710.
+Highly Efficient Motion-Compensated 3D Coronary Vessel Wall 1907
+
+34. Buerger C, Clough RE, King AP, Schaeffter T, Prieto C. Nonrigid motion
+modeling of the liver from 3-D undersampled self-gated golden-radial
+phase encoded MRI. IEEE Trans Med Imaging 2012;31:805–815.
+35. Bracewell RN, Chang K-Y, Jha AK, Wang Y-H. Affine theorem for
+two-dimensional Fourier transform. Electron Lett 1993;29:304.
+36. Forman C, Piccini D, Grimm R, Hutter J, Hornegger J, Zenge MO.
+Reduction of respiratory motion artifacts for free-breathing whole￾heart coronary MRA by weighted iterative reconstruction. Magn
+Reson Med 2014;73:1885–1895.
+37. Piccini D, Bonanno G, Ginami G, Littmann A, Zenge MO, Stuber M. Is
+there an optimal respiratory reference position for self-navigated whole￾heart coronary MR angiography? J Magn Reson Imaging 2016;43:426–433.
+38. Hestenes MR, Stiefel E. Methods of conjugate gradients for solving
+linear systems. J Res Natl Bureau Stand 1952;49:409–436.
+39. Etienne A, Botnar RM, Van Muiswinkel AMC, Boesiger P, Manning
+WJ, Stuber M. “Soap-Bubble” visualization and quantitative analysis
+of 3D coronary magnetic resonance angiograms. Magn Reson Med
+2002;48:658–666.
+40. Gradus-Pizlo I, Bigelow B, Mahomed Y, Sawada S, Rieger K,
+Feigenbaum H. Left anterior descending coronary artery wall thick￾ness measured by high-frequency transthoracic and epicardial echo￾cardiography includes adventitia. Am J Cardiol 2003;91:27–32.
+41. Perry R, Majo J, Chew D, Aylward P, De Pasquale C. Coronary artery
+wall thickness of the left anterior descending artery using high reso￾lution transthoracic echocardiography–normal range of values. Echo￾cardiography 2013;30:759–764.
+42. Jenista ER, Rehwald WG, Chen EL, Kim HW, Klem I, Parker MA,
+Kim RJ. Motion and flow insensitive adiabatic T2-preparation module
+for cardiac MR imaging at 3 Tesla. Magn Reson Med 2013;70:1360–
+1368.
+43. Jezzard P, Balaban RS. Correction for geometric distortion in echo pla￾nar images from B0 field variations. Magn Reson Med 1995;34:65–73.
+44. Cunningham CH, Pauly JM, Nayak KS. Saturated double-angle method
+for rapid B1 þ mapping. Magn Reson Med 2006;55:1326–1333.
+45. Henningsson M, Smink J, Razavi R, Botnar RM. Prospective respira￾tory motion correction for coronary MR angiography using a 2D
+image navigator. Magn Reson Med 2013;69:486–494.
+46. Powell J, Prieto C, Henningsson M, Koken P, Botnar R. CMRA with
+100% navigator efficiency with 3D self navigation and interleaved
+scanning. J Cardiov Magn Reson 2014;16(Suppl. 1):O8.
+47. Roes S, Korosoglou G, Sch€ar M, Westenberg J, van Osch M, de Roos
+A, Stuber, M. Correction for heart rate variability during 3D whole
+heart MR coronary angiography. J Magn Reson Imaging 2008;27:
+1046–1053
+48. Cruz G, Atkinson D, Buerger C, Schaeffter T, Prieto C. Accelerated
+motion corrected three-dimensional abdominal MRI using total varia￾tion regularized SENSE reconstruction. Magn Reson Med 2016;75:
+1484–1498.
+SUPPORTING INFORMATION
+Additional Supporting Information may be found in the online version of
+this article.
+Table S1. P values for the comparison of lumen metrics against the Gated
+and comparison of vessel wall metrics against the TC1GMD in Table 2.
+1908 Cruz et al.
+

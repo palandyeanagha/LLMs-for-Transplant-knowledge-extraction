@@ -1,0 +1,499 @@
+1
+Vol.:(0123456789)
+Scientifc Reports | (2020) 10:19921 | https://doi.org/10.1038/s41598-020-77106-x
+www.nature.com/scientificreports
+New insights into quetiapine 
+metabolism using molecular 
+networking
+Brendan Le Daré 1,2*, Pierre‑Jean Ferron1, Pierre‑MarieAllard3, Bruno Clément1, 
+Isabelle Morel1,2 & ThomasGicquel1,2
+Metabolism is involved in both pharmacology and toxicology of most xenobiotics including drugs. 
+Yet, visualization tools facilitating metabolism exploration are still underused, despite the availibility 
+of pertinent bioinformatics solutions. Since molecular networking appears as a suitable tool to 
+explore structurally related molecules, we aimed to investigate its interest in in vitro metabolism 
+exploration. Quetiapine, a widely prescribed antipsychotic drug, undergoes well-described extensive 
+metabolism, and is therefore an ideal candidate for such a proof of concept. Quetiapine was 
+incubated in metabolically competent human liver cell models (HepaRG) for diferent times (0 h, 
+3 h, 8 h, 24 h) with or without cytochrom P450 (CYP) inhibitor (ketoconazole as CYP3A4/5 inhibitor 
+and quinidine as CYP2D6 inhibitor), in order to study its metabolism kinetic and pathways. HepaRG 
+culture supernatants were analyzed on an ultra-high performance liquid chromatography coupled 
+with tandem mass spectrometry (LC-HRMS/MS). Molecular networking approach on LC-HRMS/
+MS data allowed to quickly visualize the quetiapine metabolism kinetics and determine the major 
+metabolic pathways (CYP3A4/5 and/or CYP2D6) involved in metabolite formation. In addition, two 
+unknown putative metabolites have been detected. In vitro metabolite fndings were confrmed 
+in blood sample from a patient treated with quetiapine. This is the frst report using LC-HRMS/MS 
+untargeted screening and molecular networking to explore in vitro drug metabolism. Our data provide 
+new evidences of the interest of molecular networking in drug metabolism exploration and allow our 
+in vitro model consistency assessment.
+Quetiapine is an orally administered atypical antipsychotic indicated in schizophrenia treatment, bipolar disorders and as an adjuvant treatment in major depressive disorders1
+. Widely prescribed in these indications, this 
+dibenzodiazepine derivative shows afnity for various neurotransmitter receptors including serotonin, dopamine, 
+histamine and adrenergic receptors and has binding characteristics at the dopamine-2 receptor similar to those of 
+clozapine2
+. Quetiapine undergoes an extensive liver biotransformation, involving cytochromes P450 (CYPs) and 
+uridine 5′-diphospho-glucuronosyltransferases (UGTs)3–6
+. Among them, CYP3A4 and CYP2D6 are the predominant metabolic systems : CYP3A4 is known to give rise to N-desalkylquetiapine, N-desalkylquetiapine sulfoxide 
+and quetiapine sulfoxide and CYP2D6 is known to give rise to 7-hydroxyquetiapine, 7-hydroxy-N-desalkylquetiapine3,6,7
+. In addition, minor metabolism though CYP3A5 is known to give rise to O-desalkylquetiapine7. Tis 
+knowledge on quetiapine metabolism is resulting from a sequence of works specifcally targeting the metabolism 
+of one molecule afer another. Despite the recent design of appropriate bioinformatics tools, visualization tools 
+allowing metabolism exploration are still underused.
+Molecular networking (MN) allows the organization and representation of untargeted tandem mass spectrometry (MS/MS) data in a graphical form8
+. Each node represents an ion and its associated fragmentation 
+spectrum, the links between the nodes indicating similarities between spectra. By allowing to propagate structural 
+information within the network and facilitating sample-to-sample comparison, the MN approach ofers valuable 
+insights into drug metabolism9
+. Tereby, a multi-matrix approach provides a semi-quantitative visualization of 
+molecule repartition in diferent matrix samples. MN has already proven its interest in plant species profling10, 
+metabolomics11, the dereplication of naturally produced substances12, and in drug metabolism analysis for in vivo 
+OPEN
+1
+INSERM, INRAE, CHU Rennes, Institut NuMeCan (Nutrition, Metabolism and Cancer), PREVITOX Network, Univ 
+Rennes, 35033 Rennes, France. 2
+Forensic Toxicology Laboratory, Rennes University Hospital, 35033 Rennes, 
+France. 3
+School of Pharmaceutical Sciences, and Institute of Pharmaceutical Sciences of Western Switzerland 
+(ISPSW), University of Geneva, CMU, Rue Michel Servet 1, 1211Geneva 4, Switzerland. *email: brendan.le.dare@
+chu‑rennes.fr
+
+2
+Vol:.(1234567890)
+Scientifc Reports | (2020) 10:19921 | https://doi.org/10.1038/s41598-020-77106-x
+www.nature.com/scientificreports/
+clinical or forensic purposes9,13. Particularly, previous works focused on in vivo new psychoactive substances 
+metabolite discovery9
+, multi-matrix post-mortem samples in case of drug intoxication13, and toxic plant samples 
+in case of intoxication14. However, to our knowlegde, MN applied to in vitro metabolism exploration has not 
+already been reported.
+Many human hepatic cell lines, including HepG2 and HuH7 have been used as pharmacological and toxicological models. However, the lack of relevant expression of metabolism proteins is a major shortcoming 
+when using cell cultures, particularly in drug biotransformation studies15,16. HepaRG, originally isolated from 
+a female patient sufering from hepatocellular carcinoma, is a bipotent cell line that can diferentiate into either 
+cholangiocyte- or hepatocyte-like cells in appropriate culture conditions17. Diferentiated hepatocyte-like HepaRG transcribe liver-specifc genes at high levels, closer to primary human hepatocytes (pHH) and human 
+liver tissue than any other liver cell lines18,19. More precisely, HepaRG cells express most of the drug processing 
+genes including major CYPs20 and UGTs19,21. HepaRG cell culture exhibit a long-term fonctional stability while 
+pHH loose their diferentiated phenotype and drug metabolism over time. Moreover, HepaRG cells have been 
+successfully used in metabolomics22 and have shown greater metabolite production compared to human liver 
+microsome due to the lack of sulfation, methylation, acetylation or glutathione conjugation in this latter model23. 
+Tus, there is a large body of evidence that diferentiated HepaRG culture is a particularly relevant cell model 
+system for drug metabolism study.
+In the present study, MN application to in vitro metabolism exploration was investigated using our original 
+MN analytical approach in diferentiated HepaRG cells. Since in vivo quetiapine metabolism pathways generate well defned metabolite derivatives, we used this drug in order to explore the consistency of our in vitro 
+metabolic model.
+Results
+In vitro quetiapine metabolism kinetic. In order to understand quetiapine metabolism kinetic, we 
+incubated quetiapine (13 µM) in metabolically competent human liver cell models, diferentiated HepaRG cells 
+during 0, 3, 8 and 24 h (H0, H3, H8 and H24, respectively). Analysis of culture media at diferent time allowed 
+us to generate a multi-matrix molecular network which displayed the MS/MS data acquired during analysis 
+(Fig. 1a). Nodes are labelled with the exact protonated mass (m/z) and retention times (RT in minutes) and the 
+links are labelled with the exact mass shif. A specifc color was assigned to each time (H0 in white, H3 in green, 
+H8 in yellow and H24 in orange). Te area of diferent color in each node represent concentrations of the corresponding compound in each condition in a semi-quantitative manner. Nodes were linked together in cluster 
+according to their MS2
+ spectral similarities (Fig. 1a). Visual analysis of the multi-matrix molecular network 
+shows a cluster containing quetiapine linked to other nodes (Fig. 1b). Te molecular network allows to make 
+Figure 1. Visualization of in vitro quetiapine metabolism kinetics using molecular networking. Diferentiated 
+HepaRG were incubated with quetiapine (13 µM) during diferent incubation time. (a) Te multi-matrix 
+molecular network. Each incubation time is depicted in a specifc color: H0 in white, H3 in green, H8 in yellow 
+and H24 in orange. (b) Details of the specifc quetiapine-containing cluster. Nodes are labelled with the exact 
+protonated mass (m/z) and retention times (RT in minutes) and the links are labelled with the exact mass shif.
+
+3
+Vol.:(0123456789)
+Scientifc Reports | (2020) 10:19921 | https://doi.org/10.1038/s41598-020-77106-x
+www.nature.com/scientificreports/
+two observations. First, quetiapine amount decrease as a function of incubation time with the HepaRG cells. 
+Second, quetiapine is correlated with eight structurally related molecules (m/z 296.121 (RT: 6.3 min); 312.116 
+(RT: 5.5 min); 340.147 (RT: 6.4 min); 354.126 (RT: 6.4 min); 356.142 (RT: 5.5 min); 398.152 (RT: 6.5 min); 
+400.168 (RT: 4.9 min); 400.168 (RT: 5.6 min)). Immediately afer quetiapine incubation (H0), none of these 
+latter molecules was detectable. Taken together, these results suggest that these spectrally related molecules are 
+putative quetiapine metabolites.
+In this quetiapine-containing cluster (Fig. 1b), the related metabolites can be classifed in two subgroups. Te 
+frst subgroup corresponds to molecules that accumulate over time and therefore present their highest concentration at H24 (m/z 312.116; 354.126; 356.142; 398.152). Te second subgroup corresponds to molecules that 
+does not accumulate and present relatively constant concentrations over time as long as quetiapine remains [m/z
+296.121; 340.147; 400.168 (RT: 4.9 min); 400.168 (RT: 5.6 min)] (Fig. 1b). Taken together, these visual results give 
+a good understanding of quetiapine metabolism kinetic, and suggest that the quetiapine structurally closed molecules can be divided into metabolite accumulating over time and transitory metabolite which do not accumulate.
+Identifcation step. Structural identifcation remains a challenge in metabolism exploration. Here, a node 
+identifed using GNPS or open spectral library can serve as a starting point to identify another node in the 
+same cluster using information propagation. Information propagation within a molecular network consists in 
+determining the structure of an unknown molecule using the structural information of the neighboring nodes. 
+Such process can be automatized24. In particular, spectrally related molecules may display mass shifs corresponding to well-established biotransformation reactions (Supplementary Table 1)13. From a known structure, 
+it is thus possible to determine the structure of a linked molecule, using these biotransformation reactions, 
+coupled with structural information of the neighboring nodes. Our data showed also two compounds with the 
+same exact mass (m/z 400.168) but with two diferent retention time (RT: 4.9 and 5.6 min) (Fig. 1b). According 
+to literature data, m/z 400.168 could correspond to 7-hydroxyquetiapine (m/z 400.168) or quetiapine sulfoxide 
+(m/z 400.168))6
+. Tese nodes are linked to quetiapine (m/z 384.173) with a mass shif of+15.994, corresponding to oxidation reaction. We found also mass shifs which could correspond to two desalkylation (-44.026 Da), 
+giving rise to m/z 296.121 compound (Fig. 1b). In order to fnd where the biotransformation took place, we 
+used MZMine sofware chromatogram profle analysis and MS2
+ fragmentation trees analysis using SIRIUS 4.0.1 
+sofware25. Briefy, chromatogram profle analysis allows us to ensure that all nodes contained in the cluster of 
+interest are not artefact. SIRIUS 4.0.1 sofware provides us a molecular formula for each detected fragment, 
+allowing us to orientate towards a structural formula. Figure 2 displays the example of two m/z 400.168 isomers 
+(RT 4.9 and 5.6 min).
+We found that both isomers presented m/z 158.12 and m/z 269.07 fragments, which could correspond to the 
+same alkyl chain of quetiapine and an oxidized tricycle, respectively. Tus, we concluded that oxidation reaction 
+took place on the quetiapine tricycle. In addition, we found that m/z 237.10 and m/z 221.10 fragments correspond 
+to an oxidized tricycle without sulfur and an unoxidized tricycle without sulfur, respectively (Fig. 2). Tese 
+results suggest that m/z 400.168 (RT: 4.9 min) and m/z 400.168 (RT: 5.6 min) correspond to 7-OH-quetiapine 
+Figure 2. Isomer diferentiation using. Chromatogram analysis of m/z 400.168 isomers (RT 4.9 and RT 5.6) at 
+H24 and analysis of MS2
+ spectra allowed isomer diferentiation. (a) Blue box: 7-hydroxyquetiapine MS2 spectra 
+shows the oxidized cycle structure without sulfur fragment (m/z 237.10). (b) Red box: quetiapine sulfoxide MS2
+spectra shows the unoxidized cycle without sulfur fragment (m/z 221.11).
+
+4
+Vol:.(1234567890)
+Scientifc Reports | (2020) 10:19921 | https://doi.org/10.1038/s41598-020-77106-x
+www.nature.com/scientificreports/
+and quetiapine sulfoxide, respectively. Same methodology was applied to other nodes, allowing identifcation of 
+all the quetiapine-containing cluster molecules shown in Fig. 1.
+Quetiapine metabolic pathways exploration. In order to explore metabolic pathways, we incubated 
+quetiapine (13 µM) with or without cytochrome P450 (CYP) inhibitors during H24. Since Kittler et al. (2014) 
+and Ferron et  al. (2016) showed that ketoconazole was able to abolish CYP3A4-dependant metabolism, we 
+adapted this method to our work26,27. Ketoconazole (10 µM) and quinidine (10 µM) were used as CYP3A4/5 and 
+CYP2D6 inhibitors, respectively. Quetiapine quantitative analysis using a LC-HR-MS with external standard 
+calibration curve method allowed us to control inhibitors efectiveness and measure quetiapine concentration 
+at diferent time (Fig. 3). It also allowed us to compare these validated quantitative results with the semi-quantitative results obtained by MN. Te relevance of HepaRG model (Fig. 3a) was assessed by comparing it to pHH 
+in the same conditions (Fig. 3b). We observed a higher quetiapine metabolism in diferentiated HepaRG cells 
+compared to pHH. Indeed, approximately 50% of quetiapine were metabolized at H6 compared to 25% in pHH. 
+However, of CYPs inhibitors displayed a similar profle between these two models. Te use of quinidine showed 
+a weak inhibition of quetiapine metabolism while ketoconazole allowed a strong inhibition. Taking together, 
+these results suggest that (i) CYP3A4/5 is more likely involved than CYP2D6 in quetiapine metabolism and that 
+(ii) diferentiated HepaRG is a relevant model for this study.
+We performed a MN approach in the presence of ketoconazole or quinidine CYP inhibitors in diferentiated HepaRG cells to visualize what putative metabolites are CYP3A4/5- and/or CYP2D6-dependent. Since the 
+aim was to compare metabolite accumulation with or without CYP inhibitor, the H24 time was chosen (Fig. 4). 
+All the known molecules were named consistently with the literature data, conversely with unknown putative 
+metabolites, here called quetiapine M1 (m/z 356.142; RT: 5.5 min) and quetiapine M2 (m/z 354.127; RT: 6.4 min).
+We observed that quetiapine (m/z 382.174) incubated alone (in orange) is nearly absent of culture media 
+at H24 in Fig. 4. In addition, quetiapine incubated with quinidine (in red) showed a lower amount at H24, 
+compared with quetiapine incubated with ketoconazole (in grey). Tis corroborate our quantitative results, 
+showing a minor metabolism through CYP2D6 (Fig. 3). We found that a few putative metabolites were nearly 
+absent of culture media when incubated with ketoconazole (in grey), suggesting a CYP3A4/5-dependent metabolic pathway for (N-desalkyquetiapine, Quetiapine M2, 7-OH-quetiapine and quetiapine sulfoxide). Similarly, 
+production of some putative metabolites was decreased in the presence of quinidine (in red), suggesting a 
+CYP2D6-dependent metabolic pathway (N-desalkyquetiapine sulfoxide and quetiapine M1). We also observe 
+that a few metabolites undergo metabolism through these two isoenzymes (quetiapine M1, N-desalkylquetiapine 
+sulfoxide and O-desalkylquetiapine). Te same experiment was carried out in our pHH model (Supplementary 
+Fig. 1). However, fewer metabolites were found, which is consistent with our quantitative results showing a slower 
+metabolism in this model (Fig. 3). Taken together, these results show that MN allows detailed visual analysis of 
+in vitro metabolism, including metabolic pathways.
+In vivo versus in vitro quetiapine metabolism. In order to compare our in vitro fndings to in vivo 
+data, we performed a sample-to-sample comparison using MN, including one blood sample of patient treated 
+Figure 3. Cytochrome inhibitors enable quetiapine metabolic pathway inhibition in diferentiated HepaRG 
+and primary Human hepatocytes (pHH). Cells were incubated with quetiapine (13 µM) with or without CYPs 
+inhibitors (ketoconazole 10 µM as a CYP3A4/5 inhibitor in grey; quinidine 10 µM as a CYP2D6 inhibitor in 
+red) in (a) diferentiated HepaRG cells or (b) pHH. Quetiapine concentration was measured at H0, H3, H6, H8 
+and H24 using high-resolution liquid-chromatography and expressed relative to the value determined at H0 
+(set arbitrarily to 100%). Te data are quoted as the mean±SEM from one experiment performed in triplicate. 
+Statistics (unpaired student’s t-test): ***p<0.01 and *p<0.05 for cultures exposed to quetiapine+CYP inhibitor 
+(ketoconazole or quinidine) compared with quetiapine alone at diferent times.
+
+5
+Vol.:(0123456789)
+Scientifc Reports | (2020) 10:19921 | https://doi.org/10.1038/s41598-020-77106-x
+www.nature.com/scientificreports/
+by quetiapine and our culture media of diferentiated HepaRG incubated by quetiapine (13 µM) during H24 
+(Fig. 5).
+Quetiapine-containing cluster visual analysis revealed that all putative metabolites found in our previous 
+in vitro experiment were present in the patient blood sample (N-desalkylquetiapine, N-desalkyquetiapine sulfoxide, quetiapine M1, quetiapine M2, O-desalkylquetiapine, 7-OH-quetiapine and quetiapine sulfoxide and quetiapine acid). In addition, we found two other metabolites, present in both blood sample and diferentiated HepaRG 
+cells supernatant, resulting from oxidation of N-desalkylquetiapine (m/z 312.116; RT: 4.4) and glucuronidation 
+(+176.032) of quetiapine (m/z 560.206). Identifcation step suggested that these two metabolites could correspond 
+to 7-OH-N-desalkylquetiapine and quetiapine glucuronide, respectively. Taken together, these results suggest 
+that diferentiated HepaRG is a strong and consistent model in metabolism study. Sample-to-sample comparison 
+including in vivo samples seems to be is a potent tool to further explore in vitro data experiment. Supplementary 
+Table 2 reports putative identifed compounds or metabolites contained in the quetiapine-containing clusters, 
+and metabolic pathway involved in quetiapine metabolites biotransformation.
+Discussion
+Metabolism unraveling is a fundamental objective of pharmacologic studies. However, visualization tools allowing quick metabolism exploration are still under-used. Te aim of this study is to illustrate the interest of molecular network for in vitro drug metabolism exploration.
+Quetiapine appeared as a suitable candidate drug to carry out this proof of concept. Indeed, this molecule 
+undergoes an extensive and well-described metabolism. Te existence of an abundant literature allows us to 
+compare it with our data in order to assess their relevance3–7
+. In addition, it is an inexpensive and widely prescribed molecule. Samples from patients treated with quetiapine were then easily available to compare real-life 
+data with our in vitro study.
+Identifcation means were also of major importance in this study. For this purpose, we used validated process 
+based on exact mass, mass spectra, retention times, fragmentation pattern analysis with SIRIUS 4.0.1 sofware, 
+Figure 4. Extinction of CYP3A4/5 and CYP2D6 metabolic pathway visualization in diferentiated HepaRG 
+cells using molecular networking. Diferentiated HepaRG were incubated with quetiapine (13 µM) during H24 
+with or without cytochrome inhibitors. Ketoconazole (10 µM) is used as a CYP3A4 inhibitor and quinidine 
+(10 µM) is used as a CYP2D6 inhibitor. Each experimental condition is depicted in a specifc color: quetiapine 
+in orange, quetiapine+quinidine in red and quetiapine+ketoconazole in grey. Nodes are labelled with the exact 
+protonated mass (m/z), chemical structures and retention times (RT in minutes) and the links are labelled with 
+the exact mass shif.
+
+6
+Vol:.(1234567890)
+Scientifc Reports | (2020) 10:19921 | https://doi.org/10.1038/s41598-020-77106-x
+www.nature.com/scientificreports/
+information propagation, and mass shifs corresponding to biotransformation reactions as already described9,13,25. 
+Here, we propose identifcation of 10 putative quetiapine metabolites, among which two of them (quetiapine M1 
+and M2) have not been already described in the literature (Supplementary Table 2). Kinetic metabolism study 
+brings us valuable data on quetiapine-related nodes. Indeed, by visualizing quetiapine clearance, correlated with 
+structurally related molecules appearance, we present strong evidence for claiming they are metabolites. None 
+of them was detectable before H3 incubation and since their intermediate and fnal metabolite profls could be 
+distinguished, a good understanding of the metabolites fliation can be proposed. Tese data allowed us to bring 
+additional evidence on quetiapine metabolic pathway (Supplementary Fig. 2).
+To date, it is well established that quetiapine is primarily metabolized by CYP3A4, CYP2D6, and CYP3A5 
+to a lesser extent. CYP3A5 appears to be routinely present in human kidney tissue but it is detected in only 25 
+to 30% of adult liver samples28,29. Tus, pHH model may be limited by the lack of this cytochrome expression in 
+a donor. Tis limitation was partially overcome using diferentiated HepaRG cells that exhibit poor but present 
+metabolizer alleles for CYP3A530. To further investigate quetiapine metabolism pathways, we used quetiapine 
+metabolism inhibitors. Ketoconazole is well known to be a CYP3A inhibitor, including CYP3A4 and CYP3A5, 
+having high inhibitory potency and producing reversible inhibition through competitive and non-competitive 
+mechanisms31–37. In this way, in vitro studies have shown that 10 µM ketoconazole inhibits specifc activity of 
+CYP3A4 on HepaRG cells27. Since ketoconazole is known to inhibit CYP3A4 and CYP3A5, we were not able to 
+precisely determine which cytochrome was the most involved in metabolites production. Terefore, we chose to 
+mention CYPA4/5 in Supplementary Fig. 2 and Supplementary Table 2. In addition, a potent competitive inhibitor of CYP2D6 is quinidine38–41. For these reasons, these two molecules (ketoconazole and quinidine) have been 
+used in this study to clarify metabolism pathways. Metabolism inhibition visualization using MN brings further 
+insight into metabolism pathways mapping and allows us to objectify a predominant CYP3A4/5 metabolism.
+Comparing HepaRG data with in vivo data appears critical to establish the proof of concept concerning the 
+use of molecular network in in vitro drug metabolism exploration. Among the 10 known quetiapine metabolites (Supplementary Fig. 2)3,5–7
+, we identify 8 of them (N-desalkylquetiapine, N-desalkyquetiapine sulfoxide, 
+7-OH-N-desalkyquetiapine, O-desalkylquetiapine, 7-OH-quetiapine, quetiapine sulfoxide, quetiapine acid and 
+quetiapine glucuronide) whereas two other compounds were unknown putatives metabolites (quetiapine M1 and 
+Figure 5. in vivo versus in vitro quetiapine metabolism. Blood sample from a patient treated with quetiapine 
+was compared with diferentiated HepaRG cells culture media incubated with quetiapine (13 µM) during H24. 
+In this quetiapine-containing cluster, patient sample and diferentiated HepaRG cells supernatant are depicted in 
+blue and orange, respectively. Nodes are labelled with the exact protonated mass (m/z), chemical structures, and 
+retention times and the links are labelled with the exact mass shif.
+
+7
+Vol.:(0123456789)
+Scientifc Reports | (2020) 10:19921 | https://doi.org/10.1038/s41598-020-77106-x
+www.nature.com/scientificreports/
+quetiapine M2). Te 10 putative metabolites reported in this study have been found in both human sample and 
+HepaRG cells supernatant, showing the consistency of this latter model. Furthermore, by comparing in vitro and 
+in vivo data, we found two metabolites that were not seen in previous in vitro molecular networks (quetiapine 
+glucuronide and 7-OH-N-desalkylquetiapine). Since these latter metabolites were found to be equally present 
+in in vitro experiments according to exact mass and retention time comparison at the gap-flling step, we believe 
+that this preprocess made it possible to link the information of weakly expressed molecules in vitro. Tus, sampleto-sample comparison is found to be a potent tool to visualize weakly expressed molecules.
+However, as expected, MN must be interpreted considering several limitations and requires optimizations at 
+every stage of data processing, and a good knowledge of LC–MS/MS analysis. We cannot exclude that diferent 
+LC–MS/MS settings would have allowed the visualization of other metabolites, in particular phase II metabolites.
+We demonstrated that organizing data by their spectral similarities is a useful means to identifying new 
+metabolites. Furthermore, unknown drug metabolite identifcation can provide valuable information on drug 
+toxicity. It would be interesting to consider broader perspectives on metabolite mapping in the context of toxicity 
+studies42. in vitro cell line models such as HepaRG can be used to study pathophysiology mechanism of diseases 
+like steatosis and NAFLD43. Moreover, next-generation liver organoids can be produced directly from patient’s 
+cells (ie blood cells, urine cells) and modifed genetically to study patient diseases and regenerative medicine 
+purposes44. Tose tools combined with MN approaches provide a new way to integrate patient individual variability in therapeutic efciency and toxicity studies.
+Material and methods
+Material. William’s E medium (ref: 12551032) was purchased from Gibco (TermoFischer Scientifc, San 
+Jose, CA). Penicillin–streptomycin was obtained from Life Technologies (Grand Island, NY USA). Fetal Bovine 
+Serum (FBS) was purchased from Eurobio (Courtaboeuf, France) and from Hyclone GE Healthcare Life Sciences (Logan, UT USA). Hydrocortisone hemisuccinate was purchased from Serb (Paris, France). Dimethyl 
+sulfoxide (DMSO), formic acid, insulin, ketoconazole and quinidine were obtained from Sigma-Aldrich (Saint 
+Louis, MO USA). Quetiapine was purchased from LGC Standards (Teddington, UK).
+Cell culture and treatment. Progenitor HepaRG cells were cultured as previously described20. Briefy, 
+HepaRG cells were seeded at a density of 105
+ cells/well in 96-well plates and cultured during two weeks in 
+culture medium (William’s E medium (1X) (A12176-01, Gibco) supplemented with 10% FBS, 50 U/mL penicillin, 50 μg/mL streptomycin, 5 µg/mL insulin, 2 mM glutamine, 50 μM sodium hydrocortisone hemisuccinate 
+and 2% DMSO). Cells were then cultured during two more weeks in the same medium supplemented with 2% 
+DMSO to induce cell diferentiation into cholangiocyte- and hepatocyte like cells17. Te detection of quetiapine 
+and its metabolites was performed using this coculture model. pHH were obtained from the processing of biological samples through the Centre de Ressources Biologiques (CRB) Santé of Rennes BB-0033-00,056 under 
+French legal guidelines and fulflled the requirements of the institutional ethics committee. Cells were isolated 
+by collagenase-perfusion of liver biopsies from adult donors45 and these cells were plated in 96-well plate at a 
+density of 1.5×105
+ /cm2 and cultured in the same William’s E medium than HepaRG cells supplemented with 2% 
+of DMSO. Cells were cultivated 4 days afer plating prior to compounds exposure.
+Diferentiated HepaRG cells and pHH were incubated with 100 µL of quetiapine (13 µM) during H0, H3, H6, 
+H8 and H24 with or without CYP inhibitors during all the treatment time. Ketoconazole (10 µM) and quinidine 
+(10 µM) were chosen in order to inhibit CYP3A4 and CYP2D6, respectively.
+Samples extraction. in vitro samples (25 µL) and in  vivo blood samples (200 µL) obtained from one 
+patient at the Toxicology Laboratory of Rennes University Hospital were extracted as already described13,14. 
+Briefy, samples were supplemented with 500 µL of methanol containing internal standard (risperidone-D4) and 
+then extracted with 300 μL of 0.1 M zinc sulfate solution. Afer supernatant evaporation, the residue was dissolved in 200 μL of LC–MS grade water and transferred into chromatographic vials for LC-HR-MS analysis and 
+quantifcation. In order to extract and analyze samples using non-targeted screening, 25 µL of each sample were 
+supplemented with 75 µL of methanol. Te supernatant (50 µL) was then diluted with LC–MS grade water (50 
+µL) and transferred into chromatographic vials for LC-HR-MS analysis.
+LC–MS settings. Liquid chromatography-mass spectrometry (LC–MS) analyses were carried out using 
+Orbitrap Q Exactive mass spectrometer coupled to an UltiMate 3000 pump (Termo Scientifc, San Jose, CA). 
+A heated electrospray ionization source (HESI-II) was used for the ionization of the target compounds. Data 
+acquisition, calibration and instrument control were performed using Xcalibur 2.1 (Termo Scientifc, San Jose, 
+CA) sofware. Samples were maintained at 15 °C in the autosampler and quality controls were injected before 
+each analysis.
+Quetiapine quantitation assays were performed using a validated LC-HRMS method as already used13 as 
+follow: Te mobile phases were composed of ammonium formiate at 10 mM and formic acid 0.1% in water 
+(phase A) and acetonitrile and formic acid 0.1% phase B). LC was performed on a on a Hypersil Gold column 
+(5 mm×2.1 mm, 3 µm) (Termo Scientifc, San Jose, CA).
+Gradient elution was as follow : initial conditions of 95:5 (A:B) maintained for 1.5 min, increasing to 70:30 
+(A:B) for 3.5 min, increasing to 60:40 (A:B) for 3 min, increasing to 5:95 (A:B) for 1 min, followed by a 1 min 
+plateau with 5:95 (A:B), decreasing to 95:5 (A:B) for 3 min, and return to initial conditions 95:5 (A:B) for equilibration for 3 min. Tis corresponded to a total chromatographic run of 15 min. Te fow rate was 500 μL/
+min, the column temperature was maintained at 25 °C, the injection volume was 5 μL. For mass spectrometry, 
+the instrument operated in ESI positive mode, the range for acquisition was 120–700 m/z. Full scan data were 
+
+8
+Vol:.(1234567890)
+Scientifc Reports | (2020) 10:19921 | https://doi.org/10.1038/s41598-020-77106-x
+www.nature.com/scientificreports/
+acquired at a resolution of 140.000 FWHM, with an AGC target of 1e6 and a maximum injection time of 200 ms. 
+Source parameters were as follows: source voltage+4.5 kV, sheath gas fow 35 units, auxiliary gas fow 15 units, 
+capillary temperature 300 °C, S-Lens RF level 50 units.
+Non-targeted screening LC-HRMS/MS method used for MN building was as follow: Te mobile phases were 
+composed of ammonium formiate at 2 mM and formic acid 0.1% in water (phase A) and ammonium formiate 
+at 2 mM and formic acid 0.1% in methanol and acetonitrile (50/50) (phase B). LC was performed on a Accucore 
+Phenyl Hexyl (100×2.1 mm, 2.6 μm) (Termo Scientifc, San Jose, CA) using the following gradient elution: 
+initial conditions of 99:1 (A:B) maintained for 1 min, increasing to 1:99 (A:B) for 9 min, followed by a 1.5 min 
+plateau with 1:99 (A:B) and return to initial conditions 99:1 (A:B) for equilibration. Tis corresponded to a total 
+chromatographic run of 15 min. Te fow rate was 500 μL/min, the column temperature was maintained at 40 °C, 
+the injection volume was 10 μL. For mass spectrometry, the instrument operated alternately in ESI positive and 
+negative mode in the same run, the range for acquisition was, respectively, 70–1000 m/z in positive mode and 
+negative mode. Ion precursor selection was performed in the data dependent mode of operation where the most 
+intense ion from the previous scan was selected for fragmentation. Full scan (MS1) data were acquired for each 
+ionization mode at a resolution of 35,000 FWHM, with an AGC target of 1e6 and a maximum injection time of 
+120 ms. Source parameters were as follows: source voltage+3.0 and −4.0 kV, sheath gas fow 60 units, auxiliary 
+gas fow 10 units, capillary temperature 320 °C, S-Lens RF level 60 units. MS/MS (MS2) data were acquired at 
+a resolution of 17,500 FWHM with an AGC target of 1e5, maximum injection time was 50 ms, a TopN of 5 in 
+positive mode and 2 in negative mode, an isolation window of 2.0 m/z. Te normalized collision energy (NCE) 
+was stepped at 17.5, 35 and 52.5, and the dynamic exclusion time set at 3 s.
+MN generation. Spectral data allowed us to generate MN using semi-quantitative bioinformatics approach. 
+Data acquisition, processing (i.e. MS data conversion, preprocessing, MS1 annotation, and generation of molecular networks), visualization and network analysis have been described in detail elsewhere9
+. Briefy, raw data 
+were converted to an open MS format (.mzXML) with ProteoWizard’s MSConvert module46. Te mzXML fles 
+were then preprocessed (deconvolution, de-isotoping, alignment, gap-flling) with MZmine 2 sofware47. Te 
+single .mgf output fle was then loaded on the Global Natural Products Social networking (GNPS) web-based 
+platform in order to generate the multi-matrix molecular network8
+. To the use of high resolution data, the basic 
+parameters were modifed to m/z 0.02 for the mass tolerance of precursor and fragment ions used for MS/MS 
+spectral library searching, and m/z 0.02 for the mass tolerance of fragment ions used for MN. Te minimum 
+cluster size was set to 1. In addition, links between nodes were created when the cosine score was greater than 
+0.70, and the minimum number of common fragment ions shared by two MS/MS spectra was 6. Links between 
+two nodes were only kept in the network if each node was in the top 10 most similar nodes. Full data processed 
+through the GNPS platform are accessible through these links:
+• https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=028befa249c495dbe8c9c94dfc3e49 (Fig. 1: in vitro 
+quetiapine metabolism kinetic);
+• https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=cfabf​fd4f1cf4fb8571bb039040ab75 (Fig. 4: in vitro quetiapine metabolism pathway inhibition in diferentiated HepaRG cells);
+• https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=dfe75ac4273d49b69b832bbe3c2c5ef5 (Fig. 5: in vitro 
+versus in vivo quetiapine metabolism);
+• https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=8f00f95fd3ca4ea99fc6477ba1a55caf (Supplementary 
+Fig. 1: in vitro quetiapine metabolism pathway inhibition in pHH).
+Te molecular network was visualized using Cytoscape 3.5.1 sofware48. Te nodes were annotated by comparison with reference standards, by spectral matching with the curated GNPS, mzCloud online mass spectral 
+libraries and information propagation49.
+Received: 12 June 2020; Accepted: 20 October 2020
+References
+1. Cross, A. J. et al. Quetiapine and its metabolite norquetiapine: translation from in vitro pharmacology to in vivo efcacy in rodent 
+models: translational pharmacology of quetiapine. Br. J. Pharmacol. 173, 155–166 (2016).
+2. Nemerof, C. B., Kinkead, B. & Goldstein, J. Quetiapine: preclinical studies, pharmacokinetics, drug interactions, and dosing. J. 
+Clin. Psychiatry 63(Suppl 13), 5–11 (2002).
+3. Bakken, G. V., Molden, E., Knutsen, K., Lunder, N. & Hermann, M. Metabolism of the active metabolite of quetiapine, N-desalkylquetiapine in vitro. Drug Metab. Dispos. 40, 1778–1784 (2012).
+4. Beloti, L., Miranda, L. & Queiroz, M. Butyl methacrylate-co-ethylene glycol dimethacrylate monolith for online in-tube SPMEUHPLC-MS/MS to determine chlopromazine, clozapine, quetiapine, olanzapine, and their metabolites in plasma samples. Molecules
+24, 310 (2019).
+5. DeVane, C. L. & Nemerof, C. B. Clinical pharmacokinetics of quetiapine: an atypical antipsychotic. Clin. Pharmacokinet. 40, 
+509–522 (2001).
+6. Fisher, D. S., Handley, S. A., Taylor, D. & Flanagan, R. J. Measurement of quetiapine and four quetiapine metabolites in human 
+plasma by LC-MS/MS: Measurement of quetiapine and four metabolites by LC-MS/MS. Biomed. Chromatogr. 26, 1125–1132 
+(2012).
+7. Fisher, D. S., Handley, S. A., Flanagan, R. J. & Taylor, D. M. Plasma concentrations of quetiapine, N-desalkylquetiapine, O-desalkylquetiapine, 7-hydroxyquetiapine, and quetiapine sulfoxide in relation to quetiapine dose, formulation, and other factors. Ter. 
+Drug Monit. https://doi.org/10.1097/FTD.0b013e3182603f62 (2012).
+
+9
+Vol.:(0123456789)
+Scientifc Reports | (2020) 10:19921 | https://doi.org/10.1038/s41598-020-77106-x
+www.nature.com/scientificreports/
+8. Wang, M. et al. Sharing and community curation of mass spectrometry data with global natural products social molecular networking. Nat. Biotechnol. 34, 828–837 (2016).
+9. Allard, S., Allard, P.-M., Morel, I. & Gicquel, T. Application of a molecular networking approach for clinical and forensic toxicology 
+exemplifed in three cases involving 3-MeO-PCP, doxylamine, and chlormequat. Drug Test. Anal. https://doi.org/10.1002/dta.2550
+(2018).
+10. Zhou, S. et al. Identifcation of chemotypes in bitter melon by metabolomics: a plant with potential beneft for management of 
+diabetes in traditional Chinese medicine. Metabolomics 15, 104 (2019).
+11. Allard, P.-M., Genta-Jouve, G. & Wolfender, J.-L. Deep metabolome annotation in natural products research: towards a virtuous 
+cycle in metabolite identifcation. Curr. Opin. Chem. Biol. 36, 40–49 (2017).
+12. Allard, P.-M. et al. Integration of molecular networking and in-silico MS/MS fragmentation for natural products dereplication. 
+Anal. Chem. 88, 3317–3323 (2016).
+13. Le Daré, B. et al. A case of fatal acebutolol poisoning: an illustration of the potential of molecular networking. Int. J. Legal Med.
+https://doi.org/10.1007/s00414-019-02062-9 (2019).
+14. Allard, S., Le Daré, B., Allard, P.-M., Morel, I. & Gicquel, T. Comparative molecular networking analysis of a Rauwolfa plant 
+powder and biological matrices in a fatal ingestion case. Forensic Toxicol. https://doi.org/10.1007/s11419-020-00531-0 (2020).
+15. Guo, L. et al. Similarities and diferences in the expression of drug metabolizing enzymes between human hepatic cell lines and 
+primary human hepatocytes. Drug Metab. Dispos. https://doi.org/10.1124/dmd.110.035873 (2010).
+16. Andersson, T. B., Kanebratt, K. P. & Kenna, J. G. Te HepaRG cell line: a unique in vitro tool for understanding drug metabolism 
+and toxicology in human. Expert Opin. Drug Metab. Toxicol. 8, 909–920 (2012).
+17. Cerec, V. et al. Transdiferentiation of hepatocyte-like cells from the human hepatoma HepaRG cell line through bipotent progenitor. Hepatology 45, 957–967 (2007).
+18. Hart, S. N. et al. A comparison of whole genome gene expression profles of HepaRG cells and HepG2 cells to primary human 
+hepatocytes and human liver tissues. Drug Metab. Dispos. 38, 988–994 (2010).
+19. Hugbart, C. et al. Non-oxidative ethanol metabolism in human hepatic cells in vitro: Involvement of uridine diphospho-glucuronosyltransferase 1A9 in ethylglucuronide production. Toxicol. in Vitro 66, 104842 (2020).
+20. Aninat, C. et al. Expression of cytochromes P450, conjugating enzymes and nuclear receptors in human hepatoma HepaRG cells. 
+Drug Metab. Dispos. Biol. Fate Chem. 34, 75–83 (2006).
+21. Quesnot, N. et al. Production of chlorzoxazone glucuronides via cytochrome P4502E1 dependent and independent pathways in 
+human hepatocytes. Arch. Toxicol. 92, 3077–3091 (2018).
+22. Manier, S. K., Wagmann, L., Flockerzi, V. & Meyer, M. R. Toxicometabolomics of the new psychoactive substances α-PBP and 
+α-PEP studied in HepaRG cell incubates by means of untargeted metabolomics revealed unexpected amino acid adducts. Arch. 
+Toxicol. https://doi.org/10.1007/s00204-020-02742-1 (2020).
+23. Richeval, C. et al. In vitro characterization of nps metabolites produced by human liver microsomes and the HepaRG cell line 
+using liquid chromatographyhigh resolution mass spectrometry (LC-HRMS) analysis: application to furanyl fentanyl. Curr. Pharm. 
+Biotechnol. 18, 806–814 (2018).
+24. Da Silva, R. R. et al. Propagating annotations of molecular networks using in silico fragmentation. PLoS Comput. Biol. 14, e1006089 
+(2018).
+25. Dührkop, K. et al. SIRIUS 4: a rapid tool for turning tandem mass spectra into metabolite structure information. Nat. Methods 16, 
+299–302 (2019).
+26. Kittler, K., Fessard, V., Maul, R. & Hurtaud-Pessel, D. CYP3A4 activity reduces the cytotoxic efects of okadaic acid in HepaRG 
+cells. Arch. Toxicol. 88, 1519–1526 (2014).
+27. Ferron, P.-J. et al. Modulation of CYP3A4 activity alters the cytotoxicity of lipophilic phycotoxins in human hepatic HepaRG cells. 
+Toxicol. in Vitro 33, 136–146 (2016).
+28. Wrighton, S. A., VandenBranden, M. & Ring, B. J. Te human drug metabolizing cytochromes P450. J. Pharmacokinet. Biopharm.
+24, 461–473 (1996).
+29. Cytochrome P450: Structure, Mechanism, and Biochemistry. (Springer International Publishing, 2015). https://doi.org/10.1007/978-
+3-319-12108-6.
+30. Jackson, J. P., Li, L., Chamberlain, E. D., Wang, H. & Ferguson, S. S. Contextualizing hepatocyte functionality of cryopreserved 
+HepaRG cell cultures. Drug Metab. Dispos. 44, 1463–1479 (2016).
+31. Greenblatt, D. J. et al. Mechanism of cytochrome P450–3A inhibition by ketoconazole: Ketoconazole inhibition of CYP3A. J. 
+Pharm. Pharmacol. 63, 214–221 (2011).
+32. Niwa, T., Imagawa, Y. & Yamazaki, H. Drug interactions between nine antifungal agents and drugs metabolized by human 
+cytochromes P450. Curr. Drug Metab. 15, 651–679 (2015).
+33. Venkatakrishnan, K., von Moltke, L. L. & Greenblatt, D. J. Efects of the antifungal agents on oxidative drug metabolism: clinical 
+relevance. Clin. Pharmacokinet. 38, 111–180 (2000).
+34. Zhao, P. et al. Quantitative evaluation of pharmacokinetic inhibition of CYP3A substrates by ketoconazole: a simulation study. J. 
+Clin. Pharmacol. 49, 351–359 (2009).
+35. Abe, S. et al. Modifcation of single-nucleotide polymorphism in a fully humanized CYP3A mouse by genome editing technology. 
+Sci. Rep. 7, 15189 (2017).
+36. Allqvist, A., Miura, J., Bertilsson, L. & Mirghani, R. A. Inhibition of CYP3A4 and CYP3A5 catalyzed metabolism of alprazolam 
+and quinine by ketoconazole as racemate and four diferent enantiomers. Eur. J. Clin. Pharmacol. 63, 173–179 (2007).
+37. Tseng, E. et al. Relative contributions of cytochrome CYP3A4 versus CYP3A5 for CYP3A-cleared drugs assessed in vitro using a 
+CYP3A4-selective inactivator (CYP3cide). Drug Metab. Dispos. 42, 1163–1173 (2014).
+38. Guengerich, F. P., Miller, G. P., Hanna, I. H., Sato, H. & Martin, M. V. Oxidation of methoxyphenethylamines by cytochrome P450 
+2D6: analysis of rate-limiting steps. J. Biol. Chem. 277, 33711–33719 (2002).
+39. Guengerich, F. P., Müller-Enoch, D. & Blair, I. A. Oxidation of quinidine by human liver cytochrome P-450. Mol. Pharmacol. 30, 
+287–295 (1986).
+40. Otton, S. V., Brinn, R. U. & Gram, L. F. In vitro evidence against the oxidation of quinidine by the sparteine/debrisoquine monooxygenase of human liver. Drug Metab. Dispos. Biol. Fate Chem. 16, 15–17 (1988).
+41. McLaughlin, L. A. et al. Why is quinidine an inhibitor of cytochrome P450 2D6? the role of key active-site residues in quinidine 
+binding. J. Biol. Chem. 280, 38617–38624 (2005).
+42. Yokoyama, Y. et al. Comparison of drug metabolism and its related hepatotoxic efects in HepaRG, cryopreserved human hepatocytes, and HepG2 cell cultures. Biol. Pharm. Bull. 41, 722–732 (2018).
+43. Le Guillou, D. et al. Drug-induced alterations of mitochondrial DNA homeostasis in steatotic and nonsteatotic HepaRG cells. J. 
+Pharmacol. Exp. Ter. 365, 711–726 (2018).
+44. Broutier, L. et al. Culture and establishment of self-renewing human and mouse adult liver and pancreas 3D organoids and their 
+genetic manipulation. Nat. Protoc. 11, 1724–1743 (2016).
+45. Guguen-Guillouzo, C. et al. High yield preparation of isolated human adult hepatocytes by enzymatic perfusion of the liver. Cell 
+Biol. Int. Rep. 6, 625–628 (1982).
+46. Kessner, D., Chambers, M., Burke, R., Agus, D. & Mallick, P. ProteoWizard: open source sofware for rapid proteomics tools 
+development. Bioinformatics 24, 2534–2536 (2008).
+
+10
+Vol:.(1234567890)
+Scientifc Reports | (2020) 10:19921 | https://doi.org/10.1038/s41598-020-77106-x
+www.nature.com/scientificreports/
+47. Pluskal, T., Castillo, S., Villar-Briones, A. & Orešič, M. MZmine 2: modular framework for processing, visualizing, and analyzing 
+mass spectrometry-based molecular profle data. BMC Bioinform. 11, 395 (2010).
+48. Shannon, P. Cytoscape: a sofware environment for integrated models of biomolecular interaction networks. Genome Res. 13, 
+2498–2504 (2003).
+49. HighChem LLC. mzCloud—advanced mass spectral database. https://www.mzcloud.org/ (2019).
+Acknowledgements
+Te authors thank the University of Rennes, Inserm and ANSM (PREVITOX network) for their fnancial 
+supports.
+Author contributions
+All authors contributed and agree with the content of the manuscript: Conception/Design: B.L.D., P.-J.F., T.G.; 
+Acquisition and/or analysis of data: B.L.D., P.-J.F., T.G.; Data interpretation: All authors; Manuscript writing: All 
+authors; Final approval of manuscript: All authors.
+Competing interests
+Te authors declare no competing interests.
+Additional information
+Supplementary information is available for this paper at https://doi.org/10.1038/s41598-020-77106-x.
+Correspondence and requests for materials should be addressed to B.L.D.
+Reprints and permissions information is available at www.nature.com/reprints.
+Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and 
+institutional afliations.
+Open Access Tis article is licensed under a Creative Commons Attribution 4.0 International 
+License, which permits use, sharing, adaptation, distribution and reproduction in any medium or 
+format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the 
+Creative Commons licence, and indicate if changes were made. Te images or other third party material in this 
+article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the 
+material. If material is not included in the article’s Creative Commons licence and your intended use is not 
+permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from 
+the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+© Te Author(s) 2020
+

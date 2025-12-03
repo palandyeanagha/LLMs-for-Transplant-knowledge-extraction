@@ -1,0 +1,843 @@
+R E S EAR CH A R TIC L E Open Access
+Sorafenib versus Transarterial
+chemoembolization for advanced-stage
+hepatocellular carcinoma: a cost￾effectiveness analysis
+Shuling Chen1†
+, Zhenwei Peng2,5†
+, Mengchao Wei3†
+, Weifeng Liu4
+, Zihao Dai3
+, Haibo Wang5
+, Jie Mei5
+,
+Mingfong Cheong6
+, Hanmei Zhang6 and Ming Kuang1,3*
+Abstract
+Background: Sorafenib and transarterial chemoembolization (TACE) might both provide survival benefit for
+advanced hepatocellular carcinoma (HCC). Adopting either as a first-line therapy carries major cost and resource
+implications. We aimed to estimate the cost-effectiveness of sorafenib and TACE in advanced HCC.
+Methods: A Markov model was constructed in a hypothetical cohort of patients aged 60 years with advanced HCC
+and Child-Pugh A/B cirrhosis over a 2-year time frame. Three strategies (full or dose-adjusted sorafenib and TACE)
+were compared in two cost settings: China and the USA. Transition probabilities, utility and costs were extracted
+from systematic review of 27 articles. Sensitivity analysis and Monte Carlo analysis were conducted.
+Results: Full and dose-adjusted sorafenib respectively produced 0.435 and 0.482 quality-adjusted life years (QALYs)
+while TACE produced 0.375 QALYs. The incremental cost-effectiveness ratio (ICER) of full-dose sorafenib versus TACE
+was $101,028.83/QALY in China whereas full-dose sorafenib is a dominant strategy (ICER of -$1,014,507.20/ QALY)
+compared with TACE in the USA. Compared to full-dose sorafenib, dose-adjusted sorafenib was the dominant
+strategy with the negative ICERs in both China (−$132,238.94/QALY) and the USA (−$230,058.09/QALY). However,
+dose-adjusted sorafenib is not available currently, so full-dose sorafenib should be compared with TACE. As the
+acceptability curves shown, full-dose sorafenib was the optimal strategy at the accepted thresholds of WTP in these
+two countries. Specifically, full-dose sorafenib was the cost-effective treatment compared with TACE if a WTP was
+set above $21,670 in the USA, whereas in China, TACE could be more favorable than full-dose sorafenib if a WTP
+was set below $10,473.
+Conclusions: Dose-adjusted sorafenib may be cost-effective compared to full-dose sorafenib or TACE for advanced
+HCC patients. However, when confining the comparisons between full-dose sorafenib and TACE, full-dose sorafenib
+was cost-effective for these patients, under the accepted thresholds of WTP.
+Keywords: Sorafenib, Transarterial chemoembolization, Advanced-stage hepatocellular carcinoma, Cost￾effectiveness analysis, Markov model
+* Correspondence: kuangm@mail.sysu.edu.cn †
+Equal contributors
+1
+Division of Interventional Ultrasound, The First Affiliated Hospital of Sun
+Yat–sen University, Guangzhou 510080, China 3
+Department of Liver Surgery, The First Affiliated Hospital of Sun Yat–sen
+University, Guangzhou 510080, China
+Full list of author information is available at the end of the article
+© The Author(s). 2018 Open Access This article is distributed under the terms of the Creative Commons Attribution 4.0
+International License (http://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and
+reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to
+the Creative Commons license, and indicate if changes were made. The Creative Commons Public Domain Dedication waiver
+(http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated.
+Chen et al. BMC Cancer (2018) 18:392 
+https://doi.org/10.1186/s12885-018-4308-7
+
+Background
+Hepatocellular carcinoma (HCC) is the fifth most com￾mon cancer and the third most common cancer-related
+cause of death, and carries a substantial healthcare
+spending burden worldwide [1]. Despite recent improve￾ments in surveillance programs, a considerable propor￾tion of patients have vascular invasion or extrahepatic
+metastasis (advanced stage) at time of diagnosis [2, 3].
+Sorafenib, an oral multi-kinase inhibitor, is the standard
+systemic therapy in the treatment of advanced HCC,
+based on two multicenter randomized controlled trials
+(RCTs), which demonstrate improved overall survival of
+full-dose sorafenib compared with best supportive care
+(BSC) [4, 5]. In routine clinical practice, sorafenib is rec￾ommended to be administered as 800 mg daily, based
+on the RCT data. However, a substantial portion of pa￾tients receiving sorafenib require dose adjustment due to
+the relatively high rate of adverse effects during the
+treatment period in the real clinical setting. Moreover,
+the high cost of full-dose sorafenib is a heavy financial
+burden for patients with advanced HCC. Recent studies
+have suggested that a dose-adjusted sorafenib regimen
+might achieve a better efficacy-safety balance [6–8].
+Nevertheless, dose-adjusted sorafenib has not been rec￾ommended by the current guidelines due to lack of
+enough robust data.
+Transarterial chemoembolization (TACE) is the stand￾ard treatment for patients with intermediate-stage HCC
+[9]. However, intrahepatic tumor control with TACE
+might be reasonable and beneficial for advanced HCC
+considering the fact that more than two-thirds of pa￾tients with advanced HCC die of liver failure or intrahe￾patic tumor progression [10–12]. Some studies have
+already reported the potential benefits of TACE for pa￾tients in this stage [12–21], even after sorafenib was uni￾versally established as the first-line treatment. Although
+several comparative studies tried to compare efficacy be￾tween TACE and sorafenib in advanced HCC [14, 15,
+22, 23], results were controversial and no RCT has been
+performed to address this question. It remains unknown
+how TACE compares with sorafenib for treatment of ad￾vanced HCC. Particularly, dose-adjusted regimen is not
+available when sorafenib is first administered, so full￾dose sorafenib will be compared with TACE. Moreover,
+there may be a significant difference in costs among
+these three treatments, which may significantly impact
+the treatment selection due to practical considerations.
+Until now, no cost-effectiveness (CE) analysis has been
+performed on this issue. The Markov model would be a
+proper solution for this issue. By dividing a disease into
+distinct states and assigning transitions probabilities for
+movement between those states, then attaching esti￾mates of costs and health outcomes to the states and
+running the model over many cycles, the model is able
+to estimate the long-term costs and outcomes associated
+with that disease and the related healthcare interven￾tions [24]. The advantage of Markov model by taking
+into accounts both costs and outcomes over a period of
+time makes it particularly suited to evaluate the cost￾effectiveness of strategies in the treatment of chronic
+disease. For example, Markov model is widely adopted
+in the evaluation of disease screening or treatments
+around the world [25–27]. Therefore, we aimed to con￾struct a Markov model to evaluate and compare the CE
+of full-dose, dose-adjusted regimens of sorafenib and
+TACE for advanced HCC, in order to provide useful in￾formation for patients and healthcare providers in the
+current era of limited health resources.
+Methods
+Model construction
+A Markov model (Fig. 1) was designed to estimate the ef￾fects and costs of TACE and sorafenib in a hypothetical
+cohort of adult patients with advanced HCC (Barcelona
+Clinic Liver Cancer (BCLC) stage C, patients with Child￾Pugh class A/B liver function with vascular invasion or ex￾trahepatic spread or symptoms (Eastern Cooperative On￾cology Group Performance Status 1–2)) over a 2-year
+time frame. The outcome measures were life year gain
+(LYG), quality-adjusted life expectancy (QALY) and incre￾mental cost-effectiveness ratio (ICER). The model con￾sisted of three decision strategies including full-dose
+sorafenib, dose-adjusted sorafenib and TACE. Since liver
+function and tumor burden are the two main factors asso￾ciated with survival and costs [28, 29], four health states
+were derived such as compensated cirrhosis (defined as
+Child-Pugh A/B cirrhosis) with or without progression,
+decompensated cirrhosis (Child-Pugh C cirrhosis) and
+death. Tumor progression was defined according to the
+modified Response Evaluation Criteria of Solid Tumor
+(mRECIST) [30]. Tumor progression was not considered
+in the state of decompensated cirrhosis because decom￾pensation was the major life-threatening factor, and the
+utility and total costs of patients in this state with or with￾out progressive HCC would not be much different [31].
+The treatment response was evaluated by mRECIST in
+compensated cirrhotic patients after administering sorafe￾nib or TACE for HCC. Patients with progressive HCC or
+decompensated cirrhosis were assumed to receive no fur￾ther active treatments. Considering the poor prognosis of
+advanced HCC, the cycle time was set to be one month. A
+2-year follow-up duration was assumed because the me￾dian survivals of advanced HCC patients were generally
+less than 10 months. In each cycle, patients in one health
+state might be transitioned to another, or could occupy
+the same state, according to transition probabilities. Each
+health state had its corresponding costs and utilities.
+Monthly transition probabilities were estimated from the
+Chen et al. BMC Cancer (2018) 18:392 Page 2 of 12
+
+Fig. 1 Flow diagram of Markov cohort model. Each pane represents a state of health. Straight lines with arrows indicate transition from one state
+to another one while circular arrows mean that some patients may stay at the same state for more than one cycle
+Table 1 Base Case Value and Range of Transition Probabilities
+Variables Base-case value Range
+Background mortality Age-specific31 –
+Median survival of decompensated cirrhotic patients (months)36,37, ßŒ 1.80–6.00
+Derived monthly mortality of decompensated cirrhotic patients (%) 19.00 10.91–31.96
+Rates in patients with compensated cirrhosis and advanced HCC
+Median survival after TACE (months)16–19, 38–40, ßŒ 4.70–9.50
+Derived monthly mortality rate after TACE (%) 11.50 7.04–13.71
+Time to progression after TACE (months) 41,42, ßŒ 3.20 1.90–3.20
+Derived monthly tumor progression rate after TACE (%) 19.46 19.46–30.57
+Monthly decompensation rate after TACE (%)a 2.40 1.30–3.50
+Median survival after taking sorafenib in full dose (months)4,39,42, 44,45,46, ßŒ 9.70 3.30–9.70
+Derived monthly mortality rate after taking sorafenib in full dose (%) 6.90 6.90–18.95
+Time to progression afrer taking sorafenib in full dose (months) 4,42,44,45, ßŒ 4.90 2.70–4.90
+Derived monthly tumor progression rate after taking sorafenib in full dose (%) 13.19 11.84–22.64
+Median survival after taking sorafenib in adjusted dose (months) 6–8, ßŒ 7.80–15.0
+Derived montly mortality rate after taking sorafenib in adjusted dose (%) 6.50 4.52–8.50
+Time to progression after taking sorafenib in adjusted dose (months) 8, ßŒ 9.20 6.40–12.0
+Derived monthly tumor progression rate after taking sorafenib in adjusted dose (%) 7.26 5.61–10.26
+Monthly decompensation rate after taking sorafenib in full dose or adjusted doseb 0.90 0.60–1.40
+Rates in patients with compensated cirrhosis and progressive HCC
+Median survival after TACE (months) 36,37,43, ßŒ 1.80–6.90
+Derived monthly mortality rate after TACE (%) 11.20 9.43–31.96
+Median survival after taking sorafenib in full dose or adjusted dose (months) 46,47, ßŒ 4.60 2.70–6.60
+Derived monthly mortality rate after taking sorafenib in full dose or adjusted dose (%) #13.99 9.97–22.64
+#In this model, we assumed that the mortalities of progressive HCC patients and the decompensation rate after full-dose or dose-adjusted sorafenib treatment
+were the same. More details could be seen in the Materials and Methods
+ß refer to additional file Tables for detailed reference lists and original probabilities
+Œ all probabilities were transformed into monthly rate. Detailed transformation methods were reported in the notes of corresponding additional file Tables a
+the data were obtained from the large HCC database of South China (http://hcc.medidata.cn/)
+Chen et al. BMC Cancer (2018) 18:392 Page 3 of 12
+
+original data using the declining exponential approxima￾tion of life expectancy (DEALE) equation [32]. The Tree￾Age–Pro–2011 software (TreeAge Software Inc.,
+Williamstown, MA, USA) was applied to create a Markov
+model.
+Literature review
+Transition probabilities, utilities and costs (Tables 1, 2 and
+3) were derived from published articles identified through
+PubMed and Cochrane Library database with the latest
+search performed on July 15, 2016. The medical subject
+heading (MESH) or their free text variants such as “Carcin￾oma, Hepatocellular”, “BCLC C” or “advanced HCC”, “so￾rafenib”, “Transarterial chemoembolization” or “TACE”,
+and “costs and cost analysis” were applied. Reference lists
+of the included studies were hand-searched to identify fur￾ther relevant articles. More details of literature review were
+in Additional file 1. The details of references used to extract
+various probabilities were reported in Additional file 2:
+Table S1, Additional file 3: Table S2, Additional file 4: Table
+S3, Additional file 5: Table S4, Additional file 6: Table S5,
+Additional file 7: Table S6, Additional file 8: Table S7, Add￾itional file 9: Table S8, Additional file 10: Table S9.
+Parameter estimation
+Double arcsine transformations were performed on the
+extracted transition probabilities before pooling them for
+variances stabilisation because the inverse variance weight
+in the pooling is suboptimal when low prevalence rates
+are involved and the transformed probabilities are
+weighted very slightly towards 50%, making it feasible to
+include studies with prevalence rates of zero [33]. The
+Wilson score method was also used to calculate the 95%
+confidence intervals (CIs) of these probabilities because of
+the values below zero produced by the asymptotic method
+[34]. After obtaining the above estimates, STATA software
+(Stata Corp., College Station, TX, USA) was used to pool
+the data using the random-effect model. SAS 9.2 (SAS In￾stitute Inc., Cary, NC, USA) was used to apply the Wilson
+score method and calculate the 95% CIs.
+Table 2 Base-Case Value and Sensitivity Range for Costs
+Variables Base case value Range
+Costs in China($)
+Monthly cost of sorafenib and TACE
+Full-dose Sorafenib
+The first 3 months without supportive policy48 7600.38 3800.19–15,200.76
+3 months after48 15.06 7.53–30.11
+Dose-adjusted Sorafenib
+The first 3 months without supportive policy48 3807.72 1903.86–7615.43
+3 months after48 15.06 8.03–32.11
+TACE per session 3347.97 1673.99.23–6695.95
+Monthly cost of progressive HCC# 247.43 123.71–494.86
+Monthly cost of decompensated cirrhosisa,b 1131.82 565.91–2263.65
+Monthly cost of compensated cirrhosisa,b 344.14 172.07–688.29
+Costs in the USA($)
+Monthly cost of sorafenib and TACE
+Full-dose Sorafenib
+The first 3 months without supportive policy50 4592.4 2296.2–9184.8
+3 months after50 1.2 0.60–2.40
+Dose-adjusted Sorafenib
+The first 3 months without supportive policy50 2296.2 1148.10–4592.40
+3 months after50 1.2 0.60–2.40
+TACE per session49 25,961.00 12,980.50–51,922.0
+Monthly cost of progressive HCC51# 8072 4036.00–16,144.00
+Monthly cost of decompensated cirrhosis49# 1519.0 759.50–3038.00
+Monthly cost of compensated cirrhosis49# 61.0 30.0–122.00
+a
+The data were obtained from the large HCC database of South China (http://hcc.medidata.cn/) b
+The total monthly cost of drugs and procedures (that include treatments for HCC, cirrhosis and adverse events derived from associated drugs and procedures),
+inpatient and outpatient visits, laboratory testing and imaging examination
+Chen et al. BMC Cancer (2018) 18:392 Page 4 of 12
+
+Summary of transition probabilities
+Common transition probabilities
+The common probability for these three therapies was the
+mortality of the general population [35] and of decompen￾sated cirrhotic patients. Advanced HCC patients with de￾compensated cirrhosis were regarded as candidates with
+terminal stage HCC without chances to receive further ef￾fective interventions, so the natural mortality of terminal￾stage patients was adopted [36, 37].
+Transition probabilities in TACE arm
+Studies on the risk of transitioning from compensated to
+decompensated state for cirrhotic patients with advanced
+HCC were unavailable. The monthly decompensated rate
+for compensated cirrhotic patients with advanced HCC
+but without tumor progression after TACE was 2.40%,
+extracting from the large HCC database of South China
+(http://hcc.medidata.cn/). This is a constantly updated
+database comprising primary and recurrent HCC patients
+treated in a tertiary medical center. There are 1694 pa￾tients with follow-up data by May 2017. Some of the data
+in our study are extracted from the cohort of primary
+advanced-stage HCC patients treated with sorafenib or
+TACE in this database. The monthly mortality of patients
+without progression after TACE was estimated as 11.5%
+after pooling the data from nine included studies[16–19,
+38–40]. The progression rate after TACE was transformed
+from the time to progression (TTP) of 3.2 months re￾ported by Zhou et al. [41, 42]. There was no study specif￾ically reporting the mortality rate of progressive disease
+after TACE, so we assumed that the mortality was com￾parable to the median of natural mortality of advanced
+and terminal stage HCC since there was no further treat￾ment for post-progression patients in this model [36, 37,
+43].
+Transition probabilities in full-dose/adjusted-dose Sorafenib
+arm
+Studies on the risk of transitioning from compensated to
+decompensated state for cirrhotic patients with ad￾vanced HCC were unavailable. The monthly decompen￾sated rate for compensated cirrhotic patients with
+advanced HCC but without tumor progression after so￾rafenib treatment was 0.90%, extracting from the large
+HCC database of South China (http://hcc.medidata.cn/).
+For the full-dose sorafenib cohort without progression,
+the median survival of 9.7 months and the TTP of 4.
+9 months were extracted from a sub-analysis of the
+SHARP trial [42]. Other studies have applied the supple￾mental survival and progression data for analysis [4, 39,
+44–46]. For the monthly mortality of patients without
+progression after taking adjusted-dose sorafenib, 6.5%
+was resulted after pooling all the data from included
+studies, [6–8]. The TTP of 9.2 months was derived from
+the SOFIA study in Italy and its 95% confidence interval
+(CI) was used to perform a sensitivity analysis [8]. Me￾dian post-progression survival was consistently reported
+as 4.6 months in two studies [46, 47]. We assumed that
+the survival of patients after sorafenib failure in both
+arms shared the same scenario.
+Costs and utilities
+This study was conducted from the perspective of a
+healthcare system; therefore, only direct medical costs
+were included. Since China and the USA present with dif￾ferent medical charging systems with different costs for
+procedures, administering the treatment (that includes
+doctor visits) and follow-up monitoring, we performed
+two cost scenarios: in China and the USA. Monthly costs
+were estimated with the frequency and unit cost of drugs
+and procedures (that include treatments for HCC, cirrho￾sis and adverse events derived from associated drugs and
+procedures), inpatient and outpatient visits, laboratory
+testing and imaging examination, and all were converted
+to U.S. dollars in 2016. The costs in China were extracted
+from a previously published Chinese study [48], supple￾mented by the data in the large HCC database of South
+China (http://hcc.medidata.cn/). The median cost of one
+session of TACE was $3347.97. The market price for a
+package of sorafenib is $3792.66 in China. We also consid￾ered the cost reduction due to the sorafenib assistance
+program for patients without progression until 3 months
+in China during the analysis. In this program, patients
+need to pay the drug cost for the initial 3 months, and
+then are free of charge until the end of treatment. The
+cost estimates in the USA were obtained from cost￾relative studies specific for the USA. The median cost of
+one session of TACE was $25,961 [49] and the market
+price for a tablet of sorafenib is $38.27 [50]. Other costs
+were also available in the literatures [49, 51]. The base
+case estimates and sensitivity ranges of utilities were ex￾tracted from the literatures [52, 53]. A discount rate was
+set at 3% yearly for both costs and utilities to inflate costs
+to 2016 dollars.
+Table 3 Base Case Value and Range of Utilities Extracted from Literatures
+Variables Base case value Range
+Compensated cirrhosis without progressive HCC52 0.76 0.76–0.80
+Compensated cirrhosis with progressive HCC52 0.68 0.60–0.68
+Decompensated cirrhosis53 0.57 0.46–0.68
+Chen et al. BMC Cancer (2018) 18:392 Page 5 of 12
+
+Cost-effectiveness analysis
+With the above parameters input into the model, effect￾iveness measures of LYG and QALY and CE measure of
+ICER were estimated. The ICER was calculated using the
+difference in costs divided by the corresponding difference
+in QALY. The relative cost-effectiveness among the three
+strategies were compared with one another in order of in￾creasing effectiveness [54]. Subsequently, one-way sensi￾tivity analysis was performed to evaluate the effect of each
+parameter preset in our model. To reduce the ambiguity
+of the mathematical uncertainty of ICER, a new assess￾ment criterion, net monetary benefits (NMB), was used.
+The formula of NMB combines cost, effectiveness and
+willingness to pay (WTP). The strategy with the higher
+NMB is more cost-effective given the fixed WTP value.
+Results were presented in the form of a tornado diagram
+and the corresponding cutoffs were determined. For prob￾abilities and utilities, we changed the value of each param￾eter over the range extracted from the included studies.
+For costs, considering the lack of reported range data, a
+wide range of 50%–200% on the base case value was ap￾plied as Lim et al. [49] described. Furthermore, Monte
+Carlo probabilistic sensitivity analysis was performed to
+estimate the total impact of parameter uncertainties on
+the model results with 10,000 simulations. Findings were
+presented on a CE acceptability curve and a CE plane. A
+gamma distribution was employed for cost estimates and
+a beta distribution for efficacy estimates.
+An external CE threshold, that is, the largest sum of
+money you are willing to pay for gaining one QALY was
+Fig. 2 Tornado diagrams of one-way sensitivity analyses for China (a) and the USA (b). All transition probabilities and costs defined in this model
+were analyzed. The length of colored bar for each factor represents the extent of its effect on NMB. A wider bar of the corresponding variable in￾dicates the larger potential effect on NMB
+Chen et al. BMC Cancer (2018) 18:392 Page 6 of 12
+
+utilized to compare with ICER to decide whether one
+strategy is cost-effective. For the USA, the commonly
+cited threshold of $50,000/QALY was used [49, 55, 56].
+For China, we adopted the threshold of $24,840.27
+which is the 3 times per capita GDP of China according
+to the WHO guidelines for CE analysis [48, 57].
+Results
+Base case analysis
+Tables 4 and 5 summarize the results of base case ana￾lyses. For LYG, the dose-adjusted -sorafenib strategy pro￾vided an average of 7.898 months while TACE and full￾dose sorafenib strategies offered 6.357 months and 7.
+236 months, respectively. Regarding QALY, full-dose so￾rafenib and dose-adjusted sorafenib treatments produced
+relatively better results (0.435, 0.482) than TACE (0.375).
+In China, full-dose sorafenib brings 0.060 of a QALY per
+person at a cost of $ 6061.73 per person when compared
+to TACE, which yields an ICER of $101,028.83 per QALY
+whereas in the USA, full-dose sorafenib is a dominant
+strategy (ICER of -$1,014,507.20/ QALY) compared with
+TACE. Compared to full-dose sorafenib, dose-adjusted so￾rafenib was the dominant strategy with the negative ICERs
+in both China (−$132,238.94/QALY) and the USA
+(−$230,058.09/QALY).
+One-way sensitivity analysis
+Fig. 2 demonstrates the tornado diagrams of all the pa￾rameters for China and the USA. The mortalities of
+compensated cirrhotic patients without and with pro￾gression taking dose-adjusted sorafenib lay in the top
+three sensitive parameters in both countries, reflecting
+that the treatment efficacy was a vital factor when con￾sidering the sorafenib strategy. For both China and the
+USA, the NMB of dose-adjusted sorafenib treatment
+was always larger than those of full-dose sorafenib and
+TACE regardless of the monthly mortality of compen￾sated cirrhotic patients with progression taking dose￾adjusted sorafenib (Additional file 11: Figure 1A, B), sug￾gesting dose-adjusted sorafenib was the dominant strat￾egy over the range we tested. Besides, the cost of
+sorafenib was the third sensitive parameter in China. If
+the expenditure of full-dose sorafenib treatment in￾creased and reached the cut-off value of $13,973.90,
+TACE could become more competitive (Additional file 12:
+Figure 2A). In the USA, TACE was apparently not a
+good treatment under the given scenarios reagardless of
+the cost of full-dose sorafenib treatment (Add￾itional file 12: Figure 2B).
+Two-way sensitivity analysis
+The top three sensitive parameters were further included
+in the two-way sensitivity analysis. In the USA scenario,
+the analysis demonstrated that dose-adjusted sorafenib
+Fig. 3 a Two-way sensitivity analysis of sCPDie and sCPDieqd for the
+NMB in the USA. b Two-way sensitivity analysis of sCPDie and sCPDieqd
+for the NMB in China. c Two-way sensitivity analysis of tCOPDie and
+csCOP for the NMB in China. sCPDie: the mortality of compensated
+cirrhotic patients with progression taking sorafenib in full dose; sCPDieqd:
+the mortality of compensated cirrhotic patients with progression taking
+sorafenib in adjusted dose; tCOPDie: the mortality of compensated
+cirrhotic patients without progression taking sorafenib in full dose; csCOP:
+the cost of sorafenib for compensated cirrhotic patients without
+progression taking sorafenib in full dose
+Chen et al. BMC Cancer (2018) 18:392 Page 7 of 12
+
+was always the cost-effective treatment no matter how the
+post-progression survivals of sorafenib treated HCC pa￾tients changed (Fig. 3a). In China, most scenarios sug￾gested that dose-adjusted sorafenib mode was more cost￾effective. However, when assuming the lowest mortality to
+patients with progression taking full-dose sorafenib,
+adjusted-dose regimen remained cost-effective until the
+monthly mortality reached 18.6% (Fig. 3b). For TACE and
+full-dose sorafenib therapies, if the drug cost of full-dose
+sorafenib was kept at $15,200.8, the monthly mortality of
+advanced HCC patients without progression would need
+to be kept below 12.3% for TACE to be cost-effective in
+China (Fig. 3c).
+Monte Carlo analysis
+The median ICERs of full-dose sorafenib and TACE
+compared to dose-adjusted sorafenib were − 6623.21(−
+25,354.58,12,108.17)and − 377.23(− 477.03,-277.42)in
+China and 583,742.25 (− 535,297.82,1702,782.31) and −
+65,695.39 (− 70,138.02,− 61,252.76) in the USA, respect￾ively. For both China and the USA, the acceptability
+curve showed that dose-adjusted sorafenib always had a
+higher probability of being more cost-effective than the
+other two therapies regardless of WTP (Fig. 4a, b).
+Moreover, in the USA, TACE could be as cost-effective
+as full-dose sorafenib if the WTP was below $21,670
+while full-dose sorafenib was always cost-effective com￾pared with TACE if the WTP was set above $21,670.
+Nevertheless, in China, TACE could be more favorable
+than full-dose sorafenib if a WTP was set below $10,473
+(Fig. 4a). Despite the above disparities, the common
+finding in these two countries was that dose-adjusted so￾rafenib was the cost-effective strategy at the preset WTP
+values in China and USA, and when confining the com￾parisons between full-dose sorafenib and TACE, full￾dose sorafenib was cost-effective for these patients.
+Discussion
+Our study shows that dose-adjusted sorafenib is cost￾effective compared to full-dose sorafenib or TACE for
+advanced HCC in both China and the USA based on the
+base case analysis, sensitivity analysis and WTP analysis.
+To the best of our knowledge, this is the first study to
+compare the CE of sorafenib with TACE. Previous CE
+Fig. 4 Cost-effectiveness acceptability curve (CEAC) of the three treatment strategies for China (a) and the USA (b). CEAC represented the
+uncertainty in cost-effectiveness analysis and provided the reference to the WTP thresholds
+Table 4 Base Case Values of Cost-Effectiveness Analysis of Three Strategies in China and the USA
+Parameters China USA
+TACE Full-dose Sorafenib Dose-adjusted Sorafenib TACE Full-dose Sorafenib Dose-adjusted Sorafenib
+LYG (months) 6.357 7.236 7.898 6.357 7.236 7.898
+QALYs (years) 0.375 0.435 0.482 0.375 0.435 0.482
+Lifetime cost ($) 10,642.22 16,703.95 10,488.72 95,061.13 34,190.70 23,377.97.54
+Chen et al. BMC Cancer (2018) 18:392 Page 8 of 12
+
+studies have confined the comparison of sorafenib to
+BSC [48, 50, 55, 58]. However, since BSC is simply a
+form of palliative treatment without offering improve￾ment in health outcomes, comparing an active treatment
+like TACE to sorafenib is a better strategy when investi￾gating the current most appropriate therapy for ad￾vanced HCC. Moreover, it is also the first study to
+compare sorafenib in different doses (full-dose and dose￾adjusted) with TACE in the treatment of advanced HCC.
+Regarding the CE of full-dose sorafenib itself, a QALY
+of 0.435 gained at a cost of $16,703 in China in our
+study was similar to that in the previous Chinese study
+(QALY, 0.45; cost, $19,149) [48], but was not consistent
+with that in the Italian study (QALY, 0.16; cost, $14,841;)
+[55]. The poorer efficacy of full-dose sorafenib for Italian
+patients represented by the much shorter QALY could
+explain the inconsistency. Meanwhile, for the dose￾adjusted sorafenib group, its CE in China in our study
+were better than that in the Italian study [55], which
+might be explained by the higher expenditures (Italy:
+$16,625 vs. China: 10,488) but lower QALY in Italy
+(Italy: 0.440 vs. China: 0.482).
+In terms of the relative CE between therapies, the Ital￾ian study and the Chinese study both suggested that
+full-dose sorafenib was not a cost-effective treatment
+compared to BSC [48, 55]. However, the Italian study
+considered sorafenib as cost-effective under the dose￾adjusted condition. Similarly in our study, dose-adjusted
+sorafenib was cost-effective whereas full-dose sorafenib
+and TACE were not. It might be due to the similar or
+higher survival benefit provided by dose-adjusted sorafe￾nib at a lower cost. Sorafenib therapy within its licensed
+dose is effective but costly, thus, it is of great importance
+to find a way to improve its CE. Half-dose sorafenib with
+the comparable or even better efficacy and substantial
+expenditure reduction is clearly a good option. However,
+the issue of optimal sorafenib dose remained to be fur￾ther investigated in the future studies.
+Concerning the role of TACE in advanced HCC, our
+study revealed that TACE produced slightly shorter life
+expectancy and QALY to sorafenib. Although TACE
+could eradicate viable tumors to some extent, the pro￾motion of proliferation and metastasis of remaining
+tumors by over-expressed angiogenic and inflammatory
+factors after TACE restricted the prolongation of the
+overall survival. Moreover, when taking the cost into
+consideration, TACE was not the cost-effective treat￾ment under the current WTP set in the USA as shown
+in the acceptability curve because one session of this
+procedure ($25,961) costs more than 5.5 times of the
+monthly cost of full-dose sorafenib ($4592). Interest￾ingly, in China, TACE was cost-effective compared to
+full-dose sorafenib if the WTP was set below $10,473.
+The underlying reason behind the difference between
+China and the USA might be the different medical char￾ging system between these two countries representing by
+the relative cost of TACE and sorafenib. Unlike the high
+expense of TACE in the USA [49], the price of TACE in￾cluding the costs of procedure, hospitalization, specialist
+visits and various examinations during hospital stay
+($3170) in China is even lower than the monthly cost of
+dose-adjusted sorafenib ($4060). However, under the ac￾cepted threshold of WTP in both countries, full-dose
+usage of sorafenib is still the cost-effective strategy com￾pared with TACE for most patients. Only for some poor
+patients with the willingness to pay less $10,473 in
+China, TACE could be the cost-effective treatment.
+Data constraints inevitably lead to several limitations
+within our model. First, there were limited studies that
+specifically reported TACE and sorafenib outcomes for
+compensated cirrhotic patients with or without progres￾sion. Such a limitation was unfortunately unavoidable in
+our type of analysis. This limitation obliged us to use the
+best available data in the literature review. The resulting
+uncertainties were not significant, which was confirmed
+by the unchanged results in the probabilistic sensitivity
+analysis. Second, the utility estimates for compensated
+cirrhosis with or without progression were extracted
+from NICE for the treatment of advanced renal carcin￾oma with sorafenib or BSC as the two previous relevant
+articles did. This adoption may not be the most rational
+because utilities might vary between populations with
+two different diseases. The third limitation concerns the
+paucity of data on cost estimates for each health state in
+different countries. It is well known that costs may vary
+with different regions and treatment plans. Thus, it
+Table 5 Incremental Cost-Effectiveness Ratios Comparing Three Strategies in China and the USA
+China USA
+Full-dose sorafenib
+vs TACE
+Dose-adjusted sorafenib vs full￾dose sorafenib
+Full-dose sorafenib
+vs TACE
+Dose-adjusted sorafenib vs full￾dose sorafenib
+Incremental cost per person
+($)
+6061.73 -6215.23 −60,870.43 −10,812.73
+Incremental QALYs per
+person (years)
+0.060 0.047 0.060 0.047
+Incremental cost per QALY
+(ICER, $)
+101,028.83 −132,238.94 −1,014,507.20 −230,058.09
+Chen et al. BMC Cancer (2018) 18:392 Page 9 of 12
+
+restricted us to make comparisons among more coun￾tries. Despite these, we have performed the analyses on
+two different cost scenarios including the USA and
+China, representing the Western and Eastern countries
+to some extent, and have detected some differences be￾tween these two countries. Moreover, we have consid￾ered the uncertainties of costs in sensitivity analyses by
+inputting a wide range of cost values (50%–200% of
+base-case value). In a sense, our model could be applied
+in those countries with efficacy and cost data falling
+within the ranges we have set. Fourth, we assumed that
+the effectiveness estimations such as LYG and QALY
+were the same between China and the USA, however,
+there might be differences in these efficacy results be￾tween these two countries. Thus, more specific data for
+individual countries are required to obtain more accur￾ate results for different countries respectively. Fifth, most
+of the included studies were retrospective and the ana￾lyses based on these retrospective data would inevitably
+result in selection bias. Sixth, the lack of information on
+vascular invasion, extrahepatic spread and/or symtoms
+in TACE versus sorafenib patients was present in our
+study, which required more detailed characteristics of
+patients to compare these two treatments in future
+studies.
+Conclusions
+In conclusion, dose-adjusted sorafenib may be cost￾effective compared to full-dose sorafenib or TACE for
+advanced HCC patients. However, dose-adjusted sorafe￾nib is not available currently, so full-dose sorafenib
+should be compared with TACE. When confining the
+comparisons between them, full-dose sorafenib was
+cost-effective compared with TACE for advanced HCC
+patients, under the accepted thresholds of WTP. Our
+findings will require further high–quality studies to
+validate.
+Additional files
+Additional file 1: Literature review of this research which includes study
+strategy, study selection and data extraction. (DOCX 14 kb)
+Additional file 2: Table S1. References used to derive monthly
+mortality of advanced HCC patients with compensated cirrhosis without
+progression after TACE. (DOCX 15 kb)
+Additional file 3: Table S2. References used to derive monthly tumor
+progression rate of advanced HCC patients with compensated cirrhosis
+after TACE. (DOCX 14 kb)
+Additional file 4: Table S3. References used to derive monthly
+mortality of advanced HCC patients with compensated cirrhosis without
+progression taking sorafenib in full dose. (DOCX 13 kb)
+Additional file 5: Table S4. References used to derive monthly
+progression rate of advanced HCC patients with compensated cirrhosis
+taking sorafenib in full dose. (DOCX 13 kb)
+Additional file 6: Table S5. References used to derive monthly
+mortality of advanced HCC patients with compensated cirrhosis without
+progression taking sorafenib in adjusted dose. (DOCX 12 kb)
+Additional file 7: Table S6. References used to derive monthly
+progression rate of advanced HCC patients with compensated cirrhosis
+taking sorafenib in adjusted dose. (DOCX 12 kb)
+Additional file 8: Table S7. References used to derive monthly
+mortality of patients with compensated cirrhosis and progressive HCC
+after TACE. (DOCX 13 kb)
+Additional file 9: Table S8. References used to derive monthly
+mortality of patients with compensated cirrhosis and progressive HCC
+taking sorafenib in full dose or adjusted dose. (DOCX 12 kb)
+Additional file 10: Table S9. References used to derive monthly
+mortality of advanced HCC patients with decompensated cirrhosis.
+(DOCX 12 kb)
+Additional file 11: Figure S1. One-way sensitivity analysis of sCPDieqd
+for the NMB in China (A) and the USA (B). The axis of abscissa repre￾sented the range of variable showed in Table 1. The Y-axis represented
+the value of NMB. The strategy with a higher NMB indicates a cost￾effective strategy within the preset WTP. As the rate of sCPDieqd in￾creased, the cost-effectiveness of dose-adjusted sorafenib treatment re￾duced. sCPDieqd: the mortality of compensated cirrhotic patients with
+progression taking sorafenib in adjusted dose. (TIFF 670 kb)
+Additional file 12: Figure S2. One-way sensitivity analysis of csCOP for
+the NMB in China (A) and the USA (B). The axis of abscissa represented
+the range of variable showed in Table 2. The Y-axis represented the value
+of NMB. A strategy with a higher NMB indicates a cost-effective strategy
+within the preset WTP. As the value of csCOP increased, the cost￾effectiveness of full-dose sorafenib treatment reduced. csCOP: the cost of
+sorafenib in compensated cirrhotic patients without progression taking
+sorafenib in full-dose. (TIFF 694 kb)
+Abbreviations
+BSC: Best supportive care; CE: Cost-effectiveness; CI: Confidence interval;
+DEALE: Declining exponential approximation of life expectancy;
+HCC: Hepatocellular carcinoma; ICER: Incremental cost-effectiveness ratio;
+LYG: Life year gain; NMB: Net monetary benefits; QALYs: Quality-adjusted life
+years; RCTs: Randomized controlled trials; TACE: Transarterial
+chemoembolization; TTP: Time to progression; WTP: Willingness to pay
+Acknowledgements
+Not applicable.
+Funding
+This work is supported by a grant from the National Natural Science
+Foundation of China (NSFC, No. 81272312; No. 81301842), and Pearl River
+S&T Nova Program of Guangzhou, China, 2014 J2200087. The funders had no
+role in the design and conduct of the study; collection, management,
+analysis, and interpretation of the data; preparation, review, or approval of
+the manuscript; and decision to submit the manuscript for publication.
+Availability of data and materials
+All data and materials have been presented within the manuscript and
+additional supporting files.
+Authors’ contributions
+SC, ZP and MK initiated and conceptualized the study. SC, ZP, MW, WL, ZD,
+HW, JM, MFC, HZ and MK all contributed to the acquisition, analysis or
+interpretation of data. SC, ZP, MW, ZD and MK drafted the manuscript. SC,
+ZP, MW, WL and MK provided critical revision of the manuscript for
+important intellectual content. SC, ZP, MW, ZD and JM performed the
+statistical analysis. ZP and MK obtained the funding. MK contributed to
+administrative, technical, or material support. ZP, HW and MK supervised the
+study. All co-authors read and approved the final manuscript.
+Ethics approval and consent to participate
+Not applicable.
+Chen et al. BMC Cancer (2018) 18:392 Page 10 of 12
+
+Consent for publication
+Not applicable.
+Competing interests
+The authors declare that they have no competing interests.
+Publisher’s Note
+Springer Nature remains neutral with regard to jurisdictional claims in
+published maps and institutional affiliations.
+Author details
+1
+Division of Interventional Ultrasound, The First Affiliated Hospital of Sun
+Yat–sen University, Guangzhou 510080, China. 2
+Department of Oncology,
+The First Affiliated Hospital of Sun Yat–sen University, Guangzhou 510080,
+China. 3
+Department of Liver Surgery, The First Affiliated Hospital of Sun Yat–
+sen University, Guangzhou 510080, China. 4
+Department of Anesthesiology,
+The First Affiliated Hospital of Sun Yat–sen University, Guangzhou 510080,
+China. 5
+Clinical Research Unit, The First Affiliated Hospital of Sun Yat–sen
+University, Guangzhou 510080, China. 6
+Zhongshan School of Medicine, Sun
+Yat-sen University, Guangzhou 510080, China.
+Received: 18 August 2017 Accepted: 26 March 2018
+References
+1. Torre L, Bray F, Siegel R, Ferlay J, Lortet-Tieulent J, Jemal A. Global cancer
+statistics, 2012. CA Cancer J Clin. 2015;65(2):87–108.
+2. Bruix J, Sherman M. American Association for the Study of liver D.
+Management of hepatocellular carcinoma: an update. Hepatology. 2011;
+53(3):1020–2.
+3. Llovet J, Bru C, Bruix J. Prognosis of hepatocellular carcinoma: the BCLC
+staging classification. Semin Liver Dis. 1999;19(3):329–38.
+4. Cheng A, Kang Y, Chen Z, Tsao C, Qin S, Kim J, Luo R, Feng J, Ye S, Yang T,
+et al. Efficacy and safety of sorafenib in patients in the Asia-Pacific region
+with advanced hepatocellular carcinoma: a phase III randomised, double￾blind, placebo-controlled trial. Lancet Oncol. 2009;10(1):25–34.
+5. Llovet J, Ricci S, Mazzaferro V, Hilgard P, Gane E, Blanc J, de Oliveira A,
+Santoro A, Raoul J, Forner A, et al. Sorafenib in advanced hepatocellular
+carcinoma. N Engl J Med. 2008;359(4):378–90.
+6. Nishikawa H, Osaki Y, Endo M, Takeda H, Tsuchiya K, Joko K, Ogawa C,
+Taniguchi H, Orito E, Uchida Y, et al. Comparison of standard-dose and half
+dose sorafenib therapy on clinical outcome in patients with unresectable
+hepatocellular carcinoma in field practice: a propensity score matching
+analysis. Int J Oncol. 2014;45(6):2295–302.
+7. Morimoto M, Numata K, Kondo M, Kobayashi S, Ohkawa S, Hidaka H,
+Nakazawa T, Okuwaki Y, Okuse C, Matsunaga K, et al. Field practice study of
+half-dose sorafenib treatment on safety and efficacy for hepatocellular
+carcinoma: a propensity score analysis. Hepatol Res. 2015;45(3):279–87.
+8. Iavarone M, Cabibbo G, Piscaglia F, Zavaglia C, Grieco A, Villa E, Camma C,
+Colombo M. Group Ss. Field-practice study of sorafenib therapy for
+hepatocellular carcinoma: a prospective multicenter study in Italy.
+Hepatology. 2011;54(6):2055–63.
+9. Bruix J, Reig M, Sherman M. Evidence-based diagnosis, staging, and
+treatment of patients with hepatocellular carcinoma. Gastroenterology.
+2016;150(4):835–53.
+10. Uka K, Aikata H, Takaki S, Shirakawa H, Jeong S, Yamashina K, Hiramatsu A,
+Kodama H, Takahashi S, Chayama K. Clinical features and prognosis of
+patients with extrahepatic metastases from hepatocellular carcinoma. World
+J Gastroenterol. 2007;13(3):414–20.
+11. Okusaka T, Okada S, Ishii H, Nose H, Nagahama H, Nakasuka H, Ikeda K,
+Yoshimori M. Prognosis of hepatocellular carcinoma patients with
+extrahepatic metastases. Hepato-Gastroenterology. 1997;44(13):251–7.
+12. Yoo D, Kim K, Jin Y, Shim J, Ko G, Yoon H, Sung K, Lee J, Kang Y, Lim Y, et
+al. Clinical outcome of 251 patients with extrahepatic metastasis at initial
+diagnosis of hepatocellular carcinoma: does transarterial
+chemoembolization improve survival in these patients? J Gastroen Hepatol.
+2011;26(1):145–54.
+13. Bruix J, Llovet J, Castells A, Montana X, Bru C, Ayuso M, Vilana R, Rodes J.
+Transarterial embolization versus symptomatic treatment in patients with
+advanced hepatocellular carcinoma: results of a randomized, controlled trial
+in a single institution. Hepatology. 1998;27(6):1578–83.
+14. Nishikawa H, Osaki Y, Iguchi E, Takeda H, Nakajima J, Matsuda F, Sakamoto A,
+Henmi S, Hatamaru K, Saito S, et al. Comparison of the efficacy of transcatheter
+arterial chemoembolization and sorafenib for advanced hepatocellular
+carcinoma. Exp Ther Med. 2012;4(3):381–6.
+15. Pinter M, Hucke F, Graziadei I, Vogel W, Maieron A, Konigsberg R, Stauber R,
+Grunberger B, Muller C, Kolblinger C, et al. Advanced-stage hepatocellular
+carcinoma: transarterial chemoembolization versus sorafenib. Radiology. 2012;
+263(2):590–9.
+16. Chern M, Chuang V, Liang C, Lin Z, Kuo T. Transcatheter arterial
+chemoembolization for advanced hepatocellular carcinoma with portal vein
+invasion: safety, efficacy, and prognostic factors. J Vasc Interv Radiol. 2014;
+25(1):32–40.
+17. Chung G, Lee J, Kim H, Hwang S, Kim J, Chung J, Yoon J, Lee H, Kim Y.
+Transarterial chemoembolization can be safely performed in patients with
+hepatocellular carcinoma invading the main portal vein and may improve
+the overall survival. Radiology. 2011;258(2):627–34.
+18. Georgiades C, Hong K, D'Angelo M, Geschwind J. Safety and efficacy of
+transarterial chemoembolization in patients with unresectable
+hepatocellular carcinoma and portal vein thrombosis. J Vasc Interv Radiol.
+2005;16(12):1653–9.
+19. Luo J, Guo R, Lai E, Zhang Y, Lau W, Chen M, Shi M. Transarterial
+chemoembolization for unresectable hepatocellular carcinoma with portal vein
+tumor thrombosis: a prospective comparative study. Ann Surg Oncol. 2011;
+18(2):413–20.
+20. Kim K, Kim J, Park I, Ko G, Yoon H, Sung K, Lim Y, Lee H, Chung Y, Lee Y, et
+al. Reappraisal of repeated transarterial chemoembolization in the treatment
+of hepatocellular carcinoma with portal vein invasion. J Gastroen Hepatol.
+2009;24(5):806–14.
+21. Lee H, Kim J, Choi I, Chung J, Park J, Kim C. The safety and efficacy of
+transcatheter arterial chemoembolization in the treatment of patients with
+hepatocellular carcinoma and main portal vein obstruction. A prospective
+controlled study. Cancer. 1997;79(11):2087–94.
+22. Kim G, Shim J, Yoon S, Jung J, Kim J, Ryu M, Ryoo B, Kang Y, Lee D, Kim K, et al.
+Comparison of chemoembolization with and without radiation therapy and
+sorafenib for advanced hepatocellular carcinoma with portal vein tumor
+thrombosis: a propensity score analysis. J Vasc Interv Radiol. 2015;26(3):320–9.
+23. Kim H, Park J, Nam B, Kim H, Choi J, Kim T, Kim H, Kim C. Survival of
+patients with advanced hepatocellular carcinoma: Sorafenib versus other
+treatments. J Gastroen Hepatol. 2011;26(11):1612–8.
+24. Briggs A, Sculpher M. An introduction to Markov modelling for economic
+evaluation. PharmacoEconomics. 1998;13(4):397–409.
+25. Parsonnet J, Harris R, Hack H, Owens D. Modelling cost-effectiveness of
+helicobacter pylori screening to prevent gastric cancer: a mandate for
+clinical trials. Lancet. 1996;348(9021):150–4.
+26. Nayagam S, Conteh L, Sicuri E, Shimakawa Y, Suso P, Tamba S, Njie R, Njai H,
+Lemoine M, Hallett T, et al. Cost-effectiveness of community-based
+screening and treatment for chronic hepatitis B in the Gambia: an
+economic modelling analysis. Lancet Glob Health. 2016;4(8):e568–78.
+27. Hillner B, Efficacy ST. Cost effectiveness of adjuvant chemotherapy in
+women with node-negative breast cancer. A decision-analysis model. N
+Engl J Med. 1991;324(3):160–8.
+28. Bell B, Manos M, Zaman A, Terrault N, Thomas A, Navarro V, Dhotre K,
+Murphy R, Van Ness G, Stabach N, et al. The epidemiology of newly
+diagnosed chronic liver disease in gastroenterology practices in the United
+States: results from population-based surveillance. Am J Gastroenterol. 2008;
+103(11):2727–36. quiz 2737
+29. Forner A, Llovet J, Bruix J. Hepatocellular carcinoma. Lancet. 2012;379(9822):1245–55.
+30. Lencioni R, Llovet J, Modified R. (mRECIST) assessment for hepatocellular
+carcinoma. Semin Liver Dis. 2010;30(1):52–60.
+31. Gomez E, Rodriguez Y, Bertot L, Gonzalez A, Perez Y, Soler E, Garcia A,
+Blanco L. The natural history of compensated HCV-related cirrhosis: a
+prospective long-term study. J Hepatol. 2013;58(3):434–44.
+32. Beck J, Kassirer J, Pauker S. A convenient approximation of life expectancy (the
+“DEALE”). I. Validation of the method. Am J Med. 1982;73(6):883–8.
+33. Freeman MF, Turkey JW. Transformations related to the angular and the
+square root. Ann Math Stats. 1950;21:607–11.
+34. Newcombe R. Two-sided confidence intervals for the single proportion:
+comparison of seven methods. Stat Med. 1998;17:857–72.
+35. Department Of Health And Human Services NCFH, Statistics. National Vital
+Statistics Reports 2006;57(14). Available at: www.dhhs.gov. (Accessed on
+April 17, 2009).
+Chen et al. BMC Cancer (2018) 18:392 Page 11 of 12
+
+36. Cabibbo G, Maida M, Genco C, Parisi P, Peralta M, Antonucci M, Brancatelli
+G, Camma C, Craxi A, Di Marco V. Natural history of untreatable
+hepatocellular carcinoma: a retrospective cohort study. World J Hepatol.
+2012;4(9):256–61.
+37. Giannini E, Farinati F, Ciccarese F, Pecorelli A, Rapaccini G, Di Marco M,
+Benvegnu L, Caturelli E, Zoli M, Borzio F, et al. Prognosis of untreated
+hepatocellular carcinoma. Hepatology. 2015;61(1):184–90.
+38. Liu L, Zhang C, Zhao Y, Qi X, Chen H, Bai W, He C, Guo W, Yin Z, Fan D, et al.
+Transarterial chemoembolization for the treatment of advanced hepatocellular
+carcinoma with portal vein tumor thrombosis: prognostic factors in a single￾center study of 188 patients. Biomed Res Int. 2014;2014:194278.
+39. Hu H, Duan Z, Long X, Hertzanu Y, Shi H, Liu S, Yang Z. Sorafenib combined
+with transarterial chemoembolization versus transarterial
+chemoembolization alone for advanced-stage hepatocellular carcinoma: a
+propensity score matching study. PLoS One. 2014;9(5):e96620.
+40. Zhou B, Yan Z, Liu R, Shi P, Qian S, Qu X, Zhu L, Zhang W, Wang J.
+Prospective study of transcatheter arterial chemoembolization (TACE) with
+ginsenoside Rg3 versus TACE alone for the treatment of patients with
+advanced hepatocellular carcinoma. Radiology. 2016;280(2):630–9.
+41. Llovet J, Bustamante J, Castells A, Vilana R, Ayuso Mdel C, Sala M, Bru C,
+Rodes J, Bruix J. Natural history of untreated nonsurgical hepatocellular
+carcinoma: rationale for the design and evaluation of therapeutic trials.
+Hepatology. 1999;29(1):62–7.
+42. Bruix J, Raoul J, Sherman M, Mazzaferro V, Bolondi L, Craxi A, Galle P,
+Santoro A, Beaugrand M, Sangiovanni A, et al. Efficacy and safety of
+sorafenib in patients with advanced hepatocellular carcinoma: subanalyses
+of a phase III trial. J Hepatol. 2012;57(4):821–9.
+43. Abou-Alfa G, Schwartz L, Ricci S, Amadori D, Santoro A, Figer A, De Greve J,
+Douillard J, Lathia C, Schwartz B, et al. Phase II study of sorafenib in patients
+with advanced hepatocellular carcinoma. J Clin Oncol. 2006;24(26):4293–
+300.
+44. Cheng A, Guan Z, Chen Z, Tsao C, Qin S, Kim J, Yang T, Tak W, Pan H, Yu S,
+et al. Efficacy and safety of sorafenib in patients with advanced
+hepatocellular carcinoma according to baseline status: subset analyses of
+the phase III Sorafenib Asia-Pacific trial. Eur J Cancer. 2012;48(10):1452–65.
+45. Cho J, Paik Y, Park H, Yu J, Sohn W, Gwak G, Choi M, Lee J, Koh K, Paik S, et
+al. The feasibility of combined transcatheter arterial chemoembolization and
+radiotherapy for advanced hepatocellular carcinoma. Liver Int. 2014;34(5):
+795–801.
+46. Iavarone M, Cabibbo G, Biolato M, Della Corte C, Maida M, Barbara M, Basso
+M, Vavassori S, Craxi A, Grieco A, et al. Predictors of survival in patients with
+advanced hepatocellular carcinoma who permanently discontinued
+sorafenib. Hepatology. 2015;62(3):784–91.
+47. Lee I, Chen Y, Chao Y, Huo T, Li C, Su C, Lin H, Lee F, Huang Y.
+Determinants of survival after sorafenib failure in patients with BCLC-C
+hepatocellular carcinoma in real-world practice. Medicine (Baltimore). 2015;
+94(14):e688.
+48. Zhang P, Yang Y, Wen F, He X, Tang R, Du Z, Zhou J, Zhang J, Li Q. Cost￾effectiveness of sorafenib as a first-line treatment for advanced
+hepatocellular carcinoma. Eur J Gastroen Hepat. 2015;27(7):853–9.
+49. Lim K, Wang V, Siddiqui F, Shi L, Chan E, Oh H, Tan S, Chow P. Cost￾effectiveness analysis of liver resection versus transplantation for early
+hepatocellular carcinoma within the Milan criteria. Hepatology. 2015;61(1):
+227–37.
+50. Carr B, Carroll S, Muszbek N, Gondek K. Economic evaluation of sorafenib in
+unresectable hepatocellular carcinoma. J Gastroenterol Hepatol. 2010;25(11):
+1739–46.
+51. Pollom E, Lee K, Durkee B, et al. Cost-effectiveness of stereotactic body
+radiation therapy versus radiofrequency ablation for hepatocellular
+carcinoma: a Markov modeling study. Radiology. 2017;283(2):460–8.
+52. NICE technology appraisal guidance 189 — Sorafenib for the treatment of
+advanced hepatocellular carcinoma www.nice.org.uk/guidance/TA189.
+53. Cucchetti A, Piscaglia F, Cescon M, et al. Cost-effectiveness of hepatic
+resection versus percutaneous radiofrequency ablation for early
+hepatocellular carcinoma. J Hepatol. 2013;59(2):300–7.
+54. Neumann P, Ganiats T, Russell L, Sanders G, Siegel J. Cost-effectiveness in
+health and medicine. 2nd ed. USA: OUP; 2016.
+55. Camma C, Cabibbo G, Petta S, Enea M, Iavarone M, Grieco A, Gasbarrini A,
+Villa E, Zavaglia C, Bruno R, et al. Cost-effectiveness of sorafenib treatment
+in field practice for patients with hepatocellular carcinoma. Hepatology.
+2013;57(3):1046–54.
+56. Grosse S. Assessing cost-effectiveness in healthcare: history of the $50,000 per
+QALY threshold. Expert Rev Pharmacoecon Outcomes Res. 2008;8:165–78.
+57. Murray C, Evans D, Acharya A, Baltussen R. Development of WHO guidelines
+on generalized cost-effectiveness analysis. Health Econ. 2000;9:235–51.
+58. Muszbek N, Shah S, Carroll S, Mcdonald H, Dale P, Maroun J, Knox J.
+Economic evaluation of sorafenib in the treatment of hepatocellular
+carcinoma in Canada. Curr Med Res Opin. 2008;24(12):3559–69.
+• We accept pre-submission inquiries
+• Our selector tool helps you to find the most relevant journal
+• We provide round the clock customer support 
+• Convenient online submission
+• Thorough peer review
+• Inclusion in PubMed and all major indexing services 
+• Maximum visibility for your research
+Submit your manuscript at
+www.biomedcentral.com/submit
+Submit your next manuscript to BioMed Central 
+and we will help you at every step:
+Chen et al. BMC Cancer (2018) 18:392 Page 12 of 12
+

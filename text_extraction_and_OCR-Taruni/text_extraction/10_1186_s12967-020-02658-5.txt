@@ -1,0 +1,986 @@
+Subramanian et al. J Transl Med (2020) 18:472 
+https://doi.org/10.1186/s12967-020-02658-5
+REVIEW
+Precision medicine in the era of artificial 
+intelligence: implications in chronic disease 
+management
+Murugan Subramanian1,2, Anne Wojtusciszyn3
+, Lucie Favre3
+, Sabri Boughorbel4
+, Jingxuan Shan2,5, 
+Khaled B. Letaief6
+, Nelly Pitteloud3* and Lotfi Chouchane1,2,5*
+Abstract
+Aberrant metabolism is the root cause of several serious health issues, creating a huge burden to health and lead￾ing to diminished life expectancy. A dysregulated metabolism induces the secretion of several molecules which in 
+turn trigger the inflammatory pathway. Inflammation is the natural reaction of the immune system to a variety of 
+stimuli, such as pathogens, damaged cells, and harmful substances. Metabolically triggered inflammation, also called 
+metaflammation or low-grade chronic inflammation, is the consequence of a synergic interaction between the host 
+and the exposome—a combination of environmental drivers, including diet, lifestyle, pollutants and other factors 
+throughout the life span of an individual. Various levels of chronic inflammation are associated with several lifestyle￾related diseases such as diabetes, obesity, metabolic associated fatty liver disease (MAFLD), cancers, cardiovascular dis￾orders (CVDs), autoimmune diseases, and chronic lung diseases. Chronic diseases are a growing concern worldwide, 
+placing a heavy burden on individuals, families, governments, and health-care systems. New strategies are needed to 
+empower communities worldwide to prevent and treat these diseases. Precision medicine provides a model for the 
+next generation of lifestyle modification. This will capitalize on the dynamic interaction between an individual’s biol￾ogy, lifestyle, behavior, and environment. The aim of precision medicine is to design and improve diagnosis, thera￾peutics and prognostication through the use of large complex datasets that incorporate individual gene, function, 
+and environmental variations. The implementation of high-performance computing (HPC) and artificial intelligence 
+(AI) can predict risks with greater accuracy based on available multidimensional clinical and biological datasets. AI￾powered precision medicine provides clinicians with an opportunity to specifically tailor early interventions to each 
+individual. In this article, we discuss the strengths and limitations of existing and evolving recent, data-driven tech￾nologies, such as AI, in preventing, treating and reversing lifestyle-related diseases.
+Keywords: Exposome, Chronic inflammation, Chronic diseases, Precision medicine, Personalized treatment, Deep 
+phenotyping, Big-data analytics, Machine leaning, Artificial intelligence
+© The Author(s) 2020. This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, 
+adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and 
+the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material 
+in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material 
+is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds 
+the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://crea￾tivecommons.org/licenses/by/4.0/. The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdo￾main/zero/1.0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data.
+Introduction
+The average lifespan of humans has more than doubled in 
+the last two hundred years, largely due to modern medi￾cine and public health initiatives. However, an extended 
+lifespan is associated with increases in various types 
+of diseases among which noncommunicable diseases 
+(NCDs), also commonly referred to as chronic diseases. 
+Recent evidence indicates that chronic inflammatory 
+Open Access
+Journal of
+Translational Medicine
+*Correspondence: Nelly.Pitteloud@chuv.ch; loc2008@med.cornell.edu
+1
+ Department of Microbiology and Immunology, Weill Cornell Medicine, 
+New York, USA
+3
+ Service of Endocrinology, Diabetology and Metabolism, Lausanne 
+University Hospital, Lausanne, Switzerland
+Full list of author information is available at the end of the article
+
+Subramanian et al. J Transl Med (2020) 18:472 Page 2 of 12
+diseases are the most significant cause of death world￾wide, with over 50% of all deaths due to inflammatory 
+conditions. For this review, we collectively refer to the 
+following as chronic diseases: type 2 diabetes, obesity, 
+cardiovascular disease (CVD), metabolic associated fatty 
+liver disease (MAFLD), cancer, chronic lung and kidney 
+disease, autoimmune and neurodegenerative diseases [1]. 
+Today, our genes function in a world that is completely 
+different from the one they were designed for and mod￾ern humans are subjected to an environment that has 
+changed tremendously over the past century. The genetic 
+predisposition to various diseases differs, from person 
+to person and non-genetic factors pose high attributable 
+risks, often assessed between 80 and 90% of the total risk 
+[2, 3]. The Global Burden of Disease (GBD) study, which 
+measured the disease burden of behavioral, environmen￾tal and occupational, and metabolic risks or clusters of 
+risks from 1990 to 2016 in 195 countries concluded that 
+the modifiable risk factors lead to nearly 60% of deaths 
+worldwide [4]. Lifestyle-associated chronic diseases tend 
+to have two common characteristics: one is homeosta￾sis disturbance and the second is metaflammation or 
+chronic metabolic inflammation. Therefore, the patho￾physiology of chronic diseases points to the physiological 
+rationale that connects inflammation with homeostasis 
+[5]. It is now widely recognized that pathogenesis of dis￾ease is often the result of interactions between various 
+genetic and environmental factors. The sum of environ￾mental exposures (non-genetic) from conception until 
+old age, throughout the lifespan is known as the “expo￾some”. The term "exposome" is used to demonstrate the 
+complexity and extent of exposures to toxic substances, 
+nutrition, psychosocial stressors and physical impacts 
+and their associated biological responses. Exposomics is 
+the study of the exposome, based on the use of internal 
+and external assessment methods [3, 6].
+Precision medicine is an emerging field in therapeu￾tics based on an understanding of the genetic make-up, 
+personal lifestyle, gene, and surrounding environment 
+of an individual. We can use precision medicine to cus￾tomize prevention and treatment strategies for an indi￾vidual by identifying the factors that predispose this 
+individual to a specific disease and defining the under￾lying molecular mechanisms that induce the disorder. 
+The use of “OMICS” or “EXPOsOMICS” along with 
+wearable sensors as measurement/assessment meth￾ods have the potential to generate large amounts of data 
+(big-data), thus requiring new digital approaches and 
+resources for analyzing, integrating, and interpreting 
+the massive amounts of data [7, 8]. Artificial intelligence 
+(AI): an emerging field in which computer algorithms 
+are equipped to carry out tasks independently of human 
+guidance. To create an efficient AI algorithm, computer 
+systems are initially fed data that is usually organized, 
+indicating each data point has an algorithm-recognizable 
+label or annotation. After sufficient sets of data points 
+and their labels are presented to the algorithm, output 
+is evaluated to ensure accuracy. Such AI algorithms are 
+capable of observing, analyzing vast data and identifying 
+patterns with incredible efficiency [9]. Artificial Intelli￾gence that we consider in this context includes machine 
+learning (ML), deep learning (DL), and artificial neural 
+networks (ANN). When AI is combined with high per￾formance computing approaches, AI allows us to estab￾lish and predict disease risk based on individual’s data 
+[10]. Translating such enormous data into clinical knowl￾edge is now in the hands of ML/AI platforms. Promising 
+results in predicting disease risk with greater accuracy 
+have been shown on these platforms [11–14]. As AI 
+enters the world of precision medicine, it can help organ￾izations to capitalize on precision medicine in many ways 
+and help deepen our knowledge of the origins and course 
+of chronic diseases.
+This review article discusses the potential contribu￾tion of lifestyle factors and biological factors -genetic, 
+epigenetics and the microbiome to the development and 
+progression of chronic inflammation. We will also high￾light the recent findings on the implementation of ML/
+AI algorithms in personalized medicine to better manage 
+and prevent chronic diseases.
+Inflammation—a natural response
+In recent years, there has been a substantial improvement 
+in our understanding of the inflammatory mechanism 
+and its contribution to health and diseases. Inflammation 
+is the natural response of the body to harmful pathogens 
+and stimuli in an effort to eliminate threat and/or repair 
+damaged tissue [5]. However, in the early 1990′s a dif￾ferent type of inflammation was associated with over￾weight and obesity was identified as a persistent and 
+maladaptive inflammatory response that had significant 
+variations compared to classical inflammation [15]. Such 
+systemic inflammation characterized as ‘low-grade’ was 
+associated with elevated levels of inflammatory media￾tors and increased immune cell infiltration in peripheral 
+tissues without altering the primary function of the tis￾sue [16, 17]. Human exposome can be categorized into 
+external and internal. An increasing number of inves￾tigations have been addressing the human exposome, 
+and the external exposome factors were well described 
+in the recent articles [3, 6]. These factors were classified 
+into four categories: (1) Lifestyle factors, such as diet, 
+physical activity, sleep, smoking and alcohol; (2) Physi￾cal and chemical factors, such as temperature, pollution, 
+pesticides, food contaminants etc.; (3) Ecosystem fac￾tors, such as food systems, climate, global warming, built 
+
+Subramanian et al. J Transl Med (2020) 18:472 Page 3 of 12
+environment, dense population etc.; (4) Social factors, 
+such as socioeconomic status, stress, social networks, 
+cultural standards etc. [3]. (Fig. 1). An example of envi￾ronmental chemicals inducing inflammation was shown 
+in a recent study: chemicals such as linuron (an herbi￾cide used in agriculture) and methyl carbamate (a com￾pound used in the fabric, polymer, and pharmaceutical 
+industries), were shown to enhance astrocyte inflamma￾tion and neurological inflammation [18]. Accumulating 
+evidences linked air pollution to inflammation and to 
+further number of chronic diseases [19–21]. Likewise, 
+the built environment is linked to the dynamics of infec￾tious diseases such as SARS CoV2, especially in contact￾borne diseases (aerosols or droplets), and climate change 
+to vector-borne diseases [22, 23]. The internal exposome 
+that includes, (1) molecules generated endogenously 
+from metabolic reactions, such as oxidative stress and 
+lipid peroxidation, (2) infections, (3) gut microbiome, 
+Adverse health
+ outcome and 
+chronic disease risk
+Lifestyle factors
+Diet, physical activity, smoking
+ alcohol use etc.,
+Physical & Chemicalfactors
+Social factors
+Ecosystem factors
+Temperature, pollutiion, pesticides, 
+food contaminants etc.,
+ Socioecnomic status, stress 
+ Social networks etc.,
+Global warming, dense population
+ built environment etc.,
+Lipid peroxidation
+Oxidative stress
+DNA damage
+Gut microbiome
+Fig. 1 Exposome—internal factors and external environmental factors role in health and disease. The totality of exposure from conception 
+throughout the life course leads to multiple physiological changes in every individual. Internal exposures such as lipid peroxidation, oxidative stress, 
+DNA damage, alterations in gut microbiome, and inflammation collectively plays a major role in health and chronic diseases
+
+Subramanian et al. J Transl Med (2020) 18:472 Page 4 of 12
+and (4) other natural reactions that affects DNA and pro￾teins within the body (Fig.  1). In addition, social stress, 
+phycological stress, and socioeconomic status were all 
+linked to inflammation and disease risk [24–26]. Over 
+the past decades, extensive efforts have been made and 
+continue to be made in pursuit of identifying the risk fac￾tors for chronic diseases [27–29]. The etiology of chronic 
+diseases has now been convincingly linked to systemic 
+chronic inflammation (SCI). An overwhelming body of 
+evidences and a recent critical review have highlighted 
+the importance of SCI and its correlation with health and 
+chronic diseases [30].
+Lifestyle factors: chronic inflammation axis
+The April 2002 issue of Science discussed “The puzzle 
+of complex diseases” where diet and lifestyle were iden￾tified to be important contributors for major chronic 
+diseases [31, 32]. Since then, numerous landmark epi￾demiological and biological studies have recognized 
+that lifestyle related choices and behaviors have contrib￾uted significantly to the incidence of chronic diseases. 
+Several studies have linked being overweight and obese 
+with increased risk of chronic diseases, cancers, includ￾ing breast cancer (in post-menopausal women), endome￾trium, esophagus, pancreas, liver, colorectum and kidney, 
+and others [33, 34]. A principal lifestyle factor influenc￾ing the onset of such diseases is the diet and nutrition of 
+each individual [35, 36]. Evidences from preclinical inves￾tigations as well as observational and interventional tri￾als indicated that Western-type diet (WD) is a key driver 
+of chronic, low-grade metabolic inflammation [37, 38]. 
+The consumption of calorie-rich foods: highly processed, 
+ultra-processed (formulations of many ingredients), in 
+addition to sugar sweetened beverages, fructose-contain￾ing sugars, trans fats and saturated fats, salt, and other 
+food additives have been proven to influence inflamma￾tion and lead to chronic diseases [39–43]. In addition, 
+WD and other popular diets have been shown to alter 
+intestinal microbiome, which in turn helps shape inte￾grated immune responses. Prolonged consumption of 
+such diets leads to disruption of the gut-barrier integrity, 
+allowing harmful secretion of microbial products that 
+can cause inflammation [44–47]. A recent study indicated 
+that the consumption of high-fat ketogenic diets can alter 
+the microbiome and also reduce the number of intestinal 
+pro-inflammatory Th17 cells which are critical for act￾ing against infectious disease [46]. The consumption of 
+fructose-rich diet has emerged as a major contributor to 
+dyslipidemia, NALFD, insulin resistance, and diabetes. A 
+recent elegant study has revealed that intestinal micro￾biota plays a major role in converting the dietary fructose 
+to acetate, which in turn activates the hepatic lipogenesis 
+[48, 49]. Numerous other dietary factors have also been 
+shown to induce inflammation and lead to SCI. These 
+include the consumption of highly processed foods that 
+lack essential vitamins and micronutrients and the defi￾ciencies in minerals such as calcium, phosphorus, zinc, 
+and magnesium [50–54]. Noteworthy, the recent Lancet 
+Commission report on the global syndemic investigated 
+how the human-driven methods of food production, food 
+supply, consumption and its consequences impacting the 
+environment and climate change. In order to counter the 
+global syndemic of obesity, undernutrition and climate 
+change the commission is urging the governments to 
+reconsider the food supply chains, and business models 
+[55].
+Other lifestyle variables such as physical inactivity, 
+lack of sleep, and tobacco smoking, can also activate 
+multiple immune-inflammatory pathways leading to 
+chronic inflammatory conditions [56]. Inadequate physi￾cal activity is a leading risk factor for chronic diseases 
+and mortality. Globally, the age-standardized prevalence 
+of insufficient physical activity was 27.5% in 2016 [57]. 
+In addition, over 80% of the world’s adolescents are not 
+physically active enough. Several studies have linked 
+insufficient physical activity with inflammatory condi￾tions; even moderate physical activity has demonstrated 
+to possess anti-inflammatory effects, further reducing 
+the risk of chronic diseases and improving age-related 
+multi-morbidity by strengthening the immune function 
+[58, 59]. Tobacco-related morbidity and mortality is sig￾nificant worldwide since smoking increases the risk of 
+developing a number of serious inflammatory conditions 
+[60]. It has been well established that the nicotine present 
+in the tobacco stimulates neutrophils, with subsequent 
+release of certain molecules that promote inflammation 
+increasing in turn the risk of chronic diseases [61, 62]. 
+Excessive alcohol use damages not only gut and liver 
+functions, but also multi-organ interactions, contribut￾ing to chronic inflammation and eventually, increasing 
+the risk of chronic liver diseases and certain cancers [63]. 
+Accumulating evidence suggests that the pathogenesis of 
+psychological disorders, such as depression and anxiety, 
+are also associated with chronic stress and neuroinflam￾mation [64]. Given the clear linkage of lifestyle factors 
+with chronic diseases, their prominence in preventing 
+diseases cannot be over-emphasized.
+Biological factors: genetics and epigenetics
+During recent years, there has been tremendous inter￾est in the discovery of genes that are responsible for 
+chronic diseases. Genetic variation consists of differ￾ences in the DNA sequences of individuals manifesting 
+as single nucleotide polymorphisms (SNPs), insertions 
+and deletions, and other structural variations. Genome￾wide association studies (GWAS) that include analyses of 
+
+Subramanian et al. J Transl Med (2020) 18:472 Page 5 of 12
+genetic variants across several human genomes in order 
+to detect associations between genotype and phenotype. 
+These have facilitated a remarkable range of discoveries 
+in the biology of chronic diseases [65]. Several studies 
+have found new genetic loci and genes that predispose an 
+individual to a number of chronic diseases, such as type 
+1 and type 2 diabetes, coronary heart disease, obesity, 
+asthma, cancer, bipolar disorder, depression, rheumatoid 
+arthritis, Crohn’s disease, and hypertension [66–73]. In 
+addition, a recent large-scale GWAS conducted among 
+the Japanese population has identified 320 independent 
+signals in 276 genetic loci for 27 diseases among which 25 
+novel loci, including certain loci specific to, the Japanese 
+population [74]. Due to the diversity in genetic make-up 
+and associated disease variants across populations, data 
+obtained from one population may not be applicable to 
+other populations [75]. However, understanding the vari￾ants, genes and mechanisms involved in specific diseases 
+unlocks the possibilities for innovative treatments, diag￾nostic approaches and the efficient prevention of dis￾eases. Candidate gene and GWAS studies have identified 
+numerous SNPs-genetic susceptibility loci across human 
+genome which explain only a fraction of the inter-indi￾vidual variation for chronic diseases. To date, however, it 
+has not been shown that solely defined genetic influences 
+contribute to a large proportion of chronic disease inci￾dence at population level.
+Beyond lifestyle factors and genetic susceptibility, 
+another powerful determinant of the health outcome is 
+epigenetics. Epigenetic alterations have emerged as sur￾rogate markers for environmental exposure. Recently, 
+epigenetic mechanisms have been increasingly recog￾nized as a critical link between environmental exposure 
+and disease risk [76]. Evidence indicates that maternally 
+regulated environmental modulation of gene expression 
+in offspring and gene-environment interactions are sig￾nificant determinants of disease risk in later life [77, 78]. 
+In addition, using a unique cohort of more than 700 pairs 
+of monozygotic and dizygotic twins, it was demonstrated 
+that both genetics and environment-inherited epigenetic 
+signatures plays major role in regulating gene expression 
+in the offspring [79, 80]. Moreover, changes in epigenet￾ics are the core mechanisms by which early nutritional 
+conditions can increase later-life susceptibility to obe￾sity and other chronic diseases [81]. Maternal malnutri￾tion influences altered epigenetic regulation in genes that 
+control the metabolism of lipids and carbohydrates and 
+those involved in the neural networks of central appetite￾energy homeostasis [82]. This suggests that early experi￾ence may lead to changes in the epigenome influencing 
+metabolic and physiological pathways, possibly chang￾ing individual’s phenotypic development and thus hav￾ing critical effect on their health. As stated above, several 
+studies have indicated that dietary components induces 
+alterations in the genome and have linked SNPs interac￾tions with the consumption of particular food and die￾tary patterns [83–85]. Nutrients and other environmental 
+factors, either directly or indirectly, can impact the levels 
+and turnover of epigenetic signatures (DNA methylation, 
+acetylation of histones) thereby regulating the expres￾sion of messenger RNAs and non-coding RNAs that have 
+been implicated in multiple chronic diseases. In sum￾mary, epigenetic mechanisms have been shown to be 
+associated with multiple lifestyle factors or environmen￾tal exposures, including overnutrition, undernutrition, 
+physical activity, stress, pollutants, and obesity, which 
+have in turn been linked to chronic diseases [86–89].
+Gut microbiome
+Multiple studies have discovered that the microbiome 
+impacts almost every aspect of human health, and that 
+the microbial composition, which differs from indi￾vidual to individual, can be a key component in diverse 
+manifestations ranging from gaining weight to develop￾ing stress and depression [90]. Some studies on human 
+or mice microbiome have indicated that this variability 
+begins with variations in host genetics [91, 92]. Several 
+other parallel studies have found that the environment 
+is dominant over host genetics in the development of 
+human intestinal microbiota [93, 94]. A recent study, 
+which looked into factors that influence the intestinal 
+microbiome composition across nine different primate 
+species and four human communities subject to vari￾ous subsistence habit, identified environmental factors 
+as the main driver of intestinal microbiome composi￾tion when compared to host species phylogenies [95]. In 
+addition, the intestinal bacteria in four Himalayan pop￾ulations (Tharu, Raute, Raji and the Chepang) differed 
+according to their dietary lifestyles [96]. Such findings 
+show that diet can dominate phylogenetic development 
+of gut microbiome composition. Acute dietary changes 
+(four days) was sufficient enough to bring about signifi￾cant alteration to the human gut microbiota composition 
+[97]. In a recent study that investigated on Irish traveler’s 
+intestinal microbiome shown that microbiota is consid￾erably different from that of a non-traveler settled popu￾lation. However, the non-travelers (settled) Irish contain 
+microbiota similar to people lives in industrialized soci￾ety with a comparatively higher risk of chronic disease. 
+Most travelers contain an ancient of microbiome that 
+protects themselves from various chronic inflammatory 
+conditions [98]. Moreover, microbiota-accessible carbo￾hydrates (MACs) serve as an energy source for gut bacte￾ria, resulting in the production of short chain fatty acids 
+(SCFAs) which benefits the host. Further, these SCFAs 
+including butyrate and propionate have multiple effects 
+
+Subramanian et al. J Transl Med (2020) 18:472 Page 6 of 12
+on signaling pathways including energy homeostasis, 
+carbohydrate and lipid metabolism, and inhibition of 
+inflammatory signals [99, 100].
+Moreover, evidence has shown that microbial coloni￾zation of the infant occurs at birth through the vaginal 
+canal and also some by breastfeeding and skin-to-skin 
+contact. Babies delivered by caesarean section lack some 
+strains of gut bacteria [101]. Furthermore, environmental 
+exposure early in life has a strong effect on a child’s intes￾tinal microbiome, and studies have linked environmental 
+factors during infancy with a subsequent risk of develop￾ing allergies and asthma [102]
+Precision medicine
+In the last decade, strategies to advance precision medi￾cine have attracted considerable investment in develop￾ing new treatments, understanding more about disease 
+mechanisms, and eventually preventing disease. Pre￾cision medicine focused on identifying the effective 
+approaches and the tailored treatment based on an indi￾vidual’s genetic, environmental, and lifestyle factors. As 
+explained above, we have undeniable evidence of human 
+biological diversity in both health and disease, as shown 
+by the findings of the Human Functional Genomics Pro￾ject (HFGP) focused on 500 healthy adult subjects [103]. 
+A number of studies have illustrated this explicitly by 
+analyzing immune cells (cytokine) as an endpoint, show￾ing that the cytokine types and levels vary depending 
+on environmental factors (e.g., season driven), genetic 
+history, and intestinal microbiome composition [104]. 
+Furthermore, the latest study from the HFGP has shown 
+that 11 different kinds of host factors together accounted 
+for up to 67% of inter-individual variation in activated 
+cytokine production in healthy subjects [105].
+Overall, interpersonal variability in diet, lifestyle, sleep, 
+stress, socioeconomic status, geography, early life expe￾riences and exercise habits combined with gut microbi￾ome, genetic background, metabolism, inflammatory 
+status, are all critical factors in determining an individ￾ual’s heath and risk for disease (Fig. 2). In addition, the 
+exposure of individual to environmental hazards is not 
+constant and can change throughout their life, and also 
+the effect of the exposures can vary depending on an 
+individual’s life stage. Environment-wide association 
+studies (EWAS) have been proposed to examine new 
+environmental factors in disease risk [106]. Therefore, the 
+need of every individual is complex and require in-depth 
+assessment (deep phenotyping) before interventions can 
+be confidently applied (Fig. 2).
+Deep phenotyping and artificial intelligence
+Precision oncology, AI can be used to develop a drug 
+combination centered on a patient’s own biopsy and 
+adopt N-of-1 medication recommendations [107]. Across 
+multiple specializations, especially in radiology AI-based 
+algorithms have already shown improvement in diagnos￾tic accuracy and performance [108–111]. The US Food 
+and Drug Administration (FDA) has licensed many AI 
+Fig. 2 Deep phenotyping and artificial intelligence for health promotion and chronic disease prevention. Deep phenotyping provides an entire 
+molecular profile of an individual’s physiological status. When longitudinally tested, the pathways can be tracked to identify the transformation 
+from a health to a disease. Various omics technologies along with other physiological measurements will be used to molecularly characterize 
+an individual’s risk for disease. Further implementation of a systems approach to the big-data analysis and integration will provide a platform for 
+machine learning and artificial intelligence in clinical decision-making for early disease risk identification and prevention
+
+Subramanian et al. J Transl Med (2020) 18:472 Page 7 of 12
+systems to promote medical imaging evaluation, includ￾ing the detection of abnormal lesions that may progress 
+to cancer [112]. A recent work highlights how AI and the 
+advancement of technologies together are empowering 
+the aim of personalized and precision medicine [113].
+Machine learning is a key for multi omics data integra￾tion and there are several aspects in which data types are 
+combined and their relationships are explored [114]. One 
+of the large prospective cohort studies the UK Biobank 
+project has collected deep genetic and phenotypic data 
+including biological measurements, lifestyle markers, 
+blood and urine biomarkers, and brain imaging from 
+500,000 individuals. This project has provided research￾ers with opportunities to search for genetic associations 
+with disease risk and has resulted in several publications 
+[115]. In addition, a precision medicine screening study 
+that introduced a platform of deep quantitative multi￾modal phenotyping including genomics, metagenomics, 
+advanced imaging, metabolomics, clinical testing and 
+family history, provided a comprehensive, predictive, 
+and personalized assessment of individuals health and 
+chronic disease risk [116].
+Further to big data obtained from deep phenotyp￾ing, a recent study empowered its participants with an 
+additional behavioral coach. The Pioneer 100 wellness 
+project (P100) was an initial effort to obtain and analyze 
+large omics data sets to correlate molecular networks 
+in 108 healthy individual. This study performed whole 
+genome sequencing, proteome, microbiome, metabo￾lome, recorded clinical data, daily physical activity, and 
+sleep patterns for every three months over a nine months 
+period. The investigators established personal, dense, 
+dynamic data clouds for each participant and carried 
+out an integrated analysis of six different data types. Fur￾ther, these data-driven insights combined with behavio￾ral coaching significantly improved the wellness of the 
+participants with regard to nutrition, inflammation, dia￾betes and CVDs [117]. A similar study performed deep 
+longitudinal omics profiling along with wearable moni￾toring for 109 individuals who were at increased risk for 
+diabetes. They utilized multi-omics including genome, 
+transcriptome, immunome, metabolome, proteome, and 
+gut microbiome measured for up to eight years (median, 
+2.8  years). Such a deep analysis for this long period of 
+time allowed the recognition of 67 clinically action￾able health outcomes, including the cardiovascular dis￾ease risk [118]. Furthermore, in order to understand the 
+molecular changes of the ageing process and associated 
+disease risk, a recent study performed longitudinal and 
+deep multi-omics profiling from 106 healthy individuals 
+aged between 29 to 75  years and analyzed how diverse 
+types of ‘omics’ results combined with clinical markers, 
+correlated with age. This study identified various types 
+of aging patterns called ’ageotypes,’ based on the types of 
+molecular pathways that have evolved over time in a spe￾cific person. Such ageotypes provides new possibilities 
+for the design of early diagnosis and treatment interven￾tions that may slow down the aging process depending 
+on the particular biology of each individual [119].
+Machine learning has been widely applied to the pre￾cision nutrition field to customize a personalized diet 
+aimed to prevent or manage diet related diseases [120, 
+121]. One landmark study has successfully used a preci￾sion nutrition approach and has created a personalized 
+diet to predict blood glucose response by considering 
+biochemical, anthropometrics, dietary intake, physical 
+activity, and gut microbiota data in an integrated frame￾work. In this study, 800 healthy and prediabetic indi￾viduals were examined and their responses to the food 
+were measured a total of 46,898 meals. The investigators 
+adopted an ML/AI algorithm that precisely predicted 
+postprandial glycemic responses (PPGRs) to meals. The 
+ML/AI predictions were validated in an independent 
+100-individual cohort. Finally, a blinded, randomized 
+controlled intervention based on an algorithm predicted 
+diet resulted in significantly lower PPGRs and consist￾ent changes in gut microbiota composition [122]. Recent 
+independent similar studies using the personalized nutri￾tion strategy for PPGRs to diet was confirmed in healthy 
+individuals in an American population [123, 124]. More￾over, ML/AI is transforming the electronic health record 
+(EHR) field and over time EHRs powered with AI were 
+shown to reveal more about diseases. The ML/AI, tools 
+applied to the health records of patients in EHRs and 
+accurately predicted their probability of acquiring or 
+developing chronic diseases [125].
+AI medical assistants
+The management of chronic disease requires regular 
+monitoring and recommendations. Virtual medical assis￾tants using AI have recently matured and are being used 
+in various products. AI assistants for diabetes have been 
+shown useful to control patient conditions. For example, 
+Onduo is a company that provides a virtual coaching via 
+text messages through a mobile app. It uses AI technol￾ogy for food recognition, glucose sensor and physical 
+activities to provide recommendations. Other examples 
+of startup companies are Virta, Wellpepper or Accolade. 
+Another interesting solution is provided by DayTwo. It 
+gives a personalized nutrition recommendation based on 
+subject’s gut microbiome. The suggested meals are cho￾sen among a large database of more than 100,000 foods 
+to keep the glycemic range under control [123].
+For cardiac diseases, AI has shown major progress in 
+the diagnosis of atrial fibrillation. The latter is a common 
+problem represents a 20 to 30% lifetime risk. It can occur 
+
+Subramanian et al. J Transl Med (2020) 18:472 Page 8 of 12
+without symptoms and increase the risk of stroke. Alive￾Cor developed a system based on deep learning, single￾lead ECG sensor and physical activity via accelerometer 
+data [126]. The system is integrated with a smart watch 
+and it is capable of predicting the occurrence of atrial 
+fibrillation every 5 s. AI has also contributed in improv￾ing diagnoses based on cardiovascular imaging such 
+as in echocardiography, MRI or ultrasound imaging. A 
+comparative study of echocardiography interpretation 
+of Ultromics system with cardiologist showed that more 
+than 90 percent of the abnormalities found by board cer￾tified cardiologists overlapped with the ones found by the 
+AI system [127].
+Another example of the use of AI for chronic disease 
+management is ResApp Health. The system uses the 
+phone microphone to analyze the subject’s breathing. 
+The AI algorithm is able to give an assessment of sev￾eral lung conditions with high accuracy such as chronic 
+obstructive lung disease, pneumonia or chronic asthma 
+[128].
+Taken together, while high-throughput data genera￾tion strategies are becoming more advanced, quicker, 
+and comparatively more affordable, researchers are 
+increasingly gaining access to large amounts of molecular 
+knowledge from human cohorts. The volume of poten￾tial data is enormous, and it has been estimated that 
+personal lifestyle-based data sum up to 1100 terabytes 
+over a lifespan, with genetics and clinical data compris￾ing 6.4 terabytes, which is less than 1% of the total. Omics 
+technologies, GWAS, EWAS, smartphone-based digital 
+phenotyping, sensors, EHRs, wearable devices to moni￾tor physical activity, geography location data and climate 
+data combined with AI have improved the prospect of 
+implementing prevention and management strategies 
+for chronic diseases [129–132]. Therefore, the use of 
+such large multidimensional data requires the establish￾ment of structured collection and big data analytics, as 
+well as multidisciplinary integration of high-performance 
+computational technologies and integration of ML/AI. 
+Hence, AI is quickly becoming a crucial methodology 
+in the advancement of precision/personalized medicine 
+[133, 134].
+Recent developments in the field
+One of the first large-scale, population-based, prospec￾tive studies which intended to enable comprehensive 
+analyses of the genetic and non-genetic causes of diseases 
+for middle and old age was the UK biobank study [115, 
+135]. In addition, the most ambitious longitudinal study 
+in precision medicine so far, the “All of Us” Research Pro￾gram, which aims to focus research on the link between 
+environment, lifestyle and biology in health and disease 
+is ongoing [136]. The All of Us program intends to enroll 
+one million people across America and plans to imple￾ment deep phenotyping by gathering genetic and health 
+data (using EHRs, digital health data), geography, and 
+biospecimens for biomarker review. Similarly, a project 
+called “The Project Baseline Health Study (PBHS)” was 
+initiated to map human health by deep phenotyping to 
+at least 10,000 individuals. The PBHS study established a 
+portal that incorporates and analyzes personalized, lon￾gitudinal, multidimensional data, with a greater focus on 
+future than past. It further explore the biological hetero￾geneity of healthy individuals or individuals with chronic 
+disease in detail for a longer period of time to create 
+reference health status by integrating various aspects of 
+health [137].
+The Human Exposome Project, 2020 from the Euro￾pean Union is the largest network of research programs 
+aiming to address the environmental exposure such as 
+diet, lifestyle, occupational and other environmental 
+factors impact on human health (https://www.human
+exposome.eu/). Such data-driven approach to expo￾some reduces the conventional decision-making method 
+and it may better determine the influence of chemical 
+exposures on particular physiological systems proven 
+to be affected. Subsequently this would help to create 
+novel chemicals with reduced impact on human health 
+and the environment [138]. Over the last two decades, 
+omics, wearables, sensors, digital medicine and emerging 
+innovative technologies together with AI have all made 
+incredible advancements in the field of precision/person￾alized medicine. Furthermore, AI is being implemented 
+in precision oncology to help clinicians in decision mak￾ing, with the aim of improving patient outcomes [139]. 
+AI-based healthcare practices are already being imple￾mented in high-income countries; for instance, the UK 
+and Singapore have recently launched national strategies 
+to tackle chronic disease burden using AI. Data driven, 
+AI-powered health care has the potential to clarify the 
+landscape of findings and enable clinical decisions to dig￾itally identify, treat, and manage chronic conditions.
+Data protection and privacy
+The frequent collection of personal health and environ￾mental data has been greatly improved through the use of 
+decentralized sensors, measurement devices and mobile 
+phones. A few decades ago, the measurement of blood 
+pressure, glucose level, heart rate could only be done by 
+medical experts. Nowadays such information can be con￾tinuously collected through mobile apps. The rapid intro￾duction of AI technology into the precision medicine is 
+advantageous, as AI offers an opportunity to increase 
+the efficiency of health care delivery and the quality of 
+patient care. However, it is necessary to mitigate the ethi￾cal risks of the AI implementation, which could include 
+
+Subramanian et al. J Transl Med (2020) 18:472 Page 9 of 12
+data privacy and confidentiality violations, informed 
+consent, and patient autonomy. In the world of precision 
+medicine, big data and AI, it is of paramount importance 
+that data protection legislation is in place that properly 
+ensures the privacy of individuals, particularly patients. 
+The raise of privacy concerns related to the collection of 
+health data has contributed in the significant progress 
+on private AI methods such as Federated Learning or 
+Differential Privacy in Machine Learning [140]. Coun￾tries around the world introducing laws to protect the 
+privacy of their citizens. The Health Insurance Portabil￾ity and Accountability Act (HIPAA) in USA the primary 
+federal law to protect the privacy of health data. How￾ever, HIPAA has major gaps in current world because 
+it protects only relevant health information produced 
+by "covered entities" or their "business associates” [141, 
+142]. Whereas in Europe, The General Data Protection 
+Regulation (GDPR) has been practical since May 25, 2018 
+in all European Union (EU) member states and imple￾mented a new era of extensive data protection law within 
+the EU [143, 144]. GDPR regulation has begun a sig￾nificant global shift in data protection, creating political 
+campaigns that advocate more privacy for data subjects, 
+stricter laws for private corporations and governments 
+that control emerging and increasingly evolving technol￾ogy that pose a threat to data security.
+Conclusion
+Chronic diseases impose a substantial health and eco￾nomic burden worldwide, with nearly one in four adults 
+suffering from one or more chronic health conditions. To 
+date, the longitudinal cohort studies have set the stage 
+for enhancing human health by identifying and defin￾ing the natural history of diseases, identifying their risk 
+factors and finding novel biomarkers. Further, the use of 
+biosensors and the advances in multi-omics have estab￾lished the foundation for better disease categorization, 
+created targeted therapies, and have improved prognosis 
+for many diseases. Most importantly, advances in digital 
+medicine have helped to determine the underlying causes 
+of diseases in individual patients.
+Since most chronic diseases are the consequence of 
+primary lifestyle factors, individuals can reduce the 
+likelihood of developing chronic conditions by making 
+healthier lifestyle decisions. Nutrition and lifestyle pref￾erences are affected by a wide variety of socio-economic 
+factors including employment, education, geography, 
+built environment, social networks, and a climate system. 
+Combatting obesity and chronic diseases associated with 
+diet needs careful examination of the social determinants 
+of food systems, environment and climate change and 
+specific public health strategies targeted at minimizing 
+health disparities [55, 145, 146].
+One aim of public health is promoting healthy life￾style and developing novel approaches to prevent, 
+detect, and respond to diseases that commonly affect 
+people. With the development of precision medicine 
+and the advent of AI, it can be misconstrued that medi￾cine and health care is again drifting towards an indi￾vidualistic approach versus a community approach to 
+controlling diseases [147]. On the contrary, precision 
+medicine, AI, and our deep understanding of disease 
+conditions offer a great opportunity to save resources 
+for those countries that have practiced a one-size-fits all 
+and a piecemeal approach in their public health think￾ing and programming and have not reaped adequate 
+return for their investments. Chronic diseases, and 
+their multifactorial nature, the advent of technological 
+advancements in the form of AI, and the ‘precision’ in 
+precision medicine have the potential to redefine and 
+replace conventional public health approaches with 
+a new holistic paradigm [148]. There remains a huge 
+scope for introducing educational programmes, devel￾oping policies, and strengthening systems to capitalize 
+on the rapid development in the field and customize 
+activities for collectives (persons who share common 
+traits and characteristics) rather than communities.
+Abbreviations
+HPC: High-performance computing; AI: Artificial intelligence; ML: Machine 
+learning; DL: Deep learning; ANN: Artificial neural networks; SCI: Systemic 
+chronic inflammation; NCDs: Noncommunicable diseases; MAFLD: Metabolic 
+associated fatty liver disease; CVDs: Cardiovascular disorders; GBD: Global 
+Burden of Disease; WD: Western-type diet; SNPs: Single nucleotide polymor￾phisms; GWAS: Genome-wide association studies; EWAS: Environment-wide 
+association studies; MACs: Microbiota-accessible carbohydrates; SCFAs: Short 
+chain fatty acids; HFGP: Human Functional Genomics Project; FDA: Food and 
+Drug Administration; PPGRs: Postprandial glycemic responses; HER: Electronic 
+health record; PBHS: Project Baseline Health Study.
+Acknowledgements
+Not applicable.
+Authors’ contributions
+MS and LC developed the concepts of the manuscript and LC, NP and KL 
+supervised the manuscript preparation. MS, AW, LF, SB, and JS performed the 
+literature search, created the figures contributed to the manuscript writing 
+and editing. MS and LC edited the final version of the manuscript. All authors 
+read and approved the final manuscript.
+Funding
+This work was supported by the BMRP Funding of Weill Cornell 
+Medicine-Qatar.
+Availability of data and materials
+Not applicable.
+Ethics approval and consent to participate
+Not applicable.
+Consent for publication
+All the authors have read and approved the manuscript in all respects for 
+publication.
+
+Subramanian et al. J Transl Med (2020) 18:472 Page 10 of 12
+Competing interests
+The authors declare that they have no competing interests.
+Author details
+1 Department of Microbiology and Immunology, Weill Cornell Medicine, New 
+York, USA. 2 Genetic Intelligence Laboratory, Weill Cornell Medicine-Qatar, 
+Qatar Foundation, Doha, Qatar. 3 Service of Endocrinology, Diabetology 
+and Metabolism, Lausanne University Hospital, Lausanne, Switzerland. 4 Clini￾cal Bioinformatics Section, Research Division, Sidra Medicine, Doha, Qatar. 
+5 Department of Genetic Medicine, Weill Cornell Medicine, 45 E 69th Street, 
+Suite 432, New York, NY 10021, USA. 6 Department of Electronic and Computer 
+Engineering, Hong Kong University of Science and Technology, Kowloon, 
+Hong Kong. 
+Received: 5 November 2020 Accepted: 2 December 2020
+References
+1. Disease GBD, Injury I, Prevalence C. Global, regional, and national 
+incidence, prevalence, and years lived with disability for 354 diseases 
+and injuries for 195 countries and territories, 1990–2017: a system￾atic analysis for the Global Burden of Disease Study 2017. Lancet. 
+2018;392(10159):1789–858.
+2. Wild CP. Complementing the genome with an “exposome”: the 
+outstanding challenge of environmental exposure measurement 
+in molecular epidemiology. Cancer Epidemiol Biomarkers Prev. 
+2005;14(8):1847–50.
+3. Vermeulen R, et al. The exposome and health: Where chemistry meets 
+biology. Science. 2020;367(6476):392–6.
+4. Collaborators, G.B.D.R.F. Global, regional, and national comparative 
+risk assessment of 84 behavioural, environmental and occupational, 
+and metabolic risks or clusters of risks, 1990–2016: a systematic 
+analysis for the Global Burden of Disease Study 2016. Lancet. 
+2017;390(10100):1345–422.
+5. Kotas ME, Medzhitov R. Homeostasis, inflammation, and disease sus￾ceptibility. Cell. 2015;160(5):816–27.
+6. Escher BI, Stapleton HM, Schymanski EL. Tracking complex 
+mixtures of chemicals in our changing environment. Science. 
+2020;367(6476):388–92.
+7. Vineis P, et al. The exposome in practice: Design of the EXPOsOMICS 
+project. Int J Hyg Environ Health. 2017;220(2 Pt A):142–51.
+8. Obermeyer Z, Emanuel EJ. Predicting the future—big data, machine 
+learning, and clinical medicine. N Engl J Med. 2016;375(13):1216–9.
+9. van Assen M, Lee SJ, De Cecco CN. Artificial intelligence from A to Z: 
+from neural network to legal framework. Eur J Radiol. 2020;129:109083.
+10. He J, et al. The practical implementation of artificial intelligence tech￾nologies in medicine. Nat Med. 2019;25(1):30–6.
+11. Esteva A, et al. Dermatologist-level classification of skin cancer with 
+deep neural networks. Nature. 2017;542(7639):115–8.
+12. Ehteshami Bejnordi B, et al. Diagnostic assessment of deep learning 
+algorithms for detection of lymph node metastases in women with 
+breast cancer. JAMA. 2017;318(22):2199–210.
+13. Poplin R, et al. Prediction of cardiovascular risk factors from retinal fun￾dus photographs via deep learning. Nat Biomed Eng. 2018;2(3):158–64.
+14. Bello GA, et al. Deep learning cardiac motion analysis for human sur￾vival prediction. Nat Mach Intell. 2019;1:95–104.
+15. Gregor MF, Hotamisligil GS. Inflammatory mechanisms in obesity. Annu 
+Rev Immunol. 2011;29:415–45.
+16. Weisberg SP, et al. Obesity is associated with macrophage accumula￾tion in adipose tissue. J Clin Invest. 2003;112(12):1796–808.
+17. Hotamisligil GS. Inflammation, metaflammation and immunometabolic 
+disorders. Nature. 2017;542(7640):177–85.
+18. Wheeler MA, et al. Environmental Control of Astrocyte Pathogenic 
+Activities in CNS Inflammation. Cell. 2019;176(3):581-596 e18.
+19. Dadvand P, et al. Air pollution and biomarkers of systemic inflammation 
+and tissue repair in COPD patients. Eur Respir J. 2014;44(3):603–13.
+20. Lelieveld J, et al. The contribution of outdoor air pollution sources to 
+premature mortality on a global scale. Nature. 2015;525(7569):367–71.
+21. Zhao CN, et al. Emerging role of air pollution in autoimmune diseases. 
+Autoimmun Rev. 2019;18(6):607–14.
+22. Emeruwa UN, et al. Associations Between Built Environment, Neigh￾borhood Socioeconomic Status, and SARS-CoV-2 Infection Among 
+Pregnant Women in New York City. JAMA. 2020;324:390–2.
+23. Rocklov J, Dubrow R. Climate change: an enduring challenge for vector￾borne disease prevention and control. Nat Immunol. 2020;21(5):479–83.
+24. Powell ND, et al. Social stress up-regulates inflammatory gene expres￾sion in the leukocyte transcriptome via beta-adrenergic induction of 
+myelopoiesis. Proc Natl Acad Sci U S A. 2013;110(41):16574–9.
+25. Cohen S, Janicki-Deverts D, Miller GE. Psychological stress and disease. 
+JAMA. 2007;298(14):1685–7.
+26. Chen E, et al. Socioeconomic status and inflammatory processes in 
+childhood asthma: the role of psychological stress. J Allergy Clin Immu￾nol. 2006;117(5):1014–20.
+27. Liu CH, et al. Biomarkers of chronic inflammation in disease develop￾ment and prevention: challenges and opportunities. Nat Immunol. 
+2017;18(11):1175–80.
+28. Straub RH. The brain and immune system prompt energy short￾age in chronic inflammation and ageing. Nat Rev Rheumatol. 
+2017;13(12):743–51.
+29. Crusz SM, Balkwill FR. Inflammation and cancer: advances and new 
+agents. Nat Rev Clin Oncol. 2015;12(10):584–96.
+30. Furman D, et al. Chronic inflammation in the etiology of disease across 
+the life span. Nat Med. 2019;25(12):1822–32.
+31. Willett WC. Balancing life-style and genomics research for disease 
+prevention. Science. 2002;296(5568):695–8.
+32. Strohman R. Maneuvering in the complex path from genotype to 
+phenotype. Science. 2002;296(5568):701–3.
+33. Key TJ, et al. Diet, nutrition and the prevention of cancer. Public Health 
+Nutr. 2004;7(1A):187–200.
+34. Khan N, Afaq F, Mukhtar H. Lifestyle as risk factor for cancer: evidence 
+from human studies. Cancer Lett. 2010;293(2):133–43.
+35. Collaborators GBDD. Health effects of dietary risks in 195 countries, 
+1990–2017: a systematic analysis for the Global Burden of Disease Study 
+2017. Lancet. 2019;393(10184):1958–72.
+36. Shan Z, et al. Association Between Healthy Eating Patterns and Risk of 
+Cardiovascular Disease. JAMA Intern Med. 2020;180:1090–100.
+37. Christ A, Lauterbach M, Latz E. Western diet and the immune system: an 
+inflammatory connection. Immunity. 2019;51(5):794–811.
+38. Minihane AM, et al. Low-grade inflammation, diet composition 
+and health: current research evidence and its translation. Br J Nutr. 
+2015;114(7):999–1012.
+39. Hall KD, et al. Ultra-processed diets cause excess calorie intake and 
+weight gain: an inpatient randomized controlled trial of Ad libitum 
+food intake. Cell Metab. 2019;30(1):67-77 e3.
+40. Katan MB, Ludwig DS. Extra calories cause weight gain–but how much? 
+JAMA. 2010;303(1):65–6.
+41. Srour B, et al. Ultraprocessed food consumption and risk of type 2 
+diabetes among participants of the NutriNet-Sante prospective cohort. 
+JAMA Intern Med. 2019;180:283–91.
+42. Margina D, et al. Chronic inflammation in the context of everyday life: 
+dietary changes as mitigating factors. Int J Environ Res Public Health. 
+2020;17(11):4135.
+43. Semnani-Azad Z, et al. Association of major food sources of fructose￾containing sugars with incident metabolic syndrome: a systematic 
+review and meta-analysis. JAMA Netw Open. 2020;3(7):e209993.
+44. Blander JM, et al. Regulation of inflammation by microbiota interactions 
+with the host. Nat Immunol. 2017;18(8):851–60.
+45. Shi Z. Gut microbiota: an important link between western diet and 
+chronic diseases. Nutrients. 2019;11(10):2287.
+46. Ang QY, et al. Ketogenic Diets Alter The Gut Microbiome Resulting In 
+Decreased Intestinal Th17 cells. Cell. 2020;181(6):1263-1275 e16.
+47. Zmora N, Suez J, Elinav E. You are what you eat: diet, health and the gut 
+microbiota. Nat Rev Gastroenterol Hepatol. 2019;16(1):35–56.
+48. Zhao S, et al. Dietary fructose feeds hepatic lipogenesis via microbiota￾derived acetate. Nature. 2020;579(7800):586–91.
+49. Lancaster KJ. Current intake and demographic disparities in the associa￾tion of fructose-rich foods and metabolic syndrome. JAMA Netw Open. 
+2020;3(7):e2010224.
+
+Subramanian et al. J Transl Med (2020) 18:472 Page 11 of 12
+50. Bonaventura P, et al. Zinc and its role in immunity and inflammation. 
+Autoimmun Rev. 2015;14(4):277–85.
+51. Nielsen FH. Effects of magnesium depletion on inflammation in chronic 
+disease. Curr Opin Clin Nutr Metab Care. 2014;17(6):525–30.
+52. Aune D, et al. Dietary intake and blood concentrations of antioxidants 
+and the risk of cardiovascular disease, total cancer, and all-cause 
+mortality: a systematic review and dose-response meta-analysis of 
+prospective studies. Am J Clin Nutr. 2018;108(5):1069–91.
+53. Ghishan FK, Kiela PR. Vitamins and minerals in inflammatory bowel 
+disease. Gastroenterol Clin North Am. 2017;46(4):797–808.
+54. Moe SM. Disorders involving calcium, phosphorus, and magnesium.
+Prim Care. 2008; 35(2): 215–37, v–vi.
+55. Swinburn BA, et al. The global syndemic of obesity, undernutri￾tion, and climate change: the lancet commission report. Lancet. 
+2019;393(10173):791–846.
+56. Guo Y, et al. Association between lifestyle factors, vitamin and garlic 
+supplementation, and gastric cancer outcomes: a secondary analysis of 
+a randomized clinical trial. JAMA Netw Open. 2020;3(6):e206628.
+57. Guthold R, et al. Worldwide trends in insufficient physical activity from 
+2001 to 2016: a pooled analysis of 358 population-based surveys with 
+1.9 million participants. Lancet Glob Health. 2018;6(10):e1077–86.
+58. Booth FW, Roberts CK, Laye MJ. Lack of exercise is a major cause of 
+chronic diseases. Compr Physiol. 2012;2(2):1143–211.
+59. Duggal NA, et al. Can physical activity ameliorate immunosenescence 
+and thereby reduce age-related multi-morbidity? Nat Rev Immunol. 
+2019;19(9):563–72.
+60. Wang M, et al. Trends in smoking prevalence and implication for 
+chronic diseases in China: serial national cross-sectional surveys from 
+2003 to 2013. Lancet Respir Med. 2019;7(1):35–45.
+61. Hosseinzadeh A, et al. Nicotine induces neutrophil extracellular traps. J 
+Leukoc Biol. 2016;100(5):1105–12.
+62. West R. Tobacco smoking: health impact, prevalence, correlates and 
+interventions. Psychol Health. 2017;32(8):1018–36.
+63. Wang HJ, Zakhari S, Jung MK. Alcohol, inflammation, and gut-liver￾brain interactions in tissue damage and disease development. World J 
+Gastroenterol. 2010;16(11):1304–13.
+64. DiSabato DJ, et al. Interleukin-1 receptor on hippocampal neurons 
+drives social withdrawal and cognitive deficits after chronic social 
+stress. Mol Psychiatry. 2020. https://doi.org/10.1038/s41380-020-0788-3.
+65. Visscher PM, et al. 10 Years of GWAS discovery: biology, function, and 
+translation. Am J Hum Genet. 2017;101(1):5–22.
+66. Shungin D, et al. New genetic loci link adipose and insulin biology to 
+body fat distribution. Nature. 2015;518(7538):187–96.
+67. Park SL, Cheng I, Haiman CA. Genome-wide association studies of 
+cancer in diverse populations. Cancer Epidemiol Biomarkers Prev. 
+2018;27(4):405–17.
+68. Shrine N, et al. Moderate-to-severe asthma in individuals of European 
+ancestry: a genome-wide association study. Lancet Respir Med. 
+2019;7(1):20–34.
+69. Wellcome Trust Case Control, C. Genome-wide association study of 
+14,000 cases of seven common diseases and 3,000 shared controls. 
+Nature. 2007;447(7145):661–78.
+70. Fuchsberger C, et al. The genetic architecture of type 2 diabetes. 
+Nature. 2016;536(7614):41–7.
+71. Okbay A, et al. Genetic variants associated with subjective well-being, 
+depressive symptoms, and neuroticism identified through genome￾wide analyses. Nat Genet. 2016;48(6):624–33.
+72. van der Harst P, Verweij N. Identification of 64 novel genetic loci pro￾vides an expanded view on the genetic architecture of coronary artery 
+disease. Circ Res. 2018;122(3):433–43.
+73. Tomei S, et al. Obesity susceptibility loci in Qataris, a highly consanguin￾eous Arabian population. J Transl Med. 2015;13:119.
+74. Ishigaki K, et al. Large-scale genome-wide association study in a 
+Japanese population identifies novel susceptibility loci across different 
+diseases. Nat Genet. 2020;52(7):669–79.
+75. Wojcik GL, et al. Genetic analyses of diverse populations improves 
+discovery for complex traits. Nature. 2019;570(7762):514–8.
+76. Stylianou E. Epigenetics of chronic inflammatory diseases. J Inflamm 
+Res. 2019;12:1–14.
+77. Wang G, et al. Epigenetics and early life origins of chronic noncommu￾nicable diseases. J Adolesc Health. 2013;52(2 Suppl 2):S14-21.
+78. Kundakovic M, Champagne FA. Early-life experience, epigenetics, and 
+the developing brain. Neuropsychopharmacology. 2015;40(1):141–53.
+79. Hannon E, et al. Characterizing genetic and environmental influences 
+on variable DNA methylation using monozygotic and dizygotic twins. 
+PLoS Genet. 2018;14(8):e1007544.
+80. Zenk F, et al. Germ line-inherited H3K27me3 restricts enhancer function 
+during maternal-to-zygotic transition. Science. 2017;357(6347):212–6.
+81. Vickers MH. Early life nutrition, epigenetics and programming of later 
+life disease. Nutrients. 2014;6(6):2165–78.
+82. Bellanti JA. Epigenetic studies and pediatric research. Pediatr Res. 
+2020;87(2):378–84.
+83. Guertin KA, et al. Metabolomics in nutritional epidemiology: identify￾ing metabolites associated with diet and quantifying their potential 
+to uncover diet-disease relations in populations. Am J Clin Nutr. 
+2014;100(1):208–17.
+84. Ramos-Lopez O, et al. Guide for current nutrigenetic, nutrigenomic, and 
+nutriepigenetic approaches for precision nutrition involving the pre￾vention and management of chronic diseases associated with obesity. J 
+Nutrigenet Nutrigenomics. 2017;10(1–2):43–62.
+85. Cavalli G, Heard E. Advances in epigenetics link genetics to the environ￾ment and disease. Nature. 2019;571(7766):489–99.
+86. Sanli E, Kabaran S. Maternal obesity, maternal overnutrition and fetal 
+programming: effects of epigenetic mechanisms on the development 
+of metabolic disorders. Curr Genomics. 2019;20(6):419–27.
+87. Sailani MR, et al. Lifelong physical activity is associated with promoter 
+hypomethylation of genes involved in metabolism, myogenesis, 
+contractile properties and oxidative stress resistance in aged human 
+skeletal muscle. Sci Rep. 2019;9(1):3272.
+88. Marsit CJ. Influence of environmental exposure on human epigenetic 
+regulation. J Exp Biol. 2015;218(Pt 1):71–9.
+89. Park C, et al. Stress, epigenetics and depression: a systematic review. 
+Neurosci Biobehav Rev. 2019;102:139–52.
+90. Gilbert JA, et al. Current understanding of the human microbiome. Nat 
+Med. 2018;24(4):392–400.
+91. Goodrich JK, et al. Human genetics shape the gut microbiome. Cell. 
+2014;159(4):789–99.
+92. Korach-Rechtman H, et al. Murine genetic background has a stronger 
+impact on the composition of the gut microbiota than maternal 
+inoculation or exposure to unlike exogenous microbiota. Appl Environ 
+Microbiol. 2019;85(18):e00826-19.
+93. Rothschild D, et al. Environment dominates over host genetics in shap￾ing human gut microbiota. Nature. 2018;555(7695):210–5.
+94. Vangay P, et al. US immigration westernizes the human gut microbi￾ome. Cell. 2018;175(4):962-972 e10.
+95. Gomez A, et al. Plasticity in the human gut microbiome defies evolu￾tionary constraints. mSphere. 2019;4(4):e00271.
+96. Jha AR, et al. Gut microbiome transition across a lifestyle gradient in 
+Himalaya. PLoS Biol. 2018;16(11):e2005396.
+97. David LA, et al. Diet rapidly and reproducibly alters the human gut 
+microbiome. Nature. 2014;505(7484):559–63.
+98. Keohane DM, et al. Microbiome and health implications for 
+ethnic minorities after enforced lifestyle changes. Nat Med. 
+2020;26(7):1089–95.
+99. De Vadder F, et al. Microbiota-generated metabolites promote meta￾bolic benefits via gut-brain neural circuits. Cell. 2014;156(1–2):84–96.
+100. Sun M, et al. Microbiota-derived short-chain fatty acids promote Th1 
+cell IL-10 production to maintain intestinal homeostasis. Nat Commun. 
+2018;9(1):3555.
+101. Shao Y, et al. Stunted microbiota and opportunistic pathogen coloniza￾tion in caesarean-section birth. Nature. 2019;574(7776):117–21.
+102. Havstad S, et al. Effect of prenatal indoor pet exposure on the trajec￾tory of total IgE levels in early childhood. J Allergy Clin Immunol. 
+2011;128(4):880-885 e4.
+103. Netea MG, et al. Understanding human immune function using the 
+resources from the Human Functional Genomics Project. Nat Med. 
+2016;22(8):831–3.
+104. Ter Horst R, et al. Host and environmental factors influencing individual 
+human cytokine responses. Cell. 2016;167(4):1111–24.
+105. Bakker OB, et al. Integration of multi-omics data and deep phe￾notyping enables prediction of cytokine responses. Nat Immunol. 
+2018;19(7):776–86.
+
+Subramanian et al. J Transl Med (2020) 18:472 Page 12 of 12
+• fast, convenient online submission
+• thorough peer review by experienced researchers in your field
+• rapid publication on acceptance
+• support for research data, including large and complex data types
+• gold Open Access which fosters wider collaboration and increased citations 
+• maximum visibility for your research: over 100M website views per year 
+At BMC, research is always in progress.
+Learn more biomedcentral.com/submissions
+Ready to submit y submit your research ? Choose BMC and benefit from: 
+106. Hall MA et al. Environment-wide association study (EWAS) for type 2 
+diabetes in the Marshfield Personalized Medicine Research Project 
+Biobank. Pac Symp Biocomput; 2014. p. 200–11.
+107. Ho D. Artificial intelligence in cancer therapy. Science. 
+2020;367(6481):982–3.
+108. Ardila D, et al. End-to-end lung cancer screening with three-dimen￾sional deep learning on low-dose chest computed tomography. Nat 
+Med. 2019;25(6):954–61.
+109. Yala A, et al. A deep learning mammography-based model for 
+improved breast cancer risk prediction. Radiology. 2019;292(1):60–6.
+110. Kantarjian H, Yu PP. Artificial intelligence, big data, and cancer. JAMA 
+Oncol. 2015;1(5):573–4.
+111. Coudray N, et al. Classification and mutation prediction from non-small 
+cell lung cancer histopathology images using deep learning. Nat Med. 
+2018;24(10):1559–67.
+112. Gerke S, et al. The need for a system view to regulate artificial intel￾ligence/machine learning-based software as medical device. NPJ Digit 
+Med. 2020;3:53.
+113. Ho D, et al. Enabling technologies for personalized and precision medi￾cine. Trends Biotechnol. 2020;38(5):497–518.
+114. Zitnik M, et al. Machine learning for integrating data in biology 
+and medicine: principles, practice, and opportunities. Inf Fusion. 
+2019;50:71–91.
+115. Bycroft C, et al. The UK Biobank resource with deep phenotyping and 
+genomic data. Nature. 2018;562(7726):203–9.
+116. Perkins BA, et al. Precision medicine screening using whole-genome 
+sequencing and advanced imaging to identify disease risk in adults. 
+Proc Natl Acad Sci U S A. 2018;115(14):3686–91.
+117. Price ND, et al. A wellness study of 108 individuals using personal, 
+dense, dynamic data clouds. Nat Biotechnol. 2017;35(8):747–56.
+118. Schussler-Fiorenza Rose SM, et al. A longitudinal big data approach for 
+precision health. Nat Med. 2019;25(5):792–804.
+119. Ahadi S, et al. Personal aging markers and ageotypes revealed by deep 
+longitudinal profiling. Nat Med. 2020;26(1):83–90.
+120. Wang DD, Hu FB. Precision nutrition for prevention and management 
+of type 2 diabetes. Lancet Diabetes Endocrinol. 2018;6(5):416–26.
+121. de Toro-Martin J, et al. Precision nutrition: a review of personalized 
+nutritional approaches for the prevention and management of meta￾bolic syndrome. Nutrients. 2017;9(8):913.
+122. Zeevi D, et al. Personalized nutrition by prediction of glycemic 
+responses. Cell. 2015;163(5):1079–94.
+123. Mendes-Soares H, et al. Assessment of a personalized approach to 
+predicting postprandial glycemic responses to food among individuals 
+without diabetes. JAMA Netw Open. 2019;2(2):e188102.
+124. Mendes-Soares H, et al. Model of personalized postprandial glycemic 
+response to food developed for an Israeli cohort predicts responses in 
+Midwestern American individuals. Am J Clin Nutr. 2019;110(1):63–75.
+125. Chaganti S, et al. Discovering novel disease comorbidities using elec￾tronic medical records. PLoS ONE. 2019;14(11):e0225495.
+126. Hall A, et al. Effectiveness of a single lead AliveCor electrocardiogram 
+application for the screening of atrial fibrillation: a systematic review. 
+Medicine (Baltimore). 2020;99(30):e21388.
+127. Madani A, et al. Fast and accurate view classification of echocardio￾grams using deep learning. NPJ Digit Med. 2018;1:1–8.
+128. Porter P, et al. A prospective multicentre study testing the diagnostic 
+accuracy of an automated cough sound centred analytic system for the 
+identification of common respiratory disorders in children. Respir Res. 
+2019;20(1):81.
+129. Oh M, et al. Machine learning-based analysis of multi-omics data on the 
+cloud for investigating gene regulations. Brief Bioinform. 2020. https://
+doi.org/10.1093/bib/bbaa032.
+130. McConnell MV, et al. Feasibility of obtaining measures of lifestyle from 
+a smartphone app: the MyHeart counts cardiovascular health study. 
+JAMA Cardiol. 2017;2(1):67–76.
+131. Althoff T, et al. Large-scale physical activity data reveal worldwide activ￾ity inequality. Nature. 2017;547(7663):336–9.
+132. Levine DM, et al. Design and testing of a mobile health application rat￾ing tool. NPJ Digit Med. 2020;3:74.
+133. Wainberg M, et al. Deep learning in biomedicine. Nat Biotechnol. 
+2018;36(9):829–38.
+134. Topol EJ. High-performance medicine: the convergence of human and 
+artificial intelligence. Nat Med. 2019;25(1):44–56.
+135. Sudlow C, et al. UK biobank: an open access resource for identifying 
+the causes of a wide range of complex diseases of middle and old age. 
+PLoS Med. 2015;12(3):e1001779.
+136. All of Us Research Program, I. The “All of Us” Research Program. N Engl J 
+Med. 2019;381(7):668–76.
+137. Arges K, et al. The Project Baseline Health Study: a step towards a 
+broader mission to map human health. NPJ Digit Med. 2020;3:84.
+138. Agier L, et al. Association between the pregnancy exposome and fetal 
+growth. Int J Epidemiol. 2020;49(2):572–86.
+139. Yu SH, et al. Early experience with Watson for Oncology: a clinical 
+decision-support system for prostate cancer treatment recommenda￾tions. World J Urol. 2020. https://doi.org/10.1007/s00345-020-03214-y.
+140. Sattler F, Muller KR, Samek W. Clustered federated learning: model￾agnostic distributed multitask optimization under privacy constraints.
+IEEE Trans Neural Netw Learn Syst. 2020.
+141. Price WN 2nd, Cohen IG. Privacy in the age of medical big data. Nat 
+Med. 2019;25(1):37–43.
+142. Cohen IG, Mello MM. HIPAA and protecting health information in the 
+21st century. JAMA. 2018;320(3):231–2.
+143. Yuan B, Li J. The policy effect of the general data protection regulation 
+(GDPR) on the digital public health sector in the european union: an 
+empirical investigation. Int J Environ Res Public Health. 2019;16(6):1070.
+144. Gerke S, Minssen T, Cohen G. Ethical and legal challenges of artificial 
+intelligence-driven healthcare. Artificial Intelligence in Healthcare. 2020; 
+p. 295–336.
+145. da Silva JG. Transforming food systems for better health. Lancet. 
+2019;393(10173):e30–1.
+146. Kleinert S, Horton R. Obesity needs to be put into a much wider con￾text. Lancet. 2019;393(10173):724–6.
+147. Ramaswami R, Bayer R, Galea S. Precision medicine from a public health 
+perspective. Annu Rev Public Health. 2018;39:153–68.
+148. Wiemken TL, Kelley RR. Machine learning in epidemiology and health 
+outcomes research. Annu Rev Public Health. 2020;41:21–36.
+Publisher’s Note
+Springer Nature remains neutral with regard to jurisdictional claims in pub￾lished maps and institutional affiliations.
+

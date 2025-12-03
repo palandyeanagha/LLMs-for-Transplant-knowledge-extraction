@@ -1,0 +1,789 @@
+MINI REVIEW ARTICLE
+published: 18 November 2013
+doi: 10.3389/fimmu.2013.00378
+Mechanisms underlying CD4+Treg immune regulation in
+the adult: from experiments to models
+Marta Caridade1,2, Luis Graca1,2*
+‡ and Ruy M. Ribeiro3*†‡
+1
+Instituto de Medicina Molecular, Faculdade de Medicina da Universidade de Lisboa, Lisbon, Portugal
+2
+Instituto Gulbenkian de Ciência, Oeiras, Portugal
+3 Theoretical Biology and Biophysics, Los Alamos National Laboratory, Los Alamos, NM, USA
+Edited by:
+Carmen Molina-Paris, University of
+Leeds, UK
+Reviewed by:
+Akihiko Yoshimura, Keio University,
+Japan
+Fernando A. Arosa, University of Beira
+Interior, Portugal
+*Correspondence:
+Luis Graca, Instituto de Medicina
+Molecular, Faculdade de Medicina,
+Universidade de Lisboa, Avenida Prof.
+Egas Moniz, 1649-028 Lisbon,
+Portugal
+e-mail: lgraca@fm.ul.pt;
+Ruy M. Ribeiro, Theoretical Biology
+and Biophysics, Los Alamos National
+Laboratory, Los Alamos, NM 87545,
+USA
+e-mail: ruy@lanl.gov
+†Present address:
+Ruy M. Ribeiro, Instituto de Medicina
+Molecular, Faculdade de Medicina da
+Universidade de Lisboa, Lisbon,
+Portugal
+‡Luis Graca and Ruy M. Ribeiro are
+joint senior authors.
+To maintain immunological balance the organism has to be tolerant to self while remaining
+competent to mount an effective immune response against third-party antigens. An important mechanism of this immune regulation involves the action of regulatory T-cell (Tregs).
+In this mini-review, we discuss some of the known and proposed mechanisms by which
+Tregs exert their influence in the context of immune regulation, and the contribution of
+mathematical modeling for these mechanistic studies. These models explore the mechanisms of action of regulatory T cells, and include hypotheses of multiple signals, delivered
+through simultaneous antigen-presenting cell (APC) conjugation; interaction of feedback
+loops between APC, Tregs, and effector cells; or production of specific cytokines that act
+on effector cells. As the field matures, and competing models are winnowed out, it is likely
+that we will be able to quantify how tolerance-inducing strategies, such as CD4-blockade,
+affect T-cell dynamics and what mechanisms explain the observed behavior of T-cell based
+tolerance.
+Keywords:Tregs, mathematical models, CD4-blockade, regulation, tolerance
+INTRODUCTION
+Immunological tolerance can be defined as the state of unresponsiveness to an antigen, following prior contact with that antigen,
+where the host remains competent to mount an effective immune
+response against third-party antigens. Accomplishing therapeutic
+induced tolerance has been one of the major goals of immunology
+ever since the pioneering work of Medawar and colleagues (1).
+There is a need to keep a balance between aggressive cells and
+cells that maintain tolerance to self. On occasions this balance
+can be disrupted originating either autoimmunity, when mechanisms leading to self-tolerance fail, or immunodeficiency and
+susceptibility to infection when the immune system is not able to
+mount a proper immune response. Usually, however, the immune
+system shows a significant capacity for self-tolerance, in spite of
+its equally efficient performance in the protection from foreign
+microbes. The ability to orchestrate protective immune responses
+is also the major hurdle impeding successful transplantation therapies and hinders the efficacy of therapeutic administration of
+foreign proteins and genes.
+Random rearrangement of T-cell receptors (TCR) during cellular maturation leads to T cells that will recognize self-antigens.
+It was a long held assumption that central tolerance, by means of
+negative selection of autoreactive lymphocyte clones, could on
+its own account for the establishment of self-tolerance. Without such a censoring mechanism these autoreactive cells could
+eventually lead to autoimmune disease. Indeed thymocytes must
+survive the process of negative selection, which eliminates cells
+whose TCRs bind too avidly to self-antigens (2–4). The apoptosis of these thymocytes will prevent migration of autoreactive
+T cells to the periphery and prevent autoimmunity. Conversely,
+absence of negative selecting self-peptide-MHC complexes in the
+thymic medulla leads to an increase in mature autoreactive T
+cells (5, 6).
+However, not all self-antigens are presented in the thymus, and
+some developing autoreactive T cells never encounter their antigens, eventually migrating to the periphery. Thus, although central
+tolerance contributes to the deletion of a large number of potentially autoreactive T cells, some autoreactive clones can be found
+in the periphery of healthy individuals (7, 8). There are, therefore, mechanisms that operate in the periphery (i.e., outside the
+thymus) to establish self-tolerance toward autoreactive clones that
+escape thymic negative selection.
+www.frontiersin.org November 2013 | Volume 4 | Article 378 | 1
+
+Caridade et al. Modeling T-reg function
+Initially, one such mechanism was thought to be mediated by Tcell anergy, described as the functional state in which T cells remain
+viable but unable to respond to optimal stimulation through the
+TCR and co-stimulatory ligands (9), i.e., unable to proliferate or
+to produce interleukin-2 (IL-2) (10, 11). The first observation of
+anergy was made with purified human CD4+ T cells stimulated
+with large quantities of peptide antigens (10). It was noted that
+after antigen stimulation there was down-regulation of TCR and
+this was associated with the molecular mechanism for anergy (12).
+Subsequent studies with mouse CD4+ T cells suggested that occupancy of the TCR without any other signals was responsible for
+the induction of this state (13, 14).
+Interestingly, anergic T cells were capable of suppressing proliferation of naïve T cells in vitro (15) and in vivo
+(16). In addition, anergic T cells have been shown to inhibit
+the antigen-presenting function and survival of dendritic cells
+(17). These and other observations led to the proposal of
+the “civil service model” (18), postulating that antigen-specific
+unresponsive cells can interfere with the generation of help
+by co-localizing with other T cells and competing for elements in the microenvironment (such as adhesion molecules or
+cytokines).
+However, it was not clear how T cells would become anergic
+in vivo, and whether such mechanism was enough to maintain
+tolerance. More recently, a specific T cell subset, termed regulatory T (Treg) cells, gained prominence as being a key mechanism
+maintaining peripheral self-tolerance (19, 20). With hindsight, it is
+likely that many of the features of anergic T cells are a consequence
+of Treg function.
+REGULATORY T CELLS
+In 1995 Sakaguchi et al. (19) showed that depletion of a minor
+population of CD4+ T cells constitutively expressing CD25 [IL-2
+receptor α-chain (IL-2Rα)] led to the generation of a spectrum of
+autoimmune diseases when transferred to immune-compromised
+recipients. In addition, the co-transfer of CD25+ T cells prevented
+the pathology.
+Based on this CD25 marker, a population of natural (thymusderived) regulatory T cells was identified in the resting immune
+system, both in mice and in humans (21). Subsequent studies
+showed that these cells express forkhead box transcription factor 3 (Foxp3) and this finding led to the definite establishment
+of a Treg subset (22–24). There is now abundant evidence that
+these regulatory T cells are actively engaged in the maintenance
+of self-tolerance (25). Furthermore, depletion of Foxp3+ Tregs
+originates fatal multi-organ autoimmunity. The phenotype of this
+disease is virtually indistinguishable from the IPEX syndrome,
+caused by Foxp3 mutations in humans and equivalent to the Scurfy
+phenotype in mice (26–28).
+THYMIC TREG CELLS
+The Treg cells that develop in the thymus, first described as naturally occurring regulatory T cells (nTregs) appear to be selected
+for self-antigen/MHC expressed by thymic epithelial cells (29, 30),
+in a process that requires TCR triggering in the presence of costimulation (31, 32), but dispenses TGF-β and IL-2 (33, 34). Early
+studies with Treg cells showed that these cells express CD25, CD5,
+and cytotoxic T lymphocyte antigen 4 (CTLA-4), which are all
+induced upon TCR stimulation (19).
+In the periphery, nTregs represent around 6–10% of the overall CD4+ T-cell population. In order to be sustained they need
+continuous TCR triggering and co-stimulation in the presence of
+IL-2 (35–37), making IL-2 essential for natural Treg pool maintenance in the periphery (38). Comparative analysis of polyclonal
+TCR repertoires showed that TCR sequences from Treg cells were
+of broader variety and only partially overlapping with the ones
+from non-Treg cells (39). Some studies have shown that antigenspecific Treg cells are more potent at suppressing the induction of
+autoimmune disease than polyclonal populations (40). However,
+other studies have also shown that polyclonal Tregs are able to
+suppress independently of their specificity (41). Thus, Tregs with
+one antigen-specificity can suppress effector cells with many other
+antigen-specificities by bystander suppression. Moreover, transplantation studies have shown that Tregs can display a phenomenon called “linked suppression,” where they can be activated in an
+antigen-specific manner, and subsequently suppress responses to
+unrelated antigens presented by the same cells (42). Tregs show a
+third property called infectious tolerance by which one population
+of Treg cells creates a regulatory milieu that promotes the outgrowth of a new population of Treg cells with antigen-specificities
+distinct from those of the original population, as long as the new
+antigen is present in the same tissue as the antigen recognized by
+the original Treg cell (43–45).
+PERIPHERAL TREG INDUCTION
+Besides nTreg, of thymic origin, it has become apparent that
+induced regulatory T cells (iTreg) also exist in the periphery (46,
+47). After the discovery of the key role for Foxp3 in Tregs, it was
+demonstrated that it was possible for non-Treg cells to acquire both
+Foxp3 and the regulatory functions associated with it, therefore
+becoming Treg cells themselves (46, 48, 49).
+It is likely that peripheral induction of iTreg occurs in response
+to non-self antigens like food, allergens, and commensal bacteria (39). Early evidence for in vivo peripheral conversion was
+derived from adoptive cell transfer experiments in which polyclonal CD4+ CD25− naïve T cells were injected into lymphopenic
+mice or mice containing a monoclonal T cell repertoire devoid of
+nTregs, or when tolerance was imposed on monoclonal populations without Treg cells (49–51). In these conditions, homeostatic
+proliferation of the donor cells could be observed and part of the
+donor cell population became CD25+CTLA-4+GITR+Foxp3+
+and acquired suppressive activity. Additionally, when congenitally marked CD4+ CD25− T cells were transferred to WT hosts,
+10% of those converted into CD4+ CD25+ Foxp3+ T cells, within
+6 weeks (52).
+It was first shown in vitro that TCR activation in the presence
+of TGF-β would lead to Treg conversion (53). Subsequent studies
+supported this observation and demonstrated that iTreg conversion could be greatly enhanced by suboptimal TCR signals or a
+combination of strong TCR signals with high doses of TGF-β (47,
+53–57). In vivo it is possible to induce oral tolerance by giving the
+antigen in the drinking water (58), or to induce transplantation
+tolerance using non-depleting anti-CD4 at the time of transplantation (48, 59). In both cases, tolerance induction is accompanied
+Frontiers in Immunology | T Cell Biology November 2013 | Volume 4 | Article 378 | 2
+
+Caridade et al. Modeling T-reg function
+by induction of Foxp3+ cells, in a process that requires TGF-β. In
+addition to these, many other factors influence the induction of
+Tregs both in vitro and in vivo, such as the co-stimulation environment, the strength of TCR signaling, mTOR inhibition with
+rapamycin, and low levels of essential amino-acids (44, 57, 60–69).
+MECHANISMS OF ACTION OF TREG CELLS
+In spite of intensive study of Tregs and their properties, the specific
+mechanisms by which they control immune responses are still not
+fully understood. There are several proposed mechanisms with
+experimental support, but it is likely that no single mechanism is
+responsible for the full range of biological phenomena involving
+Tregs (70). And it is also likely that in different milieu distinct
+mechanisms and even alternative subsets of regulatory cells are
+involved in tuning the immune response (71).
+In Figure 1, we summarize five putative mechanisms of Treg
+function: (i) modulation of antigen-presenting cell (APC) activity through Treg engagement of co-stimulatory receptors on the
+surface of APC, leading to weak or abrogated signals from APC
+to naive/effector cells; (ii) Treg secretion of cytokines, such as
+IL10 and TGFβ, suppressing the activity of effector cells and
+APC; (iii) under certain circumstances, Tregs could have a direct
+cytotoxic effect, through the production of perforin/granzyme
+and induction of apoptosis in effector cells; (iv) Tregs may also
+cause metabolic disruption, for example stimulating APCs to
+produce enzymes that consume essential amino-acids, preventing naive/effector cell proliferation, and in the presence of TGFβ
+may induce the expression of Foxp3 in naive cells (i.e., they become
+Tregs); (v) Tregs could also compete with effectors cells for APC
+signals or cytokines, such as IL2.
+There is mounting evidence [reviewed in (72)] that Treg cells
+exert their effects on different cell types, including CD4+ and
+CD8+ T cells, B cells, natural killer T cells (NKT), and DCs (70).
+The action of Tregs can be mediated by secretion of immunosuppressive cytokines, such as IL-10, TGF-β, IL-35, and galectin-1
+(72) or by cell-dependent mechanisms through molecules such as
+GITR, CTLA-4, CD39, CD73, and LAG-3 (70). The spectrum of
+effect of Tregs on their targets goes from modifying the functional
+properties of other immune cells, such as down-regulating transcription of IL-2 (70, 71, 73), and other important growth factors;
+to actually killing those cells through granzyme B and perforin
+(70, 73–77). For example, there is evidence that Tregs can kill both
+immature and mature DCs (74).
+Furthermore, Tregs may convert APCs to become themselves
+immunosuppressive (78). It has also been proposed that Tregs act
+by competing with other cells for growth factors, particularly IL-2
+(79, 80). One possible outcome of these interactions is that other
+cells become themselves Foxp3+ regulatory cells (45).
+These and other suppressive mechanisms may be operational
+depending on the microenvironment, biological context, and
+FIGURE 1 | Putative mechanisms used by regulatory T cells. (1) Targeting
+DCs – modulation of antigen-presenting cell activity through Treg engagement
+of co-stimulatory receptors on the DC surface, leading to weak or abrogated
+signals to naïve/effector T cells; (2) Metabolic disruption – includes cytokine
+deprivation, cyclic AMP-mediated inhibition, and adenosine receptor
+(A2A)-mediated immunosuppression; (3) Competition – for critical cytokines,
+such as IL-2, or direct disruption of effector cell engagement with APCs; (4)
+Cytolysis – direct cytotoxic effect through the production of Granzyme B and
+Perforin and consequent apoptosis of effector T cells or APCs; (5) Production
+of inhibitory cytokines – including IL-10, IL-35, and TGF-β.
+www.frontiersin.org November 2013 | Volume 4 | Article 378 | 3
+
+Caridade et al. Modeling T-reg function
+immune response. For instance, IL-10 producing cells are more
+abundant in lamina propria (81, 82) and perforin or granzyme
+expressing Tregs are predominant in tumor environments (83).
+MATHEMATICAL MODELING
+Due to the complexity of the mechanisms and interactions
+involved in the processes of immune tolerance, mathematical
+modeling has been used as a tool to explore different conceptual
+frameworks of immunological tolerance. Many studies have analyzed the dynamics of thymocyte development, with positive and
+negative selection, as a mechanism of central tolerance (84–91).
+Many other studies have focused on modeling the putative
+mechanisms of Treg suppression in the periphery. In these models, typically the dynamics of Tregs, effector cells, and APCs are
+studied to find the interaction mechanisms in the model that qualitatively reflect the experimental knowledge. For the purposes of
+this review, we can divide the models proposed in three categories,
+although there is overlap between these in some studies: (i) models that analyze different putative mechanisms of action of Tregs
+(Table 1); (ii) models that analyze the effects of Tregs on different
+processes, such as the immune response to pathogens and tumors,
+or in allergy; and (iii) models that study the maintenance of Tregs
+(homeostasis).
+MODELS OF THE MECHANISMS OF TREG ACTION
+An early model explicitly considering Tregs was developed by León
+and collaborators (92). They considered cross-regulation, where
+simultaneous conjugation of a Treg and an effector cell on the
+same APC can suppress effector function (92, 93). In this model,
+regulation could be due to competition for conjugation sites on
+the APC, or through inhibitory signals delivered to effector cells on
+the same APC, or by inducing conversion of effector cells to a regulatory phenotype. This model is developed and analyzed in detail
+in several subsequent publications (93–95), and it is reviewed in
+Carneiro et al. (96). Recently the model was expanded to study the
+dual effect of IL2 in promoting immunity and tolerance (97, 98).
+Some authors considered in more detail the dynamics of antigen
+and APCs, and compared mechanisms where regulatory T cells
+suppress APCs function or maturation with models where Tregs
+act directly on effector T cells (99). Other models along these lines
+included the processes of APC maturation and the differentiation
+of T cells into regulatory or effector phenotypes (100), following a previous proposal for this interaction (101). Interestingly, in
+these models, survival or proliferation of Tregs is dependent on
+feedback from effector T-cells, which is in part responsible for the
+bi-stability observed that is interpreted as states of tolerance or
+immunity.
+Another mechanism of peripheral tolerance modeled by several authors involves anergy of effector cells (102, 103). This anergy
+can be achieved by tuning the threshold for activation, for example through repeated encounter with antigen or APC (102–106),
+or through modulation by Tregs. Carneiro et al. compared this
+mechanism with their previous model of cross-regulation discussed above (102). Another model that also explores thresholds
+for activation, but based on effector T-cell population response
+was studied by Burroughs et al. (107, 108). In this model the relative levels of Tregs and effector T cells depend on the respective
+strength of stimulation by antigen, which can be modulated by
+IL-2 – this model is reviewed in (109).
+Typically these models consider a limited number of cell populations (3–6) and analyze one mechanism at a time. However, Kim
+et al. proposed a detailed model including dozens of cell populations, with a spatial component (tissue and lymph node), and
+considered multiple mechanisms of Treg action simultaneously
+(110). At the other end of the spectrum, Abreu et al. proposed a
+model where regulation of the immune system was simply based
+on cross-recognition of multiple antigens by the same cell, whether
+it is an effector, a regulatory, or an APC (111).
+MODELS OF THE EFFECT OF TREGS ON THE IMMUNE RESPONSE
+The studies discussed so far are mainly concerned with the mechanisms defining the interactions of Tregs and effector cells, often
+looking for steady states where one or the other population
+dominates, interpreted as tolerance or autoimmune states. Other
+models analyze the effects of the existence of Tregs on different
+processes.
+Many of these models explore the system level effects of Treg
+failure and the potential development of autoimmunity. One of
+the first models to study this was by León et al. (112), where they
+analyzed the relationship between infections and autoimmunity in
+general. More recent studies analyzed specific autoimmune conditions, such as multiple sclerosis (113, 114) and inflammatory
+bowel disease (115). Grosse et al. analyzed the balance of Th1 vs.
+Th2 type responses and their control by Tregs in the context of
+allergies, with the objective of analyzing immunotherapy protocols (116). Another study looking at immunotherapy protocols, in
+this case modulation of IL2 therapy, used a mathematical model of
+helper, regulatory, and memory CD4+ T cells (98). These studies
+are mostly theoretical. However, one report described an interesting experimental study of mice injected with tolerogenic or
+control peptides and followed for 16 days, with serial measurements of different T-cell subsets. These data were then analyzed
+with a mathematical model (117).
+Some studies have analyzed the interplay between infections
+and regulation of the immune response. One of these modeled
+the immune decision between attacking or not a given antigen,
+based on the network of interactions between Tregs, Th17 cells,
+and growing levels of antigen (as in the case of a pathogen) (118).
+And a model analyzing the regulation of the immune response in
+early HIV infection, through the expansion of specific Tregs, was
+recently introduced (119). Finally, León et al. (120, 121) considered an expansion of their mechanistic model of Treg – T effector
+interactions to study the immune response against tumors, and
+their control or expansion.
+MODELS OF TREG HOMEOSTASIS
+An important question that has also been addressed by modeling
+studies is the maintenance of a healthy number of Tregs. Several studies included the possibility of the Treg population being
+maintained in the periphery in part by feedback from the effector cells (92, 99, 100). One such model (94) studied the effects of
+thymic output and positive/negative selection on proper balance
+between tolerance and immunity in the periphery, and concluded
+that repertoire selection plays an important role in maintaining
+Frontiers in Immunology | T Cell Biology November 2013 | Volume 4 | Article 378 | 4
+
+Caridade et al. Modeling T-reg function
+Table 1 | Summary of mechanistic models of Treg action.
+Cell populations considered Mechanisms of regulation of immune response Some properties of the model Reference
+APC, Treg, Teff, and Treg, Teff
+conjugates on APC
+Competition for activation on APC
+Tregs inhibit Teff on same conjugate
+Treg maintenance is dependent on Teff
+Treg inhibit growth of Teff
+Treg induce Teff to become Treg
+(92–94, 96)
+No explicit APC dynamics
+As above plus IL2 Competition for IL2 Non-local interactions (97, 98)
+Tregs condition APC Model used to study IL2-based therapies
+APC and Ag dynamics Tregs directly suppress Teff (specifically and bystander) Bystander effects are important (99)
+APC maturation Tregs suppress APC maturation Direct suppression was more effective
+T cells are activated into Treg or
+Teff by APC stimulation
+Antigen Tp become Treg by interaction with resting APC Strength of antigen stimulus is crucial in
+defining whether system is in tolerant or
+non-tolerant state
+(100)
+Immature APC, resting APC,
+activated APC
+Tp become Teff by interaction with activated APC
+Teff activates APC
+Precursor T cells (Tp), Teff, Treg Treg induces activated APC to rest
+Stochastic model of TCR
+triggering for T cells (both
+thymus and periphery)
+Different thresholds for activation vs. anergy, with or
+without co-stimulation
+Self-reactive cells in periphery are controlled by
+a mechanism of reversible anergy
+(103)
+T cells with tunable activation
+thresholds
+Model for integration of signals in successive
+encounters with APC
+Exhibits self-tolerance (102)
+“More cells should lead to less anergy,” which
+is not seen in adoptive transfer experiments
+Inactive and active Treg and Teff Tregs consume IL2 Strength of antigen stimulation (forTreg and Teff)
+defines relative levels of those two populations
+(107–109)
+IL2 for Teff proliferation, also
+helps Treg proliferate
+Treg inhibit Teff (from active to inactive) proportionally
+to Treg numbers
+Cytokine (e.g., IL7) for Treg
+homeostasis
+APC with different antigens
+Teff of multiple specificities
+Tregs of multiple specificities
+Cells interact with extensive cross-reactivity, but
+different avidities
+Effector functions are the outcome of individual
+cellular decisions (based on cross-reactivity)
+(111)
+A threshold of conjugation time can be identified
+that permits self/non-self discrimination
+Comparison of some of the models for Treg action discussed in the text. The model by Kim et al. (110) is too complex to fit in this summary table.
+that balance. Baltcheva et al. (122) developed a more detailed
+model to analyze the life-long dynamics of precursor and mature
+CD25+ T cells (Tregs) in humans, including thymic production,
+density-dependent homeostasis, and effector T-cell conversion.
+CONCLUSION
+The field of regulatory T cells, although relatively recent, has had
+an explosion of knowledge driven by detailed experimental work
+(20, 65, 72, 123, 124). Indeed there are many more studies than
+we could possibly review or even allude to in this mini-review.
+However, the mechanistic details of this important function of
+the immune system are not completely elucidated (72). Many
+authors have developed mathematical models of the interactions
+between Tregs and effector cells to try to add to our understanding of these mechanisms. Still, there is a lack of true collaborations
+between experimental scientists and modelers in this field. Clearly,
+more progress would be possible if such integrated teams worked
+together, as has been the case in other areas of medicine, e.g., modeling of viral infections (125). As the field matures and competing
+models are winnowed out, it is likely that we will be able to quantify how tolerance-inducing strategies, such as CD4-blockade,
+affect T-cell dynamics, and what mechanisms explain the observed
+behavior of T-cell based tolerance.
+ACKNOWLEDGMENTS
+The authors thank Joana Duarte for assistance in preparing Figure 1. Luis Graca is funded by FCT/PTDC/SAUTOX/114424/2009 and FCT/PTDC/SAU-IMU/120225/2010. Ruy
+M. Ribeiro received funding from the European Union 7th Framework Programme under grant n° PCOFUND-GA-2009-246542
+and from Fundação para a Ciência e Tecnologia, Portugal.
+REFERENCES
+1. Medawar PB. The behaviour and fate of skin autografts and skin homografts
+in rabbits: a report to the War Wounds Committee of the Medical Research
+Council. J Anat (1944) 78(Pt 5):176–99.Epub 1944/10/01
+2. Kappler JW, Roehm N, Marrack P. T cell tolerance by clonal elimination in the
+thymus. Cell (1987) 49(2):273–80. doi:10.1016/0092-8674(87)90568-X Epub
+1987/04/24
+www.frontiersin.org November 2013 | Volume 4 | Article 378 | 5
+
+Caridade et al. Modeling T-reg function
+3. MacDonald HR, Schneider R, Lees RK, Howe RC, Acha-Orbea H, Festenstein
+H, et al. T-cell receptor V beta use predicts reactivity and tolerance to Mlsaencoded antigens. Nature (1988) 332(6159):40–5. doi:10.1038/332040a0 Epub
+1988/03/03
+4. von Boehmer H, Teh HS, Kisielow P. The thymus selects the useful, neglects
+the useless and destroys the harmful. Immunol Today (1989) 10(2):57–61.
+doi:10.1016/0167-5699(89)90307-1 Epub 1989/02/01
+5. Laufer TM, DeKoning J, Markowitz JS, Lo D, Glimcher LH. Unopposed positive
+selection and autoreactivity in mice expressing class II MHC only on thymic
+cortex.Nature (1996) 383(6595):81–5. doi:10.1038/383081a0 Epub 1996/09/05
+6. Laufer TM, Fan L, Glimcher LH. Self-reactive T cells selected on thymic cortical epithelium are polyclonal and are pathogenic in vivo. J Immunol (1999)
+162(9):5078–84.Epub 1999/05/05
+7. Ramsdell F, Lantz T, Fowlkes BJ. A nondeletional mechanism of thymic self tolerance. Science (1989) 246(4933):1038–41. doi:10.1126/science.2511629 Epub
+1989/11/24
+8. Schonrich G, Momburg F, Hammerling GJ, Arnold B. Anergy induced by
+thymic medullary epithelium. Eur J Immunol (1992) 22(7):1687–91. doi:10.
+1002/eji.1830220704 Epub 1992/07/01
+9. Schwartz RH. Models of T cell anergy: is there a common molecular mechanism? J Exp Med (1996) 184(1):1–8. doi:10.1084/jem.184.1.1 Epub 1996/07/01
+10. Lamb JR, Skidmore BJ, Green N, Chiller JM, Feldmann M. Induction of
+tolerance in influenza virus-immune T lymphocyte clones with synthetic
+peptides of influenza hemagglutinin. J Exp Med (1983) 157(5):1434–47.
+doi:10.1084/jem.157.5.1434 Epub 1983/05/01
+11. Schwartz RH. A cell culture model for T lymphocyte clonal anergy. Science
+(1990) 248(4961):1349–56. doi:10.1126/science.2113314 Epub 1990/06/15
+12. Lamb JR, Feldmann M. Essential requirement for major histocompatibility complex recognition in T-cell tolerance induction. Nature (1984)
+308(5954):72–4. doi:10.1038/308072a0 Epub 1984/03/01
+13. Jenkins MK, Schwartz RH. Antigen presentation by chemically modified
+splenocytes induces antigen-specific T cell unresponsiveness in vitro and
+in vivo. J Exp Med (1987) 165(2):302–19. doi:10.1084/jem.165.2.302 Epub
+1987/02/01
+14. Quill H, Schwartz RH. Stimulation of normal inducer T cell clones with antigen presented by purified Ia molecules in planar lipid membranes: specific
+induction of a long-lived state of proliferative nonresponsiveness. J Immunol
+(1987) 138(11):3704–12.Epub 1987/06/01
+15. Lombardi G, Sidhu S, Batchelor R, Lechler R. Anergic T cells as suppressor cells
+in vitro. Science (1994) 264(5165):1587–9. doi:10.1126/science.8202711 Epub
+1994/06/10
+16. Chai JG, Bartok I, Chandler P, Vendetti S, Antoniou A, Dyson J, et al. Anergic T cells act as suppressor cells in vitro and in vivo. Eur J Immunol
+(1999) 29(2):686–92. doi:10.1002/(SICI)1521-4141(199902)29:02<686::AIDIMMU686>3.0.CO;2-N Epub 1999/03/04
+17. Vendetti S, Chai JG, Dyson J, Simpson E, Lombardi G, Lechler R. Anergic T cells
+inhibit the antigen-presenting function of dendritic cells. J Immunol (2000)
+165(3):1175–81.Epub 2000/07/21
+18. Waldmann H, Qin S, Cobbold S. Monoclonal antibodies as agents to reinduce tolerance in autoimmunity. J Autoimmun (1992) 5(Suppl A):93–102.
+doi:10.1016/0896-8411(92)90024-K Epub 1992/04/01
+19. Sakaguchi S, Sakaguchi N, Asano M, Itoh M, Toda M. Immunologic selftolerance maintained by activated T cells expressing IL-2 receptor alpha-chains
+(CD25). Breakdown of a single mechanism of self-tolerance causes various
+autoimmune diseases. J Immunol (1995) 155(3):1151–64.Epub 1995/08/01
+20. Ohkura N, Kitagawa Y, Sakaguchi S. Development and maintenance of regulatory T cells. Immunity (2013) 38(3):414–23. doi:10.1016/j.immuni.2013.03.
+002
+21. Yagi H, Nomura T, Nakamura K, Yamazaki S, Kitawaki T, Hori S, et al. Crucial role of FOXP3 in the development and function of human CD25+CD4+
+regulatory T cells. Int Immunol (2004) 16(11):1643–56. doi:10.1093/intimm/
+dxh165
+22. Fontenot JD, Gavin MA, Rudensky AY. Foxp3 programs the development and
+function of CD4+CD25+ regulatory T cells. Nat Immunol (2003) 4(4):330–6.
+doi:10.1038/ni904
+23. Hori S, Nomura T, Sakaguchi S. Control of regulatory T cell development by the transcription factor Foxp3. Science (2003) 299(5609):1057–61.
+doi:10.1126/science.1079490 Epub 2003/01/11
+24. Khattri R, Cox T, Yasayko SA, Ramsdell F. An essential role for Scurfin in
+CD4+CD25+ T regulatory cells. Nat Immunol (2003) 4(4):337–42. doi:10.
+1038/ni909
+25. Sakaguchi S. Naturally arising CD4+ regulatory t cells for immunologic self-tolerance and negative control of immune responses. Annu Rev
+Immunol (2004) 22:531–62. doi:10.1146/annurev.immunol.21.120601.141122
+Epub 2004/03/23
+26. Bennett CL, Christie J, Ramsdell F, Brunkow ME, Ferguson PJ, Whitesell L, et al.
+The immune dysregulation, polyendocrinopathy, enteropathy, X-linked syndrome (IPEX) is caused by mutations of FOXP3. Nat Genet (2001) 27(1):20–1.
+doi:10.1038/83713 Epub 2001/01/04
+27. Wildin RS, Ramsdell F, Peake J, Faravelli F, Casanova JL, Buist N, et al. Xlinked neonatal diabetes mellitus, enteropathy and endocrinopathy syndrome
+is the human equivalent of mouse scurfy. Nat Genet (2001) 27(1):18–20.
+doi:10.1038/83707 Epub 2001/01/04
+28. Brunkow ME, Jeffery EW, Hjerrild KA, Paeper B, Clark LB, Yasayko SA, et al.
+Disruption of a new forkhead/winged-helix protein, scurfin, results in the
+fatal lymphoproliferative disorder of the scurfy mouse. Nat Genet (2001)
+27(1):68–73. doi:10.1038/83784
+29. Apostolou I, Sarukhan A, Klein L, von Boehmer H. Origin of regulatory T
+cells with known specificity for antigen. Nat Immunol (2002) 3(8):756–63.
+doi:10.1038/ni816
+30. Jordan MS, Boesteanu A, Reed AJ, Petrone AL, Holenbeck AE, Lerman MA,
+et al. Thymic selection of CD4+CD25+ regulatory T cells induced by an agonist self-peptide. Nat Immunol (2001) 2(4):301–6. doi:10.1038/86302 Epub
+2001/03/29
+31. Tai X, Cowan M, Feigenbaum L, Singer A. CD28 costimulation of developing thymocytes induces Foxp3 expression and regulatory T cell differentiation independently of interleukin 2. Nat Immunol (2005) 6(2):152–62.
+doi:10.1038/ni1160 Epub 2005/01/11
+32. Fontenot JD, Rasmussen JP, Williams LM, Dooley JL, Farr AG, Rudensky AY.
+Regulatory T cell lineage specification by the forkhead transcription factor
+foxp3. Immunity (2005) 22(3):329–41. doi:10.1016/j.immuni.2005.01.016
+33. Fontenot JD, Rasmussen JP, Gavin MA, Rudensky AY. A function for interleukin
+2 in Foxp3-expressing regulatory T cells. Nat Immunol (2005) 6(11):1142–51.
+doi:10.1038/ni1263
+34. Marie JC, Letterio JJ, Gavin M, Rudensky AY. TGF-beta1 maintains suppressor
+function and Foxp3 expression in CD4+CD25+ regulatory T cells. J Exp Med
+(2005) 201(7):1061–7. doi:10.1084/jem.20042276
+35. Gavin MA, Clarke SR, Negrou E, Gallegos A, Rudensky A. Homeostasis and
+anergy of CD4(+)CD25(+) suppressor T cells in vivo. Nat Immunol (2002)
+3(1):33–41. doi:10.1038/ni743
+36. Knoechel B, Lohr J, Kahn E, Bluestone JA,Abbas AK. Sequential development of
+interleukin 2-dependent effector and regulatory T cells in response to endogenous systemic antigen. J Exp Med (2005) 202(10):1375–86. doi:10.1084/jem.
+20050855
+37. Lohr J, Knoechel B, Jiang S, Sharpe AH, Abbas AK. The inhibitory function of
+B7 costimulators in T cell responses to foreign and self-antigens. Nat Immunol
+(2003) 4(7):664–9. doi:10.1038/ni939
+38. Malek TR. The main function of IL-2 is to promote the development of T
+regulatory cells. J Leukoc Biol (2003) 74(6):961–5. doi:10.1189/jlb.0603272
+39. Josefowicz SZ, Lu LF, Rudensky AY. Regulatory T cells: mechanisms of differentiation and function. Annu Rev Immunol (2012) 30:531–64. doi:10.1146/
+annurev.immunol.25.022106.141623 Epub 2012/01/10
+40. Salomon B, Lenschow DJ, Rhee L, Ashourian N, Singh B, Sharpe A,
+et al. B7/CD28 costimulation is essential for the homeostasis of the
+CD4+CD25+ immunoregulatory T cells that control autoimmune diabetes.
+Immunity (2000) 12(4):431–40. doi:10.1016/S1074-7613(00)80195-8 Epub
+2000/05/05
+41. Graca L, Le Moine A, Lin CY, Fairchild PJ, Cobbold SP, Waldmann H. Donorspecific transplantation tolerance: the paradoxical behavior of CD4+CD25+
+T cells. Proc Natl Acad Sci U S A (2004) 101(27):10122–6. doi:10.1073/pnas.
+0400084101 Epub 2004/06/26
+42. Davies JD, Leong LY, Mellor A, Cobbold SP, Waldmann H. T cell suppression
+in transplantation tolerance through linked recognition. J Immunol (1996)
+156(10):3602–7.Epub 1996/05/15
+43. Qin S, Cobbold SP, Pope H, Elliott J, Kioussis D, Davies J, et al. “Infectious”
+transplantation tolerance. Science (1993) 259(5097):974–7.Epub 1993/02/12
+Frontiers in Immunology | T Cell Biology November 2013 | Volume 4 | Article 378 | 6
+
+Caridade et al. Modeling T-reg function
+44. Graca L, Honey K, Adams E, Cobbold SP, Waldmann H. Cutting edge: antiCD154 therapeutic antibodies induce infectious transplantation tolerance.
+J Immunol (2000) 165(9):4783–6.Epub 2000/10/25
+45. Kendal AR, Chen Y, Regateiro FS, Ma J, Adams E, Cobbold SP, et al. Sustained
+suppression by Foxp3+ regulatory T cells is vital for infectious transplantation tolerance. J Exp Med (2011) 208(10):2043–53. doi:10.1084/jem.20110767
+Epub 2011/08/31
+46. Apostolou I, von Boehmer H. In vivo instruction of suppressor commitment
+in naive T cells. J Exp Med (2004) 199(10):1401–8. doi:10.1084/jem.20040249
+Epub 2004/05/19
+47. Kretschmer K, Apostolou I, Hawiger D, Khazaie K, Nussenzweig MC, von
+Boehmer H. Inducing and expanding regulatory T cell populations by foreign antigen. Nat Immunol (2005) 6(12):1219–27. doi:10.1038/ni1265 Epub
+2005/10/26
+48. Cobbold SP, Castejon R, Adams E, Zelenika D, Graca L, Humm S, et al. Induction of foxP3+ regulatory T cells in the periphery of T cell receptor transgenic mice tolerized to transplants. J Immunol (2004) 172(10):6003–10.Epub
+2004/05/07
+49. Curotto de Lafaille MA, Lino AC, Kutchukhidze N, Lafaille JJ. CD25− T cells
+generate CD25+Foxp3+ regulatory T cells by peripheral expansion. J Immunol
+(2004) 173(12):7259–68.
+50. Furtado GC, Curotto de Lafaille MA, Kutchukhidze N, Lafaille JJ. Interleukin 2
+signaling is required for CD4(+) regulatory T cell function. J Exp Med (2002)
+196(6):851–7. doi:10.1084/jem.20020190
+51. Cobbold SP, Graca L, Lin CY, Adams E, Waldmann H. Regulatory T cells
+in the induction and maintenance of peripheral transplantation tolerance.
+Transpl Int (2003) 16(2):66–75. doi:10.1111/j.1432-2277.2003.tb00266.x Epub
+2003/02/22
+52. Liang S, Alard P, Zhao Y, Parnell S, Clark SL, Kosiewicz MM. Conversion of
+CD4+ CD25− cells into CD4+ CD25+ regulatory T cells in vivo requires
+B7 costimulation, but not the thymus. J Exp Med (2005) 201(1):127–37.
+doi:10.1084/jem.20041201
+53. Chen W, Jin W, Hardegen N, Lei KJ, Li L, Marinos N, et al. Conversion of peripheral CD4+CD25− naive T cells to CD4+CD25+ regulatory T cells by TGF-beta
+induction of transcription factor Foxp3. J Exp Med (2003) 198(12):1875–86.
+doi:10.1084/jem.20030152
+54. Selvaraj RK, Geiger TL. A kinetic and dynamic analysis of Foxp3 induced in T
+cells by TGF-beta. J Immunol (2007) 178(12):7667–77.
+55. Zheng SG, Wang JH, Gray JD, Soucier H, Horwitz DA. Natural and induced
+CD4+CD25+ cells educate CD4+CD25− cells to develop suppressive activity:
+the role of IL-2, TGF-beta, and IL-10. J Immunol (2004) 172(9):5213–21.
+56. Graca L, Chen TC, Le Moine A, Cobbold SP, Howie D, Waldmann H. Dominant tolerance: activation thresholds for peripheral generation of regulatory T
+cells. Trends Immunol (2005) 26(3):130–5. doi:10.1016/j.it.2004.12.007 Epub
+2005/03/05
+57. Oliveira VG, Caridade M, Paiva RS, Demengeot J, Graca L. Sub-optimal
+CD4+ T-cell activation triggers autonomous TGF-beta-dependent conversion to Foxp3+ regulatory T cells. Eur J Immunol (2011) 41(5):1249–55.
+doi:10.1002/eji.201040896 Epub 2011/04/07
+58. Mucida D, Kutchukhidze N, Erazo A, Russo M, Lafaille JJ. Curotto de Lafaille
+MA. Oral tolerance in the absence of naturally occurring Tregs. J Clin Invest
+(2005) 115(7):1923–33. doi:10.1172/JCI24487 Epub 2005/06/07
+59. Lin CY, Graca L, Cobbold SP, Waldmann H. Dominant transplantation tolerance impairs CD8+ T cell function but not expansion. Nat Immunol (2002)
+3(12):1208–13. doi:10.1038/ni853 Epub 2002/11/05
+60. Chen TC, Waldmann H, Fairchild PJ. Induction of dominant transplantation
+tolerance by an altered peptide ligand of the male antigen Dby. J Clin Invest
+(2004) 113(12):1754–62. doi:10.1172/JCI20569 Epub 2004/06/17
+61. Griffin MD, Lutz W, Phan VA, Bachman LA, McKean DJ, Kumar R. Dendritic
+cell modulation by 1alpha,25 dihydroxyvitamin D3 and its analogs: a vitamin
+D receptor-dependent pathway that promotes a persistent state of immaturity in vitro and in vivo. Proc Natl Acad Sci U S A (2001) 98(12):6800–5.
+doi:10.1073/pnas.121172198 Epub 2001/05/24
+62. Manicassamy S, Pulendran B. Dendritic cell control of tolerogenic responses.
+Immunol Rev (2011) 241(1):206–27. doi:10.1111/j.1600-065X.2011.01015.x
+Epub 2011/04/15
+63. Mucida D, Park Y, Kim G, Turovskaya O, Scott I, Kronenberg M, et al. Reciprocal
+TH17 and regulatory T cell differentiation mediated by retinoic acid. Science
+(2007) 317(5835):256–60. doi:10.1126/science.1145697 Epub 2007/06/16
+64. Steinbrink K, Wolfl M, Jonuleit H, Knop J, Enk AH. Induction of tolerance by IL-10-treated dendritic cells. J Immunol (1997) 159(10):4772–80.Epub
+1997/11/20
+65. Waldmann H, Chen TC, Graca L, Adams E, Daley S, Cobbold S, et al.
+Regulatory T cells in transplantation. Semin Immunol (2006) 18(2):111–9.
+doi:10.1016/j.smim.2006.01.010 Epub 2006/02/16
+66. Yang J, Bernier SM, Ichim TE, Li M, Xia X, Zhou D, et al. LF15-0195
+generates tolerogenic dendritic cells by suppression of NF-kappaB signaling through inhibition of IKK activity. J Leukoc Biol (2003) 74(3):438–47.
+doi:10.1189/jlb.1102582 Epub 2003/09/02
+67. Battaglia M, Stabilini A, Migliavacca B, Horejs-Hoeck J, Kaupper T, Roncarolo
+MG. Rapamycin promotes expansion of functional CD4+CD25+FOXP3+ regulatory T cells of both healthy subjects and type 1 diabetic patients. J Immunol
+(2006) 177(12):8338–47.
+68. Cobbold SP, Adams E, Farquhar CA, Nolan KF, Howie D, Lui KO, et al. Infectious tolerance via the consumption of essential amino acids and mTOR signaling. Proc Natl Acad Sci U S A (2009) 106(29):12055–60. doi:10.1073/pnas.
+0903919106
+69. Zhang R, Huynh A, Whitcher G, Chang J, Maltzman JS, Turka LA. An obligate
+cell-intrinsic function for CD28 in Tregs. J Clin Invest (2013) 123(2):580–93.
+doi:10.1172/JCI65013
+70. Miyara M, Sakaguchi S. Natural regulatory T cells: mechanisms of suppression. Trends Mol Med (2007) 13(3):108–16. doi:10.1016/j.molmed.2007.01.003
+Epub 2007/01/30
+71. Toda A, Piccirillo CA. Development and function of naturally occurring
+CD4+CD25+ regulatory T cells. J Leukoc Biol (2006) 80(3):458–70. doi:10.
+1189/jlb.0206095 Epub 2006/07/01
+72. Shevach EM. Mechanisms of foxp3+ T regulatory cell-mediated suppression.
+Immunity (2009) 30(5):636–45. doi:10.1016/j.immuni.2009.04.010
+73. Wing K, Fehervari Z, Sakaguchi S. Emerging possibilities in the development and function of regulatory T cells. Int Immunol (2006) 18(7):991–1000.
+doi:10.1093/intimm/dxl044 Epub 2006/05/25
+74. Grossman WJ,Verbsky JW, Barchet W, Colonna M, Atkinson JP, Ley TJ. Human
+T regulatory cells can use the perforin pathway to cause autologous target cell
+death. Immunity (2004) 21(4):589–601. doi:10.1016/j.immuni.2004.09.002
+Epub 2004/10/16
+75. Gondek DC, Lu LF, Quezada SA, Sakaguchi S, Noelle RJ. Cutting edge:
+contact-mediated suppression by CD4+CD25+ regulatory cells involves a
+granzyme B-dependent, perforin-independent mechanism. J Immunol (2005)
+174(4):1783–6.Epub 2005/02/09.
+76. Sakaguchi S, Wing K, Onishi Y, Prieto-Martin P, Yamaguchi T. Regulatory T cells: how do they suppress immune responses? Int Immunol (2009)
+21(10):1105–11. doi:10.1093/intimm/dxp095 Epub 2009/09/10
+77. Vignali DA, Collison LW, Workman CJ. How regulatory T cells work. Nat Rev
+Immunol (2008) 8(7):523–32. doi:10.1038/nri2343
+78. Kryczek I, Wei S, Zou L, Zhu G, Mottram P, Xu H, et al. Cutting edge: induction of B7-H4 on APCs through IL-10: novel suppressive mode for regulatory
+T cells. J Immunol (2006) 177(1):40–4.Epub 2006/06/21
+79. Scheffold A, Huhn J, Hofer T. Regulation of CD4+CD25+ regulatory T cell
+activity: it takes (IL-)two to tango. Eur J Immunol (2005) 35(5):1336–41.
+doi:10.1002/eji.200425887 Epub 2005/04/14
+80. Scheffold A, Murphy KM, Hofer T. Competition for cytokines: T(reg) cells
+take all. Nat Immunol (2007) 8(12):1285–7. doi:10.1038/ni1207-1285 Epub
+2007/11/21
+81. Maynard CL, Harrington LE, Janowski KM, Oliver JR, Zindl CL, Rudensky AY,
+et al. Regulatory T cells expressing interleukin 10 develop from Foxp3+ and
+Foxp3− precursor cells in the absence of interleukin 10. Nat Immunol (2007)
+8(9):931–41. doi:10.1038/ni1504
+82. Rubtsov YP, Rasmussen JP, Chi EY, Fontenot J, Castelli L, Ye X, et al.
+Regulatory T cell-derived interleukin-10 limits inflammation at environmental interfaces.Immunity (2008) 28(4):546–58. doi:10.1016/j.immuni.2008.
+02.017
+83. Cao X, Cai SF, Fehniger TA, Song J, Collins LI, Piwnica-Worms DR, et al.
+Granzyme B and perforin are important for regulatory T cell-mediated suppression of tumor clearance. Immunity (2007) 27(4):635–46. doi:10.1016/j.
+immuni.2007.08.014
+84. Faro J, Velasco S, Gonzalez-Fernandez A, Bandeira A. The impact of thymic
+antigen diversity on the size of the selected T cell repertoire. J Immunol (2004)
+172(4):2247–55.
+www.frontiersin.org November 2013 | Volume 4 | Article 378 | 7
+
+Caridade et al. Modeling T-reg function
+85. Detours V, Mehr R, Perelson AS. Deriving quantitative constraints on T
+cell selection from data on the mature T cell repertoire. J Immunol (2000)
+164(1):121–8.
+86. Detours V, Perelson AS. Explaining high alloreactivity as a quantitative consequence of affinity-driven thymocyte selection. Proc Natl Acad Sci U S A (1999)
+96(9):5153–8. doi:10.1073/pnas.96.9.5153
+87. Mehr R, Globerson A, Perelson AS. Modeling positive and negative selection
+and differentiation processes in the thymus. J Theor Biol (1995) 175(1):103–26.
+doi:10.1006/jtbi.1995.0124
+88. Currie J, Castro M, Lythe G, Palmer E, Molina-Paris C. A stochastic T cell
+response criterion. J R Soc Interface (2012) 9(76):2856–70. doi:10.1098/rsif.
+2012.0205
+89. Castiglione F, Santoni D, Rapin N. CTLs’ repertoire shaping in the thymus:
+a Monte Carlo simulation. Autoimmunity (2011) 44(4):261–70. doi:10.3109/
+08916934.2011.523272
+90. Muller V, Bonhoeffer S. Quantitative constraints on the scope of negative
+selection. Trends Immunol (2003) 24(3):132–5. doi:10.1016/S1471-4906(03)
+00028-0
+91. Sawicka ML, Reynolds J, Abourashchi N, Lythe G, Molina-Paris C, et al.
+Immunology and mathematics: a joint effort to estimate (murine) thymic
+selection rates. Front Immunol (in press).
+92. Leon K, Perez R, Lage A, Carneiro J. Modelling T-cell-mediated suppression
+dependent on interactions in multicellular conjugates. J Theor Biol (2000)
+207(2):231–54. doi:10.1006/jtbi.2000.2169 Epub 2000/10/18
+93. Leon K, Perez R, Lage A, Carneiro J. Three-cell interactions in T cellmediated suppression? A mathematical analysis of its quantitative implications.
+J Immunol (2001) 166(9):5356–65.Epub 2001/04/21
+94. Leon K, Lage A, Carneiro J. Tolerance and immunity in a mathematical
+model of T-cell mediated suppression. J Theor Biol (2003) 225(1):107–26.
+doi:10.1016/S0022-5193(03)00226-1 Epub 2003/10/16
+95. Leon K, Faro J, Carneiro J. A general mathematical framework to model generation structure in a population of asynchronously dividing cells. J Theor Biol
+(2004) 229(4):455–76. doi:10.1016/j.jtbi.2004.04.011 Epub 2004/07/13
+96. Carneiro J, Leon K, Caramalho I, van den Dool C, Gardner R, Oliveira V, et al.
+When three is not a crowd: a crossregulation model of the dynamics and repertoire selection of regulatory CD4+ T cells. Immunol Rev (2007) 216:48–68.
+doi:10.1111/j.1600-065X.2007.00487.x. Epub 2007/03/21
+97. Garcia-Martinez K, Leon K. Modeling the role of IL-2 in the interplay between
+CD4+ helper and regulatory T cells: assessing general dynamical properties. J Theor Biol (2010) 262(4):720–32. doi:10.1016/j.jtbi.2009.10.025 Epub
+2009/11/03
+98. Garcia-Martinez K, Leon K. Modeling the role of IL2 in the interplay between
+CD4+ helper and regulatory T cells: studying the impact of IL2 modulation
+therapies. Int Immunol (2012) 24(7):427–46. doi:10.1093/intimm/dxr120
+99. Alexander HK, Wahl LM. Self-tolerance and autoimmunity in a regulatory T
+cell model. Bull Math Biol (2011) 73(1):33–71. doi:10.1007/s11538-010-9519-
+2 Epub 2010/03/03
+100. Fouchet D, Regoes R. A population dynamics analysis of the interaction
+between adaptive regulatory T cells and antigen presenting cells. PLoS One
+(2008) 3(5):e2306. doi:10.1371/journal.pone.0002306. Epub 2008/05/30
+101. Powrie F, Maloy KJ. Immunology. regulating the regulators. Science (2003)
+299(5609):1030–1. doi:10.1126/science.1082031
+102. Carneiro J, Paixao T, Milutinovic D, Sousa J, Leon K, Gardner R, et al. Immunological self-tolerance: Lessons from mathematical modeling. J Comput Appl
+Math (2005) 184(1):77–100. doi:10.1016/j.cam.2004.10.025
+103. Chan C, Stark J, George AJT. The impact of multiple T cell-APC encounters and the role of anergy. J Comput Appl Math (2005) 184(1):101–20.
+doi:10.1016/j.cam.2004.07.036
+104. Anderton SM, Wraith DC. Selection and fine-tuning of the autoimmune T-cell
+repertoire. Nat Rev Immunol (2002) 2(7):487–98. doi:10.1038/nri842
+105. Grossman Z, Paul WE. Adaptive cellular interactions in the immune system: the tunable activation threshold and the significance of subthreshold
+responses. Proc Natl Acad Sci U S A (1992) 89(21):10365–9. doi:10.1073/pnas.
+89.21.10365
+106. van den Berg HA, Rand DA. Quantitative theories of T-cell responsiveness.
+Immunol Rev (2007) 216:81–92. doi:10.1111/j.1600-065X.2006.00491.x
+107. Burroughs NJ, Miguel Paz Mendes de Oliveira B, Adrego Pinto A. Regulatory T
+cell adjustment of quorum growth thresholds and the control of local immune
+responses. J Theor Biol (2006) 241(1):134–41. doi:10.1016/j.jtbi.2005.11.010
+Epub 2006/01/13
+108. Burroughs NJ, Oliveira BM, Pinto AA, Sequeira HJT. Sensibility of the quorum
+growth thresholds controlling local immune responses. Math Comput Model
+(2008) 47(7–8):714–25. doi:10.1016/j.mcm.2007.06.007
+109. Pinto AA, Burroughs NJ, Ferreira M, Oliveira BM. Dynamics of immunological
+models. Acta Biotheor (2010) 58(4):391–404. doi:10.1007/s10441-010-9117-6
+110. Kim PS, Lee PP, Levy D. Modeling regulation mechanisms in the immune
+system. J Theor Biol (2007) 246(1):33–69. doi:10.1016/j.jtbi.2006.12.012 Epub
+2007/02/03
+111. de Abreu FV, Mostardinha P. Maximal frustration as an immunological principle. J R Soc Interface (2009) 6(32):321–34. doi:10.1098/rsif.2008.0280
+112. Leon K, Faro J, Lage A, Carneiro J. Inverse correlation between the incidences of
+autoimmune disease and infection predicted by a model of T cell mediated tolerance. J Autoimmun (2004) 22(1):31–42. doi:10.1016/j.jaut.2003.10.002 Epub
+2004/01/08
+113. Martinez-Pasamar S, Abad E, Moreno B, Velez de Mendizabal N, MartinezForero I, Garcia-Ojalvo J, et al. Dynamic cross-regulation of antigen-specific
+effector and regulatory T cell subpopulations and microglia in brain autoimmunity. BMC Syst Biol (2013) 7:34. doi:10.1186/1752-0509-7-34
+114. Velez de Mendizabal N, Carneiro J, Sole RV, Goni J, Bragard J, Martinez-Forero
+I, et al. Modeling the effector – regulatory T cell cross-regulation reveals the
+intrinsic character of relapses in Multiple Sclerosis. BMC Syst Biol (2011) 5:114.
+doi:10.1186/1752-0509-5-114
+115. Lo WC, Arsenescu RI, Friedman A. Mathematical Model of the Roles of T
+Cells in Inflammatory Bowel Disease. Bull Math Biol (2013) 75(9):1417–33.
+doi:10.1007/s11538-013-9853-2
+116. Gross F, Metzner G, Behn U. Mathematical modeling of allergy and specific
+immunotherapy: Th1-Th2-Treg interactions. J Theor Biol (2011) 269(1):70–8.
+doi:10.1016/j.jtbi.2010.10.013
+117. Arazi A, Sharabi A, Zinger H, Mozes E, Neumann AU. In vivo dynamical interactions between CD4 Tregs, CD8 Tregs and CD4+ CD25− cells in mice. PLoS
+One (2009) 4(12):e8447. doi:10.1371/journal.pone.0008447
+118. Bewick S, Yang R, Zhang M. The danger is growing! A new paradigm
+for immune system activation and peripheral tolerance. PLoS One (2009)
+4(12):e8112. doi:10.1371/journal.pone.0008112
+119. Simonov M, Rawlings RA, Comment N, Reed SE, Shi X, Nelson PW. Modeling adaptive regulatory T-cell dynamics during early HIV infection. PLoS One
+(2012) 7(4):e33924. doi:10.1371/journal.pone.0033924
+120. Leon K, Garcia K, Carneiro J, Lage A. How regulatory CD25+CD4+ T cells
+impinge on tumor immunobiology: the differential response of tumors to
+therapies. J Immunol (2007) 179(9):5659–68.
+121. Leon K, Garcia K, Carneiro J, Lage A. How regulatory CD25(+)CD4(+)
+T cells impinge on tumor immunobiology? On the existence of two alternative dynamical classes of tumors. J Theor Biol (2007) 247(1):122–37.
+doi:10.1016/j.jtbi.2007.01.029
+122. Baltcheva I, Codarri L, Pantaleo G, Le Boudec JY. Lifelong dynamics of
+human CD4+CD25+ regulatory T cells: insights from in vivo data and mathematical modeling. J Theor Biol (2010) 266(2):307–22. doi:10.1016/j.jtbi.2010.
+06.024
+123. Agua-Doce A, Graca L. Regulatory T cells and the control of the allergic response. J Allergy (2012) 2012:948901. doi:10.1155/2012/948901 Epub
+2012/10/12
+124. Gratz IK, Rosenblum MD, Abbas AK. The life of regulatory T cells. Ann N Y
+Acad Sci (2013) 1283:8–12. doi:10.1111/nyas.12011
+125. Perelson AS. Modelling viral and immune system dynamics. Nat Rev Immunol
+(2002) 2(1):28–36. doi:10.1038/nri700
+Conflict of Interest Statement: The authors declare that the research was conducted
+in the absence of any commercial or financial relationships that could be construed
+as a potential conflict of interest.
+Received: 29 August 2013; paper pending published: 23 September 2013; accepted: 03
+November 2013; published online: 18 November 2013.
+Citation: Caridade M, Graca L and Ribeiro RM (2013) Mechanisms underlying CD4+
+Treg immune regulation in the adult: from experiments to models. Front. Immunol.
+4:378. doi: 10.3389/fimmu.2013.00378
+Frontiers in Immunology | T Cell Biology November 2013 | Volume 4 | Article 378 | 8
+
+Caridade et al. Modeling T-reg function
+This article was submitted to T Cell Biology, a section of the journal Frontiers in
+Immunology.
+Copyright © 2013 Caridade, Graca and Ribeiro. This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The
+use, distribution or reproduction in other forums is permitted, provided the original
+author(s) or licensor are credited and that the original publication in this journal is cited,
+in accordance with accepted academic practice. No use, distribution or reproduction is
+permitted which does not comply with these terms.
+www.frontiersin.org November 2013 | Volume 4 | Article 378 | 9
+

@@ -1,0 +1,863 @@
+R E S EAR CH A R TIC L E Open Access
+Assessment of viral RNA in idiopathic
+pulmonary fibrosis using RNA-seq
+Qinyan Yin1
+, Michael J. Strong2
+, Yan Zhuang1
+, Erik K. Flemington2
+, Naftali Kaminski3
+, Joao A. de Andrade4 and
+Joseph A. Lasky1*
+Abstract
+Background: Numerous publications suggest an association between herpes virus infection and idiopathic
+pulmonary fibrosis (IPF). These reports have employed immunohistochemistry, in situ hybridization and/or PCR,
+which are susceptible to specificity artifacts.
+Methods: We investigated the possible association between IPF and viral RNA expression using next-generation
+sequencing, which has the potential to provide a high degree of both sensitivity and specificity. We quantified viral
+RNA expression for 740 viruses in 28 IPF patient lung biopsy samples and 20 controls. Key RNA-seq results were
+confirmed using Real-time RT-PCR for select viruses (EBV, HCV, herpesvirus saimiri and HERV-K).
+Results: We identified sporadic low-level evidence of viral infections in our lung tissue specimens, but did not find
+a statistical difference for expression of any virus, including EBV, herpesvirus saimiri and HERV-K, between IPF and
+control lungs.
+Conclusions: To the best of our knowledge, this is the first publication that employs RNA-seq to assess whether
+viral infections are linked to the pathogenesis of IPF. Our results do not address the role of viral infection in acute
+exacerbations of IPF, however, this analysis patently did not support an association between herpes virus detection
+and IPF.
+Keywords: Idiopathic pulmonary fibrosis, IPF, RNA-seq, Viruses, EBV, HCV, HERV-K, Herpesvirus saimiri
+Background
+Idiopathic pulmonary fibrosis (IPF) is a progressive dis￾ease with insidious onset in older people that progresses
+relentlessly in the absence of therapy to disability and
+death [1]. Although multiple risk factors, including viral
+infection, have been linked to IPF, studies are inconsist￾ent and its etiology remains unclear. To date, more than
+14 viruses have been investigated for a potential role in
+initiation and progression of IPF, including RNA viruses
+such as Hepatitis C (HCV), and DNA viruses such as
+human herpes viruses (HHVs), adenoviruses, human
+endogenous retrovirus E (HERV-E), transfusion trans￾mitted virus (TTV) and parvovirus B19 [2–7]. However,
+the studies on the relationship between virus expression
+and development of IPF are conflicting. While some
+studies show that virus infection is associated with IPF,
+other manuscripts show no viral association with IPF
+[8–11], which may be due to the differences in virus dis￾tribution and sensitivity and/or specificity of the tech￾niques employed between studies.
+Given the fact that alveolar epithelial cells are abnor￾mal and likely contribute to the pathobiology of IPF, we
+believe that epithelial perturbation may contribute to in￾ducing and maintaining IPF. Herpes viruses can infect
+many different cell types, including epithelial cells with
+two infection stages, the lytic stage and the latent stage.
+© The Author(s). 2020 Open Access This article is licensed under a Creative Commons Attribution 4.0 International License,
+which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give
+appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if
+changes were made. The images or other third party material in this article are included in the article's Creative Commons
+licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons
+licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain
+permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the
+data made available in this article, unless otherwise stated in a credit line to the data.
+* Correspondence: jlasky@tulane.edu 1
+Section of Pulmonary Diseases, Critical Care and Environmental Medicine,
+Department of Medicine, Tulane University School of Medicine, 1430 Tulane
+Avenue, New Orleans, LA 70112, USA
+Full list of author information is available at the end of the article
+Yin et al. BMC Pulmonary Medicine (2020) 20:81 
+https://doi.org/10.1186/s12890-020-1114-1
+
+Both lytic genes and latent genes could interact with cel￾lular genes to contribute to IPF initiation, progression
+and/or maintenance. Viral genes may regulate cellular
+gene expression and induce fibrogenesis. For example,
+Type I collagen can be induced by adenovirus [12].
+HSV-1 stimulates endoplasmic reticulum (ER) stress and
+apoptosis [3], and these processes are implicated in the
+pathobiology of IPF. HCMV infection induces the un￾folded protein response (UPR) and it’s related signaling
+pathways elF2alpha kinase PERK, and causes endoplas￾mic reticulum stress [13]. CMV, KSHV and EBV also in￾duce endoplasmic reticulum stress and the UPR [14].
+Murine studies demonstrate that the latent genes of
+MHV-68 induce lung fibrosis in mice via TGF-β, vascu￾lar endothelial growth factor, CCL2, CCL12, TNF-α and
+IFN-γ [15]. EBV lytic gene expression also activates
+TGF-β expression in alveolar epithelial cell lines [16]
+and in primary corneal epithelial cells [17] where EBV
+can induce epithelial-mesenchymal transition (EMT)
+[18]. Moreover, the fibrotic cytokine milieu in IPF lung
+may activate virus replication and further promote virus
+gene expression in fibrotic lung. TGF-β promotes EBV
+reactivation from latency to the lytic replication stage
+and further induces latent membrane protein expression,
+which synergizes with TGF-β1 to induce EMT in lung
+epithelial cells [19]. Given these mechanisms, it is rea￾sonable to speculate that viruses may play a role in the
+pathogenesis of IPF.
+If viruses are responsible for causing IPF, then viral
+screening or anti-viral treatment may provide a diagnos￾tic test or a potential treatment. Previously employed
+techniques, including immunohistochemistry, fluores￾cence in situ hybridization (FISH), gene array and PCR,
+are not sufficiently sensitive or specific. Thus, a more
+sensitive and reliable technique is required to qualify
+and quantity viruses at the DNA, or RNA levels. Next￾generation sequencing offers high sensitivity, specificity
+and reproducibility in the detection of low levels of gene
+expression as well as a broad dynamic range afforded by
+the high sequencing depth. New high throughput tech￾nologies have been used to generate comprehensive se￾quencing data for the identification and quantification of
+known and novel genes in several diseases [20]. More￾over, RNA-seq has the potential to further elucidate the
+mechanisms of pathogenesis of IPF by identifying novel
+viruses not previously implicated by PCR or array based
+methods. Here we have utilized RNA-seq for the detec￾tion of virus expression in lung tissue from patients with
+IPF and their age-matched controls.
+Methods
+Sample description
+Lung tissue samples for the first group were obtained
+from remnants of surgical biopsies from the University
+of Alabama at Birmingham (UAB) according to IRB (ap￾proval number N120410001 and 12-334398E). They in￾cluded 5 control lungs and 12 IPF lungs. The control
+lung samples were obtained from histological disease￾free margins from patients undergoing resection of lung
+adenocarcinoma. The diagnosis of IPF patients was
+made by clinicians, pathologists and radiologists accord￾ing to diagnostic criteria of the American Thoracic Soci￾ety and the European Respiratory Society [21]. The
+detailed demographics for the first group are available at
+GEO along with raw RNA-seq data (accession numbers:
+GSE138239 for poly(A) selected RNA-seq data and
+GSE138283 for non-poly(A) selected RNA-seq data).
+The demographics and description for lung tissue sam￾ples for the second and third groups were previously
+published [22–24]. IPF patients for the second group of
+samples (Pittsburgh) and the third group of samples
+(FFPE) were vetted using the 2000 and 2011 ATS/ERS
+guidelines respectively [21, 25].
+RNA-sequencing data acquisition from IPF and control
+lung
+For this report, we analyzed RNA expression from 3
+groups that in total were derived from 28 IPF and 20
+control lung specimens. The first group included sam￾ples from 12 IPF patients and 5 controls, and encom￾passed patients who underwent lung biopsies at the
+University of Alabama at Birmingham. Total RNA was
+prepared using Qiagen’s RNeasy kit (cat#74104). Poly(A)
+selected RNA-sequencing (RNA-seq) was performed at
+UAB for the first group (one control (3007) and one IPF
+(2053) sample was not analyzed by RNA-seq because the
+aliquot of RNA was considered to be of insufficient qual￾ity for these two samples). We repeated RNA￾sequencing on this same group at Tulane, but we did
+not select for polyadenylation because some viral genes
+are not polyadenylated. Non-poly(A) selected RNA-seq
+was performed using the Illumina NextSeq 550 located
+within the NextGen Sequencing Core at the Tulane
+Center for Translational Research in Infection & Inflam￾mation. Ribosomal RNA was removed from 1 μg total
+RNA for both poly(A) selected and non-poly(A) selected
+RNA-seq, and a library was prepared using TruSeq
+stranded mRNA (polyA+) for poly(A) selected RNA-seq
+or using TruSeq stranded total RNA ribozero [12] for
+non-poly(A) selected RNA-seq from Illumina. The sec￾ond group, including 10 IPF samples and 10 age￾matched controls, were from a poly(A) selected RNA￾seq dataset provided from the University of Pittsburg.
+The lung tissue for the Pittsburg group was part of the
+LTRC (Lung Tissue Research Consortium) specimen
+bank that was funded by NHLBI biospecimen repository.
+The third group, including 6 IPF lungs and 5 controls,
+was obtained from a RNA-seq dataset downloaded from
+Yin et al. BMC Pulmonary Medicine (2020) 20:81 Page 2 of 12
+
+the sequence read archive (SRA, PRJNA326784, https://
+www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_
+all&from_uid=326784), and was generated with non￾poly(A) selected total RNA [24]. RNA from the third
+group was isolated from paraffin-embedded tissue. Al￾though we acknowledge that fixation in group 3 had the
+potential to damage nucleic acids, RNA-seq for these
+samples was considered reliable based on the original re￾port (~ 62 million mapped reads in 116 million reads at
+50 bp per sample) [24].
+Virome analysis of the RNA-sequencing data
+Raw RNA-seq data was aligned to a genome reference
+containing the human genome (hg19; genome reference
+consortium GRCh37) plus a library of 740 known mam￾malian viral sequences that have been documented by
+the NCBI (National Center for Biotechnology Informa￾tion). Alignments were performed using the transcript
+aligner STAR (Spliced Transcripts Alignment to a Refer￾ence) version 2.3.0 and version 2.5.2a. Uniquely mapped
+viral and human reads were quantified using in-house
+computational pipelines. The first script extracts all the
+reads mapping to virus sequences and writes the output
+to one file for each sample. The second script takes as
+input all the viral sequence information from the first
+script and removes any duplicate reads. The output is a
+list of all the uniquely mapped viral sequences for each
+sample. The third script takes as input the uniquely
+mapped reads for each sample and counts the number
+of reads mapping to each virus in each sample. The out￾put is a compiled file that contains the virus chromo￾some name followed by the number of occurrences in
+each aligned file. As a complementary approach, we also
+analyzed mapped reads using the metatranscriptomics
+pipeline, RNA CoMPASS for entire metatranscriptome
+analysis [26].
+cDNA synthesis and RT-PCR
+cDNA was synthesized with 1μg RNA following the
+manufacturer’s instructions within the Bio-Rad iScriptm
+cDNA Synthesis Kit (cat#170–8891). PCR was per￾formed with 2 μl of 10X diluted cDNA in a 20 μl volume
+according to the manufacturer’s protocol (BioRAD
+cat#170–8880). PCR conditions: for EBV we used 3 min
+at 95 °C, 40 cycles of 15 s at 95 °C and 30 s at 60 °C then
+40 s at 72 °C [27]; to detect HCV, we followed the
+methods of Lin et al. [28]; to detect HHV-7, we followed
+Caserta’s method [29]; to detect saimiri expression, we
+followed Folcik ‘s method [30] using the primers listed
+on Table 1. HERV-K strand-specific nested-RT-PCR
+products from primers designed to detect RNAs spliced
+at the conventional envelope (env) mRNA splice junc￾tion (sense strand, 1 × −env) following the nested-PCR
+and quantitative RT-PCR protocol of Agoni et al. [32].
+In brief, 1x-env products were amplified with cDNA re￾verse transcript using primers for RT-env-1-Rev then
+nested-PCR with primers env (1) & [31]. The primer se￾quences used for RT-PCR analysis were listed in Table
+1. Relative transcript expression levels were calculated
+using the ΔΔCt method and the fold change of relative
+transcript expression was calculated by ΔΔCt of IPF/
+ΔΔCt of control (CNTL).
+Statistical analyses
+RT-PCR was performed in triplicate for each sample. In
+order to test the significant difference of RT-PCR data
+and/or RNA-seq reads (RPHM), we used student’s t￾tests and F tests that were performed using GraphPad
+Table 1 Nucleotide sequence of primer sets used for RT-PCR analysis in this study
+Genes Forward nucleotide sequence (5′ → 3′) Revers nucleotide sequence (5′ → 3′)
+EBV EBERs GACTCTGCTTTCTGCCGTCT AATAGCGGACAAGCCGAATA
+HERV-K RT-env-1-Rev CACCGCACTATTGGCCACA
+Nested-PCR env(1) AGGGAAAAACCGCCTTAGGG CACCGCACTATTGGCCACA
+Nested-PCR env [31] TGCGGGCAGCAATACTGCT CGCACTATTGGCCACACATTC
+Quantitative PCR env TCACATGGTAAGCGGGATGTC CGCACTATTGGCCACACATTC
+Quantitative PCR LTR AGGGAAAAACCGCCTTAGGG AGCAGACAAACATGTGAACAAAGG
+LTR-Fwd |-Rev CGTGGGAAGGGAAAGACCTGA AGCAGACAAACATGTGAACAAAGG
+GAPDH GAPDH AGATCATCAGCAATGCCTCCT AGTCTTCTGGGTGGCAGTG
+HCV p3804|p305 GTATCTCGAGGCGACACTCCACCATAGAT ATACTCGAGGTGCACGGTCTACGAGACCT
+p302|p304 CCACCATAGATCTCTCCCCTGT CACTCTCGAGCACCCTATCAGGCAGT
+Saimiri virus Human cyclin D1 CGGAGGAGAACAAACAGATCATCCGCAAAC GTGTGAGGCGGTAGTAGGACAGGAAGTTGT
+Viral cyclin D1 ACTGCTTACCTGGATGCATCTGCTCTGTGA GCAAGTACAGCTTCAGTGTGTCCCATTTCAGTGC
+HHV-7 G1|G2 CATGCACAACGCAAGCTCTACTA ACGTAGTTTCGTGCAGTTGTATCGT
+G3|G4 GCTTGTTAGAATACACAAGATGTACA CTGTCTAATAATGTCTATGTCTCTCCA
+Yin et al. BMC Pulmonary Medicine (2020) 20:81 Page 3 of 12
+
+Prism. T-tests were used to compare differences between
+control and IPF groups, and the F tests were employed
+to compare variance within the groups (control group or
+IPF group). Differential expression analysis of RNA-Seq
+was carried out using the EBSeq statistical package. Scat￾ter plots depict the mean with the standard error of the
+mean [33]. Statistical significance was defined at an
+alpha value of p < 0.05. Results are expressed as mean ±
+SEM.
+Results
+Quantitation of viral gene expression using RNA￾sequencing
+Although we observed that the Shamonda virus averages
+10 reads per million human mapped reads (RPHM) in
+poly(A) selected RNA-seq, this is likely an artifact and
+not true infection because viral reads were detected in
+every sample analyzed, including the normal controls. In
+addition, manual BLAST showed that the actual reads
+hit to human sequences that were mistakenly being
+called Shamonda virus, and a few repeat reads have been
+clonally amplified and resulting in such a high read
+number. The next most commonly detected virus was
+human adenovirus C with 1 read per million human
+mapped reads (Table 2). The mapped reads of other vi￾ruses were very low (under 1 RPHM, Table 2) in poly(A)
+selected RNA-seq. This could be due to exclusion of
+viral RNA that is not polyadenylated. To detect viral
+encoded non-coding RNAs, we performed a non-poly(A)
+RNA-seq using ribodepleted RNA libraries for our initial
+group 1 samples (5 controls and 12 IPF lungs). Non￾poly(A) selected RNA-seq detected more virus than
+poly(A) selected RNA-seq, including tick-born encephal￾itis virus, herpesvirus 2 (HHV-2, HSV-2), Roseolovirus
+(HHV-6B) and EBV (HHV-4, Table 3, Table S3). How￾ever, there were no significant differences between con￾trol and IPF (Table 3, Tables S3, S4). These data were
+confirmed by analysis of viral RNA expression using an￾other non-poly(A) selected RNA-seq datasets (the third
+group dataset, Table S5). Overall, none of the samples
+from either the control or IPF groups reached a virus
+detection threshold high enough to qualify as positive.
+We conclude that there are no viruses associated with
+IPF tissue samples (Table 2, Table S1).
+Screening for EBV, HCV, HHV-7 and herpesvirus saimiri
+RNA using real-time RT-qPCR
+To confirm our RNA-seq results, we performed serial
+RT-qPCR on the first group of specimens (12 IPF and 5
+control lung RNAs). This was not performed on the sec￾ond and third group because we only had the data sets
+and not the RNA. EBV has two major infection gene ex￾pression programs, the latency associated gene expres￾sion program and the lytic gene expression program,
+which are uniquely utilized depending on cell type. Since
+it is not known which cell type might harbor EBV within
+IPF lung, and to avoid “lack of detection” errors due to
+EBV infection status, primers spanning the EBV latent
+genes, EBNA1, Qp and LMP1, as well as the EBV lytic
+gene Zta were employed for RT-qPCR. No EBV latent or
+lytic gene expression was detected using RT-qPCR, sug￾gesting that neither the latent nor the lytic forms of EBV
+were present in the lungs of IPF patients or the control
+group (data not shown). However, using primers that
+span the EBV-encoded noncoding small RNAs, EBER1
+to EBER2, we detected a very low level of EBERs expres￾sion in both the IPF and control specimens, with cycle
+threshold [34] values over 33 cycles and with no signifi￾cant difference between the two groups (Fig. 1a). This
+data is consistent with the analysis of the non-polyA se￾lected RNA-seq.
+Other ubiquitous herpes viruses have also been re￾ported to be associated with IPF, including herpes sim￾plex virus type 1 (HSV-1), HHV-6, − 7 and − 8 and
+cytomegalovirus (CMV) [2]. Our RNA-seq data detected
+sporadic and very low virus mapped reads per million
+human mapped reads (RPHM – reads per million hu￾man mapped) for these viruses; HHV-5 with 1 RPHM in
+IPF lung and 2 RPHM in control lung; HHV-6 with 1
+RPHM read in control and HHV-7 with 2 RPHM in IPF
+(Table 2). RT-qPCR Ct values for these viruses were
+around 40, and therefore not reliable for quantification
+of these HHVs (data not shown). Chronic infection of
+HCV has been implicated in liver fibrosis; however, it is
+still debatable whether HCV can cause pulmonary fibro￾sis. While some research indicates that HCV infection
+may play an important role in the pathogenesis of IPF
+[4, 5], others have not detected HCV RNA in IPF sam￾ples, despite detection in some specimens using ELISA
+[10, 35]. No HCV mapped reads were detected in any of
+our IPF or control lung specimens using RNA-seq
+(Table S1). A nested real-time RT-qPCR assay with
+primers spanning the 5-UTR of HCV [28, 36] detected
+very low levels of HCV transcripts with Ct value over 30
+cycles (Fig. 1b). Importantly, the ΔΔCt for HCV was not
+significantly different between IPF and controls (Fig. 1b).
+More recently, Folcik et al. reported that IPF is associ￾ated with herpesvirus saimiri but not with other herpes￾viruses such as EBV, KSHV, CMV or HSV I/II [30].
+They detected herpesvirus saimiri DNA and RNA in all
+13 IPF cases and none of their controls. Herpesvirus sai￾miri is a member of the rhadinovirus genus, which also
+includes Kaposi’s sarcoma-associated herpesvirus, and
+can infect humans and squirrel monkeys without causing
+disease. Around 4.0–7.3% of humans are seropositive
+and express viral proteins such as viral cyclin D [37]. Al￾though no substantial herpesvirus saimiri virus reads
+were detected in any of the IPF and control specimens
+Yin et al. BMC Pulmonary Medicine (2020) 20:81 Page 4 of 12
+
+Table 2 Summary of the number of virus mapped reads per million human mapped reads (RPHM) for IPF and control lung
+specimens from first and second group in poly(A) selected RNA-seq and third group in non-poly(A) selected RNA-seq. Viruses were
+displayed here if at least one viral mapped read was detected in at least one sample. The total mapped reads of human are for
+quality control
+Virus name Control IPF
+# of
+samples
+% of
+samples
+Min Max # of
+samples
+% of
+samples
+Min Max
+1st group
+Human 4 100% 26,511,
+620
+39,945,
+034
+11 100% 23,500,
+148
+44,071,
+337
+Cytomegalovirus 0 0% 0 0 1 9% 0.80 0.80
+Adenovirus C 0 0% 0 0 2 18% 0.03 0.07
+Mouse mammary tumor virus 1 25% 0.03 0.03 4 36% 0.03 0.05
+Simbu virus 3 75% 0.03 0.23 5 45% 0.03 0.20
+Immunodeficiency virus 1 0 0% 0 0 1 9% 0.03 0.03
+Hepatitis C virus genotype 1 0 0% 0 0 1 9% 0.03 0.03
+Hepatitis C virus genotype 2 0 0% 0 0 1 9% 0.04 0.04
+Papillomavirus 110 0 0% 0 0 1 9% 0.02 0.02
+Shamonda virus 4 100% 5.407 15.489 11 100% 0.03 15.98
+2nd group
+Human 10 100% 19,847,
+360
+37,420,
+687
+10 100% 21,826,
+038
+41,977,
+536
+Cytomegalovirus 0 0% 0.00 0.00 2 20% 0.07 0.14
+Herpesvirus 6A 0 0% 0.00 0.00 1 10% 0.04 0.04
+Herpesvirus 7 2 20% 0.03 0.04 0 0% 0 0
+Adenovirus C 10 100% 0.05 0.35 10 100% 0.05 1.05
+Simian virus 40 1 10% 0.03 0.03 0 0% 0 0
+Papillomavirus 16 1 10% 0.04 0.04 0 0% 0 0
+Shamonda virus 10 100% 0.35 6.28 10 100% 1.42 11.17
+3rd group
+Tick-borne encephalitis virus 2 40% 0.00 0.11 2 33% 0.00 0.06
+Hepatitis C virus genotype 1 5 100% 0.03 3.63 6 100% 0.14 1.07
+Hepatitis C virus genotype 6 3 60% 0.00 0.04 2 33% 0.00 0.03
+Hepatitis C virus genotype 2 4 80% 0.00 0.11 5 83% 0.00 0.09
+Adenovirus C 5 100% 0.02 0.33 6 100% 0.78 3.27
+Adenovirus E 0 0% 0.00 0.00 1 17% 0.00 0.03
+Herpesvirus 1 0 0% 0.00 0.35 1 17% 0.00 0.06
+Herpesvirus 2 1 20% 0.00 0.04 5 83% 0.00 0.03
+Epstein-Bar virus 1 20% 0.00 0.04 1 17% 0.00 0.14
+Cytomegalovirus 4 80% 0.00 0.41 2 33% 0.00 0.09
+Herpesvirus 7 3 60% 0.00 0.07 0 0% 0.00 0.00
+Kaposi’s sarcoma-associated
+herpesvirus
+1 20% 0.00 0.02 1 17% 0.00 0.02
+Cutthroat trout virus 0 0% 0.00 0.00 3 50% 0.00 0.03
+Measles virus 0 0% 0.00 0.00 2 33% 0.00 0.03
+Abelson murine leukemia virus 5 100% 0.01 0.31 1 17% 0.00 0.03
+Shamonda virus 3 60% 0.00 0.05 1 17% 0.00 0.03
+Simian virus 40 5 100% 0.02 0.46 5 83% 0.00 0.06
+Yin et al. BMC Pulmonary Medicine (2020) 20:81 Page 5 of 12
+
+using RNA-seq (Table 2 & S1), we still performed RT￾qPCR to assess expression of herpesvirus saimiri using
+primers against viral cyclin D1 and viral ORF73 (a con￾served viral gene). We did not detect significant expres￾sion of ORF73 in IPF patient samples compared to
+controls (data not shown). We observed high expression
+of human cyclin D1 (Fig. 2b) and very low expression of
+viral cyclin D1 (Ct value over 30, Fig. 2a) in both IPF
+and control samples, indicating lack of an association
+between herpesvirus saimiri and IPF.
+HERV-K gene expression and coverage in IPF patients
+HERV sequences make up about 4.9% of the human
+genome. HERV-K research has been assessed in auto￾immune disorders and oncogenesis, yet to date we are
+not aware of any literature to assess its possible role in
+pulmonary fibrosis. Recently, RT-PCR results have sug￾gested that HERV-K env mRNA was increased in PBMC
+and skin biopsies of morphea/localized scleroderma [38].
+This study suggests that HERV-K env may be function￾ally linked to fibrosis. HERV-K gene expression could
+theoretically promote IPF through cell stress, and
+HERV-K expression is reported to be higher with EBV
+infection [39]. Therefore, we evaluated whether HERV-K
+genes are upregulated in IPF lung. Notably, of the vi￾ruses analyzed in poly(A) selected RNA-seq, HERV-K
+was the virus with the highest read numbers (23 to 83
+HERV-K mapped reads per million human mapped
+reads in both IPF and control samples) (Fig. 3a & Table
+S2). Statistical analysis showed about a 2-fold increase in
+the 11 IPF patient samples compared 5 controls in group
+1 (Fig. 3a & b). However, no statistical difference was
+evident between IPF and controls in the second group
+(Fig. 3a & b). These data were confirmed by non-poly(A)
+selected RNA-seq in the initial group and the third
+group. Non-poly(A) selected RNA-seq detected more
+HERV mapped reads than poly(A) selected RNA-seq
+(Table 3, Table S4, Table S5). Overall we were not able
+to make an association between HERV-K gene expres￾sion and IPF.
+Quantitative RT-PCR of the HERV-K env and long
+terminal repeat (LTR) regions show that the expression
+levels of env and LTR were higher in IPF than in con￾trols (two-fold difference, Fig. 3d), which corroborates
+the RNA-seq data. Next, strand-specific nested RT-PCR
+was performed with primers spanning the HERV-K env
+and LTR regions in group 1. The primers were originally
+designed to detect viral 1x env splicing transcripts [32].
+Since HERV-K can be transcribed from the LTR at ei￾ther or both directions, the sense strand and anti-sense
+strand, we performed strand-specific RT-PCR to detect
+the plus strand and the minus strand using forward
+(LTR-Fwd) or reverse primers (LTR-Rev) for reverse
+strand transcription of the LTR. As shown in Fig. 3c, we
+found no statistical difference in expression of env and
+Table 2 Summary of the number of virus mapped reads per million human mapped reads (RPHM) for IPF and control lung
+specimens from first and second group in poly(A) selected RNA-seq and third group in non-poly(A) selected RNA-seq. Viruses were
+displayed here if at least one viral mapped read was detected in at least one sample. The total mapped reads of human are for
+quality control (Continued)
+Virus name Control IPF
+# of
+samples
+% of
+samples
+Min Max # of
+samples
+% of
+samples
+Min Max
+Papillomavirus 28 0 0% 0.00 0.00 1 17% 0.00 0.03
+Papillomavirus 100 0 0% 0.00 0.00 1 17% 0.00 0.03
+Table 3 Comparison of the virome reads between non-poly(A)
+selected RNA-seq (non-poly(A)) with poly(A) selected RNA-seq
+(poly(A)) from first group of lung tissue. The numbers
+correspond to the average virome reads per million human
+mapped reads
+Viruses Non-poly(A) Poly(A)
+Controls IPF Controls IPF
+Cytomegalovirus 0.15 0.18 0.00 0.80
+Hepatitis C virus genotype 2 2.05 2.57 0.00 0.04
+Hepatitis C virus genotype 6 0.49 0.61 0.00 0.00
+Hepatitis C virus genotype 1 0.15 0.16 0.00 0.03
+Tick-borne encephalitis virus 0.23 0.22 0.00 0.00
+Abelson murine leukemia virus 0.09 0.14 0.06 0.05
+Shamonda virus 0.08 0.09 9.15 3.52
+Cutthroat trout virus 0.02 0.02 0.00 0.00
+Murine type C retrovirus 0.02 0.01 0.00 0.00
+Simbu virus 0.02 0.02 0.10 0.08
+Moloney murine leukemia virus 0.02 0.00 0.03 0.02
+Herpesvirus 2 0.01 0.01 0.00 0.00
+Epstein-barr virus 0.01 0.01 0.00 0.00
+Herpesvirus 6B 0.01 0.00 0.00 0.00
+Adenovirus C 0.00 0.00 0.00 0.05
+Immunodeficiency virus 1 0.00 0.00 0.00 0.03
+Papillomavirus 110 0.00 0.00 0.00 0.02
+Mouse mammary tumor virus 0.00 0.00 0.03 0.03
+HERV-K 96.35 94.04 29.36 52.11
+HERV-W 4.58 4.00 0.21 0.44
+HERVs 102.80 99.41 32.87 54.39
+Yin et al. BMC Pulmonary Medicine (2020) 20:81 Page 6 of 12
+
+LTR from either direction between IPF and controls.
+We observed that there were several different sizes of
+env spliced transcripts. Eleven of 12 (91.7%) IPF samples
+were env positive, compared to 3 of 5 (60%) controls,
+and the majority of env transcripts were large in IPF (9
+of 11), compared with 1 of 3 env in controls (Fig. 3c). In
+summary, the spliced env appears preferentially
+expressed in IPF, and we do not yet know whether the
+large env may play a role in IPF pathogenesis.
+Discussion
+Here we used RNA-seq to characterize 740 virus gene
+expression profiles in 28 IPF biopsies and 20 age￾matched controls. RNA-seq did not provide evidence for
+an association between any virus and IPF. Studies using
+RT-PCR for HERV-K, saimiri, EBV, HHV7 and HCV by
+RT-PCR corroborated the RNA-seq results. Our findings
+provide a new scope for exploring the causes of IPF by
+using the sensitive RNA-seq method.
+To enable us to analyze both viral poly(A) and non￾poly(A) mRNA in the same sample, we divided total
+RNA extracted from surgical lung biopsies into a poly(A)
+enriched fraction via oligo (dT) for poly(A)-selected
+RNA-seq, and a non-poly(A) fraction for non-poly(A)-
+selected RNA-seq. Similar to eukaryotic mRNAs, viral
+mRNAs have two main types: poly(A) and non-poly(A)
+transcripts, based on the presence or absence of a
+poly(A) tail at their 3′-end. Poly(A) mRNA transcripts
+represent the majority of viral mRNA, however some vi￾ruses express non-poly(A) mRNA including miRNA and
+lncRNA. Important examples are herpesvirus EBV￾encoded non-coding small RNAs (EBER), and
+adenovirus-encoded non-coding RNA VA (viral associ￾ated) RNAs. Viral-encoded non-poly(A) RNAs have an
+essential role in a variety of physiological conditions and
+in several illnesses, including viral life cycle and function,
+host cell immune evasion and transformation [40]. Spe￾cifically, EBERs are highly abundant in all latently EBV￾infected cells and play a significant role in the pathogen￾esis of EBV infection including contributions to EBV￾mediated oncogenesis such as Burkitt’s lymphoma, gas￾tric carcinoma and nasopharyngeal carcinoma through
+regulation of apoptosis and/or several cytokines [41]. As
+such, EBERs are the gold standard clinic markers for
+Fig. 1 Evaluation of EBV and HCV expression levels in IPF and control lung specimens by RT-qPCR. a To evaluate EBV expression levels, RT-qPCR
+was performed using primers against EBER. b HCV expression was assessed using primers against the 5’UTR
+Yin et al. BMC Pulmonary Medicine (2020) 20:81 Page 7 of 12
+
+detection of EBV latent infection in specimens. For this
+reason, we analyzed viral poly(A) and non-poly(A)
+mRNAs separately on the same sample from the first
+group.
+EBV appears to be the most commonly investigated
+virus in IPF. Previous research has suggested that IPF is
+linked to EBV, while other studies, using some common
+techniques such as PCR with primers from the EBV
+BamHI W repeats or the EBER gene, FISH with an
+EBER probe, and IHC with antibody against the viral
+capsid antigen (VCA) or the latent membrane protein 1,
+have found no link [9]. Here, we did not detect EBV la￾tent or lytic gene expression differences using RNA-seq
+or real-time RT-qPCR between the lungs of IPF patients
+compared to control lungs. Nevertheless, we detected
+very low level of EBER in both IPF and control lung with
+no difference between the two groups, and this is not
+unexpected since most people are latently infected with
+EBV. Notably, EBV EBERs are the most highly expressed
+EBV latent genes, typically with greater than 1 million
+RNA molecules per cell [42]. EBERs were detected at
+very low-levels in the non-poly(A) selected RNA-seq
+dataset (Table S3) and in real-time RT-qPCR, but not in
+poly(A) selected RNA-seq. Their quantification failed to
+demonstrate enhancement of EBV gene expression in
+IPF specimens, thus implying that the EBV virus is not
+associated with IPF lung any more than with normal
+lung.
+HERV-K expression was examined because some re￾ports have indicated that it is elevated in other fibrotic
+diseases and because conceptually HERV-K could pro￾mote fibrogenesis by inducing cellular stress. Moreover,
+Fig. 2 Detection of herpesvirus saimiri expression in IPF and control lung specimens. a Saimiri virus was assessed using RT-qPCR using primers
+designed for viral cyclin D1. b Human cyclin D1 was evaluated using RT-qPCR using primers designed for human cyclin D1
+Yin et al. BMC Pulmonary Medicine (2020) 20:81 Page 8 of 12
+
+HERV-K expression is reportedly enhanced in response
+to herpes virus infection. HERV-K protein NP9 can
+negatively regulate EBV EBNA2 expression by binding
+to EBNA2 [43]. The env-encoded superantigens SAg
+and NP9 were increased in EBV-transformed lympho￾cytes, and further studies have demonstrated that the
+EBV genes LMP2A and LMP1 transactivate HERV-K
+gene expression [44, 45]. Given the reported association
+between EBV and HERV-K, we hypothesized that gene
+expression of EBV and HERV-K should have a positive
+correlation. As such, we performed RT-PCR for HERV￾K and EBV, and found expression of HERV-K env and
+LTR, but no or low expression of EBV (Fig. 2 and Fig.
+1a). The absence of differences in overall HERV-K ex￾pression between IPF and control data further supports
+the concept that there is no association between EBV
+and IPF.
+Although RNA-seq is highly sensitive technique to de￾tect virus, there are still some limitations in our study.
+Most of the mapped viral reads detected in our study
+were low except for HERVs, and this potentially could
+be due to the quality of RNA-seq or the script used in
+our research. Additionally, the expression of RNA vi￾ruses is difficult to differentiate from genome detection
+despite the fact that viral RNA may indeed reveal ex￾pression of DNA viruses such as herpes. For persistent
+DNA viruses with very limited expression such as HBV,
+a strategy restricted to the detection of RNA such as
+RNA-seq, may miss these viruses. Finally, although a
+greater number of tissue samples would add to the con￾fidence of our findings, we suggest the lack of significant
+findings in 28 IPF lungs from 3 different sources is com￾pelling. Although our sample size makes it very unlikely
+to have missed a significant difference in expression of
+viral gene expression in common viruses, such as EBV,
+we are not able to fully exclude that there may be a
+small percentage of patients with IPF, or a specific IPF
+phenotype, that have expression viral RNA in lung.
+This study has bearing as clinical investigators are con￾sidering anti-herpesvirus therapy as a treatment for IPF.
+A similar scenario existed for glioblastoma multiforme
+(GBM) in which, based on IHC, in situ hybridization,
+western blotting and RT-PCR, CMV was entertained as
+a causative factor for this fatal disease [46]. A clinical
+Fig. 3 Detection of HERV-K transcripts in human lung tissue. a Counts for HERV mapped reads and human mapped RNA-seq reads for IPF and
+control RNA. b Quantification of HERV-K RNA-seq mapped reads. c Strand-specific RT-PCR was performed to detect viral env transcripts and LTR
+expression, and the products were resolved by electrophoresis (−RT indicates no reverse transcriptase control). d Detection of HERV-K gene
+expression by qualitative RT-PCR using primers designed for env and LTR. The relative transcript expression levels were calculated using the ΔΔCt
+method and fold change was calculated by the ΔΔCt of IPF/ΔΔCt of control (CNTL)
+Yin et al. BMC Pulmonary Medicine (2020) 20:81 Page 9 of 12
+
+trial using anti-viral therapy to treat GBM was not ef￾fective [47]. Only after conclusion of the trial did next
+generation sequencing data come to light that refuted
+the role of CMV in GBM [48]. Our data indicates that a
+clinical trial employing anti-herpesvirus medication for
+the treatment of IPF would be unwarranted, with the
+caveat that it does not address so called acute exacerba￾tions of IPF.
+Conclusions
+Our study employs next generation RNA-sequencing to
+assess whether viral infections are linked to the patho￾genesis of IPF for the first time. Although quantification
+of viral RNAs using RNA-seq in IPF lung specimens
+does not support the role of viral infection in acute exac￾erbations of IPF, however, this analysis patently did not
+support an association between virus detection especially
+herpes virus detection and IPF.
+Supplementary information
+Supplementary information accompanies this paper at https://doi.org/10.
+1186/s12890-020-1114-1.
+Additional file 1: Table S1. Counts for human and virus mapped RNA￾seq reads for IPF and control lung RNA. Virus data is shown if at least one
+read was detected in at least one sample.
+Additional file 2: Table S2. Counts for human and HERV-K & HERV-W
+mapped RNA-seq reads for IPF and control lung RNA. Virus-encoded
+genes are shown if at least one read was detected in at least one
+sample.
+Additional file 3: Table S3. Counts for virus mapped non-poly(A) se￾lected RNA-seq reads for IPF and control lung RNA.
+Additional file 4: Table S4. Counts for HERV mapped non-poly(A) se￾lected RNA-seq reads for IPF and control lung RNA.
+Additional file 5: Table S5. Counts for virus mapped SRA RNA-seq
+reads for IPF and control lung RNA.
+Abbreviations
+CCL12: Chemokine (C-C motif) ligand 12; CCL2: Chemokine (C-C motif)
+ligand 2; CMV: Cytomegalovirus; EBER: Epstein–Barr virus-encoded small RNA;
+EBNA: Epstein-Barr nuclear antigen; EBV: Epstein–Barr virus; ELISA: Enzyme￾linked immunosorbent assay; EMT: Epithelial-mesenchymal transition;
+env: Viral envelope; ER: Endoplasmic reticulum; FISH: Fluorescence in situ
+hybridization; GAPDH: Glyceraldehyde 3-phosphate dehydrogenase;
+GBM: Glioblastoma multiforme; HCMV: Human cytomegalovirus or human
+betaherpesvirus 5; HCV: Hepatitis C; HERV-E: Human endogenous retrovirus E;
+HERV-K: Human endogenous retrovirus K; HHV-2: Herpesvirus 2; HHV-6, − 7
+and − 8: Human herpesvirus-6, − 7 and − 8; HHV-6B: Human betaherpesvirus
+6B; HHVs: Human herpes viruses; HSV-1: Herpes simplex virus type 1; IFN￾γ: Interferon gamma; IHC: Immunohistochemistry; IPF: Idiopathic pulmonary
+fibrosis; KSHV: Kaposi’s sarcoma-associated herpesvirus; LMP1: Epstein-Barr
+latent membrane protein 1; LTR: Long terminal repeat; LTRC: Lung tissue
+research consortium; ORF: Open reading frame; PBMC: Peripheral blood
+mononuclear cell; PERK: Protein kinase R (PKR)-like endoplasmic reticulum
+kinase; RPHM: Reads per million human mapped reads; RT-PCR: Reverse
+transcription polymerase chain reaction; RT-qPCR: Quantitative reverse
+transcription PCR; SRA: Sequence read archive; TGF-β: Transforming growth
+factor beta; TNF-α: Tumor necrosis factor alpha; TTV: Transfusion transmitted
+virus; UPR: Unfolded protein response; UTR: Untranslated region; VCA: Viral
+capsid antigen
+Acknowledgements
+We acknowledge Melody C. Baddoo with the Next Generation Sequence
+Analysis Core supported by the National Cancer Institute (P01CA214091) for
+virome analysis; Kejing Song and Cathy Flemington from the Tulane Center
+for Translational Research in Infection and Inflammation for performing non￾poly(A) selected RNA-seq, and Steven M. Rowe and Li Tang from University
+of Alabama at Birmingham for their technical support. This abstract was not
+presented at the PFF Summit 2019.
+Authors’ contributions
+QY performed RNA-seq analysis, RT-PCR and participated in writing the
+manuscript. MS performed RNA-seq analysis for the first and second group
+data. YZ performed RNA extraction and RT-PCR for HERV-K. EKF assisted with
+RNA-seq analysis and edited the manuscript. NK provided the third group of
+raw RNA-seq data. JA provide IPF lung tissue samples. JL conceived of this
+study and participated in experimental design and analysis. He also co-wrote
+this manuscript. All authors read and approved the final manuscript.
+Funding
+This study was supported by the John Deming Endowed Chair for Research
+and the Wetmore Foundation [50] and Deep South Network for Translational
+Research Pilot Funding Selection Committee (JAL and J AdeA). These
+funding participated in the design of the study, collection, analysis,
+interpretation of data and writing of the manuscript.
+Availability of data and materials
+All data generated or analyzed during this study are included in this
+published article and its supplementary information files. Raw and processed
+RNA-seq data for the first group is available at Gene Expression Omnibus
+[49], accession numbers: GSE138239 for poly(A) selected RNA-seq data and
+GSE138283 for non-poly(A) selected RNA-seq data. The second and third
+group RNA-seq data have been previously uploaded to GEO and the lung
+genomics research consortium (www.lung-genomics.org) as shown in their
+publications [22, 23].
+Ethics approval and consent to participate
+The use of specimens was approved by the Tulane University Biomedical
+institutional review board (IRB, approval number 12-334398E), University of
+Alabama at Birmingham (approval number N120410001), University of Pitts￾burgh (approval number IRB0411036) and Yale School of Medicine (approval
+number 1409014689). Written informed consents were obtained as appropri￾ate according to IRB.
+Consent for publication
+Not applicable.
+Competing interests
+The authors declare that they have no competing interests.
+Author details
+1
+Section of Pulmonary Diseases, Critical Care and Environmental Medicine,
+Department of Medicine, Tulane University School of Medicine, 1430 Tulane
+Avenue, New Orleans, LA 70112, USA. 2
+Department of Pathology and
+Laboratory Medicine, Tulane University School of Medicine, 1430 Tulane
+Avenue, New Orleans, LA 70112, USA. 3
+Section of Pulmonary, Critical Care
+and Sleep Medicine, Yale University, 300 Cedar Street, Ste S441D, New
+Haven, CT 06519, USA. 4
+Division of Allergy, Pulmonary, Critical Care Medicine,
+Department of Medicine, Vanderbilt University, 1161 21st Avenue South,
+B1317 MCN, Nashville, TN 37232-2650, USA.
+Received: 16 July 2019 Accepted: 13 March 2020
+References
+1. Lederer DJ, Martinez FJ. Idiopathic pulmonary fibrosis. N Engl J Med. 2018;
+378(19):1811–23.
+2. Tang YW, Johnson JE, Browning PJ, Cruz-Gervis RA, Davis A, Graham BS,
+Brigham KL, Oates JA, Loyd JE, Stecenko AA. Herpesvirus DNA is
+consistently detected in lungs of patients with idiopathic pulmonary
+fibrosis. J Clin Microbiol. 2003;41(6):2633–40.
+Yin et al. BMC Pulmonary Medicine (2020) 20:81 Page 10 of 12
+
+3. Cheng G, Feng Z, He B. Herpes simplex virus 1 infection activates the
+endoplasmic reticulum resident kinase PERK and mediates eIF-2alpha
+dephosphorylation by the gamma (1)34.5 protein. J Virol. 2005;79(3):1379–
+88.
+4. Ueda T, Ohta K, Suzuki N, Yamaguchi M, Hirai K, Horiuchi T, Watanabe J,
+Miyamoto T, Ito K. Idiopathic pulmonary fibrosis and high prevalence of
+serum antibodies to hepatitis C virus. Am Rev Respir Dis. 1992;146(1):266–8.
+5. Arase Y, Suzuki F, Suzuki Y, Akuta N, Kobayashi M, Kawamura Y, Yatsuji H,
+Sezaki H, Hosaka T, Hirakawa M, et al. Hepatitis C virus enhances incidence
+of idiopathic pulmonary fibrosis. World J Gastroenterol. 2008;14(38):5880–6.
+6. Kuwano K, Nomoto Y, Kunitake R, Hagimoto N, Matsuba T, Nakanishi Y, Hara
+N. Detection of adenovirus E1A DNA in pulmonary fibrosis using nested
+polymerase chain reaction. Eur Respir J. 1997;10(7):1445–9.
+7. Calabrese F, Kipar A, Lunardi F, Balestro E, Perissinotto E, Rossi E, Nannini N,
+Marulli G, Stewart JP, Rea F: Herpes Virus Infection Is Associated with
+Vascular Remodeling and Pulmonary Hypertension in Idiopathic Pulmonary
+Fibrosis. PLoS One 2013, 8(2)..
+8. Tsukamoto K, Hayakawa H, Sato A, Chida K, Nakamura H, Miura K.
+Involvement of Epstein-Barr virus latent membrane protein 1 in disease
+progression in patients with idiopathic pulmonary fibrosis. Thorax. 2000;
+55(11):958–61.
+9. Hayakawa H, Shirai M, Uchiyama H, Imokawa S, Suda T, Chida K, Muro H.
+Lack of evidence for a role of Epstein-Barr virus in the increase of lung
+cancer in idiopathic pulmonary fibrosis. Respir Med. 2003;97(3):281–4.
+10. Irving WL, Day S, Johnston ID. Idiopathic pulmonary fibrosis and hepatitis C
+virus infection. Am Rev Respir Dis. 1993;148(6 Pt 1):1683–4.
+11. Wootton SC, Kim DS, Kondoh Y, Chen E, Lee JS, Song JW, Huh JW,
+Taniguchi H, Chiu C, Boushey H, et al. Viral infection in acute exacerbation
+of idiopathic pulmonary fibrosis. Am J Respir Crit Care Med. 2011;183(12):
+1698–702.
+12. Matsui R, Goldstein RH, Mihal K, Brody JS, Steele MP, Fine A. Type I collagen
+formation in rat type II alveolar cells immortalised by viral gene products.
+Thorax. 1994;49(3):201–6.
+13. Isler JA, Skalet AH, Alwine JC. Human cytomegalovirus infection activates
+and regulates the unfolded protein response. J Virol. 2005;79(11):6890–9.
+14. Lawson WE, Crossno PF, Polosukhin VV, Roldan J, Cheng DS, Lane KB,
+Blackwell TR, Xu C, Markin C, Ware LB, et al. Endoplasmic reticulum stress in
+alveolar epithelial cells is prominent in IPF: association with altered
+surfactant protein processing and herpesvirus infection. Am J Phys Lung
+Cell Mol Phys. 2008;294(6):L1119–26.
+15. Naik PN, Horowitz JC, Moore TA, Wilke CA, Toews GB, Moore BB. Pulmonary
+fibrosis induced by gamma-Herpesvirus in aged mice is associated with
+increased fibroblast responsiveness to transforming growth factor-beta. J
+Gerontol Series a-Biol Sci Med Sci. 2012;67(7):714–25.
+16. Keating DT, Sadlier DM, Patricelli A, Smith SM, Walls D, Egan JJ, Doran PP.
+Microarray identifies ADAM family members as key responders to TGF-beta1
+in alveolar epithelial cells. Respir Res. 2006;7:114.
+17. Cayrol C, Flemington EK. Identification of cellular target genes of the
+Epstein-Barr virus transactivator Zta: activation of transforming growth factor
+beta igh3 (TGF-beta igh3) and TGF-beta 1. J Virol. 1995;69(7):4206–12.
+18. Park GB, Kim D, Kim YS, Kim S, Lee HK, Yang JW, Hur DY. The Epstein-Barr
+virus causes epithelial-Mesenchymal transition in human corneal epithelial
+cells via Syk/Src and Akt/Erk signaling pathways. Invest Ophth Vis Sci. 2014;
+55(3):1770–9.
+19. Sides MD, Klingsberg RC, Shan B, Gordon KA, Nguyen HT, Lin Z, Takahashi T,
+Flemington EK, Lasky JA. The Epstein-Barr virus latent membrane protein 1
+and transforming growth factor--beta1 synergistically induce epithelial--
+mesenchymal transition in lung epithelial cells. Am J Respir Cell Mol Biol.
+2011;44(6):852–62.
+20. Ozsolak F, Milos PM. RNA sequencing: advances, challenges and
+opportunities. Nat Rev Genet. 2011;12(2):87–98.
+21. Raghu G, Collard HR, Egan JJ, Martinez FJ, Behr J, Brown KK, Colby TV,
+Cordier JF, Flaherty KR, Lasky JA, et al. An official ATS/ERS/JRS/ALAT
+statement: idiopathic pulmonary fibrosis: evidence-based guidelines for
+diagnosis and management. Am J Respir Crit Care Med. 2011;183(6):788–
+824.
+22. Rabinovich EI, Kapetanaki MG, Steinfeld I, Gibson KF, Pandit KV, Yu G,
+Yakhini Z, Kaminski N. Global methylation patterns in idiopathic pulmonary
+fibrosis. PLoS One. 2012;7(4):e33770.
+23. Lino Cardenas CL, Henaoui IS, Courcot E, Roderburg C, Cauffiez C, Aubert S,
+Copin MC, Wallaert B, Glowacki F, Dewaeles E, et al. miR-199a-5p is
+upregulated during fibrogenic response to tissue injury and mediates
+TGFbeta-induced lung fibroblast activation by targeting caveolin-1. PLoS
+Genet. 2013;9(2):e1003291.
+24. Vukmirovic M, Herazo-Maya JD, Blackmon J, Skodric-Trifunovic V, Jovanovic
+D, Pavlovic S, Stojsic J, Zeljkovic V, Yan X, Homer R, et al. Identification and
+validation of differentially expressed transcripts by RNA-sequencing of
+formalin-fixed, paraffin-embedded (FFPE) lung tissue from patients with
+idiopathic pulmonary fibrosis. BMC Pulm Med. 2017;17(1):15.
+25. American Thoracic Society. Idiopathic pulmonary fibrosis: diagnosis and
+treatment. International consensus statement. American Thoracic Society
+(ATS), and the European Respiratory Society (ERS). Am J Respir Crit Care
+Med 2000, 161(2 Pt 1):646–664..
+26. Xu G, Strong MJ, Lacey MR, Baribault C, Flemington EK, Taylor CM. RNA
+CoMPASS: a dual approach for pathogen and host transcriptome analysis of
+RNA-seq datasets. PLoS One. 2014;9(2):e89445.
+27. Yin Q, Wang X, Fewell C, Cameron J, Zhu H, Baddoo M, Lin Z, Flemington
+EK. MicroRNA miR-155 inhibits bone morphogenetic protein (BMP) signaling
+and BMP-mediated Epstein-Barr virus reactivation. J Virol. 2010;84(13):6318–
+27.
+28. Lin L, Fevery J, Hiem Yap S. A novel strand-specific RT-PCR for detection of
+hepatitis C virus negative-strand RNA (replicative intermediate): evidence of
+absence or very low level of HCV replication in peripheral blood
+mononuclear cells. J Virol Methods. 2002;100(1–2):97–105.
+29. Caserta MT, Hall CB, Schnabel K, Lofthus G, McDermott MP. Human
+herpesvirus (HHV)-6 and HHV-7 infections in pregnant women. J Infect Dis.
+2007;196(9):1296–303.
+30. Folcik VA, Garofalo M, Coleman J, Donegan JJ, Rabbani E, Suster S, Nuovo A,
+Magro CM, Di Leva G, Nuovo GJ. Idiopathic pulmonary fibrosis is strongly
+associated with productive infection by herpesvirus saimiri. Modern Pathol.
+2014;27(6):851–62.
+31. Kusko RL, Brothers JF 2nd, Tedrow J, Pandit K, Huleihel L, Perdomo C, Liu G,
+Juan-Guardela B, Kass D, Zhang S, et al. Integrated genomics reveals
+convergent Transcriptomic networks underlying chronic obstructive
+pulmonary disease and idiopathic pulmonary fibrosis. Am J Respir Crit Care
+Med. 2016;194(8):948–60.
+32. Agoni L, Guha C, Lenz J. Detection of human endogenous retrovirus K
+(HERV-K) transcripts in human prostate Cancer cell lines. Front Oncol. 2013;
+3:180.
+33. Pandit KV, Corcoran D, Yousef H, Yarlagadda M, Tzouvelekis A, Gibson KF,
+Konishi K, Yousem SA, Singh M, Handley D, et al. Inhibition and role of let-7d in
+idiopathic pulmonary fibrosis. Am J Respir Crit Care Med. 2010;182(2):220–9.
+34. Cheson BD, Pfistner B, Juweid ME, Gascoyne RD, Specht L, Horning SJ,
+Coiffier B, Fisher RI, Hagenbeek A, Zucca E, et al. Revised response criteria
+for malignant lymphoma. J Clin Oncol. 2007;25(5):579–86.
+35. Meliconi R, Andreone P, Fasano L, Galli S, Pacilli A, Miniero R, Fabbri M,
+Solforosi L, Bernardi M. Incidence of hepatitis C virus infection in Italian
+patients with idiopathic pulmonary fibrosis. Thorax. 1996;51(3):315–7.
+36. Garson JA, Ring C, Tuke P, Tedder RS. Enhanced detection by PCR of
+hepatitis C virus RNA. Lancet. 1990;336(8719):878–9.
+37. Ablashi DV, Dahlberg JE, Cannon GB, Fischetti G, Loeb W, Hinds W, Schatte
+C, Levine PH. Detection of antibodies to Herpesvirus saimiri late antigens in
+human sera. Intervirology. 1988;29(4):217–26.
+38. Kowalczyk MJ, Danczak-Pazdrowska A, Szramka-Pawlak B, Zaba R, Silny W,
+Osmola-Mankowska A. Expression of selected human endogenous retroviral
+sequences in skin and peripheral blood mononuclear cells in morphea.
+Arch Med Sci. 2012;8(5):819–25.
+39. Bergallo M, Pinon M, Galliano I, Montanari P, Dapra V, Gambarino S, Calvo
+PL: EBV induces HERV-K and HERV-W expression in pediatrics liver transplant
+recipients? Minerva Pediatr 2015..
+40. Tycowski KT, Guo YE, Lee N, Moss WN, Vallery TK, Xie MY, Steitz JA. Viral
+noncoding RNAs: more surprises. Genes Dev. 2015;29(6):567–84.
+41. Iwakiri D. Epstein-Barr virus-encoded RNAs: key molecules in viral
+pathogenesis. Cancers. 2014;6(3):1615–30.
+42. Fok V, Mitton-Fry RM, Grech A, Steitz JA. Multiple domains of EBER 1, an
+Epstein-Barr virus noncoding RNA, recruit human ribosomal protein L22.
+RNA. 2006;12(5):872–82.
+43. Gross H, Barth S, Pfuhl T, Willnecker V, Spurk A, Gurtsevitch V, Sauter M, Hu
+B, Noessner E, Mueller-Lantzsch N, et al. The NP9 protein encoded by the
+human endogenous retrovirus HERV-K (HML-2) negatively regulates gene
+activation of the Epstein-Barr virus nuclear antigen 2 (EBNA2). Int J Cancer.
+2011;129(5):1105–15.
+Yin et al. BMC Pulmonary Medicine (2020) 20:81 Page 11 of 12
+
+44. Sutkowski N, Conrad B, Thorley-Lawson DA, Huber BT. Epstein-Barr virus
+transactivates the human endogenous retrovirus HERV-K18 that encodes a
+superantigen. Immunity. 2001;15(4):579
+–89.
+45. Hsiao FC, Lin M, Tai A, Chen G, Huber BT. Cutting edge: Epstein-Barr virus
+transactivates the HERV-K18 superantigen by docking to the human
+complement receptor 2 (CD21) on primary B cells. J Immunol. 2006;177(4):
+2056
+–60.
+46. Cobbs CS, Harkins L, Samanta M, Gillespie GY, Bharara S, King PH, Nabors LB,
+Cobbs CG, Britt WJ. Human cytomegalovirus infection and expression in
+human malignant glioma. Cancer Res. 2002;62(12):3347
+–50.
+47. Stragliotto G, Rahbar A, Solberg NW, Lilja A, Taher C, Orrego A, Bjurman B,
+Tammik C, Skarman P, Peredo I, et al. Effects of valganciclovir as an add-on
+therapy in patients with cytomegalovirus-positive glioblastoma: a
+randomized, double-blind, hypothesis-generating study. Int J Cancer. 2013;
+133(5):1204
+–13.
+48. Strong MJ, Blanchard E, Lin Z, Morris CA, Baddoo M, Taylor CM, Ware ML,
+Flemington EK. A comprehensive next generation sequencing-based virome
+assessment in brain tissue suggests no major virus - tumor association. Acta
+Neuropathol Commun. 2016;4(1):71.
+49. Lopez-Mejia IC, Vautrot V, De Toledo M, Behm-Ansmant I, Bourgeois CF,
+Navarro CL, Osorio FG, Freije JM, Stevenin J, De Sandre-Giovannoli A, et al. A
+conserved splicing mechanism of the LMNA gene controls premature
+aging. Hum Mol Genet. 2011;20(23):4540
+–55.
+50. Hjalgrim H, Friborg J, Melbye M: The epidemiology of EBV and its
+association with malignant disease. In: Human Herpesviruses: Biology,
+Therapy, and Immunoprophylaxis
+. edn. Edited by Arvin A, Campadelli-Fiume
+G, Mocarski E, Moore PS, Roizman B, Whitley R, Yamanishi K. Cambridge;
+2007..
+Publisher
+’s Note
+Springer Nature remains neutral with regard to jurisdictional claims in
+published maps and institutional affiliations.
+Yin et al. BMC Pulmonary Medicine (2020) 20:81 Page 12 of 12
+

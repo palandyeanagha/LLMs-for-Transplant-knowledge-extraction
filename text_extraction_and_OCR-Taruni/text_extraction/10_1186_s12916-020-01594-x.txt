@@ -1,0 +1,800 @@
+R E S EAR CH A R TIC L E Open Access
+The role of testosterone in chronic kidney
+disease and kidney function in men and
+women: a bi-directional Mendelian
+randomization study in the UK Biobank
+Jie V. Zhao1* and C. Mary Schooling1,2
+Abstract
+Background: Chronic kidney disease (CKD) has an apparent sex disparity, with a more rapid progress in men than
+in women. Whether the well-established sex-specific evolutionary biology trade-off between reproduction and
+longevity might inform CKD has not previously been considered. Relevant evidence from randomized controlled
+trials (RCTs) is not available.
+Methods: We used a bi-directional Mendelian randomization study to obtain unconfounded estimates using the
+UK Biobank. Single nucleotide polymorphisms (SNPs) that strongly (p value < 5 × 10−8
+) predicted testosterone in a
+sex-specific manner were applied to 179,916 white British men (6016 CKD cases) and 212,079 white British women
+(5958 CKD cases) to obtain sex-specific associations with CKD, albuminuria, and estimated glomerular filtration rate
+(eGFR). We also used multivariable MR to control for sex hormone binding globulin (SHBG). For validation, we
+similarly examined their role in hemoglobin and high-density lipoprotein cholesterol (HDL-c). We also assessed the
+role of kidney function in serum testosterone, by applying eGFR-related SNPs to testosterone in the UK Biobank.
+Results: Genetically predicted testosterone was associated with CKD in men (odds ratio (OR) for bioavailable
+testosterone 1.17 per standard deviation, 95% confidence interval (CI) 1.03 to 1.33) based on 125 SNPs but not in
+women (OR 1.02, 95% CI 0.92 to 1.14 for total testosterone) based on 254 SNPs. Multivariable MR allowing for SHBG
+showed consistent patterns. Genetically predicted bioavailable testosterone in men and women and genetically
+predicted total testosterone in women increased hemoglobin and lowered HDL-c, as seen in RCTs. Genetically
+predicted eGFR was not related to serum testosterone in men or in women.
+Conclusions: Genetically predicted testosterone was associated with CKD and worse kidney function in men, whilst
+not affected by kidney function. Identifying drivers of testosterone and the underlying pathways could provide new
+insights into CKD prevention and treatment.
+Keywords: Big data, Testosterone, Chronic disease, Mendelian randomization
+© The Author(s). 2020 Open Access This article is licensed under a Creative Commons Attribution 4.0 International License,
+which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give
+appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if
+changes were made. The images or other third party material in this article are included in the article's Creative Commons
+licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons
+licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain
+permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the
+data made available in this article, unless otherwise stated in a credit line to the data.
+* Correspondence: janezhao@hku.hk 1
+School of Public Health, Li Ka Shing Faculty of Medicine, The University of
+Hong Kong, 1/F, Patrick Manson Building, 7 Sassoon Road, Pokfulam, Hong
+Kong SAR, China
+Full list of author information is available at the end of the article
+Zhao and Schooling BMC Medicine (2020) 18:122 
+https://doi.org/10.1186/s12916-020-01594-x
+
+Background
+Chronic kidney disease (CKD) represents a major burden
+of morbidity and mortality globally, affecting 10% of the
+population worldwide [1]. Renal replacement therapy (dia￾lysis or kidney transplantation), which is the treatment to
+enable survival during end-stage renal disease, has become
+the leading cost in health care systems in developed coun￾tries [2]. Notably, CKD has an apparent disparity in men
+and women [3]. Specifically, kidney function declines fas￾ter in men than in women, and the mortality rate is higher
+in men at all levels of pre-dialysis CKD [3]. Understanding
+the reasons underlying men’s disadvantage may provide
+new clues about etiology, with relevance to identification
+of new modifiable targets in primary care and develop￾ment of clinical treatment for CKD. It may also provide
+information that can be used to address the sexual dispar￾ity in life expectancy.
+Accumulating evidence suggests androgens may play a
+key role in differences in longevity by sex [4]. From the
+perspective of evolutionary biology, growth and
+reproduction trade off against longevity, with men and
+women having different investments in these trade-offs
+and as a result have different vulnerabilities to disease
+[4–6]. Correspondingly, hypothalamic-pituitary axis dys￾function is closely related to infertility and to CKD [7,
+8], supporting a role of reproductive factors in CKD.
+Animal experiments have repeatedly shown that testos￾terone damages renal function [9, 10]. For example,
+in vitro experiments show testosterone induced renal
+tubular epithelial cell death in a dose-response manner
+[10]. Correspondingly, castration in males increases
+renal clearance [11], lowers proteinuria, and protects
+against glomerular injury assessed from renal morph￾ology [11, 12]. Nevertheless, evidence, especially experi￾mental evidence, in humans is limited. A clinical case
+report showed testosterone therapy induced renal im￾pairment [13]. A randomized controlled trial in 48 men
+showed 6-month testosterone treatment lowered esti￾mated glomerular filtration rate (eGFR) [14]. In contrast,
+some observational studies have found higher testoster￾one associated with lower mortality in CKD patients
+[15] and higher eGFR [16]. These observed associations
+in patients are difficult to interpret because observa￾tional studies, essentially of survivors, are open to selec￾tion bias [17]. No large-scale RCT has ever been
+implemented to assess the long-term effect of testoster￾one on CKD. Moreover, no study has specifically exam￾ined the sex-specific role of testosterone in CKD and
+kidney function.
+In this situation where a large RCT is not available,
+using naturally occurring testosterone-related genetic
+variants as proxies of exposure, i.e., a Mendelian
+randomization (MR) study design, enables us to obtain
+unconfounded associations without any potentially
+harmful interventions. Genetic variants resulting in life￾long differences in endogenous exposures are unlikely to
+be associated with socioeconomic position or other con￾founders as they are determined at conception [18]. In
+this study, for the first time, we examined the association
+of genetically predicted testosterone with CKD events
+and kidney function using an MR study in the UK Bio￾bank. For validation of the genetic instrument, we simi￾larly examined the effect of genetically predicted
+testosterone on hemoglobin and high-density lipoprotein
+(HDL)-cholesterol, because meta-analysis of RCTs has
+clearly shown testosterone increases hemoglobin and
+lowers HDL-cholesterol [19]. As serum testosterone may
+also be affected by kidney function [20], we used a bi￾directional MR to examine the effect of genetically pre￾dicted eGFR on serum testosterone.
+Methods
+Study design
+We used univariable MR, as well as multivariable MR, to
+control for pleiotropic effects of SHBG where necessary
+[21]. We used a one-sample MR study to examine the
+role of genetically predicted testosterone in CKD and
+kidney function (indicated by albuminuria and eGFR),
+by applying testosterone-related, genome-wide signifi￾cant SNPs in univariable MR and additionally including
+SHBG-related, genome-wide significant SNPs in multi￾variable MR, to the individual level outcome data in
+men and women separately in the UK Biobank, by far
+the largest cohort in Europeans [22]. For validation, we
+assessed the associations of genetically predicted testos￾terone with hemoglobin and HDL-cholesterol; a finding
+consistent with well-established effects in RCTs provides
+some validation of the genetic instrument. We also
+tested the role of genetically predicted eGFR in serum
+testosterone to check for the reverse association.
+The role of testosterone in CKD and eGFR
+Data source
+The genetic predictors for testosterone and their associa￾tions with CKD and kidney function were both obtained
+from the UK Biobank. The UK Biobank is a large, on￾going, prospective cohort study, with median follow up
+time of 11.1 years [22]. The UK Biobank recruited 502,
+713 people (aged 40–69 years, mean age 56.5 years,
+45.6% men) from 2006 to 2010 from England, Scotland,
+and Wales; 94% were of self-reported European ancestry.
+Genetic predictors for testosterone
+MR is based on three assumptions, i.e., the genetic vari￾ants, specifically here single nucleotide polymorphisms
+(SNPs), are strongly related to the exposure (relevance),
+are not associated with confounders of the exposure￾outcome relation (independence), and only influence the
+Zhao and Schooling BMC Medicine (2020) 18:122 Page 2 of 10
+
+outcome via the exposure (exclusion-restriction) [23].
+To meet these assumptions, we used genome-wide sig￾nificant (p < 5 × 10−8
+) SNPs. The genetic instruments
+were obtained from the largest, sex-specific genome￾wide association study (GWAS) conducted in the UK
+Biobank (178,782 white British men and 230,454 white
+British women) and replicated in three independent
+studies (CHARGE Consortium, Twins UK, and EPIC￾Norfolk) [21]. The GWAS provided 125 independent
+SNPs (r
+2 < 0.05) for bioavailable testosterone in men and
+254 independent SNPs for testosterone in women, with
+minor allele frequency > 0.1%, imputation quality score >
+0.5, and little genetic correlation with SHBG (− 0.05 in
+men and − 0.06 in women) [21]. We checked for the
+Hardy-Weinburg equilibrium (HWE) and dropped any
+SNP with HWE p value < 10−50 [24]. The GWAS also
+provided 231 independent SNPs for total testosterone in
+men and 180 independent SNPs for bioavailable testos￾terone in women [21], which are highly correlated with
+SHBG [21]. As such, multivariable MR controlling for
+SHBG may have the greatest validity for these instru￾ments, but for comprehensiveness, we also presented re￾sults of univariable MR for comparison.
+To satisfy the assumption of independence, we
+checked for their association with potential confounders,
+including Townsend index, smoking, alcohol drinking,
+and physical activity in the UK Biobank summary statis￾tics. We dropped SNPs associated with any of these po￾tential confounders at genome-wide significance (p <5×
+10−8
+). We also checked in PhenoScanner (www.phenos￾canner.medschl.cam.ac.uk), a platform with comprehen￾sive information on the associations of genotype and
+phenotype, to see whether these SNPs were associated
+with the potential confounders, and dropped SNP(s) as￾sociated with any of these potential confounders at
+genome-wide significance.
+Genetic predictors for multivariable MR
+Multivariable MR controlling for SHBG used genetic
+predictors for the exposure (bioavailable testosterone or
+total testosterone) and SHBG. The genetic predictors for
+testosterone were as used in univariable MR. The gen￾etic predictors for SHBG were provided by the GWAS
+in the UK Biobank, with 357 SNPs in men and 359 SNPs
+in women [21]. After combining the genetic predictors
+for an exposure and SHBG, we dropped overlapping
+SNPs, correlated SNPs (r
+2 > 0.05), and SNPs whose cor￾relations with other SNPs not available in MR-Base or
+LDlink (https://ldlink.nci.nih.gov/). The remaining SNPs
+were used for multivariable MR.
+Genetic associations with CKD and kidney function
+The genetic associations with CKD were obtained using
+individual-level, de-identified information from the UK
+Biobank (under application #42468). CKD events in￾cluded mortality, morbidity, and self-reported chronic
+renal failure (ICD10-code: N18, ICD9-code: 5859, and
+self-report code: 1192); indications of renal replacement
+therapy (ICD-10 code Z99.2 (dependence on renal dialy￾sis), Z94.0 (kidney transplant status), and Z49 (encoun￾ter for care involving renal dialysis)), identified based on
+a nurse-led interview at recruitment; record linkage to
+all health service encounters; deaths in the ongoing
+follow-up [22]; and eGFR, calculated based on the CKD￾EPI formula using serum creatinine [25], less than 60
+ml/min per 1.73 m2
+. Other outcomes included albumin￾uria and eGFR calculated based on the CKD-EPI for￾mula using serum creatinine (eGFRcr) [25] and using
+both creatinine and cystatin C (eGFRcr_cys) [26].
+In the UK Biobank, genotyping was assessed using two
+very similar arrays, i.e., the UK BiLEVE array and UK
+Biobank Axiom array. To control for population stratifi￾cation, we restricted our analysis to participants with
+white British ancestry based on self-report and genetic
+quality control information. For quality control, we ex￾cluded participants with inconsistent self-reported and
+genotyped sex, or excess relatedness (more than 10 puta￾tive third-degree relatives) or abnormal sex chromo￾somes (such as XXY), or poor-quality genotyping
+(heterozygosity or missing rate > 1.5%). After quality
+control, we identified 179,916 white British men (6016
+CKD cases) and 212,079 white British women (5958
+CKD cases) updated till December 2019. Albuminuria
+was identified based on urine albumin-to-creatinine ratio
+(UACR) > 30 mg/g [27], where urine microalbumin was
+measured using an immune-turbidimetric assay, and
+urine creatinine was measured using an enzymatic assay
+(http://biobank.ndph.ox.ac.uk/showcase/showcase/docs/
+urine_assay.pdf); participants with microalbumin lower
+than the detection limit were considered to be free from
+albuminuria. We identified 8845 men and 8275 women
+with albuminuria. Logistic regression was used to obtain
+the association of each SNP with CKD and albuminuria,
+and linear regression was used for eGFR. We controlled
+for age, sex, 20 principal components, assay array, body
+mass index (BMI), systolic blood pressure (SBP), and
+diastolic blood pressure (DBP). BMI and blood pressure
+were controlled for because they are risk factors in com￾mon for various chronic diseases such as CKD and car￾diovascular disease (CVD) [28, 29]; controlling for the
+common risk factors may partly address selection bias
+from competing risk from other diseases before recruit￾ment [29, 30].
+Genetic associations with hemoglobin and HDL-cholesterol
+For validation, we examined the association of genetically
+predicted testosterone with hemoglobin and HDL￾cholesterol as positive controls. The sex-specific associations
+Zhao and Schooling BMC Medicine (2020) 18:122 Page 3 of 10
+
+of each SNP with hemoglobin and HDL-cholesterol were ob￾tained from the UK Biobank summary statistics provided by
+Neale Lab (http://www.nealelab.is/uk-biobank/), using linear
+regression adjusted for age, age2
+, and 20 principal compo￾nents in the UK Biobank.
+The role of kidney function in serum testosterone
+Genetic predictors for eGFR
+To meet the MR assumptions, we used genetic predic￾tors reaching genome-wide significance (p < 5 × 10−8
+) in
+the recent GWAS meta-analysis in CKDGen [31]. We
+selected independent SNPs (r
+2 < 0.01) predicting eGFR
+using the “clumping” function of MR-Base. Given it is a
+two-sample MR, we also checked for palindromic SNPs
+(i.e., SNPs with alleles (A/T and C/G) that pair with each
+other) and aligned on effect allele frequency. We
+dropped palindromic SNPs if the minor allele frequency
+was close to 0.50, such as 0.48 to 0.52, which are difficult
+to align unequivocally.
+Genetic association with serum testosterone
+We obtained the association of each eGFR-related SNP
+with serum testosterone from the UK Biobank summary
+statistics, provided by Neale Lab (http://www.nealelab.is/
+uk-biobank/), in 167,020 white British men and 194,174
+women, adjusted for age, age2
+, and 20 principal compo￾nents. If the SNPs predicting eGFR were not in the UK
+Biobank, proxy SNPs (r
+2 ≥ 0.8), identified from the
+LDlink (https://ldlink.nci.nih.gov/), were used.
+Statistical analysis for MR estimates using univariable MR
+MR estimates were derived from the Wald estimates
+(genetic association with outcome divided by the genetic
+association with the exposure), i.e., genetic association
+with CKD, albuminuria, or eGFR divided by the genetic
+association with testosterone when assessing the renal
+effect of testosterone, and genetic association with tes￾tosterone divided by the genetic association with eGFR
+when assessing the role of kidney function in testoster￾one. We obtained the Wald estimate for each SNP and
+then meta-analyzed them using inverse variance weight￾ing (IVW) with multiplicative random effects. To exam￾ine whether the MR estimates were larger in men than
+in women, we calculated the p value for the differences
+in sex-specific estimates (log odds ratios for CKD and al￾buminuria, and beta-coefficients for eGFR), where we
+used a well-established formula to calculate the z-statis￾tic, and then obtained the one-tailed p value [32].
+In sensitivity analysis, we used other statistical
+methods, specifically a weighted median [33] and Men￾delian randomization pleiotropy residual sum and outlier
+(MR-PRESSO) [34]. The weighted median estimate is ro￾bust to invalid instruments and able to provide consist￾ent estimation even when up to 50% of the weight is
+from invalid SNPs [33]. MR-PRESSO is able to identify
+outliers with potential horizontal pleiotropy amongst
+multiple genetic variants and provide a corrected esti￾mate after removing these outliers [34]. If MR-PRESSO
+identified outlier(s), we used the corrected estimates
+from MR-PRESSO instead of IVW in the main analysis.
+Power calculations were conducted where the sample
+size needed for MR is approximately the sample size for
+the conventional observational study divided by the vari￾ance in the exposure explained by the SNPs [35]. Specif￾ically, the variance explained by each SNP was
+calculated using beta2 × 2 × minor allele frequency
+(MAF) × (1 − MAF), where beta is the standardized beta
+coefficient for the effect allele and MAF is the minor al￾lele frequency [36]. For CKD events, the required sample
+size was calculated based on the log odds ratio, the ratio
+of cases to non-cases, and the variance explained by the
+SNPs [37]. For eGFR, the continuous outcome, it was
+calculated based on the effect size and the variance ex￾plained by the SNPs [35].
+Statistical analysis for MR estimates using multivariable
+MR
+Multivariable MR is an extension of conventional uni￾variable MR. It takes advantage of pleiotropic SNPs pre￾dicting two or more exposures and can be used to
+estimate the effect of one exposure after controlling for
+the other exposure(s) [38], here the effect of testosterone
+on CKD and kidney function after controlling for SHBG.
+In multivariable MR, we used MR Egger to detect
+whether the genetic predictors were acting other than
+via testosterone or SHBG (directional pleiotropy) indi￾cated by a non-zero intercept [39], in which case we
+used multivariable MR Egger estimates in the main
+analysis.
+All statistical analyses were conducted using R version
+3.6.2 (R Foundation for Statistical Computing, Vienna,
+Austria), the “clumping” function of MR-Base, and the R
+package “MendelianRandomization.”
+Patient and public involvement statement
+Patients or the public were not involved in the design, or
+conduct, or reporting, or dissemination plans of our
+research.
+Ethical approval
+This research has been conducted using the UK Biobank
+Resource under application number 42468. No original
+data were collected for the MR study. Ethical approval
+for each of the studies included in the investigation can
+be found in the original publications (including informed
+consent from each participant). The UK Biobank has
+already received ethical approval from the Research Eth￾ics Committee, and participants provided written
+Zhao and Schooling BMC Medicine (2020) 18:122 Page 4 of 10
+
+informed consent. The analysis of other publicly
+available summary statistics does not require additional
+ethical approval.
+Results
+The role of testosterone in CKD and kidney function
+We used the previously published 125 genome-wide sig￾nificant SNPs for bioavailable testosterone in men and
+254 SNPs for total testosterone in women. No SNP vio￾lated HWE. One SNP in men and 2 SNPs in women
+were related to alcohol drinking. Given the unclear
+causal role of alcohol in CKD, we kept these SNPs in the
+main analysis but excluded them in the sensitivity ana￾lysis. Of these SNPs, 6 SNPs in men and 2 SNPs in
+women were not available in the summary statistics
+from Neale Lab (http://www.nealelab.is/uk-biobank/),
+nor were their proxies, so 119 SNPs in men and 252
+SNPs in women were used for hemoglobin and HDL￾cholesterol, whereas all SNPs were used for CKD and
+kidney function. Similarly, we used the previously pub￾lished 231 genome-wide significant SNPs for total tes￾tosterone in men and the 180 SNPs for bioavailable
+testosterone in women. All SNPs were used for CKD
+and kidney function; 224 SNPs in men and 176 SNPs in
+women were used for hemoglobin and HDL-cholesterol.
+In multivariable MR for bioavailable testosterone con￾trolling for SHBG in men, there were 125 SNPs for bio￾available testosterone and 357 SNPs for SHBG (in total
+482 SNPs). After excluding 3 duplicate SNPs, 8 corre￾lated SNPs, and 7 SNPs with unclear correlation infor￾mation, 464 SNPs remained and were used. In women,
+there were 180 SNPs for bioavailable testosterone and
+359 SNPs for SHBG (in total 539 SNPs). After excluding
+26 duplicate SNPs, 47 correlated SNPs, and 3 SNPs with
+unclear correlation information, 463 SNPs remained. In
+multivariable MR for total testosterone controlling for
+SHBG in men, there were 231 SNPs for total testoster￾one and 357 SNPs for SHBG (in total 588 SNPs). After
+excluding 39 duplicate SNPs, 87 correlated SNPs, and 2
+SNPs with unclear correlation information, 460 SNPs
+remained and were used. In women, there were 254
+SNPs for total testosterone and 359 SNPs for SHBG (in
+total 613 SNPs). After excluding 2 duplicate SNPs, 29
+correlated SNPs, and 1 SNPs with unclear correlation in￾formation, 581 SNPs remained.
+Using univariable MR, genetically predicted bioavail￾able testosterone was associated with higher risk of CKD
+and albuminuria, and lower eGFRcr and eGFRcr_cys in
+men, but had null associations in women (Table 1),
+whilst neither bioavailable nor total testosterone was re￾lated to CKD or kidney function in women (Table 1 and
+Additional file 1: Table S1). The difference by sex was
+significant for CKD and albuminuria (p values for sex
+difference 0.04 and 0.01, respectively) as well as for
+eGFR (p values for sex difference less than 1 × 10−5 for
+both eGFRcr and eGFRcr_cys). The associations were
+robust to different methods (Additional file 1: Table S2)
+and to excluding SNPs related to alcohol drinking (Add￾itional file 1: Table S3). Similar patterns of associations
+were found in multivariable MR (Table 2). Multivariable
+MR Egger did not indicate directional pleiotropy except
+for bioavailable testosterone and CKD in women (Add￾itional file 1: Table S4). At an approximate R2 of 0.056
+in men and of 0.085 in women, the UK Biobank has 0.8
+power to detect an odds ratio (OR) of about 1.17 for
+CKD and 1.14 for albuminuria per one standard devi￾ation increase in testosterone in men and an OR of
+about 1.14 for CKD and 1.12 for albuminuria in women
+[37], as well as an effect size of about 0.03 standard devi￾ations for eGFR in men and of 0.02 in women [35]. Gen￾etically predicted bioavailable testosterone in men and
+women, as well as genetically predicted total testoster￾one in women, showed the associations expected from
+meta-analysis of RCTs [19], i.e., a positive association
+with hemoglobin and inverse association with HDL￾cholesterol (Table 3), whist total testosterone in men
+was related to higher HDL-cholesterol in univariable
+MR but was as expected, related to lower HDL￾cholesterol, in multivariable MR controlling for SHBG
+(Additional file 1: Table S5).
+The role of kidney function in testosterone
+There were 264 SNPs for eGFR in the GWAS meta￾analysis [31]. Of the 264 SNPs, 228 were uncorrelated.
+After excluding 1 SNP not available for genetic associ￾ation with testosterone and 4 SNPs that are palindromic
+with minor allele frequency close to 0.5, 223 SNPs were
+used (Additional file 1: Table S6). Genetically predicted
+eGFR was not related to testosterone in men or women
+(Table 4). The associations were robust to different ana￾lysis methods (Table 4).
+Discussion
+In an MR study using univariable and multivariable MR,
+our study for the first time suggests testosterone affects
+CKD and kidney function in a sex-specific way. Testos￾terone might be an underlying cause of CKD in men but
+not in women. Meanwhile, genetically predicted kidney
+function did not affect serum testosterone. Our finding
+may be relevant to the sex disparity in CKD and kidney
+function, consistent with the sex-specific role of testos￾terone in CVD [40], and with expectations from evolu￾tionary biology [4–6].
+Our findings did not corroborate a beneficial associ￾ation of testosterone with kidney function sometimes
+seen in observational studies [15, 16], possibly due to
+poor health lowering both testosterone and kidney func￾tion [41, 42]. However, dietary factors, such as a high
+Zhao and Schooling BMC Medicine (2020) 18:122 Page 5 of 10
+
+protein diet, which boost testosterone in men [43], in￾crease CKD. In contrast, some medications lowering tes￾tosterone show a benefit for kidney function. For
+example, statins lower testosterone [44] and can slow
+down the progression of CKD [45]. Although the bene￾fits may be due to lipid lowering, recent MR studies do
+not support a role of LDL-cholesterol in CKD [46]. Our
+findings are also consistent with changing disease pat￾terns with economic development. Improvements in
+living conditions that enable higher levels of testosterone
+[47], with corresponding effects on kidney function, may
+be relevant to the rising rates of CKD that emerge with
+economic development, such as in China [1].
+To our knowledge, this MR study is the first to exam￾ine the role of testosterone in CKD and kidney function.
+Despite the novelty, our study has several limitations.
+First, MR relies on three assumptions, i.e., relevance, in￾dependence, and exclusion-restriction [23]. To satisfy
+Table 1 Associations of genetically predicted bioavailable testosterone in men and of genetically predicted total testosterone in
+women with CKD and kidney function using univariable Mendelian randomization in the UK Biobank
+Outcome Exposure #SNPs Sex OR 95% CI p
+CKD Genetically predicted bioT 125 Men 1.17 1.03, 1.33 0.01
+Genetically predicted TT 254 Women 1.02 0.92, 1.14 0.68
+Albuminuria Genetically predicted bioT 125 Men 1.15* 1.04, 1.27 0.008
+Genetically predicted TT 254 Women 0.96 0.88, 1.06 0.43
+Beta 95% CI p
+eGFR_cr (ml/min per 1.73 m2
+) Genetically predicted bioT 125 Men − 1.70* − 2.09, − 1.31 2.4 × 10−14
+Genetically predicted TT 254 Women − 0.24* − 0.49, 0.02 0.07
+eGFR_crcys (ml/min per 1.73 m2
+) Genetically predicted bioT 125 Men − 1.27* − 1.62, − 0.91 1.0 × 10−10
+Genetically predicted TT 254 Women 0.12* − 0.14, 0.39 0.36
+bioT bioavailable testosterone, CKD chronic kidney disease, eGFR estimated glomerular filtration rate, TT total testosterone *
+Mendelian randomization pleiotropy residual sum and outlier (MR-PRESSO) was used for the analysis; otherwise, inverse variance weighting was used
+Table 2 Associations of bioavailable testosterone and total testosterone with CKD and kidney function in the UK Biobank using
+multivariable MR
+Exposure Outcome Sex #SNPs OR 95% CI p
+Genetically predicted bioavailable testosterone CKD Men 464 1.14 1.02, 1.28 0.025
+Women 463 0.92 0.71, 1.19 0.52
+Albuminuria Men 464 1.17 1.04, 1.32 0.01
+Women 463 0.85 0.70, 1.04 0.12
+Beta 95% CI p
+eGFR_cr (ml/min per 1.73 m2
+) Men 464 − 1.06 − 1.52, − 0.60 6.7 × 10−6
+Women 463 − 0.71 − 1.70, 0.28 0.16
+eGFR_crcys (ml/min per 1.73 m2
+) Men 464 − 0.48 − 0.97, 0.005 0.05
+Women 463 − 0.58 − 1.63, 0.47 0.28
+Genetically predicted total testosterone CKD Men 460 1.13 0.96, 1.32 0.13
+Women 581 1.00 0.90, 1.11 0.96
+Albuminuria Men 460 1.19 1.02, 1.39 0.03
+Women 581 0.95 0.87, 1.04 0.30
+Beta 95% CI p
+eGFR_cr (ml/min per 1.73 m2
+) Men 460 − 1.20 − 1.80, − 0.61 7.7 × 10−5
+Women 581 − 0.31 − 0.75, 0.12 0.16
+eGFR_crcys (ml/min per 1.73 m2
+) Men 460 − 0.66 − 1.30, − 0.02 0.045
+Women 581 − 0.12 − 0.60, 0.36 0.62
+CKD chronic kidney disease, eGFR estimated glomerular filtration rate
+Multivariable MR controlling for sex hormone binding globulin was used
+Zhao and Schooling BMC Medicine (2020) 18:122 Page 6 of 10
+
+these assumptions, we used genetic variants from the
+largest sex-specific published GWAS of testosterone
+based on the UK Biobank and with replication in three
+independent studies [21]. We also checked the
+randomization from their associations with potential
+confounders, such as socioeconomic position and life￾style. To address the assumption of exclusion￾restriction, we tested and corrected for potential plei￾otropy using MR-PRESSO. We also used multivariable
+MR to control for pleiotropic associations with SHBG.
+Second, measurement error might exist in the classifica￾tion of CKD or the single time-point assay of testoster￾one. However, any measurement error should be non￾differential, thus bias toward a null association, which
+should not affect the directions of associations. Third,
+our study could be affected by survivor bias [30] and by
+competing risk, i.e., by an event whose occurrence pre￾cludes the occurrence of CKD [29]. For example, if tes￾tosterone leads to death from ischemic heart disease at
+74 years [48], death from CKD which usually occurs at
+85 years will not be observed [49]. As such, the potential
+harm for CKD will be underestimated due to competing
+events. To control for the bias arising from competing
+risk, we adjusted for common causes of CKD and CVD
+[29], specifically BMI, smoking, and blood pressure.
+Fourth, the participants in the UK Biobank are healthier
+than the general population [50], and the majority do
+not suffer from CKD, so the estimates may not be ap￾plicable to CKD patients; however, the directions of as￾sociations should be consistent. Fifth, the associations in
+Europeans may not apply to other populations, such as
+Asians. However, causal effects should be consistent
+across settings, for example the effect on HDL￾cholesterol was also reported in our previous MR study
+in Chinese [51]. Nevertheless, the effect size might vary
+by population according to testosterone levels; as such,
+replication in Asians would be worthwhile. Sixth, the
+genetic effects might be buffered by compensatory pro￾cesses or feedback mechanisms. Such compensation
+would be expected to mitigate the genetic effects, thus
+biasing toward the null. As such, the estimates for CKD
+and kidney function might be underestimated. Finally,
+the wide age range in the UK Biobank participants may
+increase the variation in testosterone levels. However,
+this will only lower the precision of the testosterone
+GWAS and MR estimates, rather than affect the direc￾tions of association.
+Despite the consistency with evolutionary biology [4–
+6], the known sex disparity [3], and evidence from ani￾mal experiments [9, 10], these novel findings need to be
+interpreted cautiously. First, the association with CKD
+needs to be replicated in a larger sample with more
+power. Second, due to the limited number with follow￾up measures of kidney function, we used baseline rather
+than decline in kidney function. It would be valuable to
+assess the role of testosterone in CKD progression, spe￾cifically the relevance to decline in kidney function,
+when sufficient follow-up data in the UK Biobank and
+suitable analytic techniques are available [52]. Third, the
+role of endogenous testosterone might be different from
+the role of testosterone supplementation or other life￾style factors that modulate testosterone. However, the
+findings for hemoglobin and HDL-cholesterol in MR
+showed consistency with meta-analysis of RCTs [19].
+Table 3 Associations of genetically predicted bioavailable testosterone in men and of genetically predicted total testosterone in
+women with hemoglobin and HDL-cholesterol for validation of the genetic instrument in the UK Biobank
+Outcome Exposure #SNPs Sex Methods Beta 95% CI p
+Hemoglobin Genetically predicted bioT 119 Men MR-PRESSO 0.30 0.26, 0.33 8.3 × 10−31
+WM 0.33 0.28, 0.37 2.0 × 10−48
+Genetically predicted TT 252 Women MR-PRESSO 0.05 0.03, 0.08 8.6 × 10−5
+WM 0.03 − 0.002, 0.06 0.07
+HDL-cholesterol Genetically predicted bioT 119 Men MR-PRESSO − 0.07 − 0.10, − 0.04 4.0 × 10−5
+WM − 0.08 − 0.12, − 0.04 4.1 × 10−5
+Genetically predicted TT 252 Women MR-PRESSO − 0.06 − 0.09, − 0.04 1.2 × 10−6
+WM − 0.05 − 0.09, − 0.02 0.003
+HDL high-density lipoprotein, IVW inverse variance weighting, WM weighted median, MR-PRESSO Mendelian randomization pleiotropy residual sum and outlier
+Table 4 Association of genetically predicted eGFR with serum testosterone using Mendelian randomization in the UK Biobank
+Exposure Outcome #SNPs Sex Methods Beta 95% CI p
+Genetically predicted eGFR Serum testosterone 223 Men MR-PRESSO 0.12* − 0.12, 0.37 0.33
+WM 0.02 − 0.27, 0.32 0.89
+Women MR-PRESSO 0.06* − 0.18, 0.30 0.63
+WM 0.09 − 0.23, 0.41 0.57
+Zhao and Schooling BMC Medicine (2020) 18:122 Page 7 of 10
+
+Moreover, MR estimates lifetime effects rather than the
+effects of a short-term exposure. As such, the effect on
+CKD and kidney function might not be comparable to
+the acute renal effect of testosterone supplementation,
+although the use of testosterone gel lowers eGFR in
+RCT [14]. Finally, the underlying pathways from testos￾terone to kidney function remain to be clarified. The in￾verse association with eGFRcr might be due to or partly
+due to testosterone increasing muscle mass and thereby
+increasing serum creatinine. However, the inverse asso￾ciation remained for eGFRcr_cys. The similar pattern of
+associations for CKD and albuminuria also provides con￾sistent evidence concerning the renal effects of testoster￾one. The effect size is small and might not be clinically
+significant; however, an MR study is more useful in de￾termining the direction of causation than the magnitude
+of an effect size [53]. Moreover, a small effect size may
+be highly relevant at the population level [54]. Several
+mechanisms might underlie the renal effects of testoster￾one, including an effect on cellular apoptosis that may
+impact renal disease progression, an effect on glomerular
+matrix accumulation, an influence on the synthesis and
+activity of several cytokines and vasoactive agents, an
+interaction with the renin-angiotensin system [55], an
+increase in the generation of reactive oxygen species [55,
+56], and a pro-inflammatory effect in the kidney [57]. In￾flammation and immune function may underlie the
+pathology of CKD [58], and testosterone is known to be
+immunomodulatory [59]. In a clinical case report, testos￾terone directly modulated kidney perfusion [13], but the
+specific pathway is unclear. Clarifying these pathways,
+especially as regards any sex differences in the response
+to testosterone, such as immune function [59], would be
+valuable.
+From the perspective of clinical and public health
+practice, our findings suggest that testosterone and
+drivers of testosterone are potential targets for lowering
+the burden of kidney disease in men rather than in
+women, consistent with the dominant role of testoster￾one in men’s reproduction and health [4]. Medications
+or lifestyle factors that modulate testosterone might be
+effective for the prevention and treatment of CKD and
+may be expected to play a sex-specific effect. As such,
+our study highlights the importance of considering sex￾specific causes and treatments for CKD and raises the
+question as to whether any causes of CKD specific to
+women exist. Exploration of such factors and the under￾lying pathways would give insights to the re-positioning
+of existing drugs, new drug development, and lifestyle
+recommendations.
+Conclusions
+Genetically predicted testosterone was associated with
+CKD and unfavorable kidney function in men, which
+might contribute to the sex disparity in CKD. Serum tes￾tosterone was not affected by kidney function. Clarifying
+the underlying pathways could provide new insights for
+prevention and treatment strategies in both men and
+women. Replication in other studies, especially in under￾studied populations, is needed.
+Supplementary information
+Supplementary information accompanies this paper at https://doi.org/10.
+1186/s12916-020-01594-x.
+Additional file 1: Table S1. Associations of genetically predicted total
+testosterone in men and of genetically predicted bioavailable
+testosterone in women with CKD and kidney function in the UK Biobank
+using univariable MR. Table S2. Sensitivity analysis on the associations of
+genetically predicted bioavailable testosterone in men and of genetically
+predicted total testosterone in women with CKD and kidney function
+using different analysis methods in the univariable Mendelian
+randomization in the UK Biobank. Table S3. Sensitivity analysis excluding
+genetic variants* related to alcohol in Mendelian randomization in the UK
+Biobank. Table S4. Sensitivity analysis on the associations of bioavailable
+testosterone and total testosterone with CKD and kidney function in men
+and women in the UK Biobank using multivariable MR Egger. Table S5.
+Associations of genetically predicted total testosterone in men and of
+genetically predicted bioavailable testosterone in women with
+hemoglobin and HDL-cholesterol for validation of the genetic instrument
+in the UK Biobank using univariable and multivariable MR*
+. Table S6.
+Genetic predictors for eGFR.
+Abbreviations
+BMI: Body mass index; CVD: Cardiovascular disease; CKD: Chronic kidney
+disease; DBP: Diastolic blood pressure; eGFR: Estimated glomerular filtration
+rate; GWAS: Genome-wide association study; HDL: High-density lipoprotein;
+HWE: Hardy-Weinburg equilibrium; IVW: Inverse variance weighting;
+MAF: Minor allele frequency; MR: Mendelian randomization; MR￾PRESSO: Mendelian randomization pleiotropy residual sum and outlier;
+OR: Odds ratio; RCT: Randomized controlled trial; SBP: Systolic blood
+pressure; SHBG: Sex hormone binding globulin; SNP: Single nucleotide
+polymorphism; UACR: Urine albumin-to-creatinine ratio
+Acknowledgements
+The main outcomes are from the UK Biobank under application #42468. The
+authors would like to thank the UK Biobank for approving our application.
+The authors would also like to thank Neale Lab (http://www.nealelab.is/uk￾biobank/) for conducting the GWAS of biomarkers and providing the sex￾specific genetic associations in the UK Biobank.
+Authors’ contributions
+JVZ designed the study. JVZ analyzed the data and interpreted the results
+with the help of CMS. JVZ drafted the paper, CMS critically revised the paper.
+Both authors read and approved the final manuscript.
+Funding
+None.
+Availability of data and materials
+The access of data from the UK Biobank can be obtained by application to
+the UK Biobank (http://biobank.ctsu.ox.ac.uk/crystal/). The summary statistics
+can be downloaded from the website (http://www.nealelab.is/uk-biobank/).
+Ethics approval and consent to participate
+This research has been conducted using the UK Biobank Resource under
+application number 42468. No original data were collected for the MR study.
+Ethical approval for each of the studies included in the investigation can be
+found in the original publications (including informed consent from each
+participant). The UK Biobank has already received ethical approval from the
+Research Ethics Committee, and participants provided written informed
+Zhao and Schooling BMC Medicine (2020) 18:122 Page 8 of 10
+
+consent. The analysis of other publicly available summary statistics does not
+require additional ethical approval.
+Consent for publication
+Not applicable.
+Competing interests
+The authors declare that they have no competing interests.
+Author details
+1
+School of Public Health, Li Ka Shing Faculty of Medicine, The University of
+Hong Kong, 1/F, Patrick Manson Building, 7 Sassoon Road, Pokfulam, Hong
+Kong SAR, China. 2
+School of Public Health and Health Policy, City University
+of New York, New York, NY, USA.
+Received: 25 December 2019 Accepted: 15 April 2020
+References
+1. Jha V, Garcia-Garcia G, Iseki K, Li Z, Naicker S, Plattner B, et al. Chronic
+kidney disease: global dimension and perspectives. Lancet. 2013;382:260–72.
+2. Couser WG, Remuzzi G, Mendis S, Tonelli M. The contribution of chronic
+kidney disease to the global burden of major noncommunicable diseases.
+Kidney Int. 2011;80:1258–70.
+3. Carrero JJ, Hecking M, Chesnaye NC, Jager KJ. Sex and gender disparities in
+the epidemiology and outcomes of chronic kidney disease. Nat Rev
+Nephrol. 2018;14:151–64.
+4. Schooling CM. Could androgens be relevant to partly explain why men
+have lower life expectancy than women? J Epidemiol Community Health.
+2016;70:324–8.
+5. Lemaitre JF, Berger V, Bonenfant C, Douhard M, Gamelon M, Plard F, et al.
+Early-late life trade-offs and the evolution of ageing in the wild. Proc Biol
+Sci. 2015;282:20150209.
+6. Rook G, Backhed F, Levin BR, McFall-Ngai MJ, McLean AR. Evolution, human￾microbe interactions, and life history plasticity. Lancet. 2017;390:521–30.
+7. Meuwese CL, Carrero JJ. Chronic kidney disease and hypothalamic-pituitary
+axis dysfunction: the chicken or the egg? Arch Med Res. 2013;44:591–600.
+8. Holley JL. The hypothalamic-pituitary axis in men and women with chronic
+kidney disease. Adv Chronic Kidney Dis. 2004;11:337–41.
+9. Hewitson TD, Boon WC, Simpson ER, Smith ER, Samuel CS. Estrogens do not
+protect, but androgens exacerbate, collagen accumulation in the female
+mouse kidney after ureteric obstruction. Life Sci. 2016;158:130–6.
+10. Peng Y, Fang Z, Liu M, Wang Z, Li L, Ming S, et al. Testosterone induces
+renal tubular epithelial cell death through the HIF-1alpha/BNIP3 pathway.
+J Transl Med. 2019;17:62.
+11. Fortepiani LA, Yanes L, Zhang H, Racusen LC, Reckelhoff JF. Role of
+androgens in mediating renal injury in aging SHR. Hypertension. 2003;42:
+952–5.
+12. Baylis C. Age-dependent glomerular damage in the rat. Dissociation
+between glomerular injury and both glomerular hypertension and
+hypertrophy. Male gender as a primary risk factor. J Clin Invest. 1994;94:
+1823–9.
+13. Filler G, Ramsaroop A, Stein R, Grant C, Marants R, So A, et al. Is testosterone
+detrimental to renal function? Kidney Int Rep. 2016;1:306–10.
+14. Pedersen L, Christensen LL, Pedersen SM, Andersen M. Reduction of
+calprotectin and phosphate during testosterone therapy in aging men: a
+randomized controlled trial. J Endocrinol Investig. 2017;40:529–38.
+15. Khurana KK, Navaneethan SD, Arrigain S, Schold JD, Nally JV Jr, Shoskes DA.
+Serum testosterone levels and mortality in men with CKD stages 3-4. Am J
+Kidney Dis. 2014;64:367–74.
+16. Kurita N, Horie S, Yamazaki S, Otani K, Sekiguchi M, Onishi Y, et al. Low
+testosterone levels and reduced kidney function in Japanese adult men: the
+locomotive syndrome and health outcome in aizu cohort study. J Am Med
+Dir Assoc. 2016;17:371 e371–6.
+17. Schooling CM, Cowling BJ, Jones HE. Selection bias in cohorts of cases. Prev
+Med. 2013;57:247–8.
+18. Lawlor DA, Harbord RM, Sterne JA, Timpson N, Davey SG. Mendelian
+randomization: using genes as instruments for making causal inferences in
+epidemiology. Stat Med. 2008;27:1133–63.
+19. Fernandez-Balsells MM, Murad MH, Lane M, Lampropulos JF, Albuquerque F,
+Mullan RJ, et al. Clinical review 1: adverse effects of testosterone therapy in
+adult men: a systematic review and meta-analysis. J Clin Endocrinol Metab.
+2010;95:2560–75.
+20. Eckersten D, Giwercman A, Pihlsgard M, Bruun L, Christensson A. Impact of
+kidney transplantation on reproductive hormone levels in males: a
+longitudinal study. Nephron. 2018;138:192–201.
+21. Ruth KS, Day FR, Tyrrell J, Thompson DJ, Wood AR, Mahajan A, et al. Using
+human genetics to understand the disease impacts of testosterone in men
+and women. Nat Med. 2020;26:252–8.
+22. Sudlow C, Gallacher J, Allen N, Beral V, Burton P, Danesh J, et al. UK
+biobank: an open access resource for identifying the causes of a wide range
+of complex diseases of middle and old age. PLoS Med. 2015;12:e1001779.
+23. Davies NM, Holmes MV, Davey SG. Reading Mendelian randomisation
+studies: a guide, glossary, and checklist for clinicians. BMJ. 2018;362:k601.
+24. Canela-Xandri O, Rawlik K, Tenesa A. An atlas of genetic associations in UK
+Biobank. Nat Genet. 2018;50:1593–9.
+25. Levey AS, Stevens LA, Schmid CH, Zhang YL, Castro AF 3rd, Feldman HI,
+et al. A new equation to estimate glomerular filtration rate. Ann Intern Med.
+2009;150:604–12.
+26. Inker LA, Schmid CH, Tighiouart H, Eckfeldt JH, Feldman HI, Greene T, et al.
+Estimating glomerular filtration rate from serum creatinine and cystatin C.
+N Engl J Med. 2012;367:20–9.
+27. Quick Reference on UACR & GFR. https://www.niddk.nih.gov/health￾information/professionals/advanced-search/quick-reference-uacr-gfr.
+Accessed 10 Apr 2020.
+28. Wang T, Ma X, Tang T, Jin L, Peng D, Zhang R, et al. Overall and central
+obesity with insulin sensitivity and secretion in a Han Chinese population: a
+Mendelian randomization analysis. Int J Obes. 2016;40:1736–41.
+29. Schooling CM, Lopez P, Yang Z, Au Yeung SL, Huang JV. Bias from
+competing risk before recruitment in Mendelian randomization studies of
+conditions with shared etiology. 2020. https://www.biorxiv.org/content/1
+0.1101/716621v3.full.pdf. Accessed 10 Apr 2020.
+30. Schooling CM. Selection bias in population-representative studies? A
+commentary on Deaton and Cartwright. Soc Sci Med. 2018;210:70.
+31. Wuttke M, Li Y, Li M, Sieber KB, Feitosa MF, Gorski M, et al. A catalog of
+genetic loci associated with kidney function from analyses of a million
+individuals. Nat Genet. 2019;51:957–72.
+32. Paternoster R, Brame R, Mazerolle P, Piquero A. Using the correct statistical
+test for the equality of regression coefficients. Criminology. 1998;36:859–66.
+33. Bowden J, Davey Smith G, Haycock PC, Burgess S. Consistent estimation in
+Mendelian randomization with some invalid instruments using a weighted
+median estimator. Genet Epidemiol. 2016;40:304–14.
+34. Verbanck M, Chen CY, Neale B, Do R. Detection of widespread horizontal
+pleiotropy in causal relationships inferred from Mendelian randomization
+between complex traits and diseases. Nat Genet. 2018;50:693–8.
+35. Freeman G, Cowling BJ, Schooling CM. Power and sample size calculations
+for Mendelian randomization studies using one genetic instrument. Int J
+Epidemiol. 2013;42:1157–63.
+36. Guan W, Steffen BT, Lemaitre RN, Wu JHY, Tanaka T, Manichaikul A, et al.
+Genome-wide association study of plasma N6 polyunsaturated fatty acids
+within the cohorts for heart and aging research in genomic epidemiology
+consortium. Circ Cardiovasc Genet. 2014;7:321–31.
+37. Burgess S. Sample size and power calculations in Mendelian randomization
+with a single instrumental variable and a binary outcome. Int J Epidemiol.
+2014;43:922–9.
+38. Burgess S, Thompson SG. Multivariable Mendelian randomization: the use of
+pleiotropic genetic variants to estimate causal effects. Am J Epidemiol. 2015;
+181:251–60.
+39. Rees JMB, Wood AM, Burgess S. Extending the MR-Egger method for
+multivariable Mendelian randomization to correct for both measured and
+unmeasured pleiotropy. Stat Med. 2017;36:4705–18.
+40. Luo S, Au Yeung SL, Zhao JV, Burgess S, Schooling CM. Association of
+genetically predicted testosterone with thromboembolism, heart failure,
+and myocardial infarction: mendelian randomisation study in UK Biobank.
+BMJ. 2019;364:l476.
+41. Mintzes B. The marketing of testosterone treatments for age-related low
+testosterone or ‘Low T’. Curr Opin Endocrinol Diabetes Obes. 2018;25:
+224–30.
+42. Sartorius G, Spasevska S, Idan A, Turner L, Forbes E, Zamojska A, et al. Serum
+testosterone, dihydrotestosterone and estradiol concentrations in older men
+self-reporting very good health: the healthy man study. Clin Endocrinol.
+2012;77:755–63.
+Zhao and Schooling BMC Medicine (2020) 18:122 Page 9 of 10
+
+43. Moran LJ, Brinkworth GD, Martin S, Wycherley TP, Stuckey B, Lutze J, et al.
+Long-term effects of a randomised controlled trial comparing high protein or
+high carbohydrate weight loss diets on testosterone, SHBG, erectile and
+urinary function in overweight and obese men. PLoS One. 2016;11:e0161297.
+44. Schooling CM, Au Yeung SL, Freeman G, Cowling BJ. The effect of statins
+on testosterone in men and women, a systematic review and meta-analysis
+of randomized controlled trials. BMC Med. 2013;11:57.
+45. Esmeijer K, Dekkers OM, de Fijter JW, Dekker FW, Hoogeveen EK. Effect of
+different types of statins on kidney function decline and proteinuria: a
+network meta-analysis. Sci Rep. 2019;9:16632.
+46. Lanktree MB, Theriault S, Walsh M, Pare G. HDL cholesterol, LDL cholesterol,
+and triglycerides as risk factors for CKD: a Mendelian randomization study.
+Am J Kidney Dis. 2018;71:166
+–72.
+47. Schooling CM, Leung GM. A socio-biological explanation for social
+disparities in non-communicable chronic diseases: the product of history?
+J Epidemiol Community Health. 2010;64:941
+–9.
+48. Kesteloot H, Decramer M. Age at death from different diseases: the flemish
+experience during the period 2000-2004. Acta Clin Belg. 2008;63:256
+–61.
+49. Chronic kidney disease compendium. https://www.aihw.gov.au/reports/
+chronic-kidney-disease/chronic-kidney-disease-compendium/contents/
+deaths-from-chronic-kidney-disease. Accessed 10 Apr 2020.
+50. Fry A, Littlejohns TJ, Sudlow C, Doherty N, Adamska L, Sprosen T, et al.
+Comparison of sociodemographic and health-related characteristics of UK
+Biobank participants with those of the general population. Am J Epidemiol.
+2017;186:1026
+–34.
+51. Zhao J, Jiang C, Lam TH, Liu B, Cheng KK, Xu L, et al. Genetically predicted
+testosterone and cardiovascular risk factors in men: a Mendelian
+randomization analysis in the Guangzhou Biobank Cohort Study. Int J
+Epidemiol. 2014;43:140
+–8.
+52. Walker VM, Davies NM, Hemani G, Zheng J, Haycock PC, Gaunt TR, et al.
+Using the MR-Base platform to investigate risk factors and drug targets for
+thousands of phenotypes. Wellcome Open Res. 2019;4:113.
+53. Schooling CM, Au Yeung SL, Freeman G. Mendelian randomization
+estimates may be inflated. J Am Coll Cardiol. 2013;61:1931.
+54. Rose G. Sick individuals and sick populations. Int J Epidemiol. 2001;30:427
+–
+32 discussion 433-424.
+55. Neugarten J, Golestaneh L. Influence of sex on the progression of chronic
+kidney disease. Mayo Clin Proc. 2019;94:1339
+–56.
+56. Cobo G, Hecking M, Port FK, Exner I, Lindholm B, Stenvinkel P, et al. Sex and
+gender differences in chronic kidney disease: progression to end-stage renal
+disease and haemodialysis. Clin Sci (Lond). 2016;130:1147
+–63.
+57. Metcalfe PD, Leslie JA, Campbell MT, Meldrum DR, Hile KL, Meldrum KK.
+Testosterone exacerbates obstructive renal injury by stimulating TNF-alpha
+production and increasing proapoptotic and profibrotic signaling. Am J
+Physiol Endocrinol Metab. 2008;294:E435
+–43.
+58. Li L, Tang W, Yi F. Role of inflammasome in chronic kidney disease. Adv Exp
+Med Biol. 2019;1165:407
+–21.
+59. Roved J, Westerdahl H, Hasselquist D. Sex differences in immune responses:
+hormonal effects, antagonistic selection, and evolutionary consequences.
+Horm Behav. 2017;88:95
+–105.
+Publisher
+’s Note
+Springer Nature remains neutral with regard to jurisdictional claims in
+published maps and institutional affiliations.
+Zhao and Schooling BMC Medicine (2020) 18:122 Page 10 of 10
+

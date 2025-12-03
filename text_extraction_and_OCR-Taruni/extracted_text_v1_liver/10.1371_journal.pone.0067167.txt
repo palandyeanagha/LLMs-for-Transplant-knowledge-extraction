@@ -1,0 +1,420 @@
+The Surgical Site Infection Risk Score (SSIRS): A Model to
+Predict the Risk of Surgical Site Infections
+Carl van Walraven1,3,4*, Reilly Musselman2
+1 Department of Medicine, University of Ottawa, Ottawa, Canada, 2 Department of Surgery, University of Ottawa, Ottawa, Canada, 3Ottawa Hospital Research Institute,
+Ottawa, Canada, 4 Institute for Clinical Evaluative Sciences, Toronto, Canada
+Abstract
+Background: Surgical site infections (SSI) are an important cause of peri-surgical morbidity with risks that vary extensively
+between patients and surgeries. Quantifying SSI risk would help identify candidates most likely to benefit from interventions
+to decrease the risk of SSI.
+Methods: We randomly divided all surgeries recorded in the National Surgical Quality Improvement Program from 2010 into
+a derivation and validation population. We used multivariate logistic regression to determine the independent association
+of patient and surgical covariates with the risk of any SSI (including superficial, deep, and organ space SSI) within 30 days of
+surgery. To capture factors particular to specific surgeries, we developed a surgical risk score specific to all surgeries having
+a common first 3 numbers of their CPT code.
+Results: Derivation (n = 181 894) and validation (n = 181 146) patients were similar for all demographics, past medical
+history, and surgical factors. Overall SSI risk was 3.9%. The SSI Risk Score (SSIRS) found that risk increased with patient factors
+(smoking, increased body mass index), certain comorbidities (peripheral vascular disease, metastatic cancer, chronic steroid
+use, recent sepsis), and operative characteristics (surgical urgency; increased ASA class; longer operation duration; infected
+wounds; general anaesthesia; performance of more than one procedure; and CPT score). In the validation population, the
+SSIRS had good discrimination (c-statistic 0.800, 95% CI 0.795–0.805) and calibration.
+Conclusion: SSIRS can be calculated using patient and surgery information to estimate individual risk of SSI for a broad
+range of surgery types.
+Citation: van Walraven C, Musselman R (2013) The Surgical Site Infection Risk Score (SSIRS): A Model to Predict the Risk of Surgical Site Infections. PLoS ONE 8(6):
+e67167. doi:10.1371/journal.pone.0067167
+Editor: Emma S. McBryde, Royal Melbourne Hospital, Australia
+Received December 7, 2012; Accepted May 15, 2013; Published June 27, 2013
+Copyright:  2013 van Walraven, Musselman. This is an open-access article distributed under the terms of the Creative Commons Attribution License, which
+permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.
+Funding: The authors have no support or funding to report.
+Competing Interests: The authors have declared that no competing interests exist.
+* E-mail: carlv@ohri.ca
+Introduction
+Surgical site infections [SSIs] are important events. They are
+one of the most common nosocomial infections [1], occurring in
+2–5% of the estimated 30 million operations occurring annually in
+the United States [2]. They are associated with significantly
+increased health care costs [3]. Most importantly, they have
+important implications for patients by causing pain, increasing the
+risk of hospital readmissions, and making repeated procedures
+more likely [4].
+Being able to accurately quantify SSI risk would be helpful for
+two primary reasons. First, determining the likelihood that a
+particular patient develops an SSI is essential for deciding whether
+or not particular preventive strategies [such as prophylactic
+antibiotics] should be used. This is because the probability that
+a particular patient benefits from such strategies is inversely
+associated with baseline risk of the event. Second, an accurate risk
+model would facilitate the comparison of SSI rates between
+facilities and health care providers.
+A large number of SSI risk models that are specific to particular
+surgery types have been published. One of the most common tools
+to predict SSI risk in a broad range of surgeries is the National
+Nosocomial Infections Surveillan [NNIS] Basic SSI Risk Index
+[5]. This model has several limitations including: its small number
+of potential final scores [thereby limiting its discriminatory
+abilities]; the uncertain validity of equally weighting all three
+components of the model; and its inability to risk stratify particular
+specific surgeries [6,7]. Mu et. al. [8] created 39 procedure-specific
+models with more extensive candidate variables and greater cstatistics than the NNIS Basic SSI Risk Index [median values of
+0.67 vs. 0.60] but were still weakly discriminative.
+In this study, we derived and internally validated a model to
+predict the risk of developing surgical site infections [SSIs] within
+30 days of surgery. SSI risk for an individual patient can be
+estimated with this model via a webpage that we have developed
+or using a point system created from the model.
+Methods
+Data Source
+This study used data from the American College of Surgery
+National Surgical Quality Improvement Program [ACS-NSQIP].
+ACS-NSQIP collects prepoperative data and 30-day morbidity
+outcomes on patients undergoing major operations meeting
+PLOS ONE | www.plosone.org 1 June 2013 | Volume 8 | Issue 6 | e67167
+
+program criteria. Data are collected by uniformly trained Surgical
+Clinical Reviewers [SCR] and entered into a secure internet
+website. Data are subjected to quality checks with detailed
+examination for inter-rater reliability.
+Cases were collected in 8-day cycles with participating hospitals
+either: including all specialties; or limiting their cases to general/
+vascular surgery. Cases were sampled by the SCR from each
+institution’s operative log and were excluded if: the patient was less
+than 18 years old; surgical indications included acute trauma,
+transplantation, or brain-dead organ donor; the procedure was an
+inguinal herniorrhaphy, breast lumpectomy, laparoscopic cholecystectomy, or transurethral resection of the prostate and three
+examples of the procedure had already been sampled within the
+current 8-day sampling cycle; or the patient had already been
+included within the previous 30 days. In high-volume hospitals,
+the first consecutive general and vascular surgeries that qualified
+within each cycle were included while approximately 20% of cases
+from other specialties were included [varying by hospital size].
+Low-volume hospitals were required to enter at least 22 general/
+vascular and other specialty cases per cycle.
+Standard data collection sheets were used at each centre. The
+patient’s electronic and/or paper medical record was reviewed to
+abstract all preoperative and intraoperative information. Postoperative information was collected by review of the in-patient
+medical record, out-patient charts, and phone calls or letters to the
+patient.
+Analytical Dataset: Population, Primary Outcome, and
+Covariates
+The data were collected by the National Surgical Quality
+Improvement Program. These data are collected without explicit,
+written patient consent since they are for quality improvement.
+Our study was reviewed by the NSQIP team [the data owners],
+who released both patient- and institutional- deidentified data to
+us for our analyses. We used the Participant Use Data File from
+ACS-NSQIP which contained all reported surgeries from participating hospitals in 2010 and excluded all operations containing
+maligned CPT codes. The study was approved by the Ottawa
+Hospital Research Ethics Board.
+The primary outcome was surgical site infection [SSI] within
+30 days of operation. This outcome included all patients with a
+superficial, a deep, or an organ-space infection [Appendix S1]. In
+the presence of an open wound, SSIs were counted only if they
+were initially detected more than two days after the operation. We
+considered all pre- and intra-operative covariates collected by
+NSQIP as long as data for the covariate was missing in less than
+1% of cases [thereby excluding pre-operative laboratory information, since these were missing in at least ,15% of patients].
+Analysis
+The cohort was randomly divided into equally sized derivation
+and validation groups. Non-linear associations between continuous
+variables and the outcome were identified using fractional
+polynomials [9,10].
+In the first stage of modeling, we used binomial logistic
+regression [SAS 9.2, Cary NC] with forward variable selection to
+identify the covariates independently associated with 30-day SSI
+status. This model was then used to gauge SSI risk within surgical
+groups independent of all covariates in the initial model. Surgeries
+that had the same first three numbers in their CPT code were
+grouped together. SSI risk within each surgical group was
+quantified as the ratio of the observed to expected number of
+SSIs [with the latter calculated from the initial model]. We called
+this statistic the ‘‘CPT3 Score’’ in which scores below 1 indicated
+that fewer than expected SSIs were observed based on the patient
+population. If no SSIs were observed within a surgical group, we
+assigned CPT3 Scores of 0 if the expected number of SSIs in the
+group exceeded 0.5 [otherwise, CPT3 Scores were defaulted to 1].
+In the second stage of modeling, we added the CPT3 Score to
+all other covariates and used binomial logistic regression with
+forward selection to identify all covariates independently and
+strongly [p,0.0001] associated with SSI. Finally, we tested the
+significance of several potential interactions identified a priori based
+on clinical criteria.
+We used methods described by Sullivan et al [11] to convert the
+model to the ‘‘SSI Risk Score’’ [SSIRS]. We calculated the
+expected risk change associated with each SSIRS point using a
+logistic regression model having 30-day SSI as the outcome and
+risk score as the only dependent variable.
+The model and SSIRS was evaluated by determining both
+discrimination [using the c-statistic with 95% confidence intervals
+[12]] and calibration [using the Hosmer-Lemeshow goodness-offit test [13]]. The c-statistic is equivalent to the area under the
+receiver operating characteristic [ROC] curve. Numerically, it is
+the proportion of time that the estimated risk from a model is
+higher in the person with an event vs. the person without an event.
+A valued of 0.5 indicates that the model is nor better than chance
+at predicting risk. Models are typically considered reasonable
+when the C-statistic exceeds 0.7 and strong when it exceeds 0.8
+[14].
+We further assessed calibration by comparing the expected to
+observed event rate at each SSIRS vallue. The expected risk of SSI
+for each patient was calculated as the inverse of 1+ e
+2[intercept+b*SSIRS value], where b was the coefficient of the risk score in a
+logistic regression model whose sole covariate was SSIRS. The
+expected and observed event rates were considered similar if the
+expected rate was within the exact 95% CI around the observed
+rate [15]. We compared the performance of our model with that of
+the NNIS basic risk model [5].
+Results
+There were 363 431 surgeries recorded in NSQIP during 2010.
+391 [0.1%] of these were excluded because of invalid CPT codes
+leaving 363 040 surgeries in the study [181 894 for model
+derivation, 181 146 for model validation].
+The study cohort is summarized in Table S1 [a complete
+description of the cohort - including all candidate variables for the
+model - is provided in Appendix S2]. Patients were middle aged
+and predominantly independent. Approximately one third of
+surgeries were ambulatory, one half were elective in-patient
+surgeries, and the remaining 10% were emergency surgeries. More
+than half of surgeries had clean fields and more than half of
+patients had ASA scores of 1 or 2. Surgeries involved general
+anaesthesia more than 90% of the time, housestaff more than half
+of the time, and an additional procedure [by the same team] more
+than a third of the time. Mean duration of the operation was 1.8
+hours. Derivation and validation groups were essentially identical
+[Table S1].
+Overall, SSIs occurred after 14 227 surgeries [3.9%]. The
+majority of these [n = 8188, 57.5% of all SSIs] had a superficial
+component while 15.8% and 29.2% of SSIs involved the deep
+incision or the organ space, respectively. Overall SSI risk, as well
+as SSI type, was similar in the derivation and validation groups.
+SSI risk increased significantly with increased levels in the NNIS
+basic risk model [Table S2]. 82% of the cohort had an NNIS score
+of 0 or 1, resulting in weak discrimination [c-statistic 0.641].Covariates describing the actual surgery predominated in the initial
+Predicting Risk of Surgical Site Infections
+PLOS ONE | www.plosone.org 2 June 2013 | Volume 8 | Issue 6 | e67167
+
+model [Appendix S3]. This initial model included 5 of the 11
+variables dealing with patient demographics [45.4%], 10 of 32
+variables describing patient medical history [31.2%], and 9 of 11
+variables [81.8%] describing surgical information. The initial
+model had adequate discrimination [C-statistic 0.772].
+The initial model was used to generate the CPT3 Score
+[Appendix S4]. Of the 296 possible unique combinations of the
+first 3 numbers of CPT codes: 288 [97.3%] had at least one
+operation in the derivation group; 48 [16.2%] had no observed
+SSIs but had an expected number of SSIs [based on the initial
+model] that exceeded 0.5 [and were therefore were assigned a
+CPT3 Score of ‘‘0’’]; and 56 [18.9%] had no observed SSIs but
+had an expected number of SSIs [based on the initial model] of
+less than 0.5 [and were therefore assigned a CPT3 Score of ‘‘1’’].
+Overall, CPT3 Scores ranged from 0 to 4.07 with a mean value of
+0.895 and median value of 0.984 [Interquartile Range 0.394–
+1.086].
+In the final model, the CPT3 Score was strongly and
+independently associated with 30-day SSI risk along with a dozen
+other covariates and four interactions [Table S3]. SSI risk
+increased with: smoking; increased body mass index; peripheral
+vascular disease; metastatic cancer; steroid use; and pre-operative
+sepsis. Procedural factors that notably increased the risk of
+infection included: inpatient and emergent setting; contaminated
+or dirty operative fields; ASA scores of 3 or more; the use of a
+general [instead of local] anesthesia; the conduct of more than one
+procedure during the surgery; and increased operative time. In the
+validation group, the model had both excellent discrimination [Cstatistic = 0.800 [95% CI 0.795–0.805]]. Our web-page can be
+used to calculate SSI risk for a particular patient from this model
+[http://www.ohri.ca/SSI_risk_index/Default.aspx ].
+The model was modified into the SSI Risk Score [SSIRS] to
+make risk calculation without a computer possible [Table S4].
+Each SSIRS point equaled the increased SSI risk associated with a
+5-unit increase of the body mass index. Categorical variables
+independently associated with a notably increased risk of an SSI
+included: a contaminated/dirty or infected wound; inpatient and
+emergency surgery; and an ASA score exceeding 3. Notably
+influential continuous covariates included: a BMI exceeding 35;
+operation duration less than or equal to K hour or exceeding 3K
+hours; and a CPT3 score less than 0.9 or exceeding 1.262.
+SSIRS had a potential range between 217 and 62 but had an
+observed range between 215 and 50 [median score: 13,
+interquartile range: 7 to 21] [Figure S1]. Discrimination using
+SSIRS was very good [c-statisitc 0.781, 95% CI 0.776–0.786] but
+was significantly lower than that of the entire model [Table S3].
+The predicted SSI risk based on SSIRS was within the 95%
+confidence interval of the observed risk in 49 of the 58 point levels
+in which an SSI was observed [84.5%] capturing 89.7% of the
+validation population.
+Discussion
+This study derived and internally validated a model that uses
+commonly available information to predict the risk of SSI within
+30-days of an operation. Compared to the NNIS Basic Risk
+model, it had significantly better discrimination while maintaining
+adequate calibration. The model was also modified to the SSI Risk
+Score [SSIRS] that permits 30-day SSI risk to be estimated at the
+bedside without computational aids. If validated in an external
+patient population, this model will be a significant advance for
+predicting the risk of SSI in patients having surgeries.
+Determining SSI risk has two important applications. First,
+accurate quantification of SSI risk is needed to compare SSI rates
+between patients groups [defined by hospitals, clinical services, or
+individual surgeons]. Second, determining SSI risk for an
+individual patient is necessary to gauge the potential utility of
+preventive interventions. For example, an intervention that halves
+SSI risk [slightly less than the risk reduction associated with
+prophylactic antibiotics [16]] has a number needed to treat [NNT]
+to avoid one SSI of 20 when the baseline risk is 10% but a NNT of
+200 when the baseline risk is 1%. Surgeon behaviour and practice
+guidelines reflect the fact that higher-risk patients are more likely
+to benefit from preventive interventions since antibiotic prophylaxis is recommended for patients with contaminated or dirty
+wounds – patients who have a higher risk of SSI. Our model
+illustrates that many other factors contribute to SSI risk.
+Systematically considering all of these factors should result in a
+more accurate estimate of SSI risk and better decisions regarding
+SSI preventive therapies.
+Our model was similar to, but distinct from, other studies
+examining SSI risk in patients. The CPT3 Score in our model
+used an approach similar to that by Raval et al [17], who used a
+more clinically robust method to cluster CPT codes into
+procedural groups. Multiple previous studies have found significant associations between the risk of SSI and factors in our model
+[including wound class, body mass index, surgical location and
+urgency, ASA class, the performance of more than one procedure,
+metastatic cancer, the presence of steroids, and surgical duration]
+[18]. One study found that smoking [19] is an independent
+predictor of SSI in breast cancer surgeries. We believe that our
+study is innovative in the way it gauged the independent influence
+that each of these factors – along with a new method of
+quantifying the influence of different operative types – have on
+SSI risk.
+Our model has several notable strengths. It was derived and
+internally validated on a large cohort of patients involving a large
+number and a broad range of hospitals, surgeons, and surgeries.
+The analytical dataset included prospectively collected data with
+explicitly defined covariates. Our model was very accurate with
+both excellent discrimination and calibration. Finally, the model
+has real practical relevance to clinicians and patients since it
+permits the SSI risk for a particular patient to be calculated
+through the internet [http://www.ohri.ca/SSI_risk_index/
+Default.aspx] or through the SSI Risk Index [Table S4].
+Several limitations of our study should be noted when
+interpreting its results. The most important limitation to our
+model is its inability to capture interventions for reducing SSI risk
+given to patients. The most important of these are peri-operative
+antibiotics, which has a relative risk of SSI that varies between
+0.19 and 0.85 [16]. Given that they so effectively decrease SSI risk,
+and are more likely to be given to patients with more aggressive
+wounds, we believe that our model and index underestimates SSI risk
+associated with wounds other than clean wonds. The second most
+important limitation is that our model has not been externally
+validated. Until this has happened, people should use it cautiously
+to predict SSI risk in patients. Other limitations are notable: the
+model, when expressed as a scoring system, is too complicated to
+memorize [a notable benefit of the NNIS Basic Risk model]; the
+model requires that the user knows the CPT code of the surgery;
+one of the components of the model – duration of the operation –
+is unknown prior to the operation when interventions to decrease
+the risk of SSI would primarily be invoked. Therefore, SSI risk
+estimates prior to the operation would only be approximations
+since they would require an estimate of the operation duration.
+In summary, we derived and internally validated a model that
+predicts the risk of 30-day SSI in a broad range of surgical
+procedures. These data show that the risk of SSI can be estimated
+Predicting Risk of Surgical Site Infections
+PLOS ONE | www.plosone.org 3 June 2013 | Volume 8 | Issue 6 | e67167
+
+using readily available covariates regarding the patient and the
+surgery. We believe that external validation of this model,
+especially with data that incorporate information regarding
+prophylactic antibiotics, should be pursued before this model is
+used to predict the risk of surgical site infections in individual
+patients.
+Supporting Information
+Figure S1 Relationship between the Surgical Site Infection (SSI) Risk Score (SSIRS) and 30-day SSI probability
+in the validation population. For each SSI Risk Score value
+(horizontal axis), this graph presents: the observed number of
+people (columns, left vertical axis); the observed percentage of
+people with an SSI within 30-days of surgery (red line, right
+vertical axis); and the expected percentage of people with an SSI
+(black dotted line, right vertical axis). 95% confidence intervals are
+presented for the observed percentages.
+(TIFF)
+Table S1 Description of study cohort.
+(DOC)
+Table S2 Performance of the NNIS Basic Risk Model in
+the study cohort.
+(DOC)
+Table S3 Model to predict 30-day risk of surgical site
+infection.
+(DOC)
+Table S4 SSI Risk Score (SSIRS).
+(DOC)
+Appendix S1 Definitions used for superficial, deep, and
+organ surgical site infections.
+(DOC)
+Appendix S2 Complete description of all covariates
+offered to model.
+(DOC)
+Appendix S3 Initial logistic model to predict risk of 30-
+day surgical site infection.
+(DOC)
+Appendix S4 The CPT3 Score.
+(DOC)
+Author Contributions
+Conceived and designed the experiments: CVW RM. Performed the
+experiments: CVW. Analyzed the data: CVW. Contributed reagents/
+materials/analysis tools: CVW RM. Wrote the paper: CVW RM.
+References
+1. Pittet D, Harbarth S, Ruef C, Francioli P, Sudre P, et al. (1999) Prevalence and
+risk factors for nosocomial infections in four university hospitals in Switzerland.
+Infect Control Hosp Epidemiol 20: 37–42.
+2. Horan TC, Culver DH, Gaynes RP, Jarvis WR, Edwards JR, et al. (1993)
+Nosocomial infections in surgical patients in the United States, January 1986-
+June 1992. National Nosocomial Infections Surveillance (NNIS) System. Infect
+Control Hosp Epidemiol 14: 73–80.
+3. Boyce JM, Potter-Bynoe G, Dziobek L (1990) Hospital reimbursement patterns
+among patients with surgical wound infections following open heart surgery.
+Infect Control Hosp Epidemiol 11: 89–93.
+4. Whitehouse JD, Friedman ND, Kirkland KB, Richardson WJ, Sexton DJ (2002)
+The impact of surgical-site infections following orthopedic surgery at a
+community hospital and a university hospital: adverse quality of life, excess
+length of stay, and extra cost. Infect Control Hosp Epidemiol 23: 183–189.
+5. Culver DH, Horan TC, Gaynes RP, Martone WJ, Jarvis WR, et al. (1991)
+Surgical wound infection rates by wound class, operative procedure, and patient
+risk index. National Nosocomial Infections Surveillance System. Am J Med 91:
+152S–157S.
+6. Gaynes RP (2000) Surgical-site infections and the NNIS SSI Risk Index: room
+for improvement. Infect Control Hosp Epidemiol 21: 184–185.
+7. Ercole FF, Starling CE, Chianca TC, Carneiro M (2007) Applicability of the
+national nosocomial infections surveillance system risk index for the prediction of
+surgical site infections: a review. Braz J Infect Dis 11: 134–141.
+8. Mu Y, Edwards JR, Horan TC, Berrios-Torres SI, Fridkin SK (2011) Improving
+risk-adjusted measures of surgical site infection for the national healthcare safety
+network. Infection Control and Hospital Epidemiology 32: 970–986.
+9. Sauerbrei W, Royston P (1999) Building multivariable prognostic and diagnostic
+models: transformation of the predictors by using fractional polynomials. Journal
+of the Royal Statistical Society Series A 162: 71–94.
+10. Sauerbrei W, Meier-Hirmer C, Benner A, Royston P (2006) Multivariable
+regression model building by using fractional polynomials: Description of SAS,
+STATA and R programs. Computational Statistics and Data Analysis 50: 3464–
+3485.
+11. Sullivan LM, Massaro JM, D’Agostino RB Sr (2004) Presentation of multivariate
+data for clinical use: The Framingham Study risk score functions. Stat Med 23:
+1631–1660.
+12. Gonen M (2007) Single Continuous Predictor. In: Analyzing receiver operating
+characteristic curves with SAS. Cary, N.C.: SAS Institute Inc. 15–36.
+13. Hosmer DW, Hosmer T, Le Cessie S, Lemeshow S (1997) A comparison of
+goodness-of-fit tests for the logistic regression model. Stat Med 16: 965–980.
+14. Hosmer DW, Lemeshow S (2000) Assessing the Fit of the Model. In: Applied
+Logistic Regression. John Wiley and Sons, Inc. 143–202.
+15. Daly L (1992) Simple SAS macros for the calculation of exact binomial and
+Poisson confidence limits. Comput Biol Med 22: 351–361.
+16. Bowater RJ, Stirling SA, Lilford RJ (2009) Is antibiotic prophylaxis in surgery a
+generally effective intervention? Testing a generic hypothesis over a set of metaanalyses. Ann Surg 249: 551–556.
+17. Raval MV, Cohen ME, Ingraham AM, Dimick JB, Osborne NH, et al. (2010)
+Improving American College of Surgeons National Surgical Quality Improvement Program Risk Adjustment: Incorporation of a Novel Procedure Risk Score.
+Journal of the American College of Surgeons 211: 715–723.
+18. Gibbons C, Bruce J, Carpenter J, Wilson AP, Wilson J, et al. (2011)
+Identification of risk factors by systematic review and development of riskadjusted models for surgical site infection. Health Technol Assess 15: 1–iv.
+19. de Blacam C, Ogunleye AA, Momoh AO, Colakoglu S, Tobias AM, et al. (2012)
+High body mass index and smoking predict morbidity in breast cancer surgery: a
+multivariate analysis of 26,988 patients from the national surgical quality
+improvement program database. Ann Surg 255: 551–555.
+Predicting Risk of Surgical Site Infections
+PLOS ONE | www.plosone.org 4 June 2013 | Volume 8 | Issue 6 | e67167
+

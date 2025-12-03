@@ -1,0 +1,1795 @@
+ARTICLE
+Functional compensation precedes recovery
+of tissue mass following acute liver injury
+Chad M. Walesky 1,12, Kellie E. Kolb 2,3,4,12, Carolyn L. Winston 1
+, Jake Henderson 1
+, Benjamin Kruft 1
+,
+Ira Fleming 2,3,4, Sungjin Ko 5, Satdarshan P. Monga 5, Florian Mueller 6, Udayan Apte 7,
+Alex K. Shalek 2,3,4,8,13✉ & Wolfram Goessling 1,3,8,9,10,11,13✉
+The liver plays a central role in metabolism, protein synthesis and detoxification. It possesses
+unique regenerative capacity upon injury. While many factors regulating cellular proliferation
+during liver repair have been identified, the mechanisms by which the injured liver maintains
+vital functions prior to tissue recovery are unknown. Here, we identify a new phase of
+functional compensation following acute liver injury that occurs prior to cellular proliferation.
+By coupling single-cell RNA-seq with in situ transcriptional analyses in two independent
+murine liver injury models, we discover adaptive reprogramming to ensure expression of both
+injury response and core liver function genes dependent on macrophage-derived WNT/β￾catenin signaling. Interestingly, transcriptional compensation is most prominent in non￾proliferating cells, clearly delineating two temporally distinct phases of liver recovery. Overall,
+our work describes a mechanism by which the liver maintains essential physiological func￾tions prior to cellular reconstitution and characterizes macrophage-derived WNT signals
+required for this compensation.
+https://doi.org/10.1038/s41467-020-19558-3 OPEN
+1Genetics Division, Brigham and Women’s Hospital, Harvard Medical School, Boston, MA 02115, USA. 2 Institute of Medical Engineering & Science (IMES),
+Department of Chemistry, and Koch Institute for Integrative Cancer Research, Massachusetts Institute of Technology, Cambridge, MA 02139, USA. 3 Broad
+Institute of MIT and Harvard, Cambridge, MA 02142, USA. 4 Ragon Institute of MGH, MIT and Harvard, Cambridge, MA 02139, USA. 5Department of
+Pathology, University of Pittsburgh, School of Medicine; and Pittsburgh Liver Research Center, University of Pittsburgh and University of Pittsburgh Medical
+Center, Pittsburgh, PA 15261, USA. 6 Imaging and Modeling Unit, Institut Pasteur, UMR 3691CNRS, C3BI USR 3756 IP CNRS, Paris, France. 7Department of
+Pharmacology, Toxicology, and Therapeutics, University of Kansas Medical Center, Kansas City, KS 66160, USA. 8Harvard-MIT Division of Health Sciences
+and Technology, Boston, MA 02115, USA. 9Dana-Farber Cancer Institute, Boston, MA 02215, USA. 10Harvard Stem Cell Institute, Cambridge, MA 02134,
+USA. 11Division of Gastroenterology, Massachusetts General Hospital, Harvard Medical School, Boston, MA 02114, USA. 12These authors contributed equally:
+Chad M. Walesky, Kellie E. Kolb. 13These authors jointly supervised this work: Alex K. Shalek, Wolfram Goessling. ✉email: shalek@mit.edu;
+wgoessling@partners.org
+NATURE COMMUNICATIONS | (2020) 11:5785 | https://doi.org/10.1038/s41467-020-19558-3 | www.nature.com/naturecommunications 1
+1234567890():,;
+
+The liver is a vital organ with a wide array of functions,
+including homeostasis of glucose, protein, and lipid
+metabolism; production of bile; synthesis of critical serum
+proteins; and metabolism of endogenous and xenobiotic toxins1.
+The liver experiences frequent toxic insults that can result in
+cellular injury and death. Acetaminophen (APAP) overdose is the
+most common cause of toxic liver injury in the United States2.
+Another cause for acutely reduced liver function is surgical
+resection, often used to remove liver tumors or cancer metas￾tases3. Typically, any injury to the liver is followed by liver
+regeneration through cellular proliferation4. While the process
+and signals involved in liver regeneration have been studied in
+great detail, it remains unclear how an organism can survive the
+period immediately following the loss of substantial functional
+liver tissue.
+Hepatocytes are the major parenchymal cells of the liver and
+are organized into lobules with coordinated blood flow from the
+portal to the central vein. Within each lobule, hepatocyte gene
+expression is heterogenously structured, governed by metabolic
+demands and signaling pathways, supporting distinct hepatocel￾lular functionality across the periportal, midlobular, and peri￾central zones1. The impact of either zone-specific injury or global
+loss of liver mass on gene expression in these different regions has
+not been examined.
+Pioneering studies on liver regeneration have primarily focused
+on the signaling mechanisms that underlie re-establishment of
+lost cell mass through hepatocyte proliferation and coordinated
+angiogenesis4–7. While cell cycle initiation can be detected at
+12–24 h after injury, cell proliferation typically begins only after
+~24–30 h and does not peak until ~40–48 h7,8. This is in great
+contrast to regenerative responses in other organs, such as skin,
+where cell proliferation is initiated within a few hours following
+injury8. The reason for this delay in hepatocyte proliferation has
+been enigmatic.
+Here, we investigate compensatory responses in the liver dur￾ing key phases of liver regeneration in both a toxic (APAP) injury
+model and following surgical resection (partial hepatectomy, PH)
+(Fig. 1a). Utilizing the powerful combinatorial approach of Seq￾Well, a massively-parallel single-cell RNA-seq (scRNA-Seq)
+platform ideally suited for fragile cells like hepatocytes, and
+single-molecule fluorescent in situ hybridization (smFISH), we
+define transcriptional changes after injury9. We discover that
+remaining hepatocytes functionally compensate for lost liver mass
+by increased transcriptional output of key hepatocyte genes.
+Importantly, hepatocytes also alter their zone-specific functional
+identities within the liver lobule to maintain global expression of
+select transcripts. We find that hepatocyte functional compen￾sation precedes the peak phase of cellular proliferation and that
+cycling cells do not participate in this process to the same degree
+as non-cycling hepatocytes during the regeneration phase. Both
+cycling and non-cycling cells show upregulation of Wnt signaling
+targets—known to play a central role in normal hepatocyte
+development, maintenance, and liver regeneration;10–24 we
+demonstrate that compensation depends on intact Wnt/β-catenin
+activation through macrophage-secreted Wnts. Overall, our
+results identify previously unappreciated plasticity among hepa￾tocytes during a newly discovered compensatory phase after liver
+injury, as well as Wnt/β-catenin signaling as a therapeutically
+relevant pathway for maintaining and re-establishing homeostatic
+liver function.
+Results
+Transcriptional adaption after liver injury. To assess global
+transcriptional shifts in hepatocytes at single-cell resolution fol￾lowing acute liver injury, we employed scRNA-Seq to characterize
+response dynamics in both PH and APAP models, capturing the
+injury, regeneration, and termination phases of liver regenera￾tion4 (Fig. 1b, c). We profiled a total of 16,019 cells across 19
+different experiments to an average sequencing depth of >48,000
+reads/cell (Supplementary Fig. 1a–c, Supplementary Methods).
+Immune and endothelial cell types, as well as low-quality cells,
+were filtered out from the dataset, retaining 10,762 high-quality
+hepatocyte transcriptomes for subsequent analyses (Supplemen￾tary Fig. 1d, e, Supplementary Data 1, Methods). Shared nearest
+neighbor clustering (SNN) visualized on a t-Stochastic Neighbor
+Embedding (t-SNE) plot revealed hepatocyte populations that
+cluster by injury model and post-injury time point (Fig. 1d,
+Methods). While hepatocytes from each untreated mouse clus￾tered independently, the injury samples grouped by time point
+and injury type, rather than mouse of origin, indicating that the
+transcriptional response to injury causes individual hepatocytes to
+become more similar to one another. To confirm that this clus￾tering captures biological, rather than technical, variation, we
+performed differential expression to identify genes unique to each
+cluster. Clusters were defined by many genes related to liver
+function, injury response, and oxidative stress (Fig. 1e, Supple￾mentary Data 3), and technical gradients led to variation within,
+rather than across, clusters (nGene, nUMI; Supplementary Fig. 2).
+Regression over technical variables (i.e., number of genes) largely
+removed these technical gradients, but preserved other, biologi￾cally important signals; removal of PC1, which captured technical
+effects, similarily resulted in a reduction of technical signals while
+preserving key biological ones. Since regression changed very
+little, other than downweighting technical differences in cell
+quality, and the biological signals on which this work focuses
+were robust to regression, we opted to use the non-regressed
+dataset in our downstream analysis to avoid possible introduction
+of artificial variation.
+APAP injury resulted in pericentral necrosis after 6 h as
+demonstrated by histological analysis (hereafter A6; Fig. 1b, c).
+Hepatocytes scoring high for a pericentral hepatocyte signature
+(PCHSig) were absent at 6 h post-APAP (A6, Fig. 1f). Surpris￾ingly, at 24 h post-APAP, the pericentral hepatocyte expression
+signature returned (A24, Fig. 1f), despite histology showing
+persistent pericentral necrosis (A24, Fig. 1b, c). In particular,
+expression of two typically pericentrally restricted genes—Cyp2e1,
+responsible for metabolizing APAP, and Glul, which assimilates
+ammonia into glutamine—was maintained, or returned, following
+pericentral injury. For example, Cyp2e1 + hepatocytes decreased
+from 67% (Untreated, UT) to 5% (A6), but returned back to 46%
+by 24 h with no significant change in the number of Glul +
+hepatocytes at any time point. These results suggest the intriguing
+possibility of compensatory expression of pericentral genes by
+non-pericentral hepatocytes.
+scRNA-seq is a powerful tool for determining global
+transcriptional changes in subsets of cells from a heterogenous
+organ, such as the liver; however, meticulous validation is
+necessary to overcome some limitations of this rapidly-evolving
+technology, such as inefficiencies in transcript capture. To
+validate these findings in a spatiotemporal context, we assessed
+the distribution of the pericentral markers Cyp2e1 and Glul using
+highly sensitive smFISH analysis (Fig. 2a–e; Supplementary
+Figs. 3, 4). Cyp2e1 extended further into the lobular midzone
+following APAP exposure, with pericentral necrosis at A6 and
+A24 (Fig. 2b, Supplementary Fig. 4). Expression then normalized
+at A48, following the cell proliferative response. Glul expression is
+normally restricted to a single layer of cells surrounding the
+central vein25, which underwent necrosis following APAP
+overdose (Fig. 2b). Surprisingly, we observed that Glul was now
+expressed at low levels across the entire liver lobule (A6, A24,
+Fig. 2b; Supplementary Fig. 4). Glul expression patterns return to
+ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-19558-3
+2 NATURE COMMUNICATIONS | (2020) 11:5785 | https://doi.org/10.1038/s41467-020-19558-3 | www.nature.com/naturecommunications
+
+normal by A48 (Fig. 2b; Supplementary Fig. 4). These findings
+reveal compensatory expression of pericentral genes through
+adaptive reprogramming of midzonal hepatocytes after pericen￾tral toxic injury.
+In contrast to APAP, PH does not result in zone-dependent
+injury but represents a massive loss of ~70% of liver cell mass
+(compared to ~10% total cell loss after APAP injury), imposing
+extreme functional demand on remaining hepatocytes. Similarly
+to APAP toxicity, functional compensation was also observed
+after PH, evident from a dramatic increase in Glul + hepatoctyes
+(Fig. 1g) from 18% (Control) to 60% (P3). This is further
+supported by the observation that Cyp2e1 + hepatocytes only
+a
+e
+d
+b
+c
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+tSNE_1
+Toxic injury (APAP)
+0 24 96 6 48
+03 48 120
+CV PV
+tSNE_2
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+Hp
+Mt1
+Aldh3a2
+Cyp8b1
+Apoc1
+Apoc2
+Cyp4a10
+Cyp4a14
+Txnrd1
+Gclc
+Srxn1
+f
+g
+PCH Signature Score PCH Signature Score
+Normalized Expression
+ln(tp10K+1)
+Normalized Expression
+ln(tp10K+1)
+Normalized Expression
+ln(tp10K+1)
+Normalized Expression
+ln(tp10K+1)
+−1
+0
+1
+2
+UT
+A6
+A24
+A48
+A96
+APAP PCH signature
+Toxic Injury (APAP) Surgical Resection (PH)
+% Pos: 67 5.0 46 39 73 18 20 15 31 18
+% Pos:
+0
+1
+2
+3
+4
+UT
+A6
+A24
+A48
+A96
+APAP Glul
+0
+1
+2
+3
+4
+5
+UT
+A6
+A24
+A48
+A96
+APAP Cyp2e1
+18 60 19 24
+−1
+0
+1
+2
+UT
+P3
+P48
+P120
+PH PCH signature
+0
+1
+2
+3
+4
+5
+UT
+P3
+P48
+P120
+PH Glul
+0
+1
+2
+3
+4
+5
+UT
+P3
+P48
+P120
+PH Cyp2e1
+67 49 54 67
+TUNEL PCNA
+0 h 6 h 24 h 48 h
+Toxic injury
+96 h 3 h 48 h 120 h
+ns
+ns
+*
+** **
+***
+***
+Time (h)
+Time (h)
+Hpx
+H
+L
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+0
+50
+100
+150
+200
+250
+PCNA (+) Cells
+Cell proliferation
+****
+****
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+0
+2
+4
+6
+8
+10
+% Positive Area (um3
+)
+TUNEL (+) area
+****
+*
+Surgical Resection (PH)
+Surgical resection
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-19558-3 ARTICLE
+NATURE COMMUNICATIONS | (2020) 11:5785 | https://doi.org/10.1038/s41467-020-19558-3 | www.nature.com/naturecommunications 3
+
+decrease by 18% (67 to 49%) at P3 (Fig. 1g). smFISH analysis
+confirmed expanded expression zones and total expression levels
+for both Cyp2e1 and Glul in PH (Fig. 2c, e; Supplementary Fig. 4a,
+b). In addition, we observed functional compensatory upregula￾tion of the periportal marker Arg1, suggesting that adaptive
+reprogramming of hepatocytes is not exclusive to pericentral
+genes (Supplementary Fig. 4c, d). These results highlight that
+hepatocytes alter their transcriptional output to maintain the
+expression of zonally expressed genes otherwise lost due to injury.
+Liver injury causes both injury- and non-specific responses. To
+further define shared and unique responses in both liver injury
+models, we determined differentially expressed genes (DEGs)
+between each treatment condition and untreated controls (UT),
+and then pooled results to reveal composite DEG results for
+APAP and PH (Methods, Supplementary Data 4), for which we
+performed specific validations using smFISH (Fig. 3, Supple￾mentary Figs. 6–10). A number of gene expression alterations
+could be attributed to injury-specific effects. A large number of
+gene expression changes, however, were shared between the two
+models, indicating that they do not reflect the specific nature of
+injury (Fig. 3a, Supplementary Fig. 5, Supplementary Data 5).
+Gene set analysis (GSA) revealed an enrichment of pathways
+involved in toxic injury within the APAP model (Supplementary
+Fig. 5, Supplementary Data 6)26. The PH model, meanwhile,
+exhibited an enrichment among pathways involved in cell pro￾liferation, possibly due to differences in the extent of injury
+between the two models (Supplementary Fig. 5, Supplementary
+Data 6). Following APAP overdose, there was a substantial anti￾oxidant response by GSA and expression of individual anti￾oxidant response genes, such as thioredoxin reductase (Txnrd1)
+and glutamate-cysteine ligase subunit c (Gclc) (Fig. 3b). Surpris￾ingly, smFISH analysis revealed an upregulation of Txnrd1 and
+Gclc across the entire liver lobule reaching into the periportal
+region (Fig. 3b, Supplementary Figs. 6–10). These findings suggest
+that some injury responses are not exclusive to lobular localiza￾tion of injury.
+DEG analysis further highlighted the breadth of the functional
+compensatory response with a large number of the most
+significantly upregulated genes being involved in classic hepatic
+functions, such as secreted protein synthesis, gluconeogenesis,
+blood clotting, and ion homeostasis (Fig. 3, Supplementary
+Figs. 6–10). Albumin is the most abundant serum protein and is
+produced by all hepatocytes across the liver lobule, with the
+highest expression in the periportal region. Acute injury in both
+models resulted in a dramatic upregulation of albumin across the
+entire liver lobule beginning at the earliest observed time points
+(A6 and P3) (Fig. 3c). However, most genes involved in essential
+liver function responded at a level correlated to the extent of
+injury (Fig. 3b–e, Supplementary Figs. 6–10, Supplementary
+Data 5). This is consistent with the larger total loss of hepatocytes
+in the PH model compared to the APAP model (~70% vs. ~10%,
+respectively), resulting in a greater need for functional compensa￾tion. These findings highlight not only the rapidity of hepatic
+functional adaptation but also the plasticity of hepatocytes across
+the liver lobule.
+Proliferation is inversely correlated with functional adaptation.
+Liver regeneration research has traditionally focused on hepato￾cyte proliferation4–7. It is unknown whether actively dividing
+hepatocytes can equally contribute to functional compensation.
+We observed a down-regulation of many hepatic function genes
+during activation of the proliferative response (A24, P48,
+Fig. 3b–e). Therefore, we identified cells that became tran￾scriptionally active for cell cycle genes in the scRNA-Seq dataset
+(Fig. 4a), and analyzed hepatocyte-specific transcript output
+compared to those cells at all time points that are not cycling.
+Compared to non-cycling cells (NC), there was a significant
+down-regulation of the Hepatocyte Signature Score in cycling
+cells (CC) in both injury conditions (Fig. 4b, c, Supplementary
+Fig. 11, Methods). DEG revealed substantial differences between
+cycling and non-cycling cells. CCs expressed many classic cell
+proliferation markers and exhibited down-regulation of many
+hepatic function genes (Fig. 4d, Supplementary Data 7). Pro￾liferating hepatocytes in general scored lower for hepatocyte
+markers. This was corroborated in individual cells by co-staining
+for proliferating cell nuclear antigen (PCNA) and either the
+glucose transporter Slc2a2 or serum protein Alb by smFISH
+(PCNA IF/smFISH, Fig. 4e). Additionally, the cell cycle inhibitor
+p21 is upregulated following acute injury leading to the observed
+delay in cell proliferation27. scRNA-seq data corroborated this
+previously described observation (Fig. 4f). Further, smFISH
+analysis of both p21 and functional compensatory genes (Fig. 4g,
+Supplementary Fig. 11) show a correlation between p21 expres￾sion and the functional compensatory response. Taken together,
+these data suggest that the functional compensatory response is
+strongest in non-proliferating hepatocytes that are actively
+inhibited from entering the cell cycle.
+To identify pathways and potential upstream regulators
+involved in cell cycle activation, we performed GSA over DEG
+calculated between CCs and NCs from A24 and P48, revealing an
+upregulation of cell cycle-related pathways. Further, there was a
+strong enrichment for Wnt/β-catenin-related pathways (Supple￾mentary Fig. 11). It has been shown extensively that Wnt
+signaling is involved with normal hepatocyte turnover and liver
+regeneration10,12–24. These Wnt factors are derived from the
+endothelium and contribute to the activation of hepatic
+progenitor cell genes (Axin2, Tbx3, and Sox9)17,28. We observed
+upregulation of Axin2, Tbx3, and Sox9 in each acute injury
+model, with expression reaching multiple cell layers into the
+midzone (Supplementary Fig. 12). These data support activation
+of Wnt/β-catenin signaling in response to injury, which may be
+co-localized with the induction of genes associated with hepatic
+plasticity17,29.
+Wnt mediates functional compensation in addition to pro￾liferation. Given the demonstrated role of Wnt/β-catenin sig￾naling in establishing liver zonation and proliferation during liver
+Fig. 1 Hepatocyte response to toxic and surgical liver injuries. a Time course depicting analysis time points during liver injury recovery following APAP
+overdose or PH. b Murine liver sections (5 μm, n = 3) show necrotic TUNEL-positive (brown, top) and proliferative PCNA-positive (brown, bottom) cells.
+Scale bar is 100 μm. c Bar graphs quantifying total TUNEL- and PCNA-positive area. Error bars are s.e.m., P < 0.05 (*), < 0.01 (**), and < 0.0001 (****)
+calculated using unpaired t test with Welch’s correction (two-tailed). d t-SNE plot of all high-quality hepatocytes (Methods) in the scRNA-Seq dataset.
+Cells are colored by injury mode and time point. SNN clusters outlined in black. e Heatmap of marker genes for all clusters outlined in (d). f, g Pericentral
+Hepatocyte Signature Score (PCH Signature Score) (left). Violin plot of normalized expression of Cyp2e1 (middle) and Glul (right); percent positive
+calculated as percentage of total cells in each condition above average normalized genes expression (dashed red line). Untreated (UT) and each post￾treatment are plotted for APAP (f) and PH (g). Source data provided as a Source Data file.
+ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-19558-3
+4 NATURE COMMUNICATIONS | (2020) 11:5785 | https://doi.org/10.1038/s41467-020-19558-3 | www.nature.com/naturecommunications
+
+regeneration, we investigated whether Wnt signaling might acti￾vate adaptation of already present hepatocytes to maintain
+essential hepatic function18,30–36. scRNA-seq data corroborated
+previous observations of increased Wnt activity in proliferating
+hepatocytes (Fig. 5a)22,33,37. Further, it revealed activation of Wnt
+target gene expression in the majority of hepatocytes in both the
+APAP and PH models, preceding the onset of cell proliferative
+activity (A6 and P3, Fig. 5b).
+To identify if the hepatic compensatory response following
+injury is dependent on Wnt/β-catenin signaling, we evaluated
+conditional Wntless (Wls) KO mice with impaired Wnt processing
+and secretion as well as hepatocyte-specific β-catenin KO mice
+after acute injury (Fig. 5c)18,38 (Supplementary Fig. 13). This
+strategy enabled identification of the cellular source of secreted
+Wnt ligands responsible for the functional compensatory response.
+Loss of either endothelium- or macrophage-derived Wnt secretion
+Untreated 6 hr 24 hr 48 hr 96 hr
+a
+b
+Pericentral Zone Periportal Zone
+Image acquisition Cell segmentation
+CV PV
+Accepted Spots
+Rejected Spots
+3 hr 48 hr 120 hr Untreated
+c
+Cyp2e1
+L H
+Glul
+L H
+Toxic injury (APAP)
+Cyp2e1 Glul Cyp2e1 Glul
+Confocal Confocal Confocal Confocal
+Cyp2e1 Glul Cyp2e1 Glul d e
+0.25 0.50 0.75 0.25 0.50 0.75
+0
+2000
+4000
+6000
+8000
+0
+2000
+4000
+6000
+8000
+0
+2000
+4000
+6000
+8000
+0
+2000
+4000
+6000
+8000
+0
+2000
+4000
+6000
+8000
+Pericentral → Periportal
+Average RNA Counts
+Average RNA Counts
+0.25 0.50 0.75 0.25 0.50 0.75
+0
+2500
+5000
+7500
+10000
+0
+2500
+5000
+7500
+10000
+0
+2500
+5000
+7500
+10000
+0
+2500
+5000
+7500
+10000
+AUC 2239 ± 303.0
+AUC 1410 ± 231.3
+AUC 1146 ± 157.9
+AUC 2058 ± 209.3
+AUC 1715 ± 201.0
+AUC 3288 ± 171.4
+AUC 3475 ± 324.3
+AUC 2012 ± 241.4
+AUC 998.4 ± 119.1
+AUC 288.7 ± 43.12
+AUC 1035 ± 97.97
+AUC 706.2 ± 65.14
+AUC 1171 ± 120.2
+AUC 2412 ± 211.7
+AUC 2454 ± 390.0
+AUC 1467 ± 123.0
+AUC 2239 ± 303.0 AUC 998.4 ± 119.1
+UT
+A6
+A24
+A48
+A96
+UT
+A6
+A24
+A48
+A96
+UT
+P3
+P48
+P120
+UT
+P3
+P48
+P120
+Pericentral → Periportal
+Transcript quantification
+Surgical resection (PH)
+Projection Projection Projection Projection 754
+566
+377
+188
+0
+754
+566
+377
+188
+0
+754
+566
+377
+188
+0
+754
+566
+377
+188
+0
+754
+566
+377
+188
+0
+754
+566
+377
+188
+0
+754
+566
+377
+188
+0
+754
+566
+377
+188
+0
+754
+566
+377
+188
+0
+Fig. 2 Functional compensation of hepatocytes following acute liver injury. a Schematic for staining and image quantification. b, c Images of liver section
+showing pericentral markers Cyp2e1 and Glul for untreated and each APAP-treated (b) or PH-treated (c) time point (left column). Cell outlined and colored
+by number of Cyp2e1 transcripts (brown, low; white, high) for each condition (middle column). Cell outlined and colored by number of Glul transcripts
+(black, low; bright green, high) for each condition (right column). Scale bars are 100 μm. d, e Quantification of gene expression intensity across the lobule
+for Cyp2e1 and Glul. 90% of area under the curve (AUC) for UT is to the left dashed red line. treated (d) and PH-treated (e). Source data provided as a
+Source Data file.
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-19558-3 ARTICLE
+NATURE COMMUNICATIONS | (2020) 11:5785 | https://doi.org/10.1038/s41467-020-19558-3 | www.nature.com/naturecommunications 5
+
+resulted in a down-regulation of hepatic function genes at baseline
+consistent with the role of Wnt signaling in hepatic function33,39,40
+(Fig. 5d, e). Importantly, EC-Wls-KO mice can still transcription￾ally compensate following PH but have altered cell proliferation
+(Fig. 5d, e and Supplementary Fig. 14c)18. In contrast, loss of Wnt
+processing in macrophages of Mac-Wls-KO mice resulted in
+down-regulation of all examined hepatocyte genes after injury with
+complete loss of transcriptional compensation following PH.
+Proliferative capacity was modestly decreased, yet overall main￾tained (Fig. 5d, e and Supplementary Fig. 14)41. Resident hepatic
+macrophage numbers and geographic distribution were similar
+between groups (Supplementary Fig. 14b). In addition, combined
+IF and smFISH staining revealed increased Glul transcript level
+within ~30 μm (average diameter of a single hepatocyte) of F4/80+ F2
+0
+1
+2
+3
+4
+n *
+0
+1
+2
+3
+4 *** * ***
+UT
+A6
+A24
+A48
+A96
+UT
+P3
+P48
+P120
+UT
+A6
+A24
+A48
+A96
+UT
+P3
+P48
+P120
+UT
+A6
+A24
+A48
+A96
+UT
+P3
+P48
+P120
+0
+1
+2
+3
+4
+0
+1
+2
+3
+0
+1
+2
+3
+4
+0
+1
+2
+3
+n
+n
+*
+* * **
+***
+n
+n n *
+* *
+***
+Txnrd1 Gclc
+3
+4
+5
+6
+7 n * ***
+Secreted proteins
+3
+4
+5
+6
+7 * n *** *
+Alb
+UT
+A6
+A24
+A48
+A96
+UT
+P3
+P48
+P120
+Gluconeogenesis
+Pck1
+0
+1
+2
+3
+4
+0
+1
+2
+3
+4
+n * ** * *** *** ***
+UT
+A6
+A24
+A48
+A96
+UT
+P3
+P48
+P120
+597 234 192 313 260 96
+Genes upregulated in response to injury
+APAP PH
+Genes downregulated in response to injury
+APAP PH
+a
+b c
+d e
+0
+1
+2
+3
+4
+UT
+P3
+P48
+P120
+0
+1
+2
+3
+UT
+A6
+A24
+A48
+A96
+0
+1
+2
+3
+UT
+A6
+A24
+A48
+A96 0
+1
+2
+3
+UT
+P3
+P48
+P120
+Serpina3n
+0
+1
+2
+3
+UT
+A6
+A24
+A48
+A96 0
+1
+2
+3
+UT
+P3
+P48
+P120
+G6pc
+0
+1
+2
+3
+4
+5
+UT
+A6
+A24
+A48
+A96 0
+2
+4
+6
+UT
+P3
+P48
+P120
+Fga
+** ***
+n n ***
+***
+***
+*** * * * *** * **
+*** ** ***
+*** *** *** *
+*** ***
+* * * * **
+Normalized Expression
+ln(tp10K+1) Normalized Expression ln(tp10K+1) Normalized Expression ln(tp10K+1) Normalized Expression ln(tp10K+1)
+Normalized expression
+ln(tp10K+1)
+Normalized Expression
+ln(tp10K+1)
+Normalized Expression
+ln(tp10K+1)
+Normalized Expression
+ln(tp10K+1)
+Normalized Expression
+ln(tp10K+1)
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+0
+500
+1000
+1500
+2000
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+0
+500
+1000
+1500
+2000
+2500
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+0
+1000
+2000
+3000
+Average Total RNA Counts Average Total RNA Counts Average Total RNA Counts Average Total RNA Counts Average Total RNA Counts
+* *
+*
+0.06
+0.058
+0.08
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+0
+1000
+2000
+3000 *
+*
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+0
+1000
+2000
+3000
+4000
+**
+** **
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+0
+500
+1000
+1500
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+0
+500
+1000
+1500
+2000
+2500
+Average Total RNA Counts Average Total RNA Counts Average Total RNA Counts Average Total RNA Counts
+0.053
+**
+0.058
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+0
+1000
+2000
+3000
+4000
+5000 0.06 *
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+0
+1000
+2000
+3000
+4000
+**
+* *
+W = 4.553
+P-value = 0.03 
+W = 4.464
+P-value = 0.03 
+W = 22.44
+P-value = 0.0004 
+Fibrin Clot
+Thrombin
+Pyruvate OAA PEP Fruc-6-P Gluc-6-P Glucose
+Pck1 G6pc
+Txnrd1 Gclc
+Txn Txn
+Oxidative
+Stress
+GSS
+GGC Glutamate
+Cysteine GSH +
+ROS S S S S
+H H
+Fibrinogen
+(Fga, Fgb, Fgg)
+Prothrombin
+(F2)
+Blood clotting
+Oxidative stress response
+Igfbp1
+Fig. 3 Shared and unique gene expression responses in acute liver injury models. a Venn diagram showing genes significantly changed in response to
+APAP and/or PH treatment compared to untreated. b Expression of oxidative stress response genes (Txnrd1 and Gclc) significantly upregulated in APAP
+treatment response. c–e Expression of genes representing specific hepatic functions (c, secreted proteins; d, gluconeogenesis; e, blood clotting). scRNA￾seq data (left) presented as violin plots. smFISH quantification (right) shown as bar plot with individual replicates presented as dots (n = 3). Error bars are
+s.e.m., P < 0.05 (*), < 0.005 (**), < 0.0005 (***), and < 0.0001 (****) calculated using unpaired t tests with Welch’s correction (two-tailed) comparing
+untreated group (UT) to all other experimental groups. Source data provided as a Source Data file.
+ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-19558-3
+6 NATURE COMMUNICATIONS | (2020) 11:5785 | https://doi.org/10.1038/s41467-020-19558-3 | www.nature.com/naturecommunications
+
+macrophages (Supplementary Fig. 14d, e). The number of detected
+transcripts decreased substantially with increased distance from
+macrophages (Supplementary Fig. 14f). These data reveal a
+dichotomy of the function of Wnt signaling within the regenerat￾ing liver, where macrophage-derived Wnts are required for the
+observed functional compensation following PH, while
+endothelium-derived Wnts are more important for the cell
+proliferative response. In contrast, livers of Mac-Wls-KO mice
+maintained the ability to functionally compensate following APAP
+injury (Fig. 5d, e), suggesting an alternate injury-dependent
+mechanism for the functional compensatory response.
+To investigate the role of intact β-catenin activity on functional
+compensation, hepatocyte-specific β-catenin KO mice were
+subjected to acute liver injury (PH) (Supplementary Fig. 13),
+which revealed that functional compensation is β-catenin￾dependent for select genes, such as Alb, Glul, and Cyp2e1.
+However, Arg1 is still compensatorily expressed even following β￾catenin loss. These findings indicate that both canonical and non￾canonical Wnt signaling may play a role in functional
+compensation of select genes.
+Discussion
+The liver uniquely maintains complex metabolic function
+throughout injury and subsequent regeneration to enable survival
+of an organism42,43. It has long been thought that the liver has
+sufficient functional reserve to maintain these functions through
+excess baseline capacity43–47, but the exact hepatic reserve capa￾city has been mostly a theoretical concept. Liver injury induces a
+regenerative response where functionally active hepatocytes are
+the major contributor to cellular regeneration. Turnover of
+hepatocytes in the uninjured organ is typically slow, with the
+entire liver being repopulated by new hepatocytes after ~ 1
+year17,48. The liver can quickly respond to an acute insult, how￾ever, through activation of a regenerative response. Liver regen￾eration within the mouse model shows a peak of hepatocyte
+proliferation between 30 and 36 h for both PH and APAP￾induced injury49,50. Cell cycle genes are activated well before
+hepatocyte proliferation begins (priming phase) following
+injury42,43,51. Cell cycle inhibitors, such as p21 and p27, however,
+are concurrently upregulated early in liver regeneration and block
+progression of hepatocytes into the cell cycle27,52. It has been
+speculated that this co-expression of both stimulators and
+repressors of the cell cycle aides in the control of liver regen￾eration to a precise endpoint42.
+Here, we discover a mechanism by which the liver maintains
+essential function through transcriptional compensation prior to
+the proliferative response. Hepatocytes upregulate transcription
+of important liver genes, typically by adapting gene expression
+patterns extending beyond homeostatic zonal boundaries.
+APAP24 h
+PH 48 h
+Cell Cycle Score
+0.0
+0.2
+0.4
+0.6
+UT
+A6
+A24
+A48
+A96
+ P3
+ P48
+Cell cycle score
+0.1 0.5 4.9 0.2 0.0 0.0 12.9 0.1
+APAP 24 h PH 48 h
+1.2
+1.6
+2.0
+CC
+NC
+Hepatocyte Score
+0.8
+1.2
+1.6
+2.0
+CC
+NC
+CC
+NC
+CC
+NC
+a
+f
+b cd **
+***
+0.0 0.2 0.4 0.6
+Cell cycle score
+Treated
+Untreated
+1.0
+1.5
+2.0
+2.5
+Hepatocyte Score
+Untreated
+Treated
+32.7% 0.1%
+65.5% 1.6%
+P120
+e
+CC
+NC
+4
+5
+6
+*
+CC
+NC
+0.0
+0.5
+1.0
+1.5
+2.0
+Slc2a2
+*
+Cell Cycle
+Normalized expression
+ln(tp10K+1)
+0
+1
+2
+3
+UT
+A6
+A24
+A48
+A96
+P3
+P48
+P120
+p21
+0
+50
+100
+150
+200
+0 100 200 300 400
+p21
+Sample UT P3 A6 A24
+g
+0
+100
+200
+300
+RNA Count
+0
+250
+500
+750
+1000
+RNA Count
+scRNA-seq
+CC
+NC
+CC
+NC
+Alb
+PCNA IF/smFISH
+**** ****
+****
+****
+****
+****
+****
+H
+L
+Normalized Expression
+ln(tp10K+1) Normalized Expression ln(tp10K+1)
+Hepatocyte Score
+Hepatic Function
+Igfbp1
+Fig. 4 Identification and characterization of proliferating hepatocytes. a Violin plot of cell cycle score across all samples. Cycling cells (CC, larger black
+dots) are identified as having a cell cycle score two standard deviations above average (dashed red line). Percentage of cycling cells in each condition listed
+below each violin. b Scatter plot of Hepatocyte Score versus Cell Cycle Score. Horizonal line represents average Hepatocyte Score calculated over all
+untreated cells. Vertical line represents two standard deviations above the average cell cycle score. c Violin plots on Hepatocyte Score for all APAP 24 h
+cycling cells (CC) and an equal number of non-cycling cells (NC) from APAP24 (top) and the same for PH48 CC and NC (bottom). scRNA-seq effect size
+by absolute value of Cohen’s d > 0.2; *, d > 0.5; **, d > 0.8; ***. d Heatmap of marker genes of CC and NC in APAP 24 h and PH 48 h. e Violin plots of Alb
+and Slc2a2 in CC and NC cells as measured by scRNA-seq (left) and by co-staining of PCNA and smFISH within tissue sections from P24 (right). scRNA￾seq effect size by absolute value of Cohen’s d > 0.2; *, d > 0.5; **, d > 0.8; ***. smFISH data tested using an unpaired t test with Welch’s correction (two￾tailed; ****, P < 0.0001). f Violin plot of p21 expression in scRNA-seq dataset. g Quantification of RNA counts of p21 versus Igfbp1. Box plots represent data
+for both axes. Source data provided as a Source Data file.
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-19558-3 ARTICLE
+NATURE COMMUNICATIONS | (2020) 11:5785 | https://doi.org/10.1038/s41467-020-19558-3 | www.nature.com/naturecommunications 7
+
+Importantly, many hepatocyte function genes are expressed or
+upregulated predominantly in non-proliferating hepatocytes,
+while those cells that enter cell cycle express hepatocyte function
+genes at lower levels. This suggests the presence of a division-of￾labor between hepatocytes contributing to the maintenance of
+hepatic function and those responsible for the proliferation
+response and a return of cellular mass. Further investigation is
+needed to determine if select sub-populations of hepatocytes exist
+that contribute to each aspect of the response or if this dichotomy
+is present due to the differential availability of energy and cellular
+building blocks. Collectively, our data define a compensatory
+phase following liver injury, thereby complementing previous
+studies which have elegantly established the field of liver regen￾eration by focusing on the hepatocyte proliferative response4–8.
+We define a dual role for Wnt/β-catenin signaling in liver
+regeneration: it not only promotes cell proliferation and cellular
+recovery, as previously demonstrated in multiple studies10,12–24,35,36,
+but is also required for functional compensation (Fig. 6). We identify
+macrophages, but not endothelial cells, as the main source of
+secreted Wnts that enable transcriptional compensation, particularly
+following massive loss of hepatic tissue after PH. Further investi￾gation will be necessary to determine whether other signals are
+involved in this process dependent on the extent and nature of
+injury, particularly for APAP toxicity and other forms of chemical
+liver injury. The contribution of macrophage-dependent Wnts to
+transcriptional compensation complements other studies, which
+have highlighted the role of endothelial-derived Wnts to maintain
+hepatic zonation, as well as both endothelial- and macrophage￾secreted Wnts to enable cellular proliferation15,18,41,53,54. Our results
+establish that macrophages, which are responsible for broad
+inflammatory and immunologic functions55, are also essential for
+delivering Wnts locally throughout the entirety of the hepatic lobule,
+both in midzone and periportal areas, because of their ability to
+migrate and release Wnt ligands throughout the tissue. It has been
+Comp Cyp2e1 Arg1
+a b
+−0.1
+0.0
+0.1
+0.2
+CC
+NC
+–0.1
+0.0
+0.1
+0.2
+UT
+A6
+P3
+Wnt target signature Wnt target signature
+*
+*** ***
+Module score
+Module Score
+c
+EC-Wls
+Lyve1-Cre
+Mac-Wls
+WlsFl/Fl;
+WlsFl/Fl;
+Lyz2-Cre
+Endothelial cell EC-Wls Macrophage Mac-Wls
+CV PV CV PV
+CV PV CV PV
+Control EC-Wls Mac-Wls
+UT P24 A24 UT P24 UT P24 A24
+Control EC-Wls Mac-Wls Control EC-Wls Mac-Wls Control EC-Wls Mac-Wls Control EC-Wls Mac-Wls
+*
+* ****
+**
+**
+*
+*
+**
+** *
+*
+*
+d
+e
+UT
+P24
+A24
+UT
+P24
+UT
+P24
+A24
+0
+1000
+2000
+3000
+Cyp2e1
+Average total RNA counts 
+Average Total RNA Counts
+Average Total RNA Counts
+Average Total RNA Counts
+* *
+*
+UT
+P24
+A24
+UT
+P24
+UT
+P24
+A24
+0
+500
+1000
+1500
+Arg1
+**
+* ** ****
+UT
+P24
+A24
+UT
+P24
+UT
+P24
+A24
+0
+200
+400
+600
+Glul
+* *
+UT
+P24
+A24
+UT
+P24
+UT
+P24
+A24
+0
+2000
+4000
+6000
+8000
+Alb
+* *
+*
+**
+Fig. 5 Contribution of Wnt signaling to functional compensation of hepatocytes. Wnt target gene expression score over cycling cells (CC) and non￾cycling cells (NC) from A24 and PH48 (a) and hepatocytes grouped by treatment condition (UT, A6, and P3) (b). c Wnt knockout mouse models.
+d Hepatocyte marker expression (Alb and Arg1) in untreated, P24, and A24 for wild type (Control), endothelial cell Wntless KO (EC-Wls), and macrophage
+Wntless KO (Mac-Wtls) by smFISH. Representative image taken from three independent liver lobules. Scale bar is 100 μm. (e) Average RNA expression of
+hepatocyte markers (Alb, Arg1, Cyp2e1, and Glul) in untreated, P24 hr, and A24 for WT, EC-Wls, and Mac-Wtls by smFISH. smFISH quantification shown as
+bar plot with individual replicates presented as dots (n = 3). Error bars represent s.e.m., P < 0.05 (*), < 0.005 (**), < 0.0005 (***), and < 0.0001 (****)
+calculated using unpaired t tests with Welch’s correction (two-tailed). Source data provided as a Source Data file.
+ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-19558-3
+8 NATURE COMMUNICATIONS | (2020) 11:5785 | https://doi.org/10.1038/s41467-020-19558-3 | www.nature.com/naturecommunications
+
+previously shown that an increased amount of Wnt ligands span￾ning many members of the family are detectable across the liver
+lobule during liver regeneration18. In particular, Wnts 2b and 9 are
+primarily upregulated in endothelial cells and macrophages. Further
+investigation will be needed to determine whether specific Wnt
+ligands initiate the functional compensatory response during liver
+regeneration or if all ligands can contribute equally. Additionally, the
+roles of both canonical and non-canonical Wnt signaling to control
+compensation of individual genes and specific cellular functions
+need to be elucidated. Our findings further highlight the potential of
+the Wnt/β-catenin pathway as a therapeutic target in acute liver
+failure and other liver pathologies, where maintenance of liver
+function is essential. Future studies will be needed to identify specific
+Wnt ligands to promote liver function, regeneration, and survival in
+regard to multiple pathologies that result in acute liver failure.
+Methods
+Animals. Three-month-old, male, C57BL/6J mice, purchased from Jackson
+Laboratories (Bar Harbor, ME, USA), were used in acute liver injury studies (APAP
+and PH). β-catenin KO studies were conducted using Alb‐cre+/−;Ctnnb1flox/flox
+mice. Wntless KO studies were conducted using Lyve1‐cre+/–;Wlsflox/flox (endo￾thelial cell, EC-Wls) and Lyz2‐cre+/–;Wlsflox/flox(macrophages, Mac-Wls). All
+animals were housed in Association for Assessment and Accreditation of
+Laboratory Animal Care—accredited facilities under a standard 12-h light/dark
+cycle at 71 °F and 30–70% humidity with access to chow and water ad libitum.
+Partial hepatectomy studies were approved by the University of Kansas Medical
+Center and University of Pittsburgh Institutional Animal Care and Use Commit￾tees (IACUC). APAP studies were approved by the University of Pittsburgh
+Medical Center and Brigham and Women’s Hospital IACUCs. Wnt studies were
+approved by the University of Pittsburgh Medical Center IACUC. All relevant
+guidelines for work with mice were adhered to during this study.
+Acetaminophen (APAP) exposure. Mice were fasted 12 h before administration
+of APAP. APAP was dissolved in warm 0.9% saline, and mice were injected with
+300 mg/kg APAP, i.p. Food was returned to the mice after APAP treatment. Mice
+were then used for isolation of primary hepatic cells for single-cell RNA-sequen￾cing or tissue harvest for further downstream analysis.
+Partial hepatectomy. Partial hepatectomy surgeries were performed as previously
+described52. Mice were euthanized at 3 h, 48 h, and 5 days post-partial hepatectomy
+by cervical dislocation under isoflurane anesthesia and livers were harvested for
+downstream analysis. Further, mice were used for isolation of primary hepatic cells
+at 3 h, 48 h, and 5 days post-partial hepatectomy.
+Tissue harvest. Untreated (n = 3 for each sex) and APAP-treated mice (n = 3 for
+6, 24, 48, and 96 h following APAP exposure and 3, 48, and 120 h following PH)
+were euthanized by cervical dislocation following carbon dioxide exposure. A
+portion of liver tissue was fixed in 10% neutral buffered formalin for 48 h and
+further processed to obtain paraffin blocks and 5 μm thick sections. A portion of
+liver tissue was frozen in optimal cutting temperature (OCT) medium and used to
+obtain 10 μm fresh frozen sections.
+Isolation of primary hepatocytes and non-parenchymal cells. Mouse hepatic
+cells were isolated by a modification of the two-step collagenase perfusion
+method53. Cells were isolated from untreated (n = 3 for each sex), APAP-treated
+mice (n = 2 for each sex at 6, 24, 48, and 96 h following APAP exposure), and mice
+subjected to partial hepatectomy (n = 3; 3 h, 48 h, and 5 days). The digestion step
+was performed using Liver Digest Medium (Cat. #17703034; ThermoFisher Sci￾entific; Pittsburgh, PA, USA). Cell suspensions were used immediately for Seq￾Well.
+Library preparation and sequencing. Sequencing libraries were prepared from the
+single-cell suspension using the Seq-Well method as described in Gierahn et al. 9.
+Briefly, a microwell array was loaded with barcoded polyT mRNA capture beads
+(Chemgenes). Then 200 μl of media containing 15,000 single cells were loaded onto
+the array and allowed to settle into the wells by gravity. Membrane sealing, lysis,
+hybridization, reverse transcription, exonuclease digestion, second-strand synth￾esis, PCR, and library construction by Nextera were all performed as previously
+described54. Resulting libraries were quantified by Qubit and tape station (Agilent),
+and sequenced on an Illumina NextSeq 500 (UT and APAP samples, 2 arrays per
+run) or a NovaSeq (PH samples, 10 arrays per run) 30 cycle, paired end sequence
+reads, single 8 cycle index for NextSeq or dual 8 cycle indexes for NovaSeq.
+Single-cell sequencing data processing. Sequencing data were demultiplexed
+and aligned to mm10 with STAR aligner. Libraries were sequenced to an average
+depth of >48,000 reads per cell per sample. See Supplementary Data 1 for addi￾tional sequencing and data quality metrics.
+Barcodes with fewer than 400 genes were discarded from the genes x cells data
+matrix as non-cells, with 16,019 cells remaining. Data were log normalized and
+TPM-like (base 10,000) normalized and analyzed using the Seurat package in R54.
+The resulting data displayed fairly even nGene and nUMI distributions across each
+sample type (Supplementary Fig. 2h). We performed a principal component
+analysis (PCA) and selected the top 13 principal components (PCs) for tSNE
+dimensional reduction. We then performed shared nearest neighbors (SNN)
+clustering, and identified 14 distinct clusters in the data (Supplementary Fig. 1c, d).
+We calculated differential expression across the clusters using Wilcox test in the
+FindAllMarkers function in the Seurat R package and quantified expression of
+marker genes for known liver cell populations (Supplementary Fig. 1d, e). We
+identify nine high-quality hepatocyte clusters, separated by treatment condition;
+one low-quality hepatocyte cluster with a high percent mitochondrial content and
+low nGene and nUMI; a kupffer cell cluster; a liver endothelial cell (LEC) cluster; a
+neutrophil cluster; and a mixed immune cluster, which appears to contain T cells, B
+cells and monocytes. We calculated a hepatocyte signature score using
+AddModuleScore in Seurat over multiple highly expressed hepatocyte genes which
+span the lobule: Apoa1, Glul, Acly, Asl, Cyp2e1, Cyp2f2, Ass1, Alb, Mup3, Pck1,
+G6pc, Fabp1.
+In order to focus on hepatocyte responses, we subsetted our data to include the
+nine high-quality hepatocyte clusters. Following subsetting, we observed a
+remaining few cells scoring low on the hepatocyte signature. We filtered out any
+cells with a Hepatocyte Signature score less than 3 standard deviations below the
+average as non-hepatocytes (Supplementary Fig. 1e). These non-hepatocyte cells
+originated primarily from the A6 sample, which had the largest immune
+infiltration in response to injury and the highest fraction on non-parenchymal cells
+Pericentral gene
+expression
+Periportal gene
+expression
+Periportal and
+pericentral gene
+expression
+Hepatocytes Dividing hepatocyte Endothetial cell Cholangiocyte Macrophage
+Wnt secretion
+CV PV
+Uninjured
+CV PV
+Functional compensation/early injury
+CV PV
+Proliferation phase/late injury
+a
+b
+c
+Fig. 6 Model of hepatocyte response to acute liver injury. a Wnt secretion
+from the pericentral endothelium functions in the maintenance of the
+pericentral gene expression gradient in normal, quiescent liver. b Wnt
+secretion from macrophages aids in functional compensation of midzonal
+and periportal hepatocytes during the pre-proliferation phase of acute liver
+injury. c Wnt secreation is essential for both functional compensation and
+activation of the proliferative response during regeneration. Compensating
+hepatocytes contribute to a maintenance of hepatic function, whereas
+proliferating hepatocytes selectively down-regulate a subset of
+hepatic genes.
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-19558-3 ARTICLE
+NATURE COMMUNICATIONS | (2020) 11:5785 | https://doi.org/10.1038/s41467-020-19558-3 | www.nature.com/naturecommunications 9
+
+in the total sample. The filtered non-hepatocytes are likely non-parenchymal cells
+incorrectly assigned to a hepatocyte cluster by SNN. Following these filtering steps,
+we retained 10,833 high-quality hepatocytes for analysis.
+Single-cell sequencing data analysis (hepatocyte data). We performed
+dimensional reduction and clustering again on our filtered hepatocyte only dataset.
+Principal component 1 (PC1) describes 46.9% of and captures technical variation
+(nGene, nUMI) in the data (Supplementary Fig. 2e). This is not surprising for a
+dataset comprised of a single-cell type. Each of our treatment conditions scores
+similarly on PC1 (Supplementary Fig. 2b). PC2 partly captures
+pericentral–periportal variation. We identify zonally restricted genes in PC2
+loadings (Cyp2e1, Cyp1a2, Gtsm3; Cyp2f2). We also note periportal–pericentral
+variation captured in PC4.
+To more clearly visualize pericentral–periportal variation, we scored cells on
+this pericentral–periportal metric. To generate a list of pericentral genes, we
+calculated gene-by-gene correlations with Cyp2e1, a canonical pericentral gene. To
+generate a pericentral gene list, we selected genes positively correlated with Cyp2e1,
+and to generate a periportal gene list, we selected genes negatively correlated with
+Cyp2e1 (Supplementary Data 8). To generate a list of genes to be used for our
+signatures, we considered all genes with a Cyp2e1 correlation >0.3 for PCHSig and
+a Cyp2e1 correlation < −0.3 for PPHSig. From the genes falling within this range of
+values, we selected moderately expressed genes with large variability in expression
+across the dataset, removing lowly expressed genes and genes expressed in small
+numbers of cells. Positive correlations with Cyp2e1 range from 0.823 (Cyp2c29) to
+0.356 (Ang); negative correlations with Cyp2e1 range from −0.569 (Cyp2f2) to
+−0.311 (Serpina12). The 0.3/−0.3 cutoff is more than 3 standard deviations above/
+below the mean of all gene correlations with Cyp2e1 (mean = −0.01280654; mean
++ 3sd = 0.2605311; mean − 3sd = −0.2861442). We then calculated the
+pericentral hepatocyte (PCH) score and periportal hepatocyte (PPH) score using
+AddModuleScore for these genes. We then confirmed that PCH Score and PPH
+Score are inversely correlated as expected. We observe a pericentral–periportal
+gradient across PC2 using these scores (Supplementary Fig. 2). To generate a single
+score that captures pericentral–periportal character, we subtracted the PCH Score
+from the PPH Score to create the PPH-PCH Score, in which pericentral
+hepatocytes will score negatively and periportal hepatocytes will score positively.
+We also generated PCH and PPH scores from the zonated hepatocyte genes
+data presented in Halpern et al., Table S3. Briefly, we selected non-randomly
+zonated genes with a q-value < 0.01, removed lowly expressed genes with a total
+average expression lower than the average over the dataset, and split the genes into
+percentral or periportal markers based on relative zonal expression. This resulted in
+110 genes for PCH and 96 genes for PPH. We calculated module scores with these
+gene lists for the dataset. The PCH_Halpern Score did not capture loss of PCH in
+the A6 sample as well as the PCH Score calculated above with the Cyp2e1
+correlation gene list. The PPH_Halpern Score did not distribute the cells as evenly
+over the distribution as the correlation score. These Halpern scores were generated
+from a different dataset, which may contribute to their lesser ability to capture
+relevant signal in our dataset. Despite these differences, the PCH and PPH
+correlation-derived scores correlate well with the Halpern-derived scores (PCH: R2
+= 0.567, p < 10e−5; PPH R2 = 0.399, p < 10e−5, Supplementary Fig. 2i, j).
+To better visualize the data, we performed tSNE dimensional reduction.
+Hepatocytes from all samples look rather similar in lower PCs which describe
+shared variation, such as technical differences or cross-lobule variation, while the
+higher PCs capture inter-sample variation. We calculated percent variation
+captured per PC and generated an elbow plot to determine the correct number of
+PCs to use in further analysis. We selected the top 13 PCs to include in our
+analysis, which well separated samples by treatment condition and did not appear
+to be driven by technical artifacts. We observe a technical gradient across each
+cluster (which is orthogonal to the pericentral–periportal gradient across each
+cluster), but the clusters themselves do not appear technically driven
+(Supplementary Fig. 2h).
+Heatmap genes were found using FindAllMarkers in Seurat, Wilcox test, min.
+percent = 0.10, thresh.use = 0.25. Mitochondrial and hemoglobin genes were
+removed from the list prior to heatmap plotting.
+Shared and unique by injury model gene lists were assembled by combining DE
+results across all time points for each injury. We ran differential expression using
+Wilcox test in the FindAllMarkers Seurat function between each treatment
+condition (A6, A24, A48, A96, PH3, PH48, PH120) individually and untreated
+(UT) (Supplementary Data 2). We then combined results across all time points
+within each injury model to obtain a list of all DEGs from any time point in APAP
+experiments (A6, A24, A48, A96) and PH (PH3, PH48, PH120). A small number of
+genes were up at one-time point, but down at another. In these cases, the gene was
+retained in the list (up- or down-regulated) with the largest magnitude average log
+fold-change to capture to more significant change in expression.
+We ran pathway analysis on the composite DE results using the piano R package.
+Reference gene sets were downloaded from MSigDB (Broad Institute). We used
+geneSetStat = “fisher”, adjMethod = “fdr”, and signifMethod = “geneSampling”. We
+then parsed the results to identify shared and unique reference gene sets for each
+injury. Any reference gene set with a q-value greater than 0.05 was discarded as
+insignificant. We then identified reference gene sets with significant overlaps with
+only APAP and with only PH composite DE results. To focus on truly unique
+responses, we filtered out any reference gene set from the unique tables which had a
+q-value < 0.2 for the other injury model. We then identified shared responses by
+compiling all reference gene sets with a q-value of < 0.05 in both APAP and PH.
+Selected reference gene set −log(q) are plotted in Fig. 3.
+To identify cycling cells in the data, we calculated Cell Cycle Score using
+AddModuleScore in Seurat over the cell cycle markers56. We classified cells with a
+Cell Cycle Score 2 standard deviations above the average as cycling cells (Fig. 4). To
+better compare cycling and non-cycling cells (CC and NC, respectively), we
+subsetted the data to create a dataset containing all 51 CCs from the A24 condition
+and an equal number of NCs also from A24; similarly, we created a dataset
+containing all 123 CC from PH48 and an equal number of NCs also from PH48.
+Pathway analysis was done on a DE result obtained from comparing 174 CC from
+A24 and PH48 against an equal number of NCs from these time points. Piano was
+run as described above. Fig. 4 plots −log(q) values for selected reference gene sets
+with a q-value < 0.05. Wnt Target Labbe Sig was calculated using AddModuleScore
+and the reference gene set LABBE_WNT3A_TARGETS_UP which was identified
+as significant in Piano gene set enrichment analysis.
+Immunohistochemical analysis. Histology was performed by the histology core at
+Beth Israel Deaconess Medical Center using standard procedures and automated
+workflow. Samples were processed and embedded following fixation in 10% neutral
+buffered formalin for 48 h. Samples were embedded in paraffin and sectioned at 5
+μm thick. Immunohistochemistry was performed on a Leica autostainer (Leica
+Biosystems) with enzyme treatment (1:1000) using standard protocols. The anti￾body used for assessment of cell proliferation was PCNA (Cell Signaling, Cat.
+13110, 1:800), and cell death was ApopTag Peroxidase In Situ Apoptosis Detection
+Kit (Millipore, Cat. # S7100). Macrophages were stained using the anti-F4/80 (Cell
+Signaling, Cat. 70076, 1:500). Sections were then counterstained with hematoxylin,
+dehydrated, and film cover slipped. A minimum of four representative images was
+captured per slide using the Zen 2 v2.0 software package. TUNEL-positive area,
+PCNA-positive cells, and F4/80-positive cells were measured and averaged across
+the four images for each sample using ImageJ v2.0.
+Single-molecule fluorescent in situ hybridization (smFISH). smFISH was
+conducted using RNAscope technology (RNAscope Fluorescent Multiplex Kit;
+Cat. # 320850; Advanced Cell Diagnostics; Neward, CA, USA). Fresh frozen
+sections (10 μm thick) were used following the manufacturer’s guidelines. Probe
+sets were designed by the manufacturer and can be found at acdbio.com/catalog￾probes. Probe sets were chosen for genes that span multiple classic hepatic
+functions, such as secreted proteins, gluconeogenesis, blood clotting, ion
+homeostasis, and metabolism. and that were among the top 100 DEGs in the
+analysis of the scRNA-seq data. A 6 × 6 40x field was captured of a 10 μM z-stack
+(0.5 uM per slice) using the NIS-Elements v5.11 software package. This resulted
+in multiple liver lobules available for analysis within a single section. Images
+were cropped to the size of a single liver lobule and cellular outlines were defined
+using CellProfiler v2.255. smFISH signal was then quantified using FISH-quant
+v357. Post-processing of mRNA detection was performed with custom-written
+Python scripts (available at https://bitbucket.org/muellerflorian/pyfishquant/)57.
+Pseudo-color images of transcript abundance were generated by setting the pixel
+values of each segmented cells to its corresponding transcript level. To determine
+the spatial expression gradients relatively to the central vein, we manually
+outlined the vein as a polygon. This polygon served as a reference point to count
+RNAs in concentric rings. These counts were lastly renormalized by the ring area
+contained within the image. AUC (area-under-curve) for the RNA counts across
+the individual lobules was calculated using GraphPad Prism (v8.3.0) with the
+average AUC presented with calculated standard deviation. The values are
+presented as “Average Total RNA Counts”.
+Statistical analysis. We calculated P values for shifts in gene expression or module
+scores using the Wilcox test, Bonferroni corrected for multiple testing. Gene set
+enrichment results in piano were calculated using Fisher’s test and the gene
+sampling method and corrected by FDR. P values for average RNA expression
+(smFISH) and IHC counts (PCNA, F4/80, and TUNEL) were calculated using
+unpaired, two-tailed, t tests with Welch’s correction. Histograms were tested using
+the Kolmogorov–Smirnov test. Specific tests used for each figure are listed in the
+figure legends with represented P values. Statistical analysis of IHC and smFISH
+quantification was performed using Graphpad Prism 8 v8.2.1.
+Data availability
+Single-cell RNA-seq data are available through the NCBI’s Gene Expression Omnibus
+(GEO Accession GSE136679) Data are available upon reasonable request. Source data
+are provided with this paper.
+Code availability
+Custom software for analysis of smFISH data along with descriptions of functionality and
+sample data can be found at https://github.com/muellerflorian/walesky-rna-loc-liver.
+ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-19558-3
+10 NATURE COMMUNICATIONS | (2020) 11:5785 | https://doi.org/10.1038/s41467-020-19558-3 | www.nature.com/naturecommunications
+
+Received: 3 October 2019; Accepted: 12 October 2020;
+References
+1. Kietzmann, T. Metabolic zonation of the liver: the oxygen gradient revisited.
+Redox Biol. 11, 622–630 (2017).
+2. Budnitz, D. S., Lovegrove, M. C. & Crosby, A. E. Emergency department visits
+for overdoses of acetaminophen-containing products. AMEPRE 40, 585–592
+(2011).
+3. Couri, T. & Pillai, A. Goals and targets for personalized therapy for HCC.
+Hepatol. Int. 13, 125–137 (2019).
+4. Michalopoulos, G. K. Hepatostat: Liver regeneration and normal liver tissue
+maintenance. Hepatology 65, 1384–1392 (2017).
+5. Michalopoulos, G. K. Liver regeneration after partial hepatectomy: critical
+analysis of mechanistic dilemmas. Am. J. Pathol. 176, 2–13 (2010).
+6. Michalopoulos, G. K. Liver regeneration. J. Cell. Physiol. 213, 286–300 (2007).
+7. Michalopoulos, G. K. Principles of liver regeneration and growth homeostasis.
+Compr. Physiol. 3, 485–513 (2013).
+8. Gonzales, K. A. U. & Fuchs, E. Skin and its regenerative powers: an alliance
+between stem cells and their Niche. Dev. Cell 43, 387–401 (2017).
+9. Gierahn, T. M. et al. Seq-Well: portable, low-cost RNA sequencing of single
+cells at high throughput. Nat. Methods 14, 395–398 (2017).
+10. Goessling, W. et al. APC mutant zebrafish uncover a changing temporal
+requirement for wnt signaling in liver development. Dev. Biol. 320, 161–174 (2008).
+11. Ober, E. A., Verkade, H., Field, H. A. & Stainier, D. Y. R. Mesodermal Wnt2b
+signalling positively regulates liver specification. Nature 442, 688–691 (2006).
+12. Goessling, W. et al. Genetic interaction of PGE2 and Wnt signaling regulates
+developmental specification of stem cells and regeneration. Cell 136,
+1136–1147 (2009).
+13. Huch, M. et al. In vitro expansion of single Lgr5+ liver stem cells induced by
+Wnt-driven regeneration. Nature 494, 247–250 (2013).
+14. Gougelet, A. & Colnot, S. A complex interplay between wnt/β-catenin
+signalling and the cell cycle in the adult liver. Int. J. Hepatol. 2012, 816125
+(2012).
+15. Ding, B.-S. et al. Inductive angiocrine signals from sinusoidal endothelium are
+required for liver regeneration. Nature 468, 310–315 (2010).
+16. Birchmeier, W. Orchestrating Wnt signalling for metabolic liver zonation.
+Nat. Cell Biol. 18, 463–465 (2016).
+17. Wang, B., Zhao, L., Fish, M., Logan, C. Y. & Nusse, R. Self-renewing diploid
+Axin2(+) cells fuel homeostatic renewal of the liver. Nature 524, 180–185
+(2015).
+18. Preziosi, M., Okabe, H., Poddar, M., Singh, S. & Monga, S. P. Endothelial
+Wnts regulate β-catenin signaling in murine liver zonation and regeneration: a
+sequel to the Wnt-Wnt situation. Hepatol. Commun. 2, 845–860 (2018).
+19. Ma, Y. et al. Wnt agonist stimulates liver regeneration after small-for-size liver
+transplantation in rats. Hepatol. Res. 46, E154–E164 (2016).
+20. Apte, U. et al. Beta-catenin activation promotes liver regeneration after
+acetaminophen-induced injury. Am. J. Pathol. 175, 1056–1065 (2009).
+21. Sodhi, D. et al. Morpholino oligonucleotide-triggered beta-catenin knockdown
+compromises normal liver regeneration. J. Hepatol. 43, 132–141 (2005).
+22. Monga, S. P., Pediaditakis, P., Mule, K., Stolz, D. B. & Michalopoulos, G. K.
+Changes in WNT/beta-catenin pathway during regulated growth in rat liver
+regeneration. Hepatology 33, 1098–1109 (2001).
+23. Tan, X., Behari, J., Cieply, B., Michalopoulos, G. K. & Monga, S. P. S.
+Conditional deletion of beta-catenin reveals its role in liver growth and
+regeneration. Gastroenterology 131, 1561–1572 (2006).
+24. Apte, U. et al. Activation of Wnt/beta-catenin pathway during hepatocyte
+growth factor-induced hepatomegaly in mice. Hepatology 44, 992–1002 (2006).
+25. Gebhardt, R. & Mecke, D. Heterogeneous distribution of glutamine synthetase
+among rat liver parenchymal cells in situ and in primary culture. EMBO J. 2,
+567–570 (1983).
+26. Väremo, L., Nielsen, J. & Nookaew, I. Enriching the gene set analysis of
+genome-wide data by incorporating directionality of gene expression and
+combining statistical hypotheses and methods. Nucleic Acids Res. 41,
+4378–4391 (2013).
+27. Albrecht, J. H. et al. Involvement of p21 and p27 in the regulation of CDK
+activity and cell cycle progression in the regenerating liver. Oncogene 16,
+2141–2150 (1998).
+28. Font-Burgada, J. et al. Hybrid periportal hepatocytes regenerate the injured
+liver without giving rise to cancer. Cell 162, 766–779 (2015).
+29. Font-Burgada, J. et al. Hybrid periportal hepatocytes regenerate the injured
+liver without giving rise to cancer. Cell 162, 766–779 (2015).
+30. Zhao, L. et al. Tissue repair in the mouse liver following acute carbon
+tetrachloride depends on injury-induced Wnt/β-catenin signaling. Hepatology
+https://doi.org/10.1002/hep.30563 (2019).
+31. Yang, J. et al. β-catenin signaling in murine liver zonation and regeneration: a
+Wnt-Wnt situation! Hepatology 60, 964–976 (2014).
+32. Planas-Paz, L. et al. The RSPO-LGR4/5-ZNRF3/RNF43 module controls liver
+zonation and size. Nat. Cell Biol. 18, 467–479 (2016).
+33. Leibing, T. et al. Angiocrine Wnt signaling controls liver growth and
+metabolic maturation in mice. Hepatology 68, 707–722 (2018).
+34. Benhamouche, S. et al. Apc tumor suppressor gene is the ‘zonation-keeper’ of
+mouse liver. Dev. Cell 10, 759–770 (2006).
+35. Sekine, S., Gutiérrez, P. J. A., Lan, B. Y.-A., Feng, S. & Hebrok, M. Liver￾specific loss of beta-catenin results in delayed hepatocyte proliferation after
+partial hepatectomy. Hepatology 45, 361–368 (2007).
+36. Torre, C. et al. The transforming growth factor-α and cyclin D1 genes are
+direct targets of β-catenin signaling in hepatocyte proliferation. J. Hepatol. 55,
+86–95 (2011).
+37. Nejak-Bowen, K. N. & Monga, S. P. S. Beta-catenin signaling, liver
+regeneration and hepatocellular cancer: sorting the good from the bad. Semin.
+Cancer Biol. 21, 44–58 (2011).
+38. Carpenter, A. C., Rao, S., Wells, J. M., Campbell, K. & Lang, R. A. Generation
+of mice with a conditional null allele for Wntless. Genesis 48, 554–558 (2010).
+39. Preziosi, M., Poddar, M., Singh, S. & Monga, S. P. Hepatocyte Wnts are
+dispensable during diethylnitrosamine and carbon tetrachloride-induced
+injury and hepatocellular cancer. Gene Expr. 18, 209–219 (2018).
+40. Jiang, A. et al. Loss of Wnt secretion by macrophages promotes hepatobiliary
+injury after administration of 3,5-diethoxycarbonyl-1, 4-dihydrocollidine diet.
+Am. J. Pathol. 189, 590–603 (2019).
+41. Yang, J. et al. Beta-catenin signaling in murine liver zonation and
+regeneration: a Wnt-Wnt situation! Hepatology 60, 964–976 (2014).
+42. Fausto, N. Liver regeneration. J. Hepatol. 32, 19–31 (2000).
+43. Su, A. I., Guidotti, L. G., Pezacki, J. P., Chisari, F. V. & Schultz, P. G. Gene
+expression during the priming phase of liver regeneration after partial
+hepatectomy in mice. Proc. Natl Acad. Sci. U. S. A. 99, 11181–11186 (2002).
+44. Greenbaum, L. E., Cressman, D. E., Haber, B. A. & Taub, R. Coexistence of C/
+EBPα, β, growth-induced proteins and DNA synthesis in hepatocytes during
+liver regeneration. Implications for maintenance of the differentiated state
+during liver growth. J. Clin. Invest. 96, 1351–1365 (1995).
+45. Haber, B. A., Mohn, K. L., Diamond, R. H. & Taub, R. Induction patterns of
+70 genes during nine days after hepatectomy define the temporal course of
+liver regeneration. J. Clin. Invest. 91, 1319–1326 (1993).
+46. Haber, B. A. et al. High levels of glucose-6-phosphatase gene and protein
+expression reflect an adaptive response in proliferating liver and diabetes. J.
+Clin. Invest. 95, 832–841 (1995).
+47. Haber, B., Naji, L., Cressman, D. & Taub, R. Coexpression of liver-specific and
+growth-induced genes in perinatal and regenerating liver: attainment and
+maintenance of the differentiated state during rapid proliferation. Hepatology
+22, 906–914 (1995).
+48. Planas-Paz, L. et al. The RSPO–LGR4/5–ZNRF3/RNF43 module controls liver
+zonation and size. Nat. Cell Biol. 18, 467–479 (2016).
+49. Nevzorova, Y. A., Tolba, R., Trautwein, C. & Liedtke, C. Partial hepatectomy
+in mice. Lab. Anim. 49, 81–88 (2015).
+50. Bhushan, B. et al. Pro-regenerative signaling after acetaminophen-induced
+acute liver injury in mice identified using a novel incremental dose model.
+Am. J. Pathol. 184, 3013–3025 (2014).
+51. Albrecht, J. H. & Hansen, L. K. Cyclin D1 promotes mitogen-independent cell
+cycle progression in hepatocytes. Cell Growth Differ. 10, 397–404 (1999).
+52. Bhushan, B. & Apte, U. Liver regeneration after acetaminophen hepatotoxicity
+mechanisms and therapeutic opportunities. Am. J. Pathol. 189, 719–729
+(2019).
+53. Jiang, A. et al. Loss of Wnt secretion by macrophages promotes hepatobiliary
+injury after administration of 3,5-diethoxycarbonyl-1, 4-dihydrocollidine diet.
+Am. J. Pathol. 189, 590–603 (2019).
+54. Preziosi, M., Poddar, M., Singh, S. & Monga, S. P. Hepatocyte Wnts are
+dispensable during diethylnitrosamine and carbon tetrachloride-induced
+injury and hepatocellular cancer. Gene Expr. 18, 209–219 (2018).
+55. Abdullah, Z. & Knolle, P. A. Liver macrophages in healthy and diseased liver.
+Pflug. Arch. 469, 553–560 (2017).
+56. Kowalczyk, M. S. et al. Single-cell RNA-seq reveals changes in cell cycle and
+differentiation programs upon aging of hematopoietic stem cells. Genome Res.
+25, 1860–1872 (2015).
+57. Ouyang, W., Mueller, F., Hjelmare, M., Lundberg, E. & Zimmer, C. ImJoy: an
+open-source computational platform for the deep learning era. Nat. Methods
+16, 1199–1200 (2019).
+Acknowledgements
+C.W. is supported by F32DK111151, the Cholangiocarcinoma Foundation Research
+Fellowship, and the American Liver Foundation Charles Trey, MD Memorial Post￾doctoral Research Fellowship. W.G. is supported by R01DK090311, R01DK105198,
+R24OD017870, and the Claudia Adams Barr Program for Excellence in Cancer Research.
+W.G. is a Pew Scholar in Biomedical Sciences. A.K.S. was supported, in part, by the Searle
+Scholars Program, the Beckman Young Investigator Program, a Sloan Fellowship in
+Chemistry, the NIH (1DP2GM1194192 & RM1HG0061931), and the MIT Stem Cell
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-19558-3 ARTICLE
+NATURE COMMUNICATIONS | (2020) 11:5785 | https://doi.org/10.1038/s41467-020-19558-3 | www.nature.com/naturecommunications 11
+
+Initiative through Fondation MIT. U.A. is supported by R01DK098414. S.P.M is sup￾ported by NIH/NIDDK P30DK120531, Pittsburgh Liver Research Centre Grant, and
+NIH/NIDDK (DK62277, DK100287, and CA204586). S.P.M. is the Endowed Chair for
+Experimental Pathology, University of Pittsburgh School of Medicine.
+Author contributions
+C.M.W., K.E.K., A.K.S., and W.G. conceived the project and designed the experiments.
+C.M.W. and C.L.W. carried out all wild-type APAP studies. U.A., C.M.W., and J.H.
+carried out wild-type partial hepatectomy studies. C.M.W., K.E.K., C.L.W., J.H., B.K., and
+I.F. carried out all scRNA-seq studies. K.E.K. performed all scRNA-seq data processing.
+K.E.K. and C.M.W. performed scRNA-seq data analysis. C.M.W. and C.L.W. performed
+all IHC and smFISH experiments and analysis. F.M. performed software development for
+smFISH analysis. S.K. and S.P.M. performed all Wnt studies including APAP and PH for
+these models. C.M.W., K.E.K., A.K.S., and W.G. wrote the manuscript with the aid of all
+co-authors.
+Competing interests
+W.G. is a consultant for Camp4 Therapeutics. A.K.S. reports compensation for con￾sulting and/or SAB membership from Merck, Honeycomb Biotechnologies, Cellarity,
+Cogen Therapeutics, Ochre Bio, and Dahlia Biosciences. S.P.M has an advisory board
+role for Surrozen. C.M.W., K.E.K., C.L.W., J.H., B.K., I.F., F.M., S.K., and U.A. have no
+competing interests to declare.
+Additional information
+Supplementary information is available for this paper at https://doi.org/10.1038/s41467-
+020-19558-3.
+Correspondence and requests for materials should be addressed to A.K.S. or W.G.
+Peer review information Nature Communications thanks Christine Perret, Bruce Wang,
+and Yue Wang for their contribution to the peer review of this work. Peer reviewer
+reports are available.
+Reprints and permission information is available at http://www.nature.com/reprints
+Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in
+published maps and institutional affiliations.
+Open Access This article is licensed under a Creative Commons
+Attribution 4.0 International License, which permits use, sharing,
+adaptation, distribution and reproduction in any medium or format, as long as you give
+appropriate credit to the original author(s) and the source, provide a link to the Creative
+Commons license, and indicate if changes were made. The images or other third party
+material in this article are included in the article’s Creative Commons license, unless
+indicated otherwise in a credit line to the material. If material is not included in the
+article’s Creative Commons license and your intended use is not permitted by statutory
+regulation or exceeds the permitted use, you will need to obtain permission directly from
+the copyright holder. To view a copy of this license, visit http://creativecommons.org/
+licenses/by/4.0/.
+© The Author(s) 2020
+ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-19558-3
+12 NATURE COMMUNICATIONS | (2020) 11:5785 | https://doi.org/10.1038/s41467-020-19558-3 | www.nature.com/naturecommunications
+

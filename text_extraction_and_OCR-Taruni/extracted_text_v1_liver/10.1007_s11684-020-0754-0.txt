@@ -1,0 +1,377 @@
+Single-cell RNA-seq data analysis on the receptor ACE2
+expression reveals the potential risk of different human organs
+vulnerable to 2019-nCoV infection
+Xin Zou1,*, Ke Chen1,*, Jiawei Zou1,*, Peiyi Han2, Jie Hao (✉)
+1
+, Zeguang Han (✉)
+1
+1
+Key Laboratory of Systems Biomedicine (Ministry of Education), Shanghai Centre for Systems Biomedicine, Shanghai Jiao Tong University,
+Shanghai 200240, China; 2
+Ruijin Hospital Affiliated to Shanghai Jiao Tong University School of Medicine, Shanghai 200025, China
+© The Author(s) 2020. This article is published with open access at link.springer.com and journal.hep.com.cn 2020
+Abstract It has been known that, the novel coronavirus, 2019-nCoV, which is considered similar to SARS-CoV,
+invades human cells via the receptor angiotensin converting enzyme II (ACE2). Moreover, lung cells that have
+ACE2 expression may be the main target cells during 2019-nCoV infection. However, some patients also exhibit
+non-respiratory symptoms, such as kidney failure, implying that 2019-nCoV could also invade other organs. To
+construct a risk map of different human organs, we analyzed the single-cell RNA sequencing (scRNA-seq) datasets
+derived from major human physiological systems, including the respiratory, cardiovascular, digestive, and urinary
+systems. Through scRNA-seq data analyses, we identified the organs at risk, such as lung, heart, esophagus,
+kidney, bladder, and ileum, and located specific cell types (i.e., type II alveolar cells (AT2), myocardial cells,
+proximal tubule cells of the kidney, ileum and esophagus epithelial cells, and bladder urothelial cells), which are
+vulnerable to 2019-nCoV infection. Based on the findings, we constructed a risk map indicating the vulnerability of
+different organs to 2019-nCoV infection. This study may provide potential clues for further investigation of the
+pathogenesis and route of 2019-nCoV infection.
+Keywords 2019-nCoV; ACE2; single-cell RNA-seq
+Introduction
+On January 30, 2020, the World Health Organization
+(WHO) declared the novel coronavirus 2019-nCoV outbreaks as a Public Health Emergency of International
+Concern [1]. Experts and scientists worldwide are working
+rapidly to expand scientific knowledge on this new virus.
+In addition to respiratory symptoms, such as cough and
+shortness of breath, clinical manifestations including
+multiple organ failure were also observed, which is
+unusual with other coronavirus infections.
+The initial step of 2019-nCoV infection is its entrance
+into human cells. The analysis of Xu et al. [2] showed that
+the 2019-nCoV and the SARS-CoV share a common
+ancestor that resembles the bat coronavirus HKU9-1.
+These coronaviruses have very similar spike protein 3-D
+structures that are considered to have strong binding
+affinity to the human cell receptor, angiotensin-converting
+enzyme 2 (ACE2). Therefore, the cells with ACE2
+expression may act as target cells and thus are susceptible
+to 2019-nCoV infection; such cells include type II alveolar
+cells (AT2) of the lungs [3]. Hence, we believe that the
+ACE2 expression pattern in different organs, tissues, and
+cell types could uncover the potential risk to 2019-nCoV
+infection because the target cells expressing ACE2 might
+permit coronavirus entry, multiplication, spread, and
+pathogenesis. Previously, the RNA and protein expressions
+of ACE2 were investigated using bulk samples from the
+heart, lung, kidney, and other organs. However, these bulk
+data only consider average expression and utterly ignore
+RESEARCH ARTICLE
+Received February 7, 2020; accepted February 8, 2020
+Correspondence: Zeguang Han, hanzg@sjtu.edu.cn;
+Jie Hao, j.hao@sjtu.edu.cn
+*
+The authors wish it to be known that, in their opinion, the first three authors
+should be regarded as Joint First Authors.
+Front. Med. 2020, 14(2): 185–192
+https://doi.org/10.1007/s11684-020-0754-0
+
+cell diversity and specificity.
+In addition to AT2 cells, the cell types and organs that
+express ACE2 as a potential receptor for 2019-nCoV are
+still unclear. Therefore, this study explores the existence of
+host cell receptor ACE2 in various cell types using
+published single-cell RNA-seq (scRNA-seq) data to track
+the potential 2019-nCoV infection in human organs. Based
+on these data, we construct a map of ACE2 expression over
+different cell types of different organs to predict the
+potential risk for 2019-nCoV infection and injury. This
+work can contribute to an improved understanding of how
+2019-nCoV invades human body systems.
+Materials and methods
+Here, we explored the published scRNA-seq datasets from
+various tissues and organs of different human body
+systems, including the respiratory system [4,5] (nasal
+mucosa, respiratory track, bronchus, and lung), the
+cardiovascular system [6] (heart), the digestive system
+[7–10] (esophagus, stomach, ileum, and liver), and the
+urinary system [11,12] (kidney and bladder). The lung
+scRNA-seq data were acquired from the Gene Expression
+Omnibus (GEO) database under the series number
+GSE122960; the nasal mucosa, respiratory track, bronchus
+scRNA-seq data were from GSE121600; the heart data
+were from GSE106118; the esophagus data were
+downloaded from https://www.tissuestabilitycellatlas.org/;
+the ileum data were from GSE134809 sample
+GSM3972018; the stomach data were from GSE134520
+sample GSM3954949; the liver data were from
+GSE115469; the kidney data were from GSE109564;
+and the bladder data were from GSE129845 sample
+GSM3723358.
+The ACE2 expression distribution across distinct cell
+types of different organs were evaluated, and then the cell
+types with high ACE2 expression levels were identified in
+accordance with the scRNA-seq datasets. A generally
+accepted consensus suggests that the 2019-nCoV virus
+tends to attack lung AT2 cells via host receptor ACE2, and
+the expression level of ACE2 in AT2 cells were thus used
+as a reference. We defined that any type of cells with a
+proportion of ACE2 positive cells (UMI count > 0)
+comparable to or larger than that of AT2 cells is highly
+vulnerable to 2019-nCoV infection, and the corresponding
+organs should be listed as highly risky.
+We used Seurat V3.0 to discriminate different cell types.
+The data were first normalized using the LogNormalize
+method, and the cell clustering performance were
+conducted using the top 2000 most variable genes with
+the resolution set to 0.5 for kidney and 0.1 for the others.
+The cell scatter plots were obtained using the UMAP
+method [13].
+Results
+Pulmonary AT2 cells and respiratory epithelial cells
+exhibit high ACE2 expression
+We analyzed scRNA-seq datasets from nasal mucosa,
+respiratory track, bronchus, and lung of the respiratory
+system. To construct the reference, we first calculated the
+proportion of ACE2-positive lung AT2 cells from eight
+individuals. For each individual, the clusters of lung AT2
+cells were identified in accordance with the coexpression
+of ACE2, SFTPB, and SFTPC genes (Fig. S1). The
+average proportion of ACE2-positive AT2 cells among the
+eight individuals was approximately 1% with 1% standard
+derivation. We thus defined the cell types with a > 1%
+proportion of ACE2 positive cells as high risk and those
+with a < 1% proportion ACE2 positive cells as low risk.
+Interestingly, the respiratory epithelial cells from the
+respiratory track sample contained approximately 2%
+ACE2 positive cells, and the respiratory track is thus
+regarded as high risk (Fig. 1). However, almost no cell
+obtained from the nasal and bronchial samples showed
+high ACE2 expression (Figs. S2 and S3), and such samples
+are therefore low risk.
+Myocardial cells with high ACE2 expression
+The scRNA-seq data from human heart showed that more
+than 7.5% myocardial cells have positive ACE2 expression
+(Fig. 2), thereby implying that heart could be in high risk of
+2019-nCoV infection, especially in the presence of the
+virus in blood or viremia.
+Ileum and esophagus epithelial cells have high ACE2
+expression
+We explored the scRNA-seq data from the digestive
+system, including esophagus, stomach, ileum, and liver.
+Interestingly, extremely high ACE2 expression was found
+in ileal epithelial cells (~30% ACE2-positive cells, Fig. 3);
+thus, ileum could be at high risk. More than 1% ACE2
+positive esophagus epithelial cells were found, and
+esophagus can thus be regarded as high risk (Fig. 4). By
+contrast, the cells from stomach and liver showed lower
+ACE2 expression levels ( < 1% ACE2 positive cells, Figs.
+S4 and S5).
+Proximal tubule cells of kidney and bladder urothelial
+cells express ACE2
+We also analyzed the scRNA-seq data from the urinary
+system, specifically kidney and bladder. Significantly high
+ACE2 expression was found in kidney proximal tubule
+(PT) cells with the proportion of ACE2-positive cells at
+approximately 4% (Fig. 5). Furthermore, the proportion of
+186 2019-nCoV risk map constructed on scRNA-seq data
+
+Fig. 2 Heart scRNA-seq data analysis revealed myocardial cells with high ACE2 expression levels. (A) The cells were categorized into
+10 clusters. (B) Violin plot of the ACE2 expression distribution of different cell clusters. (C) Scatter plots of the cluster of cells with high
+ACE2 expression levels also expressed canonical markers of myocardial cells MYL3 and MYH7.
+Fig. 1 Respiratory track scRNA-seq data analysis showed epithelial cells with high ACE2 expression levels. (A) The cells were
+categorized into five clusters. (B) Violin plot of the ACE2 expression distribution of different cell clusters. (C) Scatter plots revealed that
+the cluster of cells with ACE2 expression also expressed canonical markers of respiratory epithelial cells PIGR and MUC1.
+Xin Zou et al. 187
+
+ACE2-positive cells in the bladder urothelial cells was
+2.4% (Fig. 6). Therefore, kidney and bladder were
+considered high risk, especially in viremia.
+On the basis of the above findings, a 2019-nCoV
+infection-related risk map of different organs can be
+constructed (Fig. 7). As a clinical implication, lung should
+be listed as having the highest risk. Interestingly, in
+addition to lung AT2, more than 1% of the cell population
+of some cell types from respiratory track, kidney,
+esophagus, bladder, ileum, and heart also expressed
+ACE2, and thus, those organs should be regarded as high
+risk for potential 2019-nCoV infection. This finding may
+explain the non-respiratory symptoms observed in 2019-
+nCoV pneumonia patients.
+Discussion
+This study provides an overview of 2019-nCoV infectionrelated vulnerable organs using state-of-art single-cell
+techniques. According to scRNA-seq datasets, we managed to stratify the organs into high and low risk on the basis
+of their ACE2 expression levels in some cell types for the
+first time. The reported clinical symptoms of 2019-nCoV
+infection (e.g., dyspnea, diarrhea, acute cardiac injury,
+and kidney failure) might be related to the invasion of the
+novel coronavirus in the lung, upper respiratory track,
+ileum, heart, and kidney, especially in the presence of
+viremia.
+In this study, we identified the organs with high and low
+vulnerability according to ACE2 expression. However, we
+admit that the 2019-nCoV invasion is not just about ACE2,
+and this observation means that our study may not have
+exhausted all 2019-nCoV vulnerable organs. In addition,
+given the gene expression variation between individuals,
+further study is still required to exclude the susceptibility
+of the organs categorized as low risk.
+The mRNA expression of the receptor ACE2 indicates
+the transcription of the gene in these tissues and relevant
+cell types. To strengthen the expression pattern of ACE2,
+we also analyzed the protein expression of ACE2 in the
+stated human organs and cells by examining the Human
+Protein Atlas (https://www.proteinatlas.org), the UniProt
+(https://www.uniprot.org) databases, and some literatures.
+The resulting data showed that ACE2 protein is enriched in
+the enterocytes of small intestine and the renal tubules,
+as well as the lung alveolar epithelial cells, the heart cells,
+the arterial smooth muscle cells, and the gastrointestinal
+Fig. 3 ScRNA-seq data analysis showed that ileal epithelial cells have high ACE2 expression. (A) The cells were categorized into nine
+clusters. (B) Violin plot of the ACE2 expression distribution of different cell clusters. (C) Scatter plots showed that the cluster of cells with
+high ACE2 expression also expressed canonical markers of ileal epithelial cells, FABP6, and ANPEP.
+188 2019-nCoV risk map constructed on scRNA-seq data
+
+system, as confirmed by published reports [14–18].
+Moreover, myocardial infarction may increase ACE2
+expression in heart, thereby suggesting that ACE2
+plays an important role in cardiac injury [19]. The
+information on ACE2 protein expression is consistent
+with our results and thus supports the predictive risk map
+of different organs and tissues according to scRNA-seq
+data.
+Fig. 4 Esophagus scRNA-seq data analysis revealed that a few esophageal epithelial cells express ACE2. (A) The cells were categorized
+into 18 cell types. (B) Violin plot of the ACE2 expression distribution of different cell clusters. (C) ACE2 expression distribution
+demonstrated in a scatter plot.
+Xin Zou et al. 189
+
+Fig. 5 Kidney scRNA-seq data analysis revealed that the proximal tubule (PT) cells highly express ACE2. (A) The cells were
+categorized into 14 clusters. (B) Violin plot of the ACE2 expression distribution of different cell clusters. (C) Scatter plots showed that the
+cluster of cells with high ACE2 expression also expressed canonical markers of kidney PT cells CUBN and LRP2.
+Fig. 6 Bladder scRNA-seq data analysis showed that a few cells express ACE2. (A) The cells were categorized into six clusters.
+(B) Violin plot of the ACE2 expression distribution of different cell clusters. (C) Scatter plots showed that the cluster of cells with high
+ACE2 expression also expressed canonical markers of bladder urothelial cells CLDN4 and SPINK1.
+190 2019-nCoV risk map constructed on scRNA-seq data
+
+Acknowledgements
+This work was supported in part by the China National Science and
+Technology Major Project for Prevention and Treatment of
+Infectious Diseases (No. 2017ZX10203207 to Z.-G. H.), National
+Natural Science Foundation of China (No. 81672772 to Z.-G. H.,
+No. 31601070 to J. H., No. 31800253 to K. C.), Interdisciplinary
+Program of Shanghai Jiao Tong University (Nos. 2019TPA09 and
+ZH2018ZDA33 to Z.-G. H., J. H., and X. Z.), Shanghai Sailing
+Program (No. 17YF1410400 to K. C.) and Innovative Research
+Team of High-Level Local Universities in Shanghai.
+Compliance with ethics guidelines
+Xin Zou, Ke Chen, Jiawei Zou, Peiyi Han, Jie Hao, and Zeguang
+Han declare that they have no conflict of interest. This manuscript
+does not involve a research protocol requiring approval by the
+relevant institutional review board or ethics committee.
+Electronic Supplementary Material Supplementary material is
+available in the online version of this article at https://doi.org/
+10.1007/s11684-020-0754-0 and is accessible for authorized users.
+Open Access This article is licensed under a Creative Commons
+Attribution 4.0 International License, which permits use, sharing,
+adaptation, distribution and reproduction in any medium or format,
+as long as you give appropriate credit to the original author(s) and the
+source, provide a link to the Creative Commons license, and indicate
+if changes were made.
+The images or other third party material in this article are included
+in the article’s Creative Commons license, unless indicated
+otherwise in a credit line to the material. If material is not included
+in the article’s Creative Commons license and your intended use is
+not permitted by statutory regulation or exceeds the permitted use,
+you will need to obtain permission directly from the copyright
+holder.
+To view a copy of this license, visit https://creativecommons.org/
+licenses/by/4.0/.
+References
+1. WHO. Statement on the second meeting of the International Health
+Regulations (2005) Emergency Committee regarding the outbreak
+of novel coronavirus (2019-nCoV). 2020. https://www.who.int/
+news-room/detail/30-01-2020-statement-on-the-second-meeting-ofthe-international-health-regulations-(2005)-emergency-committeeregarding-the-outbreak-of-novel-coronavirus-(2019-ncov) (accessed Janaury 30, 2020)
+2. Xu X, Chen P, Wang J, Feng J, Zhou H, Li X, Zhong W, Hao P.
+Evolution of the novel coronavirus from the ongoing Wuhan
+outbreak and modeling of its spike protein for risk of human
+transmission. Sci China Life Sci 2020 Jan 21. [Epub ahead of print]
+doi:10.1007/s11427-020-1637-5
+3. Zhou P, Yang XL, Wang XG, Hu B, Zhang L, Zhang W, Si HR, Zhu
+Y, Li B, Huang CL, Chen HD, Chen J, Luo Y, Guo H, Jiang RD, Liu
+MQ, Chen Y, Shen XR, Wang X, Zheng XS, Zhao K, Chen QJ,
+Deng F, Liu LL, Yan B, Zhan FX, Wang YY, Xiao GF, Shi ZL. A
+pneumonia outbreak associated with a new coronavirus of probable
+bat origin. Nature 2020 Feb 3. [Epub ahead of print] doi: 10.1038/
+s41586-020-2012-7
+4. Reyfman PA, Walter JM, Joshi N, Anekalla KR, McQuattiePimentel AC, Chiu S, Fernandez R, Akbarpour M, Chen CI, Ren Z,
+Verma R, Abdala-Valencia H, Nam K, Chi M, Han S, GonzalezGonzalez FJ, Soberanes S, Watanabe S, Williams KJN, Flozak AS,
+Nicholson TT, Morgan VK, Winter DR, Hinchcliff M, Hrusch CL,
+Guzy RD, Bonham CA, Sperling AI, Bag R, Hamanaka RB, Mutlu
+GM, Yeldandi AV, Marshall SA, Shilatifard A, Amaral LAN,
+Perlman H, Sznajder JI, Argento AC, Gillespie CT, Dematte J, Jain
+M, Singer BD, Ridge KM, Lam AP, Bharat A, Bhorade SM,
+Gottardi CJ, Budinger GRS, Misharin AV. Single-cell transcriptomic analysis of human lung provides insights into the pathobiology of pulmonary fibrosis. Am J Respir Crit Care Med 2019; 199
+(12): 1517–1536
+5. Ruiz García S, Deprez M, Lebrigand K, Cavard A, Paquet A, Arguel
+MJ, Magnone V, Truchi M, Caballero I, Leroy S, Marquette CH,
+Marcet B, Barbry P, Zaragosi LE. Novel dynamics of human
+mucociliary differentiation revealed by single-cell RNA sequencing
+of nasal epithelial cultures. Development 2019; 146(20): 146
+6. Cui Y, Zheng Y, Liu X, Yan L, Fan X, Yong J, Hu Y, Dong J, Li Q,
+Wu X, Gao S, Li J, Wen L, Qiao J, Tang F. Single-cell transcriptome
+analysis maps the developmental track of the human heart. Cell Rep
+2019; 26(7): 1934–1950.e5
+7. Madissoon E, Wilbrey-Clark A, Miragaia RJ, Saeb-Parsy K,
+Mahbubani KT, Georgakopoulos N, Harding P, Polanski K,
+Huang N, Nowicki-Osuch K, Fitzgerald RC, Loudon KW,
+Ferdinand JR, Clatworthy MR, Tsingene A, van Dongen S,
+Dabrowska M, Patel M, Stubbington MJT, Teichmann SA, Stegle
+O, Meyer KB. scRNA-seq assessment of the human lung, spleen,
+and esophagus tissue stability after cold preservation. Genome Biol
+2020; 21(1): 1
+8. Zhang P, Yang M, Zhang Y, Xiao S, Lai X, Tan A, Du S, Li S.
+Dissecting the single-cell transcriptome network underlying gastric
+Fig. 7 2019-nCoV infection-related vulnerable organs with high
+risk are highlighted in red; low-risk organs are indicated in gray.
+Xin Zou et al. 191
+
+premalignant lesions and early gastric cancer. Cell Rep 2019; 27(6):
+1934–1947.e5
+9. MacParland SA, Liu JC, Ma XZ, Innes BT, Bartczak AM, Gage BK,
+Manuel J, Khuu N, Echeverri J, Linares I, Gupta R, Cheng ML, Liu
+LY, Camat D, Chung SW, Seliga RK, Shao Z, Lee E, Ogawa S,
+Ogawa M, Wilson MD, Fish JE, Selzner M, Ghanekar A, Grant D,
+Greig P, Sapisochin G, Selzner N, Winegarden N, Adeyi O, Keller
+G, Bader GD, McGilvray ID. Single cell RNA sequencing of human
+liver reveals distinct intrahepatic macrophage populations. Nat
+Commun 2018; 9(1): 4383
+10. Martin JC, Chang C, Boschetti G, Ungaro R, Giri M, Grout JA,
+Gettler K, Chuang LS, Nayar S, Greenstein AJ, Dubinsky M,
+Walker L, Leader A, Fine JS, Whitehurst CE, Mbow ML,
+Kugathasan S, Denson LA, Hyams JS, Friedman JR, Desai PT,
+Ko HM, Laface I, Akturk G, Schadt EE, Salmon H, Gnjatic S,
+Rahman AH, Merad M, Cho JH, Kenigsberg E. Single-cell analysis
+of Crohn’s disease lesions identifies a pathogenic cellular module
+associated with resistance to anti-TNF therapy. Cell 2019; 178(6):
+1493–1508.e20
+11. Wu H, Malone AF, Donnelly EL, Kirita Y, Uchimura K,
+Ramakrishnan SM, Gaut JP, Humphreys BD. Single-cell transcriptomics of a human kidney allograft biopsy specimen defines a
+diverse inflammatory response. J Am Soc Nephrol 2018; 29(8):
+2069–2080
+12. Yu Z, Liao J, Chen Y, Zou C, Zhang H, Cheng J, Liu D, Li T, Zhang
+Q, Li J, Yang X, Ye Y, Huang Z, Long X, Yang R, Mo Z. Single-cell
+transcriptomic map of the human and mouse bladders. J Am Soc
+Nephrol 2019; 30(11): 2159–2176
+13. Becht E, McInnes L, Healy J, Dutertre CA, Kwok IWH, Ng LG,
+Ginhoux F, Newell EW. Dimensionality reduction for visualizing
+single-cell data using UMAP. Nat Biotechnol 2019; 37: 38–44
+14. Hamming I, Timens W, Bulthuis MLC, Lely AT, Navis G, van Goor
+H. Tissue distribution of ACE2 protein, the functional receptor for
+SARS coronavirus. A first step in understanding SARS pathogenesis. J Pathol 2004; 203(2): 631–637
+15. Crackower MA, Sarao R, Oudit GY, Yagil C, Kozieradzki I, Scanga
+SE, Oliveira-dos-Santos AJ, da Costa J, Zhang L, Pei Y, Scholey J,
+Ferrario CM, Manoukian AS, Chappell MC, Backx PH, Yagil Y,
+Penninger JM. Angiotensin-converting enzyme 2 is an essential
+regulator of heart function. Nature 2002; 417(6891): 822–828
+16. Kowalczuk S, Bröer A, Tietze N, Vanslambrouck JM, Rasko JEJ,
+Bröer S. A protein complex in the brush-border membrane explains
+a Hartnup disorder allele. FASEB J 2008; 22(8): 2880–2887
+17. Donoghue M, Hsieh F, Baronas E, Godbout K, Gosselin M,
+Stagliano N, Donovan M, Woolf B, Robison K, Jeyaseelan R,
+Breitbart RE, Acton S. A novel angiotensin-converting enzymerelated carboxypeptidase (ACE2) converts angiotensin I to
+angiotensin 1-9. Circ Res 2000; 87(5): E1–E9
+18. Harmer D, Gilbert M, Borman R, Clark KL. Quantitative mRNA
+expression profiling of ACE 2, a novel homologue of angiotensin
+converting enzyme. FEBS Lett 2002; 532(1-2): 107–110
+19. Burrell LM, Risvanis J, Kubota E, Dean RG, MacDonald PS, Lu S,
+Tikellis C, Grant SL, Lew RA, Smith AI, Cooper ME, Johnston
+CI. Myocardial infarction increases ACE2 expression in rat
+and humans. Eur Heart J 2005; 26(4): 369–375, discussion
+322–324
+192 2019-nCoV risk map constructed on scRNA-seq data
+
